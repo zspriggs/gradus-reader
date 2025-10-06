@@ -5,57 +5,65 @@
       <span class="lemma-label">Lemma:</span> {{ word.lemma }}
     </p>
     
-    <!-- Beginner level annotations -->
-    <div v-if="level === 'beginner' && word.beginner">
-      <div v-if="word.beginner.vocab" class="annotation-section">
-        <span class="annotation-label beginner">Vocabulary:</span>
-        <p class="annotation-text">{{ word.beginner.vocab }}</p>
+    <!-- Vocabulary -->
+    <div v-if="features.vocab && word.vocab" class="annotation-section">
+      <span class="annotation-label vocab">📝 Vocabulary:</span>
+      <p class="annotation-text">{{ word.vocab }}</p>
+    </div>
+    
+    <!-- Morphology -->
+    <div v-if="features.morphology && word.morphology">
+      <div v-if="word.morphology.grammar" class="annotation-section">
+        <span class="annotation-label morphology">🔤 Grammar:</span>
+        <p class="annotation-text">{{ word.morphology.grammar }}</p>
       </div>
-      <div v-if="word.beginner.grammar" class="annotation-section">
-        <span class="annotation-label beginner">Grammar:</span>
-        <p class="annotation-text">{{ word.beginner.grammar }}</p>
-      </div>
-      <div v-if="word.beginner.notes" class="annotation-section">
-        <span class="annotation-label beginner">Notes:</span>
-        <p class="annotation-text">{{ word.beginner.notes }}</p>
+      <div v-if="word.morphology.notes" class="annotation-section">
+        <span class="annotation-label morphology">Notes:</span>
+        <p class="annotation-text">{{ word.morphology.notes }}</p>
       </div>
     </div>
     
-    <!-- Intermediate/Advanced level annotations -->
-    <div v-if="(level === 'intermediate' || level === 'advanced') && word.intermediate">
-      <div v-if="word.intermediate.syntax" class="annotation-section">
-        <span class="annotation-label intermediate">Syntax:</span>
-        <p class="annotation-text">{{ word.intermediate.syntax }}</p>
-      </div>
-      <div v-if="word.intermediate.style" class="annotation-section">
-        <span class="annotation-label intermediate">Style:</span>
-        <p class="annotation-text">{{ word.intermediate.style }}</p>
-      </div>
+    <!-- Syntax -->
+    <div v-if="features.syntax && word.syntax" class="annotation-section">
+      <span class="annotation-label syntax">🔗 Syntax:</span>
+      <p class="annotation-text">{{ word.syntax }}</p>
     </div>
     
-    <!-- Advanced only annotations -->
-    <div v-if="level === 'advanced' && word.advanced">
-      <div v-if="word.advanced.rhetoric" class="annotation-section">
-        <span class="annotation-label advanced">Rhetoric:</span>
-        <p class="annotation-text">{{ word.advanced.rhetoric }}</p>
-      </div>
-      <div v-if="word.advanced.etymology" class="annotation-advanced">
-        <em>Etymology: {{ word.advanced.etymology }}</em>
-      </div>
+    <!-- Style -->
+    <div v-if="features.style && word.style" class="annotation-section">
+      <span class="annotation-label style">✨ Style:</span>
+      <p class="annotation-text">{{ word.style }}</p>
+    </div>
+    
+    <!-- Rhetoric -->
+    <div v-if="features.rhetoric && word.rhetoric" class="annotation-section">
+      <span class="annotation-label rhetoric">🎭 Rhetoric:</span>
+      <p class="annotation-text">{{ word.rhetoric }}</p>
+    </div>
+    
+    <!-- Message if no features enabled -->
+    <div v-if="!hasFeatureEnabled" class="no-features-message">
+      <p>👆 Enable some display options above to see annotations.</p>
     </div>
   </div>
 </template>
 
 <script setup>
-defineProps({
+import { computed } from 'vue';
+
+const props = defineProps({
   word: {
     type: Object,
     required: true
   },
-  level: {
-    type: String,
+  features: {
+    type: Object,
     required: true
   }
+});
+
+const hasFeatureEnabled = computed(() => {
+  return Object.values(props.features).some(value => value === true);
 });
 </script>
 
@@ -85,36 +93,55 @@ defineProps({
 }
 
 .annotation-section {
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 .annotation-label {
   font-weight: 600;
   display: block;
   margin-bottom: 4px;
+  font-size: 0.95rem;
 }
 
-.annotation-label.beginner {
+.annotation-label.vocab {
   color: #059669;
 }
 
-.annotation-label.intermediate {
+.annotation-label.morphology {
+  color: #0891b2;
+}
+
+.annotation-label.syntax {
   color: #7c3aed;
 }
 
-.annotation-label.advanced {
+.annotation-label.style {
+  color: #db2777;
+}
+
+.annotation-label.rhetoric {
   color: #dc2626;
 }
 
 .annotation-text {
   color: #374151;
   margin: 0;
+  line-height: 1.5;
 }
 
-.annotation-advanced {
-  margin-top: 8px;
-  font-size: 0.875rem;
+.annotation-etymology {
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+.no-features-message {
+  text-align: center;
+  padding: 20px;
   color: #6b7280;
   font-style: italic;
+}
+
+.no-features-message p {
+  margin: 0;
 }
 </style>

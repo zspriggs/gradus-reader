@@ -16,8 +16,8 @@ const props = defineProps({
     type: Object,
     required: true
   },
-  level: {
-    type: String,
+  features: {
+    type: Object,
     required: true
   },
   isSelected: {
@@ -39,24 +39,29 @@ const wordClasses = computed(() => {
     classes.push('selected');
   }
   
-  // Add morphology classes (underlines) for all levels
-  if (props.wordData.pos === 'noun' || props.wordData.pos === 'adjective') {
-    const wordCase = props.wordData.morphology?.case;
-    if (wordCase) {
-      classes.push(`case-${wordCase}`);
+  // Case highlighting
+  if (props.features.caseHighlight) {
+    if (props.wordData.morphology?.case) {
+      const wordCase = props.wordData.morphology?.case;
+      if (wordCase) {
+        classes.push(`case-${wordCase}`);
+      }
     }
-  } else if (props.wordData.pos === 'verb') {
-    classes.push('pos-verb');
-  } else if (props.wordData.pos === 'adverb') {
-    classes.push('pos-adverb');
+  }
+  
+  // POS highlighting
+  if (props.features.posHighlight) {
+    if (props.wordData.pos) {
+      classes.push(`pos-${props.wordData.pos}`);
+    }
   }
   
   return classes.join(' ');
 });
 
 const syntaxStyle = computed(() => {
-  // Only show syntax highlighting for intermediate and advanced
-  if ((props.level === 'intermediate' || props.level === 'advanced') && props.syntaxPhrase) {
+  // Only show syntax highlighting if syntax feature is enabled
+  if (props.features.syntax && props.syntaxPhrase) {
     const colors = {
       'indirect_question': 'rgba(251, 191, 36, 0.25)',
       'relative_clause': 'rgba(147, 51, 234, 0.25)',
@@ -125,12 +130,33 @@ const handleClick = () => {
   border-bottom: 3px solid #a855f7;
 }
 
-/* Special styles for verbs and adverbs */
+/* Part of speech underline styles */
+.word.pos-noun {
+  border-bottom: 3px solid #8b5cf6;
+}
+
 .word.pos-verb {
   border-bottom: 3px dashed #ec4899;
 }
 
-.word.pos-adverb {
+.word.pos-adjective {
   border-bottom: 3px dotted #14b8a6;
+}
+
+.word.pos-adverb {
+  border-bottom: 3px double #f59e0b;
+}
+
+.word.pos-pronoun {
+  text-decoration: wavy underline #06b6d4;
+  text-decoration-thickness: 3px;
+}
+
+.word.pos-preposition {
+  border-bottom: 3px solid #84cc16;
+}
+
+.word.pos-conjunction {
+  border-bottom: 3px solid #a3e635;
 }
 </style>

@@ -2,176 +2,138 @@
   "passage": {
     "title": "Cicero, In Catilinam I.1",
     "author": "Marcus Tullius Cicero",
+    "syntaxPhrases": [
+      {
+        "id": "phrase-1",
+        "type": "indirect_question",
+        "wordIds": [1, 2, 3],
+        "description": "Indirect question introduced by quo usque tandem"
+      }
+    ],
     "text": [
       {
         "id": 1,
         "word": "Quo",
         "lemma": "qui",
         "pos": "adverb",
+        "vocab": "how long? to what point? how far?",
         "morphology": {
           "type": "interrogative_adverb",
+          "grammar": "interrogative adverb",
+          "notes": "Used to ask 'how long' or 'to what extent' - introduces a question",
           "origin": "ablative_singular_neuter_of_quis"
         },
-        "beginner": {
-          "vocab": "how long? to what point? how far?",
-          "grammar": "interrogative adverb",
-          "notes": "Used to ask 'how long' or 'to what extent' - introduces a question"
-        },
-        "intermediate": {
-          "syntax": "interrogative adverb limiting 'usque', forms compound expression 'quo usque'",
-          "style": "Part of emphatic opening question for rhetorical effect"
-        },
-        "advanced": {
-          "rhetoric": "Opens the famous invective with temporal/spatial questioning, building emotional intensity",
-          "etymology": "Originally ablative singular neuter of interrogative pronoun quis, used adverbially"
-        }
+        "syntax": "interrogative adverb limiting 'usque', forms compound expression 'quo usque'",
+        "style": "Part of emphatic opening question for rhetorical effect",
+        "rhetoric": "Opens the famous invective with temporal/spatial questioning, building emotional intensity",
+        "etymology": "Originally ablative singular neuter of interrogative pronoun quis, used adverbially"
       },
       {
         "id": 2,
         "word": "usque",
         "lemma": "usque",
         "pos": "adverb",
+        "vocab": "all the way, right on, as far as, continuously",
         "morphology": {
-          "type": "adverb_of_extent"
-        },
-        "beginner": {
-          "vocab": "all the way, right on, as far as, continuously",
+          "type": "adverb_of_extent",
           "grammar": "adverb of extent in time or place",
           "notes": "Modifies 'quo' to mean 'how long' or 'up to what point'"
         },
-        "intermediate": {
-          "syntax": "Forms compound interrogative 'quo usque' with quo, sometimes written as single word 'quousque'",
-          "style": "Intensifies the temporal questioning"
-        },
-        "advanced": {
-          "rhetoric": "Strengthens the opening interrogation, part of the climactic buildup",
-          "usage": "Can govern accusative as preposition meaning 'as far as, up to'"
-        }
+        "syntax": "Forms compound interrogative 'quo usque' with quo, sometimes written as single word 'quousque'",
+        "style": "Intensifies the temporal questioning",
+        "rhetoric": "Strengthens the opening interrogation, part of the climactic buildup",
+        "etymology": "Can govern accusative as preposition meaning 'as far as, up to'"
       },
       {
         "id": 3,
         "word": "tandem",
         "lemma": "tandem",
         "pos": "adverb",
+        "vocab": "at last, finally, at length",
         "morphology": {
           "type": "temporal_adverb",
+          "grammar": "temporal adverb",
+          "notes": "Emphasizes the question - 'how long AT LAST will you...?'",
           "etymology": "tam + demonstrative_suffix_-dem"
         },
-        "beginner": {
-          "vocab": "at last, finally, at length",
-          "grammar": "temporal adverb",
-          "notes": "Emphasizes the question - 'how long AT LAST will you...?'"
-        },
-        "intermediate": {
-          "syntax": "Strengthens 'quo usque' and emphasizes the whole question for rhetorical effect",
-          "style": "Often stands in close conjunction with other adverbs for emphasis"
-        },
-        "advanced": {
-          "rhetoric": "Corresponds to Greek particle δή for emphasis, creates emotional urgency and exasperation",
-          "literary": "Common in invectives and emotional appeals, sometimes found with imperatives"
-        }
+        "syntax": "Strengthens 'quo usque' and emphasizes the whole question for rhetorical effect",
+        "style": "Often stands in close conjunction with other adverbs for emphasis",
+        "rhetoric": "Corresponds to Greek particle δή for emphasis, creates emotional urgency and exasperation"
       },
       {
         "id": 4,
         "word": "abutere",
         "lemma": "abutor",
         "pos": "verb",
+        "vocab": "you will abuse, misuse, take advantage of",
         "morphology": {
           "person": "2nd",
           "number": "singular",
           "tense": "future",
           "mood": "indicative", 
           "voice": "deponent",
-          "conjugation": "3rd_deponent"
-        },
-        "beginner": {
-          "vocab": "you will abuse, misuse, take advantage of",
+          "conjugation": "3rd_deponent",
           "grammar": "2nd person singular future indicative deponent verb",
           "notes": "Deponent verb - passive form but active meaning. Takes ablative object."
         },
-        "intermediate": {
-          "syntax": "Future tense (not present abuteris) - parallel with following futures eludet, iactabit",
-          "style": "Cicero prefers -re ending over -ris in future indicative passive/deponent"
-        },
-        "advanced": {
-          "rhetoric": "Future tense suggests ongoing, persistent abuse - not just present moment",
-          "grammar": "One of few verbs requiring ablative object (fungor, fruor, utor, abutor, vescor, potior)"
-        }
+        "syntax": "Future tense (not present abuteris) - parallel with following futures eludet, iactabit",
+        "style": "Cicero prefers -re ending over -ris in future indicative passive/deponent",
+        "rhetoric": "Future tense suggests ongoing, persistent abuse - not just present moment"
       },
       {
         "id": 5,
         "word": "Catilina",
         "lemma": "Catilina",
         "pos": "noun",
+        "vocab": "Catiline (name of the conspirator)",
         "morphology": {
           "case": "vocative",
           "number": "singular",
           "gender": "masculine",
-          "declension": "1st"
-        },
-        "beginner": {
-          "vocab": "Catiline (name of the conspirator)",
+          "declension": "1st",
           "grammar": "vocative case - used for direct address",
           "notes": "The person being spoken to directly - 'O Catiline!'"
         },
-        "intermediate": {
-          "syntax": "Vocative case of direct address, creating personal confrontation",
-          "style": "Strategic placement after the verb for dramatic effect"
-        },
-        "advanced": {
-          "rhetoric": "Direct apostrophe to the enemy, making the attack personal and immediate",
-          "historical": "Lucius Sergius Catilina, Roman senator who led conspiracy against the state in 63 BCE"
-        }
+        "syntax": "Vocative case of direct address, creating personal confrontation",
+        "style": "Strategic placement after the verb for dramatic effect",
+        "rhetoric": "Direct apostrophe to the enemy, making the attack personal and immediate"
       },
       {
         "id": 6,
         "word": "patientia",
         "lemma": "patientia",
         "pos": "noun",
+        "vocab": "patience, endurance, forbearance",
         "morphology": {
           "case": "ablative",
           "number": "singular", 
           "gender": "feminine",
-          "declension": "1st"
-        },
-        "beginner": {
-          "vocab": "patience, endurance, forbearance",
+          "declension": "1st",
           "grammar": "ablative case - direct object of the deponent verb abutere",
           "notes": "What Catiline is abusing - 'our patience'"
         },
-        "intermediate": {
-          "syntax": "Ablative object of abutor - one of the verbs requiring ablative instead of accusative",
-          "style": "Delayed until end of clause for emphasis"
-        },
-        "advanced": {
-          "rhetoric": "Personifies Roman restraint as something being violated and exploited",
-          "etymology": "From patiens (present participle of patior 'to suffer, endure')"
-        }
+        "syntax": "Ablative object of abutor - one of the verbs requiring ablative instead of accusative",
+        "style": "Delayed until end of clause for emphasis",
+        "rhetoric": "Personifies Roman restraint as something being violated and exploited",
+        "etymology": "From patiens (present participle of patior 'to suffer, endure')"
       },
       {
         "id": 7,
         "word": "nostra",
         "lemma": "noster",
         "pos": "adjective",
+        "vocab": "our",
         "morphology": {
           "case": "ablative",
           "number": "singular",
           "gender": "feminine",
-          "declension": "1st_and_2nd"
-        },
-        "beginner": {
-          "vocab": "our",
+          "declension": "1st_and_2nd",
           "grammar": "possessive adjective agreeing with patientia",
           "notes": "Shows it's 'our patience' - the Roman people's patience"
         },
-        "intermediate": {
-          "syntax": "Possessive adjective in agreement with patientia (ablative singular feminine)",
-          "style": "Emphasizes collective Roman identity against individual threat"
-        },
-        "advanced": {
-          "rhetoric": "Creates us-versus-him dynamic, appeals to collective Roman values and solidarity",
-          "political": "Implies Cicero speaks for all Romans, establishing his authority as defender of state"
-        }
+        "syntax": "Possessive adjective in agreement with patientia (ablative singular feminine)",
+        "style": "Emphasizes collective Roman identity against individual threat",
+        "rhetoric": "Creates us-versus-him dynamic, appeals to collective Roman values and solidarity"
       }
     ]
   }

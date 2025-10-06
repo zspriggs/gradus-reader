@@ -1,45 +1,65 @@
 <template>
   <div class="app-container">
-    <h1 class="main-title">Interactive Latin Commentary</h1>
-    
-    <DifficultySelector 
-      :level="difficulty" 
-      @level-change="handleLevelChange" 
-    />
-    
-    <div class="passage-container">
-      <h2 class="passage-title">{{ passageData.passage.title }}</h2>
-      <div class="passage-text">
-        <Word
-          v-for="word in passageData.passage.text"
-          :key="word.id"
-          :word-data="word"
-          :level="difficulty"
-          :is-selected="selectedWord?.id === word.id"
-          :syntax-phrase="getSyntaxPhraseForWord(word.id)"
-          @word-click="handleWordClick"
+    <!-- Sidebar toggle -->
+    <button 
+      class="sidebar-toggle" 
+      @click="sidebarOpen = !sidebarOpen"
+      :class="{ 'sidebar-open': sidebarOpen }"
+    >
+      <span v-if="!sidebarOpen">⚙️ Display Options</span>
+      <span v-else>✕</span>
+    </button>
+
+    <!-- Sidebar -->
+    <div class="sidebar" :class="{ 'open': sidebarOpen }">
+      <div class="sidebar-content">
+        <FeatureSelector 
+          :features="features" 
+          @toggle-feature="handleToggleFeature" 
         />
       </div>
-      
-      <div v-if="difficulty === 'beginner'" class="tip-text">
-        💡 <strong>Tip:</strong> Colored underlines show grammatical cases. Click any word for details!
-      </div>
-      <div v-else-if="difficulty === 'intermediate'" class="tip-text">
-        💡 <strong>Tip:</strong> Colored backgrounds show syntax phrases. Underlines show cases. Click for details!
-      </div>
     </div>
+
+    <!-- Overlay for mobile -->
+    <div 
+      v-if="sidebarOpen" 
+      class="sidebar-overlay"
+      @click="sidebarOpen = false"
+    ></div>
+
+    <div class="main-content" :class="{'sidebar-open': sidebarOpen}"></div>
+      <h1 class="main-title">Latin Commentary</h1>
+
+      <div class="passage-container">
+        <h2 class="passage-title">{{ passageData.passage.title }}</h2>
+        <div class="passage-text">
+          <Word
+            v-for="word in passageData.passage.text"
+            :key="word.id"
+            :word-data="word"
+            :features="features"
+            :is-selected="selectedWord?.id === word.id"
+            :syntax-phrase="getSyntaxPhraseForWord(word.id)"
+            @word-click="handleWordClick"
+          />
+        </div>
+      
+        <div class="tip-text">
+          💡 <strong>Tip:</strong> Toggle display options to customize your view. Click any word for detailed annotations!
+        </div>
+      </div>
     
     <AnnotationPanel 
       v-if="selectedWord"
       :word="selectedWord" 
-      :level="difficulty" 
+      :features="features" 
     />
     
     <!-- Legend -->
     <div class="legend-container">
       <h3>Legend</h3>
-      <div class="legend-section">
-        <h4>Morphology (Underlines):</h4>
+      <div v-if="features.caseHighlight" class="legend-section">
+        <h4>Cases (Underlines):</h4>
         <div class="legend-items">
           <div class="legend-item">
             <span class="legend-example case-nominative">text</span>
@@ -65,17 +85,34 @@
             <span class="legend-example case-vocative">text</span>
             <span>Vocative</span>
           </div>
+        </div>
+      </div>
+      <div v-if="features.posHighlight" class="legend-section">
+        <h4>Parts of Speech (Underlines):</h4>
+        <div class="legend-items">
+          <div class="legend-item">
+            <span class="legend-example pos-noun">text</span>
+            <span>Noun (solid)</span>
+          </div>
           <div class="legend-item">
             <span class="legend-example pos-verb">text</span>
             <span>Verb (dashed)</span>
           </div>
           <div class="legend-item">
+            <span class="legend-example pos-adjective">text</span>
+            <span>Adjective (dotted)</span>
+          </div>
+          <div class="legend-item">
             <span class="legend-example pos-adverb">text</span>
-            <span>Adverb (dotted)</span>
+            <span>Adverb (double)</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-example pos-pronoun">text</span>
+            <span>Pronoun (wavy)</span>
           </div>
         </div>
       </div>
-      <div v-if="difficulty === 'intermediate' || difficulty === 'advanced'" class="legend-section">
+      <div v-if="features.syntax" class="legend-section">
         <h4>Syntax (Highlights):</h4>
         <div class="legend-items">
           <div class="legend-item">
@@ -101,25 +138,39 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue';
-import DifficultySelector from './components/DifficultySelector.vue';
+import { ref, reactive } from 'vue';
+import FeatureSelector from './components/FeatureSelector.vue';
 import Word from './components/Word.vue';
 import AnnotationPanel from './components/AnnotationPanel.vue';
-import passageData from './data/cicero-catiline-1.json';
+import passageData from './data/cicero-1.json';
 
 const selectedWord = ref(null);
-const difficulty = ref('beginner');
+const sidebarOpen=ref(true);
+
+const features = reactive({
+  // Visual highlighting
+  caseHighlight: true,
+  posHighlight: false,
+  syntax: false,
+  
+  // Annotation content
+  vocab: true,
+  morphology: true,
+  style: false,
+  rhetoric: false,
+  etymology: false
+});
 
 const handleWordClick = (word) => {
   selectedWord.value = word;
 };
 
-const handleLevelChange = (newLevel) => {
-  difficulty.value = newLevel;
+const handleToggleFeature = (featureName) => {
+  features[featureName] = !features[featureName];
 };
 
 const getSyntaxPhraseForWord = (wordId) => {
-  if (difficulty.value === 'beginner') return null;
+  if (!features.syntax) return null;
   
   return passageData.passage.syntaxPhrases?.find(phrase => 
     phrase.wordIds.includes(wordId)
@@ -128,11 +179,116 @@ const getSyntaxPhraseForWord = (wordId) => {
 </script>
 
 <style>
+* {
+  box-sizing: border-box;
+}
+
 .app-container {
+  position: relative;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
+/* Sidebar toggle button */
+.sidebar-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+  padding: 10px 16px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s;
+}
+
+.sidebar-toggle:hover {
+  background-color: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 8px -1px rgba(0, 0, 0, 0.15);
+}
+
+.sidebar-toggle.sidebar-open {
+  background-color: #ef4444;
+}
+
+.sidebar-toggle.sidebar-open:hover {
+  background-color: #dc2626;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -350px;
+  width: 350px;
+  height: 100vh;
+  background-color: white;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.sidebar.open {
+  right: 0;
+}
+
+.sidebar-content {
+  padding: 80px 20px 20px 20px;
+}
+
+.sidebar-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #374151;
+}
+
+/* Sidebar overlay for mobile */
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
+}
+
+/* Main content */
+.main-content {
   max-width: 1024px;
   margin: 0 auto;
   padding: 24px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  transition: margin-left 0.3s ease;
+}
+
+@media (min-width: 1200px) {
+  .main-content.sidebar-open {
+    margin-right: 175px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 300px;
+    right: -300px;
+  }
+  
+  .sidebar-overlay {
+    display: block;
+  }
+  
+  .main-content.sidebar-open {
+    margin-right: 0;
+  }
 }
 
 .main-title {
@@ -241,12 +397,27 @@ const getSyntaxPhraseForWord = (wordId) => {
   border-bottom: 3px solid #a855f7;
 }
 
+/* POS styles for legend */
+.legend-example.pos-noun {
+  border-bottom: 3px solid #8b5cf6;
+}
+
 .legend-example.pos-verb {
   border-bottom: 3px dashed #ec4899;
 }
 
-.legend-example.pos-adverb {
+.legend-example.pos-adjective {
   border-bottom: 3px dotted #14b8a6;
+}
+
+.legend-example.pos-adverb {
+  border-bottom: 3px double #f59e0b;
+}
+
+.legend-example.pos-pronoun {
+  border-bottom: 3px wavy #06b6d4;
+  text-decoration: wavy underline #06b6d4;
+  text-decoration-thickness: 3px;
 }
 
 /* Syntax phrase colors for legend */
