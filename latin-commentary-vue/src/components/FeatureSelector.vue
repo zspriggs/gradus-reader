@@ -3,6 +3,16 @@
     <h3>Display Options:</h3>
     <div class="feature-toggles">
       <div class="feature-group">
+        <h4> Morphology Annotations </h4>
+        <input 
+          type="checkbox" 
+          id="annotations-toggle" 
+          :checked="features.annotations"
+          @change="handleToggle('annotations')"
+        />
+      </div>
+
+      <div class="feature-group">
         <h4>Visual Highlighting</h4>
         <label 
           v-for="feature in visualFeatures"

@@ -13,13 +13,51 @@
     
     <!-- Morphology -->
     <div v-if="features.morphology && word.morphology">
-      <div v-if="word.morphology.grammar" class="annotation-section">
-        <span class="annotation-label morphology">Grammar:</span>
-        <p class="annotation-text">{{ word.morphology.grammar }}</p>
+      <div v-if="word.morphology.pos" class="annotation-section">
+        <span class="annotation-label morphology">Part of Speech:
+          <span class="annotation-text">{{ word.morphology.pos }}</span>
+        </span>
       </div>
-      <div v-if="word.morphology.notes" class="annotation-section">
-        <span class="annotation-label morphology">Notes:</span>
-        <p class="annotation-text">{{ word.morphology.notes }}</p>
+      <div v-if="word.morphology.case" class="annotation-section">
+        <span class="annotation-label morphology">Case:
+          <span class="annotation-text">{{ word.morphology.case }}</span>
+        </span>
+      </div>
+      <div v-if="word.morphology.number" class="annotation-section">
+        <span class="annotation-label morphology">Number:
+          <span class="annotation-text">{{ word.morphology.number }}</span>
+        </span>
+      </div>
+      <div v-if="word.morphology.gender" class="annotation-section">
+        <span class="annotation-label morphology">Gender:
+          <span class="annotation-text">{{ word.morphology.gender }}</span>
+        </span>
+      </div>
+      <div v-if="word.morphology.degree" class="annotation-section">
+        <span class="annotation-label morphology">Degree:
+          <span class="annotation-text">{{ word.morphology.degree }}</span>
+        </span>
+      </div>
+
+      <div v-if="word.morphology.person" class="annotation-section">
+        <span class="annotation-label morphology">Person:
+          <span class="annotation-text">{{ word.morphology.person }}</span>
+        </span>
+      </div>
+      <div v-if="word.morphology.tense" class="annotation-section">
+        <span class="annotation-label morphology">Tense:
+          <span class="annotation-text">{{ word.morphology.tense }}</span>
+        </span>
+      </div>
+      <div v-if="word.morphology.mood" class="annotation-section">
+        <span class="annotation-label morphology">Mood:
+          <span class="annotation-text">{{ word.morphology.mood }}</span>
+        </span>
+      </div>
+      <div v-if="word.morphology.voice" class="annotation-section">
+        <span class="annotation-label morphology">Voice:
+          <span class="annotation-text">{{ word.morphology.voice }}</span>
+        </span> 
       </div>
     </div>
     

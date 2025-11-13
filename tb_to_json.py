@@ -4,7 +4,7 @@ import pandas as pd
 import json
 
 
-postag_mappings_latin = {
+postag_names_latin = {
     #NOTE 'r' is technically "adposition"
     'pos': {
         'n': 'noun', 'v': 'verb', 'a': 'adjective',
@@ -31,7 +31,7 @@ postag_mappings_latin = {
     'degree': {'p': 'positive', 'c': 'comparative', 's': 'superlative'}
 }
 
-postag_mappings_greek = {
+postag_names_greek = {
     'pos': {
         'n': 'noun', 'v': 'verb', 't': 'participle', 'a': 'adjective',
         'd': 'adverb', 'l': 'article', 'g': 'particle', 'c': 'conjunction',
@@ -57,6 +57,11 @@ postag_mappings_greek = {
     'degree': {'c': 'comparative', 's': 'superlative'}
 }
 
+postag_mappings = [
+    ('pos', 0), ('person', 1), ('number', 2), ('tense', 3),
+    ('mood', 4), ('voice', 5), ('gender', 6), ('case', 7), ('degree', 8)
+]
+
 urn_mappings_greek = pd.read_csv('greek_urns.csv', dtype={"URN": str})
 urn_mappings_latin = None
 
@@ -73,9 +78,9 @@ def parse_postag(postag: str, lang='Latin') -> Dict[str, Optional[str]]:
 
     postag_mappings={}
     if lang == 'Latin':
-        postag_mappings = postag_mappings_latin
+        postag_mappings = postag_names_latin
     elif lang == 'Greek':
-        postag_mappings = postag_mappings_greek
+        postag_mappings = postag_names_greek
     
     for feature_name, index in mappings:
         char = postag[index]
@@ -118,7 +123,7 @@ def get_annotations(file: str) -> Dict:
     }
     unique_id = 0
     current_subdoc = None
-    subdoc_words = {}
+    subdoc_words = []
 
     #get document metadata
 
@@ -128,7 +133,7 @@ def get_annotations(file: str) -> Dict:
         elif current_subdoc != sentence.get('subdoc'): #entering new subdoc
             doc['text'][current_subdoc] = subdoc_words
             current_subdoc = sentence.get('subdoc')
-            subdoc_words = {} #reset for new subdoc
+            subdoc_words = [] #reset for new subdoc
 
         for word in sentence.findall('.//word'):
             #    <word id="9201802" form="μῆνιν" lemma="μῆνις" postag="n-s---fa-" head="9201803" relation="OBJ" line="1"/>
@@ -138,30 +143,28 @@ def get_annotations(file: str) -> Dict:
             form = word.get('form')
             lemma = word.get('lemma')
             postag = word.get('postag')
-            # if postag and postag[0] == 'u':
-            #     continue
-
-            subdoc_words[unique_id] = {
-                "form": form,
-                "lemma": lemma,
-                "postag": postag
-            }
+            if postag and postag[0] == 'u': #if punctuation, append to last word
+                subdoc_words[-1]["form"] += form
+                continue
+            
+            #TODO: handle enclitics
 
             morphology = {}
             if len(postag) < 9:
                 postag = postag.ljust(9, '-')
-    
-            mappings = [
-                ('pos', 0), ('person', 1), ('number', 2), ('tense', 3),
-                ('mood', 4), ('voice', 5), ('gender', 6), ('case', 7), ('degree', 8)
-            ]
             
-            for feature_name, index in mappings:
+            for feature_name, index in postag_mappings:
                 char = postag[index]
                 if char != '-':
-                    morphology[feature_name] = postag_mappings_latin[feature_name].get(char)
+                    morphology[feature_name] = postag_names_latin[feature_name].get(char)
 
-            subdoc_words[unique_id]["morphology"] = morphology
+            subdoc_words.append({
+                "uid": unique_id,
+                "form": form,
+                "lemma": lemma,
+                "postag": postag,
+                "morphology": morphology
+            })
 
 
     with open(f"{file}.json", "w") as f:

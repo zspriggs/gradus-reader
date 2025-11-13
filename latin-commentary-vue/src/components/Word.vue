@@ -4,7 +4,7 @@
     :style="syntaxStyle"
     @click="handleClick"
   >
-    {{ wordData.word }}
+    {{ wordData.form }}
   </span>
 </template>
 
@@ -51,8 +51,8 @@ const wordClasses = computed(() => {
   
   // POS highlighting
   if (props.features.posHighlight) {
-    if (props.wordData.pos) {
-      classes.push(`pos-${props.wordData.pos}`);
+    if (props.wordData.morphology?.pos) {
+      classes.push(`pos-${props.wordData.morphology?.pos}`);
     }
   }
   

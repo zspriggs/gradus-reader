@@ -6,7 +6,7 @@
       @click="sidebarOpen = !sidebarOpen"
       :class="{ 'sidebar-open': sidebarOpen }"
     >
-      <span v-if="!sidebarOpen">⚙️ Display Options</span>
+      <span v-if="!sidebarOpen">⚙️ Settings</span>
       <span v-else>✕</span>
     </button>
 
@@ -27,19 +27,19 @@
       @click="sidebarOpen = false"
     ></div>
 
-    <div class="main-content" :class="{'sidebar-open': sidebarOpen}"></div>
-      <h1 class="main-title">Latin Commentary</h1>
+    <div class="main-content" :class="{'sidebar-open': sidebarOpen}">
+      <h1 class="main-title">Juno</h1>
 
       <div class="passage-container">
-        <h2 class="passage-title">{{ passageData.passage.title }}</h2>
+        <h2 class="passage-title">{{ passageData.passage.title}}</h2>
         <div class="passage-text">
           <Word
-            v-for="word in passageData.passage.text"
-            :key="word.id"
+            v-for="word in passageData.text.one"
+            :key="word.uid"
             :word-data="word"
             :features="features"
-            :is-selected="selectedWord?.id === word.id"
-            :syntax-phrase="getSyntaxPhraseForWord(word.id)"
+            :is-selected="selectedWord?.uid === word.uid"
+            :syntax-phrase="getSyntaxPhraseForWord(word.uid)"
             @word-click="handleWordClick"
           />
         </div>
@@ -50,9 +50,16 @@
       </div>
     
     <AnnotationPanel 
-      v-if="selectedWord"
+      v-if="selectedWord && !features.annotation"
       :word="selectedWord" 
       :features="features" 
+    />
+
+    <MorphAnnotator
+      v-if="selectedWord && features.annotation"
+      :wordData="selectedWord" 
+      :features="features"
+      @close="selectedWord = null" 
     />
     
     <!-- Legend -->
@@ -135,6 +142,7 @@
       </div>
     </div>
   </div>
+  </div>
 </template>
 
 <script setup>
@@ -142,12 +150,15 @@ import { ref, reactive } from 'vue';
 import FeatureSelector from './components/FeatureSelector.vue';
 import Word from './components/Word.vue';
 import AnnotationPanel from './components/AnnotationPanel.vue';
-import passageData from './data/cicero-1.json';
+import passageData from './data/generated-cicero.json';
+import MorphAnnotator from './components/MorphAnnotator.vue';
 
 const selectedWord = ref(null);
 const sidebarOpen=ref(true);
 
 const features = reactive({
+  annotations: true,
+  
   // Visual highlighting
   caseHighlight: true,
   posHighlight: false,
