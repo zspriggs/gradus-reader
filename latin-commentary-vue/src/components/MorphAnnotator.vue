@@ -16,7 +16,7 @@
           }"
         >
           <div class="popover-header">
-            <h3 class="popover-title">{{ selectedWord.text }}</h3>
+            <h3 class="popover-title">{{ props.wordData.form }}</h3>
             <button
               @click="handleClose"
               class="close-button"
@@ -269,7 +269,7 @@ const validateAnnotation = () => {
       isCorrect: true,
       message: `Correct! ${filledFeatures.map(f => featureLabels[f]).join(', ')} ✓`,
       checkedFeatures: filledFeatures,
-      word: props.wordData.text,
+      word: props.wordData.form,
       annotations: { ...annotations.value }
     };
     validationResult.value = result;
@@ -278,14 +278,20 @@ const validateAnnotation = () => {
   } else {
     const correctValues = {};
     incorrectFeatures.forEach(key => {
-      correctValues[key] = correctAnswer[key];
+      if (!correctAnswer[key]) {
+        correctValues[key] = "N/A"
+      }
+      else {
+        correctValues[key] = correctAnswer[key];
+      }
+
     });
     
     const result = {
       isCorrect: false,
       message: `Incorrect: ${incorrectFeatures.map(f => featureLabels[f]).join(', ')}`,
       correctValues,
-      word: props.wordData.text,
+      word: props.wordData.form,
       annotations: { ...annotations.value }
     };
     validationResult.value = result;

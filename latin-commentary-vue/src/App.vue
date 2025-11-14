@@ -1,5 +1,11 @@
 <template>
   <div class="app-container">
+    <MorphAnnotator
+      v-if="selectedWord && features.annotation"
+      :wordData="selectedWord" 
+      :features="features"
+      @close="selectedWord = null" 
+    />
     <!-- Sidebar toggle -->
     <button 
       class="sidebar-toggle" 
@@ -53,13 +59,6 @@
       v-if="selectedWord && !features.annotation"
       :word="selectedWord" 
       :features="features" 
-    />
-
-    <MorphAnnotator
-      v-if="selectedWord && features.annotation"
-      :wordData="selectedWord" 
-      :features="features"
-      @close="selectedWord = null" 
     />
     
     <!-- Legend -->
@@ -157,7 +156,7 @@ const selectedWord = ref(null);
 const sidebarOpen=ref(true);
 
 const features = reactive({
-  annotations: true,
+  annotation: true,
   
   // Visual highlighting
   caseHighlight: true,

@@ -6,9 +6,9 @@
         <h4> Morphology Annotations </h4>
         <input 
           type="checkbox" 
-          id="annotations-toggle" 
-          :checked="features.annotations"
-          @change="handleToggle('annotations')"
+          id="annotation-toggle" 
+          :checked="features.annotation"
+          @change="handleToggle('annotation')"
         />
       </div>
 
@@ -136,6 +136,7 @@ const setPreset = (presetName) => {
       etymology: false
     },
     intermediate: {
+      annotation: true,
       caseHighlight: true,
       posHighlight: false,
       syntax: true,
@@ -146,6 +147,7 @@ const setPreset = (presetName) => {
       etymology: false
     },
     advanced: {
+      annotation: true,
       caseHighlight: false,
       posHighlight: false,
       syntax: true,
