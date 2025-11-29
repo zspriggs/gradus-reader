@@ -68,10 +68,17 @@
                 Check
               </button>
               <button
+              @click="addAnnotation" 
+              :disabled="!canAddAnnotation" 
+              :class="{ 'button-disabled': !canAddAnnotation }"
+              >
+                Add Annotation
+              </button>
+              <button
                 @click="handleClose"
                 class="btn btn-secondary"
               >
-                Skip
+                Finish
               </button>
             </div>
 
@@ -137,7 +144,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, nextTick } from 'vue';
+import { ref, onMounted, nextTick, computed } from 'vue';
 
 const props = defineProps({
   wordData: {
@@ -183,7 +190,22 @@ const featureLabels = {
 const isOpen = ref(false);
 const annotations = ref({});
 const validationResult = ref(null);
+const lastValidationResult = ref(null);
 const popoverPosition = ref({ top: 0, left: 0 });
+
+const canAddAnnotation = computed(() => {
+  // button enabled iff the last time validation ran, it found >= 1 correct feat
+  // and also there's no new stale (unvalidated) data
+  const lastResult = lastValidationResult.value;
+  if (!lastResult) {
+    return false;
+  }
+
+  const isStale = lastResult.correctFeatures.some(key => 
+    lastResult.annotations[key] !== annotations.value[key]
+  );
+  return !isStale;
+});
 
 const calculatePosition = () => {
   // Find the word element in the DOM
@@ -233,71 +255,112 @@ const handleClose = () => {
   emit('close');
 };
 
-const validateAnnotation = () => {
+//helper func with check logic
+const checkAnnotation = () => {
   const correctAnswer = props.wordData.morphology;
-  
   if (!correctAnswer) {
-    validationResult.value = {
+    return {
       isCorrect: false,
       message: "No morphology data available for this word"
     };
-    return;
   }
-
-  // Get only the features the user filled in
-  const filledFeatures = Object.keys(annotations.value).filter(key => annotations.value[key]);
   
+  const filledFeatures = Object.keys(annotations.value).filter(key => annotations.value[key]);
   if (filledFeatures.length === 0) {
-    validationResult.value = {
+    return {
       isCorrect: false,
       message: "Please select at least one feature to check"
     };
-    return;
   }
-
-  // Check only the features they filled in
+  
   const allCorrect = filledFeatures.every(key => 
+    annotations.value[key] === correctAnswer[key]
+  );
+  
+  const correctFeatures = filledFeatures.filter(key => 
     annotations.value[key] === correctAnswer[key]
   );
 
   const incorrectFeatures = filledFeatures.filter(key => 
     annotations.value[key] !== correctAnswer[key]
   );
+  
+  const baseResult = {
+    word: props.wordData.form,
+    checkedFeatures: filledFeatures,
+    correctFeatures,
+    incorrectFeatures,
+    annotations: { ...annotations.value }
+  };
 
   if (allCorrect) {
-    const result = {
+    return {
+      ...baseResult,
       isCorrect: true,
-      message: `Correct! ${filledFeatures.map(f => featureLabels[f]).join(', ')} ✓`,
-      checkedFeatures: filledFeatures,
-      word: props.wordData.form,
-      annotations: { ...annotations.value }
+      message: `Correct! ${filledFeatures.map(f => featureLabels[f]).join(', ')} ✓`
     };
-    validationResult.value = result;
-    emit('annotation-checked', result);
-    emit('annotation-correct', result);
   } else {
+    // Collect correct values for incorrect features for feedback
     const correctValues = {};
     incorrectFeatures.forEach(key => {
-      if (!correctAnswer[key]) {
-        correctValues[key] = "N/A"
-      }
-      else {
-        correctValues[key] = correctAnswer[key];
-      }
-
+      correctValues[key] = correctAnswer[key] || "N/A";
     });
-    
-    const result = {
+
+    return {
+      ...baseResult,
       isCorrect: false,
       message: `Incorrect: ${incorrectFeatures.map(f => featureLabels[f]).join(', ')}`,
-      correctValues,
-      word: props.wordData.form,
-      annotations: { ...annotations.value }
+      correctValues
     };
-    validationResult.value = result;
-    emit('annotation-checked', result);
+  }
+};
+
+const validateAnnotation = () => {
+  const result = checkAnnotation();
+
+  validationResult.value = result; 
+
+  if (result.correctFeatures && result.correctFeatures.length > 0) {
+    lastValidationResult.value = result;
+  }
+  else {
+    lastValidationResult.value = null;
+  }
+
+  emit('annotation-checked', result);
+  if (result.isCorrect) {
+    emit('annotation-correct', result);
+  } else {
     emit('annotation-incorrect', result);
   }
+};
+
+const addAnnotation = () => {
+  const result = lastValidationResult.value;
+  //const result = checkAnnotation();
+
+  if (!result || result.correctFeatures.length === 0) {
+    validationResult.value = {
+      isCorrect: false,
+      message: "You must select at least one feature correctly before adding the annotation."
+    };
+    return;
+  }
+
+  const annotation = {
+    word: props.wordData.form,
+    features: result.correctFeatures.reduce((acc, key) => {
+      acc[key] = result.annotations[key]; 
+      return acc;
+    }, {})
+  }
+
+  emit('annotation-added', annotation);
+
+  //reset state so user must re-validate to add new annotaiton
+  lastValidationResult.value = null;
+  
+  return;
 };
 </script>
 
