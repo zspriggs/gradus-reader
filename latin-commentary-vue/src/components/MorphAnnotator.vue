@@ -158,7 +158,7 @@ const props = defineProps({
   }
 });
 
-const emit = defineEmits(['close', 'annotation-checked', 'annotation-correct', 'annotation-incorrect']);
+const emit = defineEmits(['close', 'annotation-checked', 'annotation-correct', 'annotation-incorrect', 'annotation-added']);
 
 // Latin morphological feature options
 const morphologyOptions = {
@@ -336,10 +336,12 @@ const validateAnnotation = () => {
 };
 
 const addAnnotation = () => {
+  console.log('WAZZUP')
   const result = lastValidationResult.value;
   //const result = checkAnnotation();
 
-  if (!result || result.correctFeatures.length === 0) {
+  if (!result || result.correctFeatures?.length === 0) {
+    console.log("result issue")
     validationResult.value = {
       isCorrect: false,
       message: "You must select at least one feature correctly before adding the annotation."
@@ -349,6 +351,7 @@ const addAnnotation = () => {
 
   const annotation = {
     word: props.wordData.form,
+    uid: props.wordData.uid,
     features: result.correctFeatures.reduce((acc, key) => {
       acc[key] = result.annotations[key]; 
       return acc;
@@ -356,6 +359,7 @@ const addAnnotation = () => {
   }
 
   emit('annotation-added', annotation);
+  console.log('emitted annotation');
 
   //reset state so user must re-validate to add new annotaiton
   lastValidationResult.value = null;

@@ -59,6 +59,7 @@
       v-if="selectedWord && !features.annotation"
       :word="selectedWord" 
       :features="features" 
+      @annotation-added="handleAnnotationAdded"
     />
     
     <!-- Legend -->
@@ -153,7 +154,7 @@ import passageData from './data/generated-cicero.json';
 import MorphAnnotator from './components/MorphAnnotator.vue';
 
 const selectedWord = ref(null);
-const sidebarOpen=ref(true);
+const sidebarOpen = ref(true);
 
 const features = reactive({
   annotation: true,
@@ -170,6 +171,20 @@ const features = reactive({
   rhetoric: false,
   etymology: false
 });
+
+const handleAnnotationAdded = (newAnnotation) => {
+  const targetWord  = passageData.text.one.find(w => w.uid === newAnnotation.uid);
+  if (targetWord) {
+    targetWord.annotations = targetWord.annotations || []
+    targetWord.annotations.push(newAnnotation.features);
+  }
+  console.log("added annotation")
+};
+
+const formatFeatures = (features) => {
+  //TODO: Feature formatting
+  return;
+};
 
 const handleWordClick = (word) => {
   selectedWord.value = word;

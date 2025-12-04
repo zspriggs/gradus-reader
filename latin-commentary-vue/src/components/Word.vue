@@ -3,8 +3,19 @@
     :class="wordClasses"
     :style="syntaxStyle"
     @click="handleClick"
+    class="word-wrapper"
   >
-    {{ wordData.form }}
+    <span class="word-form">{{ wordData.form }}</span>
+
+    <div v-if="wordData.annotations?.length" class="inline-annotations">
+      <span
+        v-for="(annotation, index) in wordData.annotations"
+        :key="index"
+        class="annotation-tag"
+      >
+        {{ abbreviateFeatures(annotation) }}
+      </span>
+    </div>
   </span>
 </template>
 
@@ -77,17 +88,43 @@ const syntaxStyle = computed(() => {
       padding: '2px 0'
     };
   }
-  return {};
+  return {}
 });
 
 const handleClick = () => {
   emit('word-click', props.wordData);
 };
+
+const abbreviateFeatures = (features) => {
+  if (!features) return '';
+
+  console.log('here i am')
+  //TODO refactor into utils file? 
+  //TODO add greek!
+  const abbreviationMap = {
+    gender: { masculine: 'm', feminine: 'f', neuter: 'n' },
+    number: { singular: 'sg', plural: 'pl' },
+    case: { nominative: 'nom', genitive: 'gen', dative: 'dat', accusative: 'acc', ablative: 'abl'},
+    tense: { present: 'pres', future: 'fut', imperfect: 'impf', perfect: 'pf', 
+      futureperfect: 'fpf', pluperfect: 'plpf'},
+    mood: {indicative: 'indic', subjunctive: 'subj', imperative: 'imper', infinitive: 'inf'},
+    voice: {active: 'act', passive: 'pass'},
+    person: {1: '1', 2: '2', 3: '3'} //fix this prolly
+  };
+
+  const abbreviations = [];
+  for(const [key, value] of Object.entries(features)) {
+    const abbr = abbreviationMap[key]?.[value] || value;
+    abbreviations.push(abbr)
+  }
+  return abbreviations.join(' ');
+};
 </script>
 
 <style scoped>
-.word {
-  display: inline-block;
+.word-wrapper {
+  display: inline-flex;
+  flex-direction: column;
   padding: 2px 4px;
   margin: 0 2px;
   border-radius: 4px;
@@ -95,47 +132,66 @@ const handleClick = () => {
   transition: all 0.2s ease;
 }
 
-.word:hover {
+.inline-annotations {
+  /* Keeps the annotation tags close together and small */
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 2px; 
+  margin-top: -2px; /* Pulls the annotations up closer to the word */
+  min-height: 10px; /* Optional: reserve a little space even if empty to prevent jumping */
+}
+
+.annotation-tag {
+  font-size: 0.65rem; 
+  color: white;
+  background-color: #4a90e2; 
+  padding: 1px 3px;
+  border-radius: 3px;
+  line-height: 1; 
+  white-space: nowrap; 
+}
+
+.word-wrapper:hover {
   background-color: rgba(59, 130, 246, 0.15);
   transform: translateY(-1px);
 }
 
-.word.selected {
+.word-wrapper.selected {
   background-color: rgba(59, 130, 246, 0.3) !important;
   box-shadow: 0 0 0 2px #3b82f6;
 }
 
 /* Case-based underline colors (for nouns/adjectives) */
-.word.case-nominative {
+.word-wrapper.case-nominative {
   border-bottom: 3px solid #ef4444;
 }
 
-.word.case-genitive {
+.word-wrapper.case-genitive {
   border-bottom: 3px solid #f59e0b;
 }
 
-.word.case-dative {
+.word-wrapper.case-dative {
   border-bottom: 3px solid #eab308;
 }
 
-.word.case-accusative {
+.word-wrapper.case-accusative {
   border-bottom: 3px solid #22c55e;
 }
 
-.word.case-ablative {
+.word-wrapper.case-ablative {
   border-bottom: 3px solid #3b82f6;
 }
 
-.word.case-vocative {
+.word-wrapper.case-vocative {
   border-bottom: 3px solid #a855f7;
 }
 
 /* Part of speech underline styles */
-.word.pos-noun {
+.word-wrapper.pos-noun {
   border-bottom: 3px solid #8b5cf6;
 }
 
-.word.pos-verb {
+.word-wrapper.pos-verb {
   border-bottom: 3px dashed #ec4899;
 }
 
@@ -158,5 +214,6 @@ const handleClick = () => {
 
 .word.pos-conjunction {
   border-bottom: 3px solid #a3e635;
-}
+} 
+
 </style>
