@@ -4,8 +4,10 @@
       v-if="selectedWord && features.annotation"
       :wordData="selectedWord" 
       :features="features"
-      @close="selectedWord = null" 
+      @close="selectedWord = null"
+      @annotation-added="handleAnnotationAdded" 
     />
+
     <!-- Sidebar toggle -->
     <button 
       class="sidebar-toggle" 
@@ -13,7 +15,7 @@
       :class="{ 'sidebar-open': sidebarOpen }"
     >
       <span v-if="!sidebarOpen">⚙️ Settings</span>
-      <span v-else>✕</span>
+      <span v-else>x</span>
     </button>
 
     <!-- Sidebar -->
@@ -22,6 +24,24 @@
         <FeatureSelector 
           :features="features" 
           @toggle-feature="handleToggleFeature" 
+        />
+      </div>
+    </div>
+
+    <!--Document selector toggle-->
+    <button
+      class="docselector-toggle"
+      @click="docselectorOpen = !docselectorOpen"
+      :class="{'docselector-open': docselectorOpen}"
+    >
+      <span v-if="!docselectorOpen"> Documents</span>
+      <span v-else>x</span>
+    </button>
+
+    <div class="docselector" :class="{ 'open': docselectorOpen }">
+      <div class="docselector-content">
+        <DocumentSelector
+          @selectDocument="handleDocumentChange" 
         />
       </div>
     </div>
@@ -36,11 +56,20 @@
     <div class="main-content" :class="{'sidebar-open': sidebarOpen}">
       <h1 class="main-title">Juno</h1>
 
+      <button class="prev-button"
+        @click="prevSection"
+      ><-</button>
+
+      <button class="next-button"
+        @click="nextSection"
+      >-></button>
+
+
       <div class="passage-container">
         <h2 class="passage-title">{{ passageData.passage.title}}</h2>
         <div class="passage-text">
           <Word
-            v-for="word in passageData.text.one"
+            v-for="word in passageData.text[currentSection]"
             :key="word.uid"
             :word-data="word"
             :features="features"
@@ -59,7 +88,6 @@
       v-if="selectedWord && !features.annotation"
       :word="selectedWord" 
       :features="features" 
-      @annotation-added="handleAnnotationAdded"
     />
     
     <!-- Legend -->
@@ -146,15 +174,22 @@
 </template>
 
 <script setup>
-import { ref, reactive } from 'vue';
+import { ref, reactive, computed } from 'vue';
 import FeatureSelector from './components/FeatureSelector.vue';
 import Word from './components/Word.vue';
 import AnnotationPanel from './components/AnnotationPanel.vue';
-import passageData from './data/generated-cicero.json';
 import MorphAnnotator from './components/MorphAnnotator.vue';
+import DocumentSelector from './components/DocumentSelector.vue';
 
+import passageDataRaw from './data/generated-cicero.json';
+
+const passageData = reactive(passageDataRaw);
+
+const currentSection = ref('1.1');
+const availableSections = computed(() => Object.keys(passageData.text));
 const selectedWord = ref(null);
-const sidebarOpen = ref(true);
+const sidebarOpen = ref(false);
+const docselectorOpen=ref(false);
 
 const features = reactive({
   annotation: true,
@@ -173,18 +208,35 @@ const features = reactive({
 });
 
 const handleAnnotationAdded = (newAnnotation) => {
-  const targetWord  = passageData.text.one.find(w => w.uid === newAnnotation.uid);
+  const targetWord  = passageData.text[currentSection].find(w => w.uid === newAnnotation.uid);
   if (targetWord) {
-    targetWord.annotations = targetWord.annotations || []
-    targetWord.annotations.push(newAnnotation.features);
+    targetWord.annotations = {
+      ...targetWord.annotations,
+      ...newAnnotation.features
+    }
+    console.log("Added annotation to:", targetWord.form, targetWord.annotations);
   }
-  console.log("added annotation")
 };
 
-const formatFeatures = (features) => {
-  //TODO: Feature formatting
-  return;
+const handleDocumentChange = (newDocument) => {
+  Object.assign(passageData, newDocument);
+  currentSection.value = Object.keys(docData.text)[0]; // Reset to first!
+  selectedWord.value = null;
+}
+
+const nextSection = () => {
+  const index = availableSections.value.indexOf(currentSection.value);
+  if (index < availableSections.value.length - 1) {
+    currentSection.value = availableSections.value[index + 1];
+  }
 };
+
+const prevSection = () => {
+  const index = availableSections.value.indexOf(currentSection.value);
+  if (index > 0) {
+    currentSection.value = availableSections.value[index - 1];
+  }
+}
 
 const handleWordClick = (word) => {
   selectedWord.value = word;
@@ -212,6 +264,78 @@ const getSyntaxPhraseForWord = (wordId) => {
   position: relative;
   min-height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
+/* doc selector toggle */
+.docselector-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1001;
+  padding: 10px 16px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s;
+}
+
+.docselector-toggle:hover {
+  background-color: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 8px -1px rgba(0, 0, 0, 0.15);
+}
+
+.docselector-toggle.docselector-open {
+  background-color: #ef4444;
+}
+
+.docselector-toggle.docselector-open:hover {
+  background-color: #dc2626;
+}
+
+.docselector {
+  position: fixed;
+  top: 0;
+  left: -400px;
+  width: 350px;
+  height: 100vh;
+  background-color: white;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  transition: left 0.3s ease;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.docselector.open {
+  left: 0;
+}
+
+.docselector-content {
+  padding: 80px 20px 20px 20px;
+}
+
+.docselector-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #374151;
+}
+
+/* Sidebar overlay for mobile */
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
 }
 
 /* Sidebar toggle button */

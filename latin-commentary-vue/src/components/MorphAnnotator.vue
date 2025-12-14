@@ -72,7 +72,7 @@
               :disabled="!canAddAnnotation" 
               :class="{ 'button-disabled': !canAddAnnotation }"
               >
-                Add Annotation
+                Add
               </button>
               <button
                 @click="handleClose"

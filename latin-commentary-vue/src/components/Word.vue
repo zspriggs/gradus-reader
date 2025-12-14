@@ -7,13 +7,9 @@
   >
     <span class="word-form">{{ wordData.form }}</span>
 
-    <div v-if="wordData.annotations?.length" class="inline-annotations">
-      <span
-        v-for="(annotation, index) in wordData.annotations"
-        :key="index"
-        class="annotation-tag"
-      >
-        {{ abbreviateFeatures(annotation) }}
+    <div v-if="wordData.annotations" class="inline-annotations">
+      <span class="annotation-tag">
+        {{ abbreviateFeatures(wordData.annotations) }}
       </span>
     </div>
   </span>
@@ -98,13 +94,14 @@ const handleClick = () => {
 const abbreviateFeatures = (features) => {
   if (!features) return '';
 
-  console.log('here i am')
+  console.log('Abbreviating', features);
+  console.log('for word', props.wordData)
   //TODO refactor into utils file? 
   //TODO add greek!
   const abbreviationMap = {
     gender: { masculine: 'm', feminine: 'f', neuter: 'n' },
     number: { singular: 'sg', plural: 'pl' },
-    case: { nominative: 'nom', genitive: 'gen', dative: 'dat', accusative: 'acc', ablative: 'abl'},
+    case: { vocative: 'voc', nominative: 'nom', genitive: 'gen', dative: 'dat', accusative: 'acc', ablative: 'abl'},
     tense: { present: 'pres', future: 'fut', imperfect: 'impf', perfect: 'pf', 
       futureperfect: 'fpf', pluperfect: 'plpf'},
     mood: {indicative: 'indic', subjunctive: 'subj', imperative: 'imper', infinitive: 'inf'},
@@ -143,8 +140,8 @@ const abbreviateFeatures = (features) => {
 
 .annotation-tag {
   font-size: 0.65rem; 
-  color: white;
-  background-color: #4a90e2; 
+  color: black;
+  background-color: white; 
   padding: 1px 3px;
   border-radius: 3px;
   line-height: 1; 
