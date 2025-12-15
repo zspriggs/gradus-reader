@@ -14,8 +14,8 @@
       >
         <option 
           v-for="doc in docs" 
-          :key="doc.id" 
-          :value="doc.id"
+          :key="doc.urn" 
+          :value="doc.urn"
         >
           {{ doc.title }}
         </option>
@@ -27,7 +27,8 @@
 <script setup>
 
 import {ref, reactive} from 'vue';
-import ciceroData from '../data/generated-cicero.json';
+import ciceroData from '../data/phi0474.phi013.perseus-lat1.json'
+import homerData from '../data/tlg0012.tlg001.perseus-grc1.json'
 
 const emit = defineEmits(['document-selected']);
 const documents = {
@@ -35,7 +36,7 @@ const documents = {
         {urn: 'phi0474.phi013', title: 'Cicero - In Catilinam', data: ciceroData}
     ],
     Greek: [
-        {urn: '', filename: '', title: ''}
+        {urn: 'tlg0012.tlg001', title: 'Homer - Iliad', data: homerData}
     ]
 };
 
@@ -47,9 +48,11 @@ const loadDocument = () => {
   const allDocs = Object.values(documents).flat();
   const doc = allDocs.find(d => d.urn === selectedURN.value);
   
+  console.log("loading document", doc.title)
+
   if (doc && doc.data) {
     // Replace passageData with new document
-    Object.assign(selectedData, doc.data);
+    selectedData.value = { ...doc.data };
     emit('document-selected', doc.data)
     console.log('Loaded:', doc.title);
   }

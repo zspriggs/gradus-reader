@@ -50,21 +50,6 @@
         </label>
       </div>
     </div>
-    
-    <div class="preset-buttons">
-      <button @click="setPreset('beginner')" class="preset-btn">
-        📚 Beginner Preset
-      </button>
-      <button @click="setPreset('intermediate')" class="preset-btn">
-        📖 Intermediate Preset
-      </button>
-      <button @click="setPreset('advanced')" class="preset-btn">
-        🎓 Advanced Preset
-      </button>
-      <button @click="setPreset('all')" class="preset-btn">
-        ⚡ Show All
-      </button>
-    </div>
   </div>
 </template>
 
@@ -92,7 +77,7 @@ const visualFeatures = [
   { 
     key: 'syntax', 
     label: 'Syntax Phrases', 
-    description: 'Highlighted background for clauses and constructions'
+    description: 'NOT YET AVAILABLE Highlighted background for clauses and constructions'
   }
 ];
 
@@ -100,82 +85,29 @@ const contentFeatures = [
   { 
     key: 'vocab', 
     label: 'Vocabulary', 
-    description: 'Word meanings and translations'
+    description: 'NOT YET AVAILABLE Word meanings and translations'
   },
   { 
     key: 'morphology', 
     label: 'Morphology', 
     description: 'Detailed grammatical analysis'
-  },
-  { 
-    key: 'style', 
-    label: 'Style', 
-    description: 'Literary and stylistic notes'
-  },
-  { 
-    key: 'rhetoric', 
-    label: 'Rhetoric', 
-    description: 'Rhetorical devices and techniques'
-  }
+  }//,
+  // { 
+  //   key: 'style', 
+  //   label: 'Style', 
+  //   description: 'Literary and stylistic notes'
+  // },
+  // { 
+  //   key: 'rhetoric', 
+  //   label: 'Rhetoric', 
+  //   description: 'Rhetorical devices and techniques'
+  // }
 ];
 
 const handleToggle = (featureName) => {
   emit('toggle-feature', featureName);
 };
 
-const setPreset = (presetName) => {
-  const presets = {
-    beginner: {
-      caseHighlight: true,
-      posHighlight: false,
-      syntax: false,
-      vocab: true,
-      morphology: true,
-      style: false,
-      rhetoric: false,
-      etymology: false
-    },
-    intermediate: {
-      annotation: true,
-      caseHighlight: true,
-      posHighlight: false,
-      syntax: true,
-      vocab: true,
-      morphology: true,
-      style: true,
-      rhetoric: false,
-      etymology: false
-    },
-    advanced: {
-      annotation: true,
-      caseHighlight: false,
-      posHighlight: false,
-      syntax: true,
-      vocab: false,
-      morphology: true,
-      style: true,
-      rhetoric: true,
-      etymology: true
-    },
-    all: {
-      caseHighlight: true,
-      posHighlight: true,
-      syntax: true,
-      vocab: true,
-      morphology: true,
-      style: true,
-      rhetoric: true,
-      etymology: true
-    }
-  };
-  
-  const preset = presets[presetName];
-  Object.keys(preset).forEach(key => {
-    if (props.features[key] !== preset[key]) {
-      emit('toggle-feature', key);
-    }
-  });
-};
 </script>
 
 <style scoped>
@@ -251,46 +183,10 @@ const setPreset = (presetName) => {
   margin-left: 26px;
 }
 
-.preset-buttons {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  padding-top: 16px;
-  border-top: 1px solid #e5e7eb;
-}
-
-.preset-btn {
-  padding: 8px 16px;
-  border-radius: 6px;
-  border: 1px solid #d1d5db;
-  background-color: white;
-  color: #374151;
-  font-size: 0.875rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.preset-btn:hover {
-  background-color: #f3f4f6;
-  border-color: #9ca3af;
-}
-
-.preset-btn:active {
-  background-color: #e5e7eb;
-}
-
 @media (max-width: 768px) {
   .feature-toggles {
     grid-template-columns: 1fr;
   }
-  
-  .preset-buttons {
-    flex-direction: column;
-  }
-  
-  .preset-btn {
-    width: 100%;
-  }
+
 }
 </style>

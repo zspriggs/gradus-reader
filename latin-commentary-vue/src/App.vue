@@ -41,7 +41,7 @@
     <div class="docselector" :class="{ 'open': docselectorOpen }">
       <div class="docselector-content">
         <DocumentSelector
-          @selectDocument="handleDocumentChange" 
+          @document-selected="handleDocumentChange" 
         />
       </div>
     </div>
@@ -54,19 +54,20 @@
     ></div>
 
     <div class="main-content" :class="{'sidebar-open': sidebarOpen}">
-      <h1 class="main-title">Juno</h1>
+      <h1 class="main-title">{{ passageData.passage.title}}</h1>
 
       <button class="prev-button"
         @click="prevSection"
-      ><-</button>
+        :class="{'hidden': docselectorOpen}"
+      >🡸</button>
 
       <button class="next-button"
         @click="nextSection"
-      >-></button>
-
+        :class="{'hidden': docselectorOpen}"
+      >🡺</button>
 
       <div class="passage-container">
-        <h2 class="passage-title">{{ passageData.passage.title}}</h2>
+        <h2 class="passage-title">Section {{currentSection }}</h2>
         <div class="passage-text">
           <Word
             v-for="word in passageData.text[currentSection]"
@@ -181,9 +182,9 @@ import AnnotationPanel from './components/AnnotationPanel.vue';
 import MorphAnnotator from './components/MorphAnnotator.vue';
 import DocumentSelector from './components/DocumentSelector.vue';
 
-import passageDataRaw from './data/generated-cicero.json';
-
-const passageData = reactive(passageDataRaw);
+//TODO: Get initial passage from DocSelector
+import passageDataRaw from './data/phi0474.phi013.perseus-lat1.json';
+const passageData = reactive(passageDataRaw); 
 
 const currentSection = ref('1.1');
 const availableSections = computed(() => Object.keys(passageData.text));
@@ -208,7 +209,7 @@ const features = reactive({
 });
 
 const handleAnnotationAdded = (newAnnotation) => {
-  const targetWord  = passageData.text[currentSection].find(w => w.uid === newAnnotation.uid);
+  const targetWord  = passageData.text[currentSection.value].find(w => w.uid === newAnnotation.uid);
   if (targetWord) {
     targetWord.annotations = {
       ...targetWord.annotations,
@@ -220,7 +221,7 @@ const handleAnnotationAdded = (newAnnotation) => {
 
 const handleDocumentChange = (newDocument) => {
   Object.assign(passageData, newDocument);
-  currentSection.value = Object.keys(docData.text)[0]; // Reset to first!
+  currentSection.value = Object.keys(passageData.text)[0]; // Reset to first!
   selectedWord.value = null;
 }
 
@@ -263,7 +264,7 @@ const getSyntaxPhraseForWord = (wordId) => {
 .app-container {
   position: relative;
   min-height: 100vh;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  font-family: 'EB Garamond', 'Garamond', 'Georgia', 'Times New Roman', serif;
 }
 
 /* doc selector toggle */
@@ -280,14 +281,12 @@ const getSyntaxPhraseForWord = (wordId) => {
   font-size: 0.95rem;
   font-weight: 500;
   cursor: pointer;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   transition: all 0.2s;
 }
 
 .docselector-toggle:hover {
   background-color: #2563eb;
   transform: translateY(-1px);
-  box-shadow: 0 6px 8px -1px rgba(0, 0, 0, 0.15);
 }
 
 .docselector-toggle.docselector-open {
@@ -352,14 +351,12 @@ const getSyntaxPhraseForWord = (wordId) => {
   font-size: 0.95rem;
   font-weight: 500;
   cursor: pointer;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   transition: all 0.2s;
 }
 
 .sidebar-toggle:hover {
   background-color: #2563eb;
   transform: translateY(-1px);
-  box-shadow: 0 6px 8px -1px rgba(0, 0, 0, 0.15);
 }
 
 .sidebar-toggle.sidebar-open {
@@ -459,7 +456,7 @@ const getSyntaxPhraseForWord = (wordId) => {
 .passage-title {
   font-size: 1.25rem;
   font-weight: 600;
-  margin-bottom: 16px;
+  margin-bottom: 16px;  
   color: #374151;
 }
 
@@ -473,6 +470,38 @@ const getSyntaxPhraseForWord = (wordId) => {
   font-size: 0.875rem;
   color: #6b7280;
 }
+
+.next-button,
+.prev-button {
+  position: fixed;
+  top: 80px;
+  z-index: 1002;
+  background-color: #19d3bd;
+  color: black;
+  padding: 5px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.next-button {
+  left: 92px;
+}
+
+.prev-button {
+  left: 20px;
+}
+
+.next-button:hover, 
+.prev-button:hover {
+  background-color: #13ac9a;
+}
+
+.prev-button.hidden,
+.next-button.hidden {
+  display: none !important;
+}
+
 
 /* Legend Styles */
 .legend-container {

@@ -102,7 +102,7 @@ def parse_postag(postag: str, lang='Latin') -> Dict[str, Optional[str]]:
     # #return f"{row['Author']}, {row['Title']}" 
 
 
-def get_annotations(file: str) -> Dict:
+def get_annotations(file: str, title, author) -> Dict:
     """Parse an XML Dependency Treebank file into a dictionary form"""
     try:
         tree = ET.parse(file)
@@ -113,6 +113,8 @@ def get_annotations(file: str) -> Dict:
 
     doc = {
         "passage": {
+            "title": title,
+            "author": author,
             "syntaxPhrases": {
 
             }
@@ -125,8 +127,6 @@ def get_annotations(file: str) -> Dict:
     current_subdoc = None
     subdoc_words = []
 
-    #get document metadata
-
     for sentence in root.findall('.//sentence'):
         if current_subdoc == None: #first pass
             current_subdoc = sentence.get('subdoc')
@@ -134,6 +134,7 @@ def get_annotations(file: str) -> Dict:
             doc['text'][current_subdoc] = subdoc_words
             current_subdoc = sentence.get('subdoc')
             subdoc_words = [] #reset for new subdoc
+
 
         for word in sentence.findall('.//word'):
             #    <word id="9201802" form="μῆνιν" lemma="μῆνις" postag="n-s---fa-" head="9201803" relation="OBJ" line="1"/>
@@ -150,6 +151,9 @@ def get_annotations(file: str) -> Dict:
             #TODO: handle enclitics
 
             morphology = {}
+            if postag == None:
+                continue
+
             if len(postag) < 9:
                 postag = postag.ljust(9, '-')
             
@@ -166,10 +170,12 @@ def get_annotations(file: str) -> Dict:
                 "morphology": morphology
             })
 
-
-    with open(f"{file}.json", "w") as f:
+    new_filename = file[:-7]
+    with open(f"{new_filename}.json", "w") as f:
         json.dump(doc, f, indent=4)
         
     return doc
 
-get_annotations("./phi0474.phi013.perseus-lat1.tb.xml")
+
+#get_annotations("./tb_data/phi0474.phi013.perseus-lat1.tb.xml", "In Catilinam I", "Cicero")
+get_annotations("./tb_data/tlg0012.tlg001.perseus-grc1.tb.xml", "Iliad", "Homer")
