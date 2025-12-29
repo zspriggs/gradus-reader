@@ -43,20 +43,32 @@
                 <label class="field-label">
                   {{ label }}
                 </label>
-                <select
-                  v-model="annotations[feature]"
-                  @change="validationResult = null"
-                  class="field-select"
-                >
-                  <option value="">—</option>
-                  <option 
-                    v-for="option in morphologyOptions[feature]" 
-                    :key="option" 
-                    :value="option"
+
+                <template v-if="feature==='custom'">
+                  <textarea
+                    v-model="annotations[feature]"
+                    placeholder="Type your notes here..."
+                    class="field-customtext"
+                    @input="validationResult = null"
+                  ></textarea>
+                </template>
+
+                <template v-else>
+                  <select
+                    v-model="annotations[feature]"
+                    @change="validationResult = null"
+                    class="field-select"
                   >
-                    {{ option }}
-                  </option>
-                </select>
+                    <option value="">—</option>
+                    <option 
+                      v-for="option in morphologyOptions[feature]" 
+                      :key="option" 
+                      :value="option"
+                    >
+                      {{ option }}
+                    </option>
+                  </select>
+                </template>
               </div>
             </div>
 
@@ -182,7 +194,8 @@ const featureLabels = {
   tense: "Tense",
   mood: "Mood",
   voice: "Voice",
-  person: "Person"//,
+  person: "Person",
+  custom: "Custom Note"
   //declension: "Declension",
   //conjugation: "Conjugation"
 };
@@ -196,6 +209,13 @@ const popoverPosition = ref({ top: 0, left: 0 });
 const canAddAnnotation = computed(() => {
   // button enabled iff the last time validation ran, it found >= 1 correct feat
   // and also there's no new stale (unvalidated) data
+  // OR button enabled if there's a custom note do add
+
+  const hasCustomNote = !!annotations.value.custom && annotations.value.custom.trim() !== '';
+  if (hasCustomNote) {
+    return true;
+  }
+
   const lastResult = lastValidationResult.value;
   if (!lastResult) {
     return false;
@@ -235,19 +255,6 @@ onMounted(() => {
   });
 });
 
-// const handleClick = (word, index, event) => {
-//   const rect = event.target.getBoundingClientRect();
-//   popoverPosition.value = {
-//     top: rect.bottom + window.scrollY + 8,
-//     left: rect.left + window.scrollX
-//   };
-  
-//   selectedWord.value = word;
-//   selectedWordIndex.value = index;
-//   annotations.value = {};
-//   validationResult.value = null;
-// };
-
 const handleClose = () => {
   isOpen.value = false
   annotations.value = {};
@@ -265,7 +272,8 @@ const checkAnnotation = () => {
     };
   }
   
-  const filledFeatures = Object.keys(annotations.value).filter(key => annotations.value[key]);
+  const filledFeatures = Object.keys(annotations.value).filter(key => 
+    key != 'custom' && annotations.value[key]);
   if (filledFeatures.length === 0) {
     return {
       isCorrect: false,
@@ -280,6 +288,9 @@ const checkAnnotation = () => {
   const correctFeatures = filledFeatures.filter(key => 
     annotations.value[key] === correctAnswer[key]
   );
+  if(annotations.value['custom']){
+    correctFeatures.push('custom')
+  } 
 
   const incorrectFeatures = filledFeatures.filter(key => 
     annotations.value[key] !== correctAnswer[key]
@@ -336,12 +347,11 @@ const validateAnnotation = () => {
 };
 
 const addAnnotation = () => {
-  console.log('WAZZUP')
   const result = lastValidationResult.value;
-  //const result = checkAnnotation();
+  const hasCustomNote = !!annotations.value.custom && annotations.value.custom.trim() !== '';
 
-  if (!result || result.correctFeatures?.length === 0) {
-    console.log("result issue")
+  if (!hasCustomNote && (!result || result.correctFeatures?.length === 0)) {
+    console.log("result issue");
     validationResult.value = {
       isCorrect: false,
       message: "You must select at least one feature correctly before adding the annotation."
@@ -349,13 +359,23 @@ const addAnnotation = () => {
     return;
   }
 
+  const featuresToAdd = []
+  // If they have validated grammar, grab those correct features
+  if (result && result.correctFeatures) {
+    result.correctFeatures.forEach(key => {
+      featuresToAdd[key] = result.annotations[key];
+    });
+  }
+  if (hasCustomNote) {
+    featuresToAdd.custom = annotations.value.custom;
+  }
+
+
+
   const annotation = {
     word: props.wordData.form,
     uid: props.wordData.uid,
-    features: result.correctFeatures.reduce((acc, key) => {
-      acc[key] = result.annotations[key]; 
-      return acc;
-    }, {})
+    features: featuresToAdd
   }
 
   emit('annotation-added', annotation);
@@ -476,6 +496,16 @@ const addAnnotation = () => {
   font-weight: 500;
   color: #374151;
   margin-bottom: 0.25rem;
+}
+
+.field-textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit; /* Keeps font consistent with selects */
+  font-size: 0.9rem;
+  min-height: 60px;
 }
 
 .field-select {

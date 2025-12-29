@@ -12,6 +12,12 @@
         {{ abbreviateFeatures(wordData.annotations) }}
       </span>
     </div>
+
+    <div v-if="wordData.annotations?.custom" class="custom-annotations">
+      <span class="custom-annotation-tag">
+        {{ wordData.annotations.custom }}
+      </span>
+    </div>
   </span>
 </template>
 
@@ -93,6 +99,8 @@ const handleClick = () => {
 
 const abbreviateFeatures = (features) => {
   if (!features) return '';
+  const { custom, ...rest } = features;
+  features = rest;
 
   console.log('Abbreviating', features);
   console.log('for word', props.wordData)
@@ -130,18 +138,34 @@ const abbreviateFeatures = (features) => {
 }
 
 .inline-annotations {
-  /* Keeps the annotation tags close together and small */
   display: flex;
   flex-wrap: wrap; 
   gap: 2px; 
-  margin-top: -2px; /* Pulls the annotations up closer to the word */
-  min-height: 10px; /* Optional: reserve a little space even if empty to prevent jumping */
+  margin-top: -2px; 
+  min-height: 10px; 
+}
+
+.custom-annotations {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 2px; 
+  margin-top: 2px; 
 }
 
 .annotation-tag {
   font-size: 0.65rem; 
   color: black;
   background-color: white; 
+  padding: 1px 3px;
+  border-radius: 3px;
+  line-height: 1; 
+  white-space: nowrap; 
+}
+
+.custom-annotation-tag{
+  font-size: 0.65rem; 
+  color: black;
+  background-color: rgb(212, 254, 205); 
   padding: 1px 3px;
   border-radius: 3px;
   line-height: 1; 
