@@ -175,16 +175,19 @@
 </template>
 
 <script setup>
-import { ref, reactive, computed } from 'vue';
+import { ref, reactive, computed, onMounted } from 'vue';
 import FeatureSelector from './components/FeatureSelector.vue';
 import Word from './components/Word.vue';
 import AnnotationPanel from './components/AnnotationPanel.vue';
 import MorphAnnotator from './components/MorphAnnotator.vue';
 import DocumentSelector from './components/DocumentSelector.vue';
+import { annotationStorage } from './utils/annotationStorage.js';
 
 //TODO: Get initial passage from DocSelector
 import passageDataRaw from './data/phi0474.phi013.perseus-lat1.json';
 const passageData = reactive(passageDataRaw); 
+
+const allAnnotations = ref({});
 
 const currentSection = ref('1.1');
 const availableSections = computed(() => Object.keys(passageData.text));
@@ -200,13 +203,34 @@ const features = reactive({
   posHighlight: false,
   syntax: false,
   
-  // Annotation content
+  // Annotation content - TODO remove unused
   vocab: true,
   morphology: true,
   style: false,
   rhetoric: false,
   etymology: false
 });
+
+onMounted(() => {
+  //Attempt to load annotations
+  allAnnotations.value = annotationStorage.load();
+  applyAnnotations();
+  //TODO: implement this!
+})
+
+const applyAnnotations = () => {
+  const docURN = passageData.passage.urn;
+  const savedAnnotations = allAnnotations.value[docURN];
+  if(!savedAnnotations){ return;}
+
+  Object.keys(passageData.text).forEach(sectionKey => {
+    passageData.text[sectionKey].forEach(word => {
+      if (savedAnnotations[word.uid]) {
+        word.annotations = savedAnnotations[word.uid];
+      }
+    });
+  });
+};
 
 const handleAnnotationAdded = (newAnnotation) => {
   const targetWord  = passageData.text[currentSection.value].find(w => w.uid === newAnnotation.uid);
@@ -215,6 +239,13 @@ const handleAnnotationAdded = (newAnnotation) => {
       ...targetWord.annotations,
       ...newAnnotation.features
     }
+
+    const docURN = passageData.passage.urn;
+    if(!allAnnotations.value[docURN]) {
+      allAnnotations.value[docURN] = {};
+    }
+    allAnnotations.value[docURN][targetWord.uid] = targetWord.annotations;
+    annotationStorage.save(allAnnotations.value);
     console.log("Added annotation to:", targetWord.form, targetWord.annotations);
   }
 };
@@ -223,7 +254,12 @@ const handleDocumentChange = (newDocument) => {
   Object.assign(passageData, newDocument);
   currentSection.value = Object.keys(passageData.text)[0]; // Reset to first!
   selectedWord.value = null;
-}
+  applyAnnotations();
+};
+
+const exportAnnotations = () => {
+  annotationStorage.export();
+};
 
 const nextSection = () => {
   const index = availableSections.value.indexOf(currentSection.value);
