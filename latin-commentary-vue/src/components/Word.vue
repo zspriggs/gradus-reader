@@ -1,5 +1,6 @@
 <template>
   <span 
+    ref="wordElement"
     :class="wordClasses"
     :style="syntaxStyle"
     @click="handleClick"
@@ -9,7 +10,7 @@
 
     <div v-if="wordData.annotations" class="inline-annotations">
       <span class="annotation-tag">
-        {{ abbreviateFeatures(wordData.annotations) }}
+        {{ abbreviatedFeatures }}
       </span>
     </div>
 
@@ -22,7 +23,8 @@
 </template>
 
 <script setup>
-import { computed } from 'vue';
+import { onLongPress } from '@vueuse/core';
+import { computed, useTemplateRef } from 'vue';
 
 const props = defineProps({
   wordData: {
@@ -43,7 +45,33 @@ const props = defineProps({
   }
 });
 
-const emit = defineEmits(['word-click']);
+const emit = defineEmits(['word-click', 'word-long-press']);
+
+const wordElement = useTemplateRef('wordElement');
+
+let longPress = false;
+
+onLongPress(
+  wordElement,
+  (e) => {
+    longPress = true;
+    emit('word-long-press', props.wordData);
+  },
+  {
+    delay: 500, 
+    modifiers: {
+      prevent: true
+    }
+  }
+)
+
+const handleClick = () => {
+  if (longPress) {
+    longPress=false;
+    return; 
+  }
+  emit('word-click', props.wordData);
+};
 
 const wordClasses = computed(() => {
   let classes = ['word'];
@@ -93,37 +121,31 @@ const syntaxStyle = computed(() => {
   return {}
 });
 
-const handleClick = () => {
-  emit('word-click', props.wordData);
+//TODO add greek!!
+const abbreviationMap = {
+  gender: { masculine: 'm', feminine: 'f', neuter: 'n' },
+  number: { singular: 'sg', plural: 'pl' },
+  case: { vocative: 'voc', nominative: 'nom', genitive: 'gen', dative: 'dat', accusative: 'acc', ablative: 'abl'},
+  tense: { present: 'pres', future: 'fut', imperfect: 'impf', perfect: 'pf', 
+    futureperfect: 'fpf', pluperfect: 'plpf'},
+  mood: {indicative: 'indic', subjunctive: 'subj', imperative: 'imper', infinitive: 'inf'},
+  voice: {active: 'act', passive: 'pass'},
+  person: {1: '1', 2: '2', 3: '3'} //fix this prolly
 };
-
-const abbreviateFeatures = (features) => {
+  
+const abbreviatedFeatures = computed(() => {
+  const features = props.wordData.annotations;
   if (!features) return '';
-  const { custom, ...rest } = features;
-  features = rest;
+
+  const { custom: _, ...feats } = features;
 
   console.log('Abbreviating', features);
-  console.log('for word', props.wordData)
-  //TODO refactor into utils file? 
-  //TODO add greek!
-  const abbreviationMap = {
-    gender: { masculine: 'm', feminine: 'f', neuter: 'n' },
-    number: { singular: 'sg', plural: 'pl' },
-    case: { vocative: 'voc', nominative: 'nom', genitive: 'gen', dative: 'dat', accusative: 'acc', ablative: 'abl'},
-    tense: { present: 'pres', future: 'fut', imperfect: 'impf', perfect: 'pf', 
-      futureperfect: 'fpf', pluperfect: 'plpf'},
-    mood: {indicative: 'indic', subjunctive: 'subj', imperative: 'imper', infinitive: 'inf'},
-    voice: {active: 'act', passive: 'pass'},
-    person: {1: '1', 2: '2', 3: '3'} //fix this prolly
-  };
 
-  const abbreviations = [];
-  for(const [key, value] of Object.entries(features)) {
-    const abbr = abbreviationMap[key]?.[value] || value;
-    abbreviations.push(abbr)
-  }
-  return abbreviations.join(' ');
-};
+  return Object.entries(feats)
+    .map(([key, value]) => abbreviationMap[key]?.[value] || value)
+    .join(' ');
+});
+
 </script>
 
 <style scoped>
@@ -155,7 +177,7 @@ const abbreviateFeatures = (features) => {
 .annotation-tag {
   font-size: 0.65rem; 
   color: black;
-  background-color: white; 
+  background-color: rgb(212, 254, 205); 
   padding: 1px 3px;
   border-radius: 3px;
   line-height: 1; 
@@ -165,7 +187,7 @@ const abbreviateFeatures = (features) => {
 .custom-annotation-tag{
   font-size: 0.65rem; 
   color: black;
-  background-color: rgb(212, 254, 205); 
+  background-color: white; 
   padding: 1px 3px;
   border-radius: 3px;
   line-height: 1; 

@@ -26,24 +26,30 @@
 
 <script setup>
 
-import {ref, reactive} from 'vue';
-import ciceroData from '../data/phi0474.phi013.perseus-lat1.json'
-import homerData from '../data/tlg0012.tlg001.perseus-grc1.json'
+import {ref, onMounted} from 'vue';
+import ciceroData from '../data/phi0474.phi013.perseus-lat1.json';
+import homerData from '../data/tlg0012.tlg001.perseus-grc1.json';
 
 const emit = defineEmits(['document-selected']);
+
 const documents = {
-    Latin: [
-        {urn: 'phi0474.phi013', title: 'Cicero - In Catilinam', data: ciceroData}
-    ],
-    Greek: [
-        {urn: 'tlg0012.tlg001', title: 'Homer - Iliad', data: homerData}
-    ]
+  Latin: [
+    {urn: 'phi0474.phi013', title: 'Cicero - In Catilinam', data: ciceroData}
+  ],
+  Greek: [
+    {urn: 'tlg0012.tlg001', title: 'Homer - Iliad', data: homerData}
+  ]
 };
 
 const selectedURN = ref('phi0474.phi013');
-const selectedData = reactive(ciceroData);
+const selectedData = ref(ciceroData);
+
+onMounted(() => {
+  loadDocument();
+});
 
 const loadDocument = () => {
+  console.log('tring to load doc')
   // Find the selected document across all languages
   const allDocs = Object.values(documents).flat();
   const doc = allDocs.find(d => d.urn === selectedURN.value);
@@ -52,14 +58,15 @@ const loadDocument = () => {
 
   if (doc && doc.data) {
     // Replace passageData with new document
-    selectedData.value = { ...doc.data };
-    emit('document-selected', doc.data)
+    selectedData.value = doc.data;
+    emit('document-selected', {
+      urn: doc.urn,
+      data: doc.data}
+    )
     console.log('Loaded:', doc.title);
   }
 };
 
-//emits the initial document
-loadDocument();
 
 </script>
 

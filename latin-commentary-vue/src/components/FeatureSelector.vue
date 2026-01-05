@@ -3,13 +3,28 @@
     <h3>Display Options:</h3>
     <div class="feature-toggles">
       <div class="feature-group">
-        <h4> Morphology Annotations </h4>
-        <input 
+        <h4> Annotation Features </h4>
+        <label 
+          v-for="feature in annotationFeatures"
+          :key="feature.key"
+          class="feature-toggle"
+        >
+          <input
+            type="checkbox"
+            :checked="features[feature.key]"
+            @change="handleToggle(feature.key)"
+          />
+          <span class="feature-label">
+            {{ feature.label }}
+          </span>
+          <span class="feature-description">{{ feature.description }}</span>
+        <!-- <input 
           type="checkbox" 
           id="annotation-toggle" 
           :checked="features.annotation"
           @change="handleToggle('annotation')"
-        />
+        /> -->
+        </label>
       </div>
 
       <div class="feature-group">
@@ -31,7 +46,7 @@
         </label>
       </div>
       
-      <div class="feature-group">
+      <!-- <div class="feature-group">
         <h4>Annotation Content</h4>
         <label 
           v-for="feature in contentFeatures"
@@ -48,8 +63,22 @@
           </span>
           <span class="feature-description">{{ feature.description }}</span>
         </label>
-      </div>
+      </div> -->
     </div>
+      <h3>Import Export Annotations:</h3>
+      <button
+        class="annotation-buttons"
+        @click="importAnnotations"
+      >
+        Import Annotations 
+      </button>
+      <button
+        class="annotation-buttons"
+        @click="exportAnnotations"
+      >
+        Export Annotations 
+      </button>
+    
   </div>
 </template>
 
@@ -63,6 +92,18 @@ const props = defineProps({
 
 const emit = defineEmits(['toggle-feature']);
 
+const annotationFeatures = [
+  {
+    key: 'inline',
+    label: 'In-line Annotations',
+    description: 'Annotations that appear underneath the annotated word.'
+  },
+  {
+    key: 'line',
+    label: 'Line-by-line Annotations',
+    descriptions: 'Annotations attached to a certain line of text.'
+  }
+]
 const visualFeatures = [
   { 
     key: 'caseHighlight', 
@@ -81,28 +122,18 @@ const visualFeatures = [
   }
 ];
 
-const contentFeatures = [
-  { 
-    key: 'vocab', 
-    label: 'Vocabulary', 
-    description: 'NOT YET AVAILABLE Word meanings and translations'
-  },
-  { 
-    key: 'morphology', 
-    label: 'Morphology', 
-    description: 'Detailed grammatical analysis'
-  }//,
-  // { 
-  //   key: 'style', 
-  //   label: 'Style', 
-  //   description: 'Literary and stylistic notes'
-  // },
-  // { 
-  //   key: 'rhetoric', 
-  //   label: 'Rhetoric', 
-  //   description: 'Rhetorical devices and techniques'
-  // }
-];
+// const contentFeatures = [
+//   { 
+//     key: 'vocab', 
+//     label: 'Vocabulary', 
+//     description: 'NOT YET AVAILABLE Word meanings and translations'
+//   },
+//   { 
+//     key: 'morphology', 
+//     label: 'Morphology', 
+//     description: 'Detailed grammatical analysis'
+//   }
+// ];
 
 const handleToggle = (featureName) => {
   emit('toggle-feature', featureName);
@@ -183,10 +214,21 @@ const handleToggle = (featureName) => {
   margin-left: 26px;
 }
 
+.annotation-buttons {
+  font-size: 0.95rem;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  border-width: 0px;
+  background-color:#19d3bd7b
+}
+
+.annotation-buttons:hover {
+  background-color: #19d3bdc8
+}
+
 @media (max-width: 768px) {
   .feature-toggles {
     grid-template-columns: 1fr;
   }
-
 }
 </style>

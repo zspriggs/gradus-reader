@@ -1,7 +1,7 @@
 <template>
   <div class="app-container">
     <MorphAnnotator
-      v-if="selectedWord && features.annotation"
+      v-if="selectedWord && features.inline"
       :wordData="selectedWord" 
       :features="features"
       @close="selectedWord = null"
@@ -53,7 +53,7 @@
       @click="sidebarOpen = false"
     ></div>
 
-    <div class="main-content" :class="{'sidebar-open': sidebarOpen}">
+    <div v-if="passageData" class="main-content" :class="{'sidebar-open': sidebarOpen}">
       <h1 class="main-title">{{ passageData.passage.title}}</h1>
 
       <button class="prev-button"
@@ -66,7 +66,7 @@
         :class="{'hidden': docselectorOpen}"
       >🡺</button>
 
-      <div class="passage-container">
+      <div v-if="passageData" class="passage-container">
         <h2 class="passage-title">Section {{currentSection }}</h2>
         <div class="passage-text">
           <Word
@@ -77,6 +77,7 @@
             :is-selected="selectedWord?.uid === word.uid"
             :syntax-phrase="getSyntaxPhraseForWord(word.uid)"
             @word-click="handleWordClick"
+            @word-long-press="handleWordLongPress"
           />
         </div>
       
@@ -84,9 +85,13 @@
           <strong>Tip:</strong> Toggle display options to customize your view. Click any word for detailed annotations!
         </div>
       </div>
+      
+      <div v-else class="loading-screen">
+        Loading library...
+      </div>
     
     <AnnotationPanel 
-      v-if="selectedWord && !features.annotation"
+      v-if="selectedWord && !features.inline"
       :word="selectedWord" 
       :features="features" 
     />
@@ -172,6 +177,7 @@
     </div>
   </div>
   </div>
+
 </template>
 
 <script setup>
@@ -183,20 +189,20 @@ import MorphAnnotator from './components/MorphAnnotator.vue';
 import DocumentSelector from './components/DocumentSelector.vue';
 import { annotationStorage } from './utils/annotationStorage.js';
 
-//TODO: Get initial passage from DocSelector
-import passageDataRaw from './data/phi0474.phi013.perseus-lat1.json';
-const passageData = reactive(passageDataRaw); 
+const currentUrn = ref(''); // Set your default
+const passageData = ref(null); 
 
 const allAnnotations = ref({});
 
 const currentSection = ref('1.1');
-const availableSections = computed(() => Object.keys(passageData.text));
+const availableSections = computed(() => Object.keys(passageData?.value.text));
 const selectedWord = ref(null);
 const sidebarOpen = ref(false);
 const docselectorOpen=ref(false);
 
 const features = reactive({
-  annotation: true,
+  inline: true,
+  line: false,
   
   // Visual highlighting
   caseHighlight: true,
@@ -204,43 +210,46 @@ const features = reactive({
   syntax: false,
   
   // Annotation content - TODO remove unused
-  vocab: true,
+  // vocab: true,
   morphology: true,
-  style: false,
-  rhetoric: false,
-  etymology: false
+  // syntax: false
 });
 
 onMounted(() => {
   //Attempt to load annotations
   allAnnotations.value = annotationStorage.load();
-  applyAnnotations();
+  // applyAnnotations();
   //TODO: implement this!
-})
+  if(currentUrn.value){
+    applyAnnotations();
+  }
+});
 
 const applyAnnotations = () => {
-  const docURN = passageData.passage.urn;
+  const docURN = currentUrn.value;
+  if (!docURN ||!passageData.value || !passageData.value.passage) return;
+
   const savedAnnotations = allAnnotations.value[docURN];
   if(!savedAnnotations){ return;}
 
-  Object.keys(passageData.text).forEach(sectionKey => {
-    passageData.text[sectionKey].forEach(word => {
+  Object.keys(passageData.value.text).forEach(sectionKey => {
+    passageData.value.text[sectionKey].forEach(word => {
       if (savedAnnotations[word.uid]) {
-        word.annotations = savedAnnotations[word.uid];
+        word.annotations = { ...savedAnnotations[word.uid]};
       }
     });
   });
 };
 
 const handleAnnotationAdded = (newAnnotation) => {
-  const targetWord  = passageData.text[currentSection.value].find(w => w.uid === newAnnotation.uid);
+  const targetWord  = passageData.value.text[currentSection.value].find(w => w.uid === newAnnotation.uid);
   if (targetWord) {
     targetWord.annotations = {
       ...targetWord.annotations,
       ...newAnnotation.features
     }
 
-    const docURN = passageData.passage.urn;
+    const docURN = currentUrn.value;
     if(!allAnnotations.value[docURN]) {
       allAnnotations.value[docURN] = {};
     }
@@ -251,10 +260,12 @@ const handleAnnotationAdded = (newAnnotation) => {
 };
 
 const handleDocumentChange = (newDocument) => {
-  Object.assign(passageData, newDocument);
-  currentSection.value = Object.keys(passageData.text)[0]; // Reset to first!
+  console.log('handledocchange')
+  currentUrn.value = newDocument.urn
+  passageData.value = newDocument.data;
+  currentSection.value = Object.keys(passageData.value.text)[0]; // Reset to first!
+  applyAnnotations()
   selectedWord.value = null;
-  applyAnnotations();
 };
 
 const exportAnnotations = () => {
@@ -279,6 +290,18 @@ const handleWordClick = (word) => {
   selectedWord.value = word;
 };
 
+const handleWordLongPress = (word) => {
+  const urn = currentUrn.value
+  word.annotations = null;
+
+  if(allAnnotations.value[urn]) {
+    delete allAnnotations.value[urn][word.uid];
+    annotationStorage.save(allAnnotations.value);
+  }
+
+  console.log("Removed annotations from:", word.form);
+};
+
 const handleToggleFeature = (featureName) => {
   features[featureName] = !features[featureName];
 };
@@ -286,7 +309,7 @@ const handleToggleFeature = (featureName) => {
 const getSyntaxPhraseForWord = (wordId) => {
   if (!features.syntax) return null;
   
-  return passageData.passage.syntaxPhrases?.find(phrase => 
+  return passageData.value.passage.syntaxPhrases?.find(phrase => 
     phrase.wordIds.includes(wordId)
   ) || null;
 };

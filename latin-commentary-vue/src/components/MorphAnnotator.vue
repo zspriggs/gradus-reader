@@ -10,10 +10,7 @@
         
         <div 
           class="annotation-popover"
-          :style="{ 
-            top: `${popoverPosition.top}px`, 
-            left: `${popoverPosition.left}px`
-          }"
+
         >
           <div class="popover-header">
             <h3 class="popover-title">{{ props.wordData.form }}</h3>
@@ -30,11 +27,12 @@
           </div>
 
           <div class="popover-body">
+
+            
+            <div class="form-fields">
             <p class="instruction-text">
               Select any features you want to practice:
             </p>
-            
-            <div class="form-fields">
               <div 
                 v-for="(label, feature) in featureLabels" 
                 :key="feature"
@@ -204,7 +202,7 @@ const isOpen = ref(false);
 const annotations = ref({});
 const validationResult = ref(null);
 const lastValidationResult = ref(null);
-const popoverPosition = ref({ top: 0, left: 0 });
+//const popoverPosition = ref({ top: 0, left: 0 });
 
 const canAddAnnotation = computed(() => {
   // button enabled iff the last time validation ran, it found >= 1 correct feat
@@ -227,30 +225,30 @@ const canAddAnnotation = computed(() => {
   return !isStale;
 });
 
-const calculatePosition = () => {
-  // Find the word element in the DOM
-  // We need to find the Word component that has is-selected class
-  const selectedWordElement = document.querySelector('.word.is-selected');
+// const calculatePosition = () => {
+//   // Find the word element in the DOM
+//   // We need to find the Word component that has is-selected class
+//   const selectedWordElement = document.querySelector('.word.is-selected');
   
-  if (selectedWordElement) {
-    const rect = selectedWordElement.getBoundingClientRect();
-    popoverPosition.value = {
-      top: rect.bottom + window.scrollY + 8,
-      left: rect.left + window.scrollX
-    };
-  } else {
-    // Fallback to center of screen if we can't find the element
-    popoverPosition.value = {
-      top: window.scrollY + 100,
-      left: window.innerWidth / 2 - 192 // 192 = half of popover width (24rem = 384px)
-    };
-  }
-};
+//   if (selectedWordElement) {
+//     const rect = selectedWordElement.getBoundingClientRect();
+//     popoverPosition.value = {
+//       top: rect.bottom + window.scrollY + 8,
+//       left: rect.left + window.scrollX
+//     };
+//   } else {
+//     // Fallback to center of screen if we can't find the element
+//     popoverPosition.value = {
+//       top: window.scrollY + 100,
+//       left: window.innerWidth / 2 - 192 // 192 = half of popover width (24rem = 384px)
+//     };
+//   }
+// };
 
 // Open the popover when component mounts
 onMounted(() => {
   nextTick(() => {
-    calculatePosition();
+    //calculatePosition();
     isOpen.value = true;
   });
 });
@@ -427,13 +425,14 @@ const addAnnotation = () => {
 
 .annotation-popover {
   position: fixed;
+  top: 150px;
   z-index: 50;
   background-color: white;
   border-radius: 0.5rem;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   border: 2px solid #bfdbfe;
-  width: 24rem;
-  max-height: calc(100vh - 100px);
+  width: 14rem;
+  max-height: calc(90vh - 100px);
   overflow: auto;
 }
 
