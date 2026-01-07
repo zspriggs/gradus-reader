@@ -68,13 +68,13 @@
       <h3>Import Export Annotations:</h3>
       <button
         class="annotation-buttons"
-        @click="importAnnotations"
+        @click="handleImportAnnotations"
       >
         Import Annotations 
       </button>
       <button
         class="annotation-buttons"
-        @click="exportAnnotations"
+        @click="handleExportAnnotations"
       >
         Export Annotations 
       </button>
@@ -90,7 +90,7 @@ const props = defineProps({
   }
 });
 
-const emit = defineEmits(['toggle-feature']);
+const emit = defineEmits(['toggle-feature', 'import-annotations', 'export-annotations']);
 
 const annotationFeatures = [
   {
@@ -122,21 +122,18 @@ const visualFeatures = [
   }
 ];
 
-// const contentFeatures = [
-//   { 
-//     key: 'vocab', 
-//     label: 'Vocabulary', 
-//     description: 'NOT YET AVAILABLE Word meanings and translations'
-//   },
-//   { 
-//     key: 'morphology', 
-//     label: 'Morphology', 
-//     description: 'Detailed grammatical analysis'
-//   }
-// ];
 
 const handleToggle = (featureName) => {
   emit('toggle-feature', featureName);
+};
+
+const handleImportAnnotations = () => {
+  console.log("emitting import event");
+  emit('import-annotations');
+};
+
+const handleExportAnnotations = () => {
+  emit('export-annotations');
 };
 
 </script>

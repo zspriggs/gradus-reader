@@ -36,5 +36,36 @@ export const annotationStorage = {
         link.download = `annotations-${new Date().toLocaleString()}.json`
         link.click();
         URL.revokeObjectURL(tempurl);
+    },
+
+    import(callback) {
+        const input = document.createElement('input');
+        input.type = 'file';
+        input.accept = '.json';
+
+        input.onchange = (event) => {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                try {
+                    const importedData = JSON.parse(e.target.result);
+                    
+                    // Save the data to localStorage
+                    this.save(importedData);
+                    
+                    // Trigger a callback so the UI can refresh
+                    if (callback) callback(importedData);
+                    
+                    console.log("Import successful!");
+                } catch (err) {
+                    console.error("Failed to parse import file:", err);
+                    alert("Invalid file format. Please upload a valid JSON file.");
+                }
+            };
+            reader.readAsText(file);
+        };
+        input.click();
     }
 };

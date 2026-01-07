@@ -24,6 +24,8 @@
         <FeatureSelector 
           :features="features" 
           @toggle-feature="handleToggleFeature" 
+          @import-annotations="importAnnotations"
+          @export-annotations="exportAnnotations"
         />
       </div>
     </div>
@@ -66,11 +68,11 @@
         :class="{'hidden': docselectorOpen}"
       >🡺</button>
 
-      <div v-if="passageData" class="passage-container">
+      <div v-if="annotatedText" class="passage-container">
         <h2 class="passage-title">Section {{currentSection }}</h2>
         <div class="passage-text">
           <Word
-            v-for="word in passageData.text[currentSection]"
+            v-for="word in annotatedText[currentSection]"
             :key="word.uid"
             :word-data="word"
             :features="features"
@@ -181,7 +183,7 @@
 </template>
 
 <script setup>
-import { ref, reactive, computed, onMounted } from 'vue';
+import { ref, reactive, computed, onMounted, watch } from 'vue';
 import FeatureSelector from './components/FeatureSelector.vue';
 import Word from './components/Word.vue';
 import AnnotationPanel from './components/AnnotationPanel.vue';
@@ -216,30 +218,33 @@ const features = reactive({
 });
 
 onMounted(() => {
-  //Attempt to load annotations
   allAnnotations.value = annotationStorage.load();
-  // applyAnnotations();
-  //TODO: implement this!
-  if(currentUrn.value){
-    applyAnnotations();
-  }
 });
 
-const applyAnnotations = () => {
+// Add this to your <script setup>
+watch(allAnnotations, (newValue) => {
+  console.log("Syncing to localStorage...");
+  annotationStorage.save(newValue);
+}, { deep: true }); 
+
+const annotatedText = computed(() => {
   const docURN = currentUrn.value;
-  if (!docURN ||!passageData.value || !passageData.value.passage) return;
+  if (!docURN ||!passageData.value || !passageData.value.passage){ return; }
 
-  const savedAnnotations = allAnnotations.value[docURN];
-  if(!savedAnnotations){ return;}
-
+  const savedAnnotations = allAnnotations.value[docURN] || {};
+  
+  const sections = {};
   Object.keys(passageData.value.text).forEach(sectionKey => {
-    passageData.value.text[sectionKey].forEach(word => {
-      if (savedAnnotations[word.uid]) {
-        word.annotations = { ...savedAnnotations[word.uid]};
-      }
+    sections[sectionKey] = passageData.value.text[sectionKey].map(word => {
+      return {
+        ...word,
+        annotations: savedAnnotations[word.uid] || null
+      };
     });
   });
-};
+
+  return sections;
+});
 
 const handleAnnotationAdded = (newAnnotation) => {
   const targetWord  = passageData.value.text[currentSection.value].find(w => w.uid === newAnnotation.uid);
@@ -254,8 +259,7 @@ const handleAnnotationAdded = (newAnnotation) => {
       allAnnotations.value[docURN] = {};
     }
     allAnnotations.value[docURN][targetWord.uid] = targetWord.annotations;
-    annotationStorage.save(allAnnotations.value);
-    console.log("Added annotation to:", targetWord.form, targetWord.annotations);
+    //console.log("Added annotation to:", targetWord.form, targetWord.annotations);
   }
 };
 
@@ -264,12 +268,30 @@ const handleDocumentChange = (newDocument) => {
   currentUrn.value = newDocument.urn
   passageData.value = newDocument.data;
   currentSection.value = Object.keys(passageData.value.text)[0]; // Reset to first!
-  applyAnnotations()
   selectedWord.value = null;
 };
 
 const exportAnnotations = () => {
   annotationStorage.export();
+};
+
+const importAnnotations = () => {  
+  annotationStorage.import((newData) => {
+    const merged = { ...allAnnotations.value };
+
+    for (const urn in newData) {
+      if (merged[urn]) {
+        merged[urn] = {
+          ...merged[urn],    // Keep existing words
+          ...newData[urn]    // Add imported words
+        };
+      } else {
+        merged[urn] = newData[urn];
+      }
+    }
+
+    allAnnotations.value = merged;
+  });
 };
 
 const nextSection = () => {
@@ -296,7 +318,6 @@ const handleWordLongPress = (word) => {
 
   if(allAnnotations.value[urn]) {
     delete allAnnotations.value[urn][word.uid];
-    annotationStorage.save(allAnnotations.value);
   }
 
   console.log("Removed annotations from:", word.form);
