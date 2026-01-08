@@ -3,7 +3,10 @@
     ref="wordElement"
     :class="wordClasses"
     :style="syntaxStyle"
-    @click="handleClick"
+    @mousedown="$emit('word-mousedown', wordData)"
+    @mouseenter="$emit('word-mouseenter', wordData)"
+    @mouseup="$emit('word-mouseup', wordData)"
+    @click="$emit('word-click', wordData)"
     class="word-wrapper"
   >
     <span class="word-form">{{ wordData.form }}</span>
@@ -19,12 +22,21 @@
         {{ wordData.annotations.custom }}
       </span>
     </div>
+
+    <button
+      v-if="wordData.annotations"
+      class="delete-button"
+      @click.stop="$emit('word-delete', wordData)"
+    >
+    x
+    </button>
   </span>
 </template>
 
 <script setup>
 import { onLongPress } from '@vueuse/core';
-import { computed, useTemplateRef } from 'vue';
+//TODO rm vueuse
+import { computed } from 'vue';
 
 const props = defineProps({
   wordData: {
@@ -45,33 +57,33 @@ const props = defineProps({
   }
 });
 
-const emit = defineEmits(['word-click', 'word-long-press']);
+const emit = defineEmits(['word-click', 'word-mouseup', 'word-mousedown', 'word-mouseenter']);
 
-const wordElement = useTemplateRef('wordElement');
+//const wordElement = useTemplateRef('wordElement');
 
-let longPress = false;
+// let longPress = false;
 
-onLongPress(
-  wordElement,
-  (e) => {
-    longPress = true;
-    emit('word-long-press', props.wordData);
-  },
-  {
-    delay: 500, 
-    modifiers: {
-      prevent: true
-    }
-  }
-)
+// onLongPress(
+//   wordElement,
+//   (e) => {
+//     longPress = true;
+//     emit('word-long-press', props.wordData);
+//   },
+//   {
+//     delay: 500, 
+//     modifiers: {
+//       prevent: true
+//     }
+//   }
+// )
 
-const handleClick = () => {
-  if (longPress) {
-    longPress=false;
-    return; 
-  }
-  emit('word-click', props.wordData);
-};
+// const handleClick = () => {
+//   if (longPress) {
+//     longPress=false;
+//     return; 
+//   }
+//   emit('word-click', props.wordData);
+// };
 
 const wordClasses = computed(() => {
   let classes = ['word'];

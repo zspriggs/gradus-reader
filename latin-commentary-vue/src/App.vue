@@ -71,18 +71,70 @@
       <div v-if="annotatedText" class="passage-container">
         <h2 class="passage-title">Section {{currentSection }}</h2>
         <div class="passage-text">
-          <Word
+          <template 
             v-for="word in annotatedText[currentSection]"
             :key="word.uid"
-            :word-data="word"
-            :features="features"
-            :is-selected="selectedWord?.uid === word.uid"
-            :syntax-phrase="getSyntaxPhraseForWord(word.uid)"
-            @word-click="handleWordClick"
-            @word-long-press="handleWordLongPress"
-          />
+          >
+            <Word
+              :word-data="word"
+              :active-ranges="getActiveRanges(word.uid)"
+              :features="features"
+              :is-selected="selectedWord?.uid === word.uid"
+              :syntax-phrase="getSyntaxPhraseForWord(word.uid)"
+              @word-click="handleWordClick"
+              @word-delete="handleWordAnnotationDelete"
+              @word-mouseup="handleMouseUp"
+              @word-mousedown="handleMouseDown"
+              @word-mouseenter="handleMouseEnter"
+            />
+            <span 
+              v-if="getRangesEndingAt(word.uid).length > 0" 
+              class="line-note-icon"
+              @click="(event) => openExistingRangeNote(word.uid, event)"
+            >
+              💬
+            </span>
+          </template>
+
+          <div 
+            v-if="showRangeInput && pendingAnnotation" 
+            class="annotation-modal"
+            @click.self="cancelRangeInput">
+            <div class="modal-content">
+              <h3>Add Note</h3>
+              <textarea 
+                v-model="pendingAnnotation.text" 
+                class="modal-input"
+                placeholder="Type your commentary here..."
+              ></textarea>
+
+              <div class="modal-actions">
+                <button @click="cancelRangeInput" class="btn-cancel">Cancel</button>
+                <button @click="saveRangeInput" class="btn-save">Save Note</button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            v-if="rangeView"
+            class="range-note-tooltip"
+            :style="{
+              top: rangeViewPosition.top + 'px',
+              left: rangeViewPosition.left + 'px'
+            }"
+          >
+            <div class="tooltip-content">
+              <button class="tooltip-close" @click="closeRangeNote">x</button>
+              <div class="tooltip-text"> {{ rangeView.text }}</div>
+              <button class="tooltip-delete" @click="handleRangeAnnotationDelete(rangeView)">Delete</button>
+            </div>
+          </div>
+          <div 
+            v-if="rangeView"
+            class="tooltip-overlay"
+            @click="closeRangeNote"
+          ></div>
         </div>
-      
         <div class="tip-text">
           <strong>Tip:</strong> Toggle display options to customize your view. Click any word for detailed annotations!
         </div>
@@ -155,7 +207,7 @@
           </div>
         </div>
       </div>
-      <div v-if="features.syntax" class="legend-section">
+      <!-- <div v-if="features.syntax" class="legend-section">
         <h4>Syntax (Highlights):</h4>
         <div class="legend-items">
           <div class="legend-item">
@@ -175,7 +227,7 @@
             <span>Ablative Absolute</span>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
   </div>
@@ -191,16 +243,28 @@ import MorphAnnotator from './components/MorphAnnotator.vue';
 import DocumentSelector from './components/DocumentSelector.vue';
 import { annotationStorage } from './utils/annotationStorage.js';
 
-const currentUrn = ref(''); // Set your default
+const currentUrn = ref(''); 
 const passageData = ref(null); 
+const currentSection = ref('1.1'); //default
+const availableSections = computed(() => Object.keys(passageData?.value.text));
 
 const allAnnotations = ref({});
-
-const currentSection = ref('1.1');
-const availableSections = computed(() => Object.keys(passageData?.value.text));
 const selectedWord = ref(null);
+
 const sidebarOpen = ref(false);
 const docselectorOpen=ref(false);
+
+const isDragging = ref(false);
+const dragStart = ref(null);
+const dragEnd = ref(null);
+
+const pendingAnnotation = ref(null);
+const showRangeInput = ref(false);
+
+const rangeView = ref(null);
+const rangeViewPosition = ref({top: 0, left: 0});
+
+
 
 const features = reactive({
   inline: true,
@@ -221,7 +285,6 @@ onMounted(() => {
   allAnnotations.value = annotationStorage.load();
 });
 
-// Add this to your <script setup>
 watch(allAnnotations, (newValue) => {
   console.log("Syncing to localStorage...");
   annotationStorage.save(newValue);
@@ -306,14 +369,53 @@ const prevSection = () => {
   if (index > 0) {
     currentSection.value = availableSections.value[index - 1];
   }
+};
+
+const getRangesEndingAt = (uid) => {
+  const docURN = currentUrn.value;
+  const docAnnos = allAnnotations.value[docURN] || {};
+  
+  return Object.values(docAnnos).filter(anno => 
+    anno.type === 'range' && anno.enduid === uid
+  );
+};
+
+const getActiveRanges = (uid) => {
+  const docURN = currentUrn.value;
+  const docAnnos = allAnnotations.value[docURN] || {};
+  
+  return Object.values(docAnnos).filter(anno => 
+    anno.type === 'range' && anno.uids.includes(uid)
+  );
+};
+
+const openExistingRangeNote = (uid, event) => {
+  const ranges = getRangesEndingAt(uid);
+  if(ranges.length > 0) {
+    //TODO: fix this, add support for showing multiple annotations
+    rangeView.value = ranges[0];
+  }
+  else {console.log("huh??");}
+
+  const rect = event.target.getBoundingClientRect();
+  rangeViewPosition.value = {
+    top: rect.bottom + window.scrollY + 2,
+    left: rect.left + window.scrollX
+  };
+
+  console.log("idk man I tried ", rangeView)
+};
+
+const closeRangeNote = () => {
+  rangeView.value = null;
 }
 
 const handleWordClick = (word) => {
   selectedWord.value = word;
 };
 
-const handleWordLongPress = (word) => {
-  const urn = currentUrn.value
+const handleWordAnnotationDelete = (word) => {
+  const urn = currentUrn.value;
   word.annotations = null;
 
   if(allAnnotations.value[urn]) {
@@ -321,6 +423,59 @@ const handleWordLongPress = (word) => {
   }
 
   console.log("Removed annotations from:", word.form);
+};
+
+const handleRangeAnnotationDelete = (rangeAnnotation) => {
+  const urn = currentUrn.value;
+  if(allAnnotations.value[urn]) {
+    delete allAnnotations.value[urn][rangeAnnotation.id];
+  }
+  console.log("Removed range annotation");
+};
+
+const handleMouseDown = (word) => {
+  console.log("mouse down")
+  isDragging.value = true;
+  dragStart.value = word.uid;
+  dragEnd.value = word.uid;
+};
+
+const handleMouseEnter = (word) => {
+  if(isDragging.value) {
+    dragEnd.value = word.uid;
+  }
+};
+
+const handleMouseUp = (word) => {
+  console.log("mouse up");
+  if(isDragging.value && dragStart.value !== dragEnd.value) {
+    saveRangeAnnotation(dragStart.value, dragEnd.value);
+    console.log("saveannotation");
+  }
+  isDragging.value = false;
+  dragStart.value = null;
+  dragEnd.value = null;
+};
+
+const saveRangeAnnotation = (startUID, endUID) => {
+  const section = passageData.value.text[currentSection.value];
+  const startIndex = section.findIndex(w => w.uid === startUID);
+  const endIndex = section.findIndex(w => w.uid === endUID);
+
+  const realStartIndex = startIndex < endIndex ? startIndex : endIndex;
+  const realEndIndex = startIndex < endIndex ? endIndex : startIndex;
+
+  const selectedWords = section.slice(realStartIndex, realEndIndex).map(w => w.uid);
+
+  const id = `range.${pendingAnnotation.value.startuid}.${pendingAnnotation.value.enduid}`
+
+  openInput({
+    id: id,
+    uids: selectedWords,
+    startuid: section[realStartIndex].uid,
+    enduid: section[realEndIndex].uid,
+    text: ""
+  });
 };
 
 const handleToggleFeature = (featureName) => {
@@ -334,6 +489,36 @@ const getSyntaxPhraseForWord = (wordId) => {
     phrase.wordIds.includes(wordId)
   ) || null;
 };
+
+const openInput = ({id, uids, startuid, enduid, text}) => {
+  pendingAnnotation.value = {
+    id, uids, startuid, enduid, text, type: 'range'
+  };
+
+  showRangeInput.value = true;
+};
+
+const cancelRangeInput = () => {
+  showRangeInput.value = false;
+  pendingAnnotation.value = null;
+};
+
+const saveRangeInput = () => {
+  const docURN = currentUrn.value;
+  if(!pendingAnnotation.value){return;}
+
+  if(!allAnnotations.value[docURN]){
+    allAnnotations.value[docURN] = {};
+  }
+
+  allAnnotations.value[docURN][pendingAnnotation.id] = {
+    ...pendingAnnotation.value
+  };
+
+  showRangeInput.value = false;
+  pendingAnnotation.value = null;
+};
+
 </script>
 
 <style>
@@ -581,6 +766,160 @@ const getSyntaxPhraseForWord = (wordId) => {
 .next-button.hidden {
   display: none !important;
 }
+
+.annotation-modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(255, 255, 255, 0.2); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  resize: both;
+}
+
+.modal-input {
+  background: white;
+  width: 100%;
+  height: 80px; 
+  padding: 0px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  resize: none; 
+  outline: none;
+}
+
+.modal-input:focus {
+  border-color: #3b82f6;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.btn-cancel {
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  color: #6b7280;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.btn-cancel:hover {
+  background: rgb(212, 212, 212);
+}
+
+.btn-save {
+  background: #639efc;
+  color: white;
+  border: none;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-save:hover {
+    background: #3b82f6;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.annotation-input-area {
+  width: 100%;
+  height: 120px;
+  margin: 12px 0;
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-family: inherit;
+}
+
+.line-note-icon {
+  cursor: pointer;
+  font-size: 9pt;
+}
+
+.line-note-icon:hover {
+  font-size: 11pt;
+}
+
+.tooltip-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1999; /* Just below the tooltip */
+  background: transparent;
+}
+
+.range-note-tooltip {
+  position: absolute;
+  z-index: 2000;
+  max-width: 300px;
+}
+
+.tooltip-content {
+  background: white;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.tooltip-close {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+}
+
+.tooltip-close:hover {
+  color: #374151;
+}
+
+.tooltip-text {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #374151;
+  padding-right: 20px; /* Space for the close button */
+}
+
+.tooltip-delete {
+  font-family: inherit;
+  background-color: rgb(255, 167, 167);
+  border: none;
+  border-radius: 4px;
+}
+
+.tooltip-delete:hover {
+  background-color: rgb(255, 100, 100);
+}
+
 
 
 /* Legend Styles */

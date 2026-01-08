@@ -27,22 +27,24 @@
 <script setup>
 
 import {ref, onMounted} from 'vue';
-import ciceroData from '../data/phi0474.phi013.perseus-lat1.json';
-import homerData from '../data/tlg0012.tlg001.perseus-grc1.json';
+import ciceroInCatilinam1 from '../data/phi0474.phi013.perseus-lat1.json';
+import homerIliad from '../data/tlg0012.tlg001.perseus-grc1.json';
+import herodotusHistories1 from '../data/tlg0016.tlg001.perseus-grc1.1.json';
 
 const emit = defineEmits(['document-selected']);
 
 const documents = {
   Latin: [
-    {urn: 'phi0474.phi013', title: 'Cicero - In Catilinam', data: ciceroData}
+    {urn: 'phi0474.phi013', title: 'Cicero - In Catilinam', data: ciceroInCatilinam1}
   ],
   Greek: [
-    {urn: 'tlg0012.tlg001', title: 'Homer - Iliad', data: homerData}
+    {urn: 'tlg0012.tlg001', title: 'Homer - Iliad', data: homerIliad},    
+    {urn: 'tlg0016.tlg001', title: 'Herodotus - Histories', data: herodotusHistories1}
   ]
 };
 
 const selectedURN = ref('phi0474.phi013');
-const selectedData = ref(ciceroData);
+const selectedData = ref(ciceroInCatilinam1);
 
 onMounted(() => {
   loadDocument();
