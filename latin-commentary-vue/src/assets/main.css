@@ -1,0 +1,42 @@
+.app-container {
+    position: relative;
+    min-height: 100vh;
+    font-family: 'EB Garamond', 'Garamond', 'Georgia', 'Times New Roman', serif;
+}
+
+:root {
+    /* Brand Colors */
+    --green-button: #768372;
+    --green-button-hover: #657062;
+
+    --orange-button: #c69670;
+    --orange-button-hover: #B87C4C;
+
+    --delete-red: #ff4d4d;
+    --delete-red-hover: #e60000;
+
+    /* Word styles */
+    --hover-khaki: #e7dbce;
+    --selected-khaki: #d0c5b9;
+    --outline-khaki: #746e67;
+
+    --highlight-1: rgb(168, 187, 163, 0.3);
+    --highlight-2: rgb(168, 187, 163, 0.5);
+    --highlight-3: rgb(168, 187, 163, 0.7);
+
+    --title-dark: #374151;
+
+    --gray-text: #6b7280;
+
+
+
+    /* Neutral Colors */
+    --bg-white: #ffffff;
+    --text-main: #333333;
+    --border-gray: #e0e0e0;
+    --btn-gray: #808080;
+
+    /* Spacing/Border Radius (Optional but helpful) */
+    --radius-sm: 4px;
+    --radius-round: 50%;
+}

@@ -97,11 +97,11 @@
           </template>
 
           <div 
-            v-if="showRangeInput && pendingAnnotation" 
+            v-if="features.line && showRangeInput && pendingAnnotation"
             class="annotation-modal"
             @click.self="cancelRangeInput">
             <div class="modal-content">
-              <h3>Add Note</h3>
+              <h5>Add Note</h5>
               <textarea 
                 v-model="pendingAnnotation.text" 
                 class="modal-input"
@@ -151,7 +151,7 @@
     />
     
     <!-- Legend -->
-    <div class="legend-container">
+    <div v-if="features.caseHighlight || features.posHighlight" class="legend-container">
       <h3>Legend</h3>
       <div v-if="features.caseHighlight" class="legend-section">
         <h4>Cases (Underlines):</h4>
@@ -264,14 +264,12 @@ const showRangeInput = ref(false);
 const rangeView = ref(null);
 const rangeViewPosition = ref({top: 0, left: 0});
 
-
-
 const features = reactive({
   inline: true,
-  line: false,
+  line: true,
   
   // Visual highlighting
-  caseHighlight: true,
+  caseHighlight: false,
   posHighlight: false,
   syntax: false,
   
@@ -403,7 +401,6 @@ const openExistingRangeNote = (uid, event) => {
     left: rect.left + window.scrollX
   };
 
-  console.log("idk man I tried ", rangeView)
 };
 
 const closeRangeNote = () => {
@@ -421,8 +418,6 @@ const handleWordAnnotationDelete = (word) => {
   if(allAnnotations.value[urn]) {
     delete allAnnotations.value[urn][word.uid];
   }
-
-  console.log("Removed annotations from:", word.form);
 };
 
 const handleRangeAnnotationDelete = (rangeAnnotation) => {
@@ -430,7 +425,8 @@ const handleRangeAnnotationDelete = (rangeAnnotation) => {
   if(allAnnotations.value[urn]) {
     delete allAnnotations.value[urn][rangeAnnotation.id];
   }
-  console.log("Removed range annotation");
+
+  closeRangeNote();
 };
 
 const handleMouseDown = (word) => {
@@ -449,7 +445,7 @@ const handleMouseEnter = (word) => {
 const handleMouseUp = (word) => {
   console.log("mouse up");
   if(isDragging.value && dragStart.value !== dragEnd.value) {
-    saveRangeAnnotation(dragStart.value, dragEnd.value);
+    startRangeAnnotation(dragStart.value, dragEnd.value);
     console.log("saveannotation");
   }
   isDragging.value = false;
@@ -457,7 +453,7 @@ const handleMouseUp = (word) => {
   dragEnd.value = null;
 };
 
-const saveRangeAnnotation = (startUID, endUID) => {
+const startRangeAnnotation = (startUID, endUID) => {
   const section = passageData.value.text[currentSection.value];
   const startIndex = section.findIndex(w => w.uid === startUID);
   const endIndex = section.findIndex(w => w.uid === endUID);
@@ -465,15 +461,18 @@ const saveRangeAnnotation = (startUID, endUID) => {
   const realStartIndex = startIndex < endIndex ? startIndex : endIndex;
   const realEndIndex = startIndex < endIndex ? endIndex : startIndex;
 
-  const selectedWords = section.slice(realStartIndex, realEndIndex).map(w => w.uid);
+  const selectedWords = section.slice(realStartIndex, realEndIndex+1).map(w => w.uid);
 
-  const id = `range.${pendingAnnotation.value.startuid}.${pendingAnnotation.value.enduid}`
+  const startuid = section[realStartIndex].uid;
+  const enduid = section[realEndIndex].uid;
+
+  const id = `range.${startuid}.${enduid}`
 
   openInput({
     id: id,
     uids: selectedWords,
-    startuid: section[realStartIndex].uid,
-    enduid: section[realEndIndex].uid,
+    startuid: startuid,
+    enduid: enduid,
     text: ""
   });
 };
@@ -511,7 +510,7 @@ const saveRangeInput = () => {
     allAnnotations.value[docURN] = {};
   }
 
-  allAnnotations.value[docURN][pendingAnnotation.id] = {
+  allAnnotations.value[docURN][pendingAnnotation.value.id] = {
     ...pendingAnnotation.value
   };
 
@@ -526,12 +525,6 @@ const saveRangeInput = () => {
   box-sizing: border-box;
 }
 
-.app-container {
-  position: relative;
-  min-height: 100vh;
-  font-family: 'EB Garamond', 'Garamond', 'Georgia', 'Times New Roman', serif;
-}
-
 /* doc selector toggle */
 .docselector-toggle {
   position: fixed;
@@ -539,7 +532,7 @@ const saveRangeInput = () => {
   left: 20px;
   z-index: 1001;
   padding: 10px 16px;
-  background-color: #3b82f6;
+  background-color: var(--green-button);
   color: white;
   border: none;
   border-radius: 8px;
@@ -550,16 +543,16 @@ const saveRangeInput = () => {
 }
 
 .docselector-toggle:hover {
-  background-color: #2563eb;
+  background-color: var(--green-button-hover);
   transform: translateY(-1px);
 }
 
 .docselector-toggle.docselector-open {
-  background-color: #ef4444;
+  background-color: var(--delete-red);
 }
 
 .docselector-toggle.docselector-open:hover {
-  background-color: #dc2626;
+  background-color: var(--delete-red-hover);
 }
 
 .docselector {
@@ -583,13 +576,6 @@ const saveRangeInput = () => {
   padding: 80px 20px 20px 20px;
 }
 
-.docselector-title {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 20px;
-  color: #374151;
-}
-
 /* Sidebar overlay for mobile */
 .sidebar-overlay {
   position: fixed;
@@ -609,7 +595,7 @@ const saveRangeInput = () => {
   right: 20px;
   z-index: 1001;
   padding: 10px 16px;
-  background-color: #3b82f6;
+  background-color: var(--green-button);
   color: white;
   border: none;
   border-radius: 8px;
@@ -620,16 +606,16 @@ const saveRangeInput = () => {
 }
 
 .sidebar-toggle:hover {
-  background-color: #2563eb;
+  background-color: var(--green-button-hover);
   transform: translateY(-1px);
 }
 
 .sidebar-toggle.sidebar-open {
-  background-color: #ef4444;
+  background-color: var(--delete-red);
 }
 
 .sidebar-toggle.sidebar-open:hover {
-  background-color: #dc2626;
+  background-color: var(--delete-red-hover);
 }
 
 /* Sidebar */
@@ -654,13 +640,6 @@ const saveRangeInput = () => {
   padding: 80px 20px 20px 20px;
 }
 
-.sidebar-title {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 20px;
-  color: #374151;
-}
-
 /* Sidebar overlay for mobile */
 .sidebar-overlay {
   position: fixed;
@@ -678,13 +657,6 @@ const saveRangeInput = () => {
   max-width: 1024px;
   margin: 0 auto;
   padding: 24px;
-  transition: margin-left 0.3s ease;
-}
-
-@media (min-width: 1200px) {
-  .main-content.sidebar-open {
-    margin-right: 175px;
-  }
 }
 
 @media (max-width: 768px) {
@@ -707,7 +679,7 @@ const saveRangeInput = () => {
   font-weight: bold;
   text-align: center;
   margin-bottom: 32px;
-  color: #374151;
+  color: var(--title-dark);
 }
 
 .passage-container {
@@ -722,7 +694,7 @@ const saveRangeInput = () => {
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 16px;  
-  color: #374151;
+  color: var(--title-dark);
 }
 
 .passage-text {
@@ -733,7 +705,7 @@ const saveRangeInput = () => {
 .tip-text {
   margin-top: 16px;
   font-size: 0.875rem;
-  color: #6b7280;
+  color: var(--gray-text);
 }
 
 .next-button,
@@ -741,7 +713,7 @@ const saveRangeInput = () => {
   position: fixed;
   top: 80px;
   z-index: 1002;
-  background-color: #19d3bd;
+  background-color: var(--orange-button);
   color: black;
   padding: 5px 16px;
   border: none;
@@ -759,7 +731,7 @@ const saveRangeInput = () => {
 
 .next-button:hover, 
 .prev-button:hover {
-  background-color: #13ac9a;
+  background-color: var(--orange-button-hover);
 }
 
 .prev-button.hidden,
@@ -771,12 +743,23 @@ const saveRangeInput = () => {
   position: fixed;
   top: 0; left: 0;
   width: 100vw; height: 100vh;
-  background: rgba(255, 255, 255, 0.2); 
+  background: rgba(255, 255, 255, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 2000;
   resize: both;
+  color: var(--title-dark);
+}
+
+.modal-content {
+  background: white;
+  border: 2px solid var(--green-button);
+  padding: 10px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
 .modal-input {
@@ -784,7 +767,7 @@ const saveRangeInput = () => {
   width: 100%;
   height: 80px; 
   padding: 0px;
-  border: 1px solid #d1d5db;
+  border: 1px solid var(--title-dark);
   border-radius: 4px;
   font-size: 0.9rem;
   resize: none; 
@@ -792,31 +775,31 @@ const saveRangeInput = () => {
 }
 
 .modal-input:focus {
-  border-color: #3b82f6;
+  border-color: var(--orange-button-hover);
 }
 
 .modal-actions {
   display: flex;
   justify-content: flex-end;
-  gap: 8px;
-  margin-top: 8px;
+  gap: 4px;
+  margin-top: 4px;
 }
 
 .btn-cancel {
   background: transparent;
   border: none;
   border-radius: 4px;
-  color: #6b7280;
+  color: var(--gray-text);
   font-size: 0.8rem;
   cursor: pointer;
 }
 
 .btn-cancel:hover {
-  background: rgb(212, 212, 212);
+  background: var(--hover-khaki);
 }
 
 .btn-save {
-  background: #639efc;
+  background: var(--green-button);
   color: white;
   border: none;
   padding: 4px 12px;
@@ -827,35 +810,16 @@ const saveRangeInput = () => {
 }
 
 .btn-save:hover {
-    background: #3b82f6;
-}
-
-.modal-content {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  width: 90%;
-  max-width: 400px;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-}
-
-.annotation-input-area {
-  width: 100%;
-  height: 120px;
-  margin: 12px 0;
-  padding: 10px;
-  border: 1px solid #d1d5db;
-  border-radius: 6px;
-  font-family: inherit;
+    background: var(--green-button-hover);
 }
 
 .line-note-icon {
   cursor: pointer;
-  font-size: 9pt;
+  font-size: .75rem;
 }
 
 .line-note-icon:hover {
-  font-size: 11pt;
+  font-size: .85rem;
 }
 
 .tooltip-overlay {
@@ -876,7 +840,7 @@ const saveRangeInput = () => {
 
 .tooltip-content {
   background: white;
-  border: 1px solid #d1d5db;
+  border: 1px solid var(--green-button);
   border-radius: 8px;
   padding: 12px;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
@@ -911,16 +875,15 @@ const saveRangeInput = () => {
 
 .tooltip-delete {
   font-family: inherit;
-  background-color: rgb(255, 167, 167);
+  color: white;
+  background-color: var(--delete-red);
   border: none;
   border-radius: 4px;
 }
 
 .tooltip-delete:hover {
-  background-color: rgb(255, 100, 100);
+  background-color: var(--delete-red-hover);
 }
-
-
 
 /* Legend Styles */
 .legend-container {

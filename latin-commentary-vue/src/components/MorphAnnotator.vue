@@ -10,7 +10,6 @@
         
         <div 
           class="annotation-popover"
-
         >
           <div class="popover-header">
             <h3 class="popover-title">{{ props.wordData.form }}</h3>
@@ -73,7 +72,7 @@
             <div class="button-group">
               <button
                 @click="validateAnnotation"
-                class="btn btn-primary"
+                class="btn btn-check"
               >
                 Check
               </button>
@@ -86,7 +85,7 @@
               </button>
               <button
                 @click="handleClose"
-                class="btn btn-secondary"
+                class="btn btn-finish"
               >
                 Finish
               </button>
@@ -99,34 +98,6 @@
                 validationResult.isCorrect ? 'validation-correct' : 'validation-incorrect'
               ]"
             >
-              <svg 
-                v-if="validationResult.isCorrect"
-                xmlns="http://www.w3.org/2000/svg" 
-                width="18" 
-                height="18" 
-                viewBox="0 0 24 24" 
-                fill="none" 
-                stroke="currentColor" 
-                stroke-width="2"
-                class="validation-icon"
-              >
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-              <svg 
-                v-else
-                xmlns="http://www.w3.org/2000/svg" 
-                width="18" 
-                height="18" 
-                viewBox="0 0 24 24" 
-                fill="none" 
-                stroke="currentColor" 
-                stroke-width="2"
-                class="validation-icon"
-              >
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="12" y1="8" x2="12" y2="12"></line>
-                <line x1="12" y1="16" x2="12.01" y2="16"></line>
-              </svg>
               <div class="validation-content">
                 <p class="validation-message">
                   {{ validationResult.message }}
@@ -178,8 +149,8 @@ const morphologyOptions = {
   gender: ["masculine", "feminine", "neuter"],
   tense: ["present", "imperfect", "future", "perfect", "pluperfect", "future perfect"],
   mood: ["indicative", "subjunctive", "imperative", "infinitive"],
-  voice: ["active", "passive"],
-  person: ["1st", "2nd", "3rd"]//,
+  voice: ["active", "passive", "deponent"],
+  person: ["first", "second", "third"]//,
   //declension: ["1st", "2nd", "3rd", "4th", "5th"],
   //conjugation: ["1st", "2nd", "3rd", "3rd-io", "4th"]
 };
@@ -396,26 +367,6 @@ const addAnnotation = () => {
   line-height: 2.5;
 }
 
-.word-clickable {
-  display: inline-block;
-  margin: 0 0.5rem;
-  padding: 0.25rem 0.75rem;
-  cursor: pointer;
-  border-radius: 0.375rem;
-  transition: all 0.2s;
-}
-
-.word-clickable:hover {
-  background-color: #dbeafe;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-}
-
-.word-selected {
-  background-color: #3b82f6;
-  color: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
 .popover-backdrop {
   position: fixed;
   inset: 0;
@@ -430,16 +381,16 @@ const addAnnotation = () => {
   background-color: white;
   border-radius: 0.5rem;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  border: 2px solid #bfdbfe;
   width: 14rem;
   max-height: calc(90vh - 100px);
   overflow: auto;
+  resize: both;
 }
 
 .popover-header {
   position: sticky;
   top: 0;
-  background-color: #3b82f6;
+  background-color: var(--orange-button-hover);
   color: white;
   padding: 0.75rem 1rem;
   display: flex;
@@ -466,7 +417,7 @@ const addAnnotation = () => {
 }
 
 .close-button:hover {
-  color: #dbeafe;
+  color: var(--title-dark);
 }
 
 .popover-body {
@@ -475,12 +426,12 @@ const addAnnotation = () => {
 
 .instruction-text {
   font-size: 0.875rem;
-  color: #4b5563;
+  color: var(--title-dark);
   margin-bottom: 1rem;
 }
 
 .form-fields {
-  max-height: 20rem;
+  max-height: 50rem;
   overflow-y: auto;
   margin-bottom: 1rem;
 }
@@ -520,7 +471,7 @@ const addAnnotation = () => {
   outline: none;
   ring: 2px;
   ring-color: #3b82f6;
-  border-color: transparent;
+  border-color: var(--orange-button);
 }
 
 .button-group {
@@ -539,24 +490,24 @@ const addAnnotation = () => {
   transition: background-color 0.2s;
 }
 
-.btn-primary {
+.btn-check {
   flex: 1;
-  background-color: #3b82f6;
+  background-color: var(--green-button);
   color: white;
 }
 
-.btn-primary:hover {
-  background-color: #2563eb;
+.btn-check:hover {
+  background-color: var(--green-button-hover);
 }
 
-.btn-secondary {
+.btn-finish {
   padding-left: 1rem;
   padding-right: 1rem;
   background-color: #e5e7eb;
   color: #374151;
 }
 
-.btn-secondary:hover {
+.btn-finish:hover {
   background-color: #d1d5db;
 }
 

@@ -9,19 +9,19 @@
     @click="$emit('word-click', wordData)"
     class="word-wrapper"
   >
-    <span class="word-form">{{ wordData.form }}</span>
+    <span :class="['word', highlightClass]">{{ wordData.form + '\u00A0' + '\u00A0' }}</span>
 
-    <div v-if="wordData.annotations" class="inline-annotations">
+    <span v-if="wordData.annotations" class="inline-annotations">
       <span class="annotation-tag">
         {{ abbreviatedFeatures }}
       </span>
-    </div>
+    </span>
 
-    <div v-if="wordData.annotations?.custom" class="custom-annotations">
+    <span v-if="wordData.annotations?.custom" class="custom-annotations">
       <span class="custom-annotation-tag">
         {{ wordData.annotations.custom }}
       </span>
-    </div>
+    </span>
 
     <button
       v-if="wordData.annotations"
@@ -34,11 +34,13 @@
 </template>
 
 <script setup>
-import { onLongPress } from '@vueuse/core';
-//TODO rm vueuse
 import { computed } from 'vue';
 
 const props = defineProps({
+  activeRanges: {
+    type: Array,
+    default: () => []
+  },
   wordData: {
     type: Object,
     required: true
@@ -57,33 +59,8 @@ const props = defineProps({
   }
 });
 
-const emit = defineEmits(['word-click', 'word-mouseup', 'word-mousedown', 'word-mouseenter']);
-
-//const wordElement = useTemplateRef('wordElement');
-
-// let longPress = false;
-
-// onLongPress(
-//   wordElement,
-//   (e) => {
-//     longPress = true;
-//     emit('word-long-press', props.wordData);
-//   },
-//   {
-//     delay: 500, 
-//     modifiers: {
-//       prevent: true
-//     }
-//   }
-// )
-
-// const handleClick = () => {
-//   if (longPress) {
-//     longPress=false;
-//     return; 
-//   }
-//   emit('word-click', props.wordData);
-// };
+const space = "      \n"
+const emit = defineEmits(['word-click', 'word-mouseup', 'word-mousedown', 'word-mouseenter', 'word-delete']);
 
 const wordClasses = computed(() => {
   let classes = ['word'];
@@ -133,6 +110,14 @@ const syntaxStyle = computed(() => {
   return {}
 });
 
+const highlightClass = computed(() => {
+  const rangeCount = props.activeRanges.length;
+  if (rangeCount === 0) return 'highlight-0';
+  if (rangeCount === 1) return 'highlight-1';
+  if (rangeCount === 2) return 'highlight-2';
+  if (rangeCount >= 3) return 'highlight-3';
+});
+
 //TODO add greek!!
 const abbreviationMap = {
   gender: { masculine: 'm', feminine: 'f', neuter: 'n' },
@@ -162,58 +147,103 @@ const abbreviatedFeatures = computed(() => {
 
 <style scoped>
 .word-wrapper {
+  position: relative;
   display: inline-flex;
   flex-direction: column;
-  padding: 2px 4px;
-  margin: 0 2px;
+  padding: 0;
+  margin: 0;
+  font-size: 0;
   border-radius: 4px;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
+.word {
+  padding: 1px 0px;
+  font-size: 1.1rem;
+}
+
 .inline-annotations {
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap; 
-  gap: 2px; 
-  margin-top: -2px; 
-  min-height: 10px; 
+  gap: 3px;
+  padding: 1px 0px;
+  margin-top: -2px;
+  min-height: 8px;
 }
 
 .custom-annotations {
   display: flex;
   flex-wrap: wrap; 
-  gap: 2px; 
+  gap: 2px;
+  padding: 1px 0px;
   margin-top: 2px; 
+  min-height: 8px;
 }
 
 .annotation-tag {
-  font-size: 0.65rem; 
+  font-size: 0.75rem;
   color: black;
   background-color: rgb(212, 254, 205); 
-  padding: 1px 3px;
   border-radius: 3px;
-  line-height: 1; 
+  line-height: 1;
   white-space: nowrap; 
 }
 
 .custom-annotation-tag{
-  font-size: 0.65rem; 
+  font-size: 0.75rem;
   color: black;
   background-color: white; 
-  padding: 1px 3px;
   border-radius: 3px;
-  line-height: 1; 
+  line-height: 1;
   white-space: nowrap; 
 }
 
+.delete-button {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 0;
+  z-index: 10;
+
+  opacity: 0;
+  transition: opacity 0.2s ease;
+
+  background-color: white;
+  color: red;
+  border-color: red;
+}
+
+.word-wrapper:hover .delete-button {
+  opacity: 1;
+}
+
 .word-wrapper:hover {
-  background-color: rgba(59, 130, 246, 0.15);
+  background-color: var(--hover-khaki);
   transform: translateY(-1px);
 }
 
 .word-wrapper.selected {
-  background-color: rgba(59, 130, 246, 0.3) !important;
-  box-shadow: 0 0 0 2px #3b82f6;
+  background-color: var(--selected-khaki) !important;
+  box-shadow: 0 0 0 2px var(--outline-khaki);
+}
+
+.highlight-1 {
+  background-color: var(--highlight-1);
+
+}
+.highlight-2 {
+  background-color: var(--highlight-2);
+}
+.highlight-3 {
+  background-color: var(--highlight-3);
 }
 
 /* Case-based underline colors (for nouns/adjectives) */

@@ -18,12 +18,6 @@
             {{ feature.label }}
           </span>
           <span class="feature-description">{{ feature.description }}</span>
-        <!-- <input 
-          type="checkbox" 
-          id="annotation-toggle" 
-          :checked="features.annotation"
-          @change="handleToggle('annotation')"
-        /> -->
         </label>
       </div>
 
@@ -67,13 +61,13 @@
     </div>
       <h3>Import Export Annotations:</h3>
       <button
-        class="annotation-buttons"
+        class="btn-import-annotation"
         @click="handleImportAnnotations"
       >
         Import Annotations 
       </button>
       <button
-        class="annotation-buttons"
+        class="btn-export-annotation"
         @click="handleExportAnnotations"
       >
         Export Annotations 
@@ -100,8 +94,8 @@ const annotationFeatures = [
   },
   {
     key: 'line',
-    label: 'Line-by-line Annotations',
-    descriptions: 'Annotations attached to a certain line of text.'
+    label: 'Chunk Annotations',
+    description: 'Annotations attached to a certain chunk of text.'
   }
 ]
 const visualFeatures = [
@@ -211,16 +205,30 @@ const handleExportAnnotations = () => {
   margin-left: 26px;
 }
 
-.annotation-buttons {
+.btn-import-annotation{
   font-size: 0.95rem;
-  margin-bottom: 5px;
+  color: white;
+  margin-bottom: 10px;
   border-radius: 4px;
   border-width: 0px;
-  background-color:#19d3bd7b
+  background-color: var(--green-button)
 }
 
-.annotation-buttons:hover {
-  background-color: #19d3bdc8
+.btn-export-annotation{
+  font-size: 0.95rem;
+  color: white;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border-width: 0px;
+  background-color: var(--orange-button)
+}
+
+.btn-import-annotation:hover {
+  background-color: var(--green-button-hover)
+}
+
+.btn-export-annotation:hover {
+  background-color: var(--orange-button-hover)
 }
 
 @media (max-width: 768px) {
