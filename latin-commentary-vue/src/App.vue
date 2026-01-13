@@ -8,6 +8,21 @@
       @annotation-added="handleAnnotationAdded" 
     />
 
+    <!--- help/about button toggle -->
+    <button
+      class="help-toggle"
+      @click="helpSidebarOpen = !helpSidebarOpen"
+      :class="{ 'help-sidebar-open': helpSidebarOpen, 'sidebar-open': sidebarOpen }"
+    >
+      <span v-if="!helpSidebarOpen">❔</span>
+      <span v-else>x</span>
+    </button>
+    <div class="sidebar" :class="{ 'open': helpSidebarOpen }">
+      <div class="sidebar-content">
+        <HelpPanel></HelpPanel>
+      </div>
+    </div>
+
     <!-- Sidebar toggle -->
     <button 
       class="sidebar-toggle" 
@@ -236,11 +251,13 @@
 
 <script setup>
 import { ref, reactive, computed, onMounted, watch } from 'vue';
+
 import FeatureSelector from './components/FeatureSelector.vue';
 import Word from './components/Word.vue';
 import AnnotationPanel from './components/AnnotationPanel.vue';
 import MorphAnnotator from './components/MorphAnnotator.vue';
 import DocumentSelector from './components/DocumentSelector.vue';
+import HelpPanel from './components/HelpPanel.vue';
 import { annotationStorage } from './utils/annotationStorage.js';
 
 const currentUrn = ref(''); 
@@ -251,6 +268,7 @@ const availableSections = computed(() => Object.keys(passageData?.value.text));
 const allAnnotations = ref({});
 const selectedWord = ref(null);
 
+const helpSidebarOpen = ref(true);
 const sidebarOpen = ref(false);
 const docselectorOpen=ref(false);
 
@@ -616,6 +634,40 @@ const saveRangeInput = () => {
 
 .sidebar-toggle.sidebar-open:hover {
   background-color: var(--delete-red-hover);
+}
+
+.help-toggle {
+  position: fixed;
+  top: 20px;
+  right:150px;
+  z-index: 1001;
+  padding: 10px 10px;
+  background-color: var(--green-button);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.help-toggle:hover {
+  background-color: var(--green-button-hover);
+  transform: translateY(-1px);
+}
+
+.help-toggle.help-sidebar-open {
+  background-color: var(--delete-red);
+}
+
+.help-toggle.help-sidebar-open:hover {
+  background-color: var(--delete-red-hover);
+}
+
+/*remove button toggle when settings are open*/
+.help-toggle.sidebar-open{
+  display: none;
 }
 
 /* Sidebar */

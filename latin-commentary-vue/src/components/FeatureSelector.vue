@@ -158,7 +158,7 @@ const handleExportAnnotations = () => {
 .feature-group h4 {
   font-size: 0.875rem;
   font-weight: 600;
-  color: #6b7280;
+  color: var(--gray-text);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 12px;
