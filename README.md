@@ -15,8 +15,8 @@ By integrating treebank data, Juno enables students to make their own attempts a
 - *Learner Analytics*: Track error patterns to generate personalized study recommendations
 
 ### Technologies
-Frontend: Vue.js
-Data Source: Perseus Project treebanks
+Frontend: Vue.js  
+Data Source: Perseus Project treebanks  
 Preprocessing: XML treebank files are preprocessed using the tb_to_json.py script in data_gen/. Automatic Syntax Labeling is performed with a modified version of [pseudw python](https://github.com/zspriggs/pseudw_python), a Python version of nkallen's [pseudw](https://github.com/nkallen/pseudw). 
 
 ### About
