@@ -20,7 +20,7 @@ Data Source: Perseus Project treebanks
 Preprocessing: XML treebank files are preprocessed using the tb_to_json.py script in data_gen/. Automatic Syntax Labeling is performed with a modified version of [pseudw python](https://github.com/zspriggs/pseudw_python), a Python version of nkallen's [pseudw](https://github.com/nkallen/pseudw). 
 
 ### About
-Juno is being developed as a master's thesis project by Zoe Spriggs and Mitchell Shiffer. User testing with students is planned for Spring 2026 to evaluate effectiveness and refine features based on learner feedback. If you have feedback on Juno or feature suggestions, we'd love to hear it! Please [reach out](mailtolink) or open a GitHub Issue. 
+Juno is being developed as a master's thesis project by Zoe Spriggs and Mitchell Shiffer. User testing with students is planned for Spring 2026 to evaluate effectiveness and refine features based on learner feedback. If you have feedback on Juno or feature suggestions, we'd love to hear it! Please reach out to [zoe.spriggs@tufts.edu](mailto:zoe.spriggs@tufts.edu) or open a GitHub Issue. 
 
 **Development Notes**
 This project has been developed with assistance from AI coding tools (Gemini, Claude, etc.). Code structure and implementation decisions are my own, with AI serving as a pair programming assistant.
