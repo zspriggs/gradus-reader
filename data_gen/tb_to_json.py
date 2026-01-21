@@ -7,18 +7,29 @@ import json
 # urn_mappings_greek = pd.read_csv('greek_urns.csv', dtype={"URN": str})
 # urn_mappings_latin = None
 
+#format: (type, query, clause?)
 queries = {
     "grc": {
-        "Dative of possession": "εἰμί > :noun:dative, εἰμί > :pronoun:dative, εἰμί > [relation=SBJ] > :noun:dative, εἰμί > [relation=SBJ] > :pronoun:dative"
+        ("Dative of possession", "εἰμί > :noun:dative, εἰμί > :pronoun:dative, εἰμί > [relation=SBJ] > :noun:dative, εἰμί > [relation=SBJ] > :pronoun:dative", False),
+        ("Relative clause", ":verb[relation=ATR] > ὅς, :verb[relation=ATR] > ὅστις, :verb[relation=ATR] > οἷος, :verb[relation=ATR] > ὅσος", True)
+        #conditional clauses
+        #genitive absolute
+        #accusative infinitive constructions
     },
     "lat": {
-
+        #abl abs
+        ("Accusative/Infinitive construction", ":verb:infinitive[relation=OBJ]", True),
+        ("Relative clause", ":verb[relation=ATR] > qui1", True)
+        #conditional clauses
+        #maybe adverbial uses of non adverbs
+        #prepositional phrases (might not be as useful)
+        #highlight complex tags when applicable (ellipsis)
     }
 }
 
 documents = [
     ("../tb_data/tlg0012.tlg001.perseus-grc1.tb.xml", "grc", "0012-001", "Iliad", "Homer"),
-    ("../tb_data/tlg0016.tlg001.perseus-grc1.tb.xml", "grc", "0016-001", "Histories", "Herodotus"),
+    ("../tb_data/tlg0016.tlg001.perseus-grc1.1.tb.xml", "grc", "0016-001", "Histories", "Herodotus"),
     ("../tb_data/phi0474.phi013.perseus-lat1.tb.xml", "lat", "0016-001", "In Catilinam I", "Cicero")         
 ]
 
@@ -54,6 +65,7 @@ def get_annotations(file: str, lang: str, urn: str, title: str, author: str) -> 
         }
     }
     unique_id = 0
+    uid_map = {}
     current_subdoc = None
     subdoc_words = []
 
@@ -71,12 +83,17 @@ def get_annotations(file: str, lang: str, urn: str, title: str, author: str) -> 
             #head and relation might be needed later
 
             unique_id += 1
-            long_id = word.id
+            long_id = (sentence.get('id'), word.get('id'))
+            uid_map[long_id] = unique_id
+            
             form = word.get('form')
             lemma = word.get('lemma')
             postag = word.get('postag')
+            insertion = word.get('artificial')
 
-            if postag == None:
+            if insertion:
+                continue
+            if postag == None or postag == '':
                 continue
             if postag[0] == 'u': #if punctuation, append to previous word and move on
                 subdoc_words[-1]["form"] += form
@@ -93,36 +110,60 @@ def get_annotations(file: str, lang: str, urn: str, title: str, author: str) -> 
             for feature_name, index in postag_mappings:
                 char = postag[index]
                 if char != '-':
-                    morphology[feature_name] = postag_names[feature_name].get(char)
+                    if feature_name == "part_of_speech": #remap for consistent casing
+                        morphology["pos"] = postag_names[feature_name].get(char)
+                    else: 
+                        morphology[feature_name] = postag_names[feature_name].get(char)
 
             subdoc_words.append({
                 "uid": unique_id,
-                "long_id": long_id,
                 "form": form,
                 "lemma": lemma,
                 "postag": postag,
                 "morphology": morphology
             })
 
+            
+    #remap ids onto each otherr
+    #todo: refactor so the IDs are handled better from the beginning
+    for syntax in doc['passage']['syntaxPhrases']:
+        syntax['uids'] = [uid_map[(str(long_id[0]), str(long_id[1]))] for long_id in syntax['longIds']]
+        del syntax['longIds']
+
     new_filename = file[:-7]
-    with open(f"./TESTER_{new_filename}.json", "w") as f:
+    with open(f"{new_filename}.json", "w") as f:
         json.dump(doc, f, indent=4)
         
     return doc
 
 def query_grammar(query_engine: QueryEngine):
-    language = QueryEngine.parser.lang
+    language = query_engine.parser.lang
     syntax_phrases = []
 
-    for type, query in queries[language]:
+    for type, query, is_clause in queries[language]:
         results = query_engine.query(query)
  
         for word in results:
-            start_id = word.id
-            syntax_phrases.append({
-                "long_id": start_id,
-                "type": type
-            })
+            if is_clause:
+                clause = query_engine.get_subtree_and_head(word)
+                first_word = clause[0].form
+                last_word = clause[-1].form
+                
+                syntax_phrases.append({
+                    "longIds": [(w.sentence_id, w.id) for w in clause],
+                    "type": type,
+                    "isClause": is_clause,
+                    "firstWord": first_word,
+                    "lastWord": last_word
+                })
+            else:
+                first_word = word.form
+                syntax_phrases.append({
+                    "longIds": [(word.sentence_id, word.id)],
+                    "type": type,
+                    "isClause": is_clause,
+                    "firstWord": first_word,
+                })
     
     return syntax_phrases
     

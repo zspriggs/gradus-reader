@@ -65,7 +65,7 @@ class AncientTextParser:
 
         elif lang == 'lat':
             self.postag_names = { #latin pos tags
-                'pos': {
+                'part_of_speech': {
                     'n': 'noun', 'v': 'verb', 'a': 'adjective',
                     'd': 'adverb', 'c': 'conjunction', 'r': 'preposition',
                     'p': 'pronoun', 'm': 'numeral', 'i': 'interjection',
@@ -127,12 +127,10 @@ class AncientTextParser:
                 # Extract basic attributes
                 lemma = word_node.get('lemma', '').replace('1', '')
                 word_id = int(word_node.get('id'))
-
-                print(f"parent id is {word_node.get('head', 0)}")
-                print(f"sentence id is {sentence_id}")
-                print(f"word is {lemma} {word_id}")
-
-                parent_id = int(word_node.get('head', 0))
+                try:
+                    parent_id = int(word_node.get('head', 0))
+                except:
+                    parent_id=0
                 form = word_node.get('form', '')
                 relation = word_node.get('relation', '')
                 postag = word_node.get('postag', '')
@@ -153,7 +151,6 @@ class AncientTextParser:
                     subdoc=subdoc,
                     **features
                 )
-                #print(word_id, urn)
                 words.append(word)
         
         return words
@@ -180,7 +177,7 @@ class QueryEngine:
             all_words.extend(words)
 
         self.words = all_words
-        self.words_by_id = {word.id: word for word in all_words}
+        self.words_by_id = {(word.sentence_id, word.id): word for word in all_words}
         self.words_by_sentence = {}
         
         # Group words by sentence
@@ -189,12 +186,11 @@ class QueryEngine:
                 self.words_by_sentence[word.sentence_id] = []
             self.words_by_sentence[word.sentence_id].append(word)
         
-        print(len(self.words_by_sentence))
-
         # Build parent-child relationships
         for word in all_words:
-            if word.parent_id in self.words_by_id:
-                parent = self.words_by_id[word.parent_id]
+            parent_key = (word.sentence_id, word.parent_id)
+            if parent_key in self.words_by_id:
+                parent = self.words_by_id[parent_key]
                 parent.children.append(word)
 
     
@@ -242,9 +238,7 @@ class QueryEngine:
         if ',' in selector:
             results = []
             for sub_selector in selector.split(','):
-                print('handling or')
                 instance = [(str(i.urn)+str(i.id), i) for i in self.query(sub_selector.strip())]
-                print(f"{len(instance)} instances found")
                 results.extend([i for i in instance if i[0] not in [r[0] for r in results]])
             return [r[1] for r in results]  
         # Handle parent-child relationships (>)
@@ -258,6 +252,33 @@ class QueryEngine:
             return self._handle_word_order(selector)
         # Handle single selector
         return self._match_single_selector(selector)
+    
+    def get_subtree(self, word: Word) -> List[Word]:
+        """
+        Input: A single 'Head' Word (e.g., 'εἰ' or a participle).
+        Output: A list of Words representing the entire phrase/clause.
+        """
+        phrase_words = [word]
+        
+        for child in word.children:
+            phrase_words.extend(self.get_subtree(child))
+            
+        phrase_words.sort(key=lambda w: w.id) #Assumes children will only be in same sentence
+        
+        return phrase_words
+    
+    def get_subtree_and_head(self, word: Word) -> List[Word]:
+        phrase_words = self.get_subtree(word)
+
+        parent_key = (word.sentence_id, word.parent_id)
+        if parent_key in self.words_by_id:
+            parent = self.words_by_id[parent_key]
+            phrase_words.append(parent)
+
+        phrase_words.sort(key=lambda w: w.id) 
+
+        return phrase_words
+
     
     def _match_single_selector(self, selector: str) -> List[Word]:
         """Match a single selector against all words."""
@@ -330,7 +351,6 @@ class QueryEngine:
         
         for attr in attributes:
             if hasattr(word, attr) and getattr(word, attr) == feature:
-                print("match")
                 return True
         
         return False
@@ -422,3 +442,4 @@ class QueryEngine:
                 return True
         
         return False
+    

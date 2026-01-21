@@ -9,87 +9,87 @@
         />
         
         <div 
-          class="annotation-popover"
+          class="popover-wrapper"
         >
-          <div class="popover-header">
-            <h3 class="popover-title">{{ props.wordData.form }}</h3>
-            <button
-              @click="handleClose"
-              class="close-button"
-              aria-label="Close"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="18" y1="6" x2="6" y2="18"></line>
-                <line x1="6" y1="6" x2="18" y2="18"></line>
-              </svg>
-            </button>
-          </div>
 
-          <div class="popover-body">
+          <div class="popover-main">
 
-            
-            <div class="form-fields">
-            <p class="instruction-text">
-              Select any features you want to practice:
-            </p>
-              <div 
-                v-for="(label, feature) in featureLabels" 
-                :key="feature"
-                class="form-field"
-              >
-                <label class="field-label">
-                  {{ label }}
-                </label>
+            <div class="popover-header">
+              <h3 class="popover-title">{{ props.wordData.form }}</h3>
+              <button
+                @click="handleClose"
+                class="close-button"
+                aria-label="Close"
+              >x
+              </button>
+            </div>
 
-                <template v-if="feature==='custom'">
-                  <textarea
-                    v-model="annotations[feature]"
-                    placeholder="Type your notes here..."
-                    class="field-customtext"
-                    @input="validationResult = null"
-                  ></textarea>
-                </template>
+            <div class="popover-body">
 
-                <template v-else>
-                  <select
-                    v-model="annotations[feature]"
-                    @change="validationResult = null"
-                    class="field-select"
-                  >
-                    <option value="">—</option>
-                    <option 
-                      v-for="option in morphologyOptions[feature]" 
-                      :key="option" 
-                      :value="option"
+              <div class="form-fields">
+              <p class="instruction-text">
+                Select any features you want to practice:
+              </p>
+                <div 
+                  v-for="(label, feature) in featureLabels" 
+                  :key="feature"
+                  class="form-field"
+                >
+                  <label class="field-label">
+                    {{ label }}
+                  </label>
+
+                  <template v-if="feature==='custom'">
+                    <textarea
+                      v-model="annotations[feature]"
+                      placeholder="Type your notes here..."
+                      class="field-customtext"
+                      @input="validationResult = null"
+                    ></textarea>
+                  </template>
+
+                  <template v-else>
+                    <select
+                      v-model="annotations[feature]"
+                      @change="validationResult = null"
+                      class="field-select"
                     >
-                      {{ option }}
-                    </option>
-                  </select>
-                </template>
+                      <option value="">—</option>
+                      <option 
+                        v-for="option in morphologyOptions[feature]" 
+                        :key="option" 
+                        :value="option"
+                      >
+                        {{ option }}
+                      </option>
+                    </select>
+                  </template>
+                </div>
+              </div>
+              <div class="button-group">
+                <button
+                  @click="validateAnnotation"
+                  class="btn btn-check"
+                >
+                  Check
+                </button>
+                <button
+                @click="addAnnotation" 
+                :disabled="!canAddAnnotation" 
+                :class="{ 'button-disabled': !canAddAnnotation }"
+                >
+                  Add
+                </button>
+                <button
+                  @click="handleClose"
+                  class="btn btn-finish"
+                >
+                  Finish
+                </button>
               </div>
             </div>
 
-            <div class="button-group">
-              <button
-                @click="validateAnnotation"
-                class="btn btn-check"
-              >
-                Check
-              </button>
-              <button
-              @click="addAnnotation" 
-              :disabled="!canAddAnnotation" 
-              :class="{ 'button-disabled': !canAddAnnotation }"
-              >
-                Add
-              </button>
-              <button
-                @click="handleClose"
-                class="btn btn-finish"
-              >
-                Finish
-              </button>
-            </div>
+
 
             <div 
               v-if="validationResult"
@@ -118,6 +118,28 @@
               </div>
             </div>
           </div>
+
+          <!--Mistake viewer-->
+          <div class="popover-sidecar">
+            <button
+              class="mistake-viewer-toggle"
+              @click="mistakeViewerOpen = !mistakeViewerOpen"
+              :class="{'mistake-viewer-open': mistakeViewerOpen}"
+            >
+              <span v-if="!mistakeViewerOpen">View Mistakes</span>
+              <span v-else>x</span>
+            </button>
+
+            <div class="mistake-viewer" :class="{ 'open': mistakeViewerOpen }">
+              <div class="mistake-viewer-content">
+                <MistakeViewer
+                  :mistake-tracker="mistakeTracker"
+                  @clear-mistakes="handleClearMistakes" 
+                />
+              </div>
+            </div>
+          </div>
+
         </div>
       </template>
     </Teleport>
@@ -126,20 +148,27 @@
 
 <script setup>
 import { ref, onMounted, nextTick, computed } from 'vue';
+import MistakeViewer from './MistakeViewer.vue';
+
+const mistakeViewerOpen = ref(false);
 
 const props = defineProps({
   wordData: {
     type: Object,
     required: true,
   },
-  // Optional: which features to show (defaults to all)
+  // which features to show (defaults to all)
   visibleFeatures: {
     type: Array,
     default: () => ['pos', 'case', 'number', 'gender', 'tense', 'mood', 'voice', 'person', 'declension', 'conjugation']
+  },
+  mistakeTracker: {
+    type: Object,
+    default: {},
   }
 });
 
-const emit = defineEmits(['close', 'annotation-checked', 'annotation-correct', 'annotation-incorrect', 'annotation-added']);
+const emit = defineEmits(['close', 'annotation-checked', 'annotation-correct', 'annotation-incorrect', 'annotation-added', 'clear-mistakes']);
 
 // Latin morphological feature options
 const morphologyOptions = {
@@ -195,6 +224,10 @@ const canAddAnnotation = computed(() => {
   );
   return !isStale;
 });
+
+const handleClearMistakes = () => {
+  emit('clear-mistakes');
+}
 
 // const calculatePosition = () => {
 //   // Find the word element in the DOM
@@ -264,6 +297,16 @@ const checkAnnotation = () => {
   const incorrectFeatures = filledFeatures.filter(key => 
     annotations.value[key] !== correctAnswer[key]
   );
+  if (incorrectFeatures) {
+    console.log(filledFeatures);
+    incorrectFeatures.forEach(feature => {
+      if (props.mistakeTracker[feature]) {
+        props.mistakeTracker[feature]++;
+      } else {
+        props.mistakeTracker[feature] = 1;
+      }
+    });
+  }
   
   const baseResult = {
     word: props.wordData.form,
@@ -374,6 +417,105 @@ const addAnnotation = () => {
   z-index: 40;
 }
 
+/* 1. The Wrapper - Holds them side-by-side */
+.popover-wrapper {
+  position: fixed;
+  top: 150px;
+  width: fit-content;
+  height: auto;
+  /* Use Flex to put Main and Sidecar next to each other */
+  display: flex; 
+  align-items: flex-start; /* Aligns them to the top */
+  z-index: 50;
+  max-width: 90vw; /* Prevent it from going off screen */
+}
+
+/* 2. The Main Box - Handles Resize & Scroll */
+.popover-main {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  
+  /* RESIZABILITY IS BACK */
+  resize: both;
+  overflow: auto; /* Required for resize to work */
+  
+  /* Initial dimensions */
+  width: 14rem;
+  height: auto;
+  min-height: 300px;
+  max-height: 80vh;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+/* 3. The Sidecar Container */
+.popover-sidecar {
+  flex-shrink: 0;
+  position: static;
+  display: flex;
+  flex-direction: column; /* Toggle on top, panel below */
+  align-items: flex-start;
+  margin-left: 0; 
+  z-index: auto;
+}
+
+.mistake-viewer {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  height: 100%; /* Match the height of the shell */
+  width: 14rem; /* Or whatever width you want */
+  
+  /* Hide it by default */
+  display: none; 
+  
+  /* Styling */
+  background-color: var(--hover-khaki); /* Slightly different color to distinguish */
+  border-radius: 0 0.5rem 0.5rem 0;
+  box-shadow: 5px 0 15px rgba(0,0,0,0.05);
+  border-left: 1px solid #e2e8f0;
+  padding-top: 2rem;
+}
+
+.mistake-viewer.open {
+  display: block;
+}
+
+/* 4. The Toggle Button */
+.mistake-viewer-toggle {
+  position: absolute;
+  left: 97%;
+  top: 0;
+  height: 50px;
+  padding-left: 20px;
+  z-index: -1;
+
+  color: white;
+  background-color: var(--green-button);
+  border: none;
+  border-radius: 8px;
+}
+
+
+.mistake-viewer-toggle:hover {
+  background-color: var(--green-button-hover);
+}
+
+.mistake-viewer-toggle.mistake-viewer-open {
+  z-index: 1;
+  left: calc(100% + 14rem - 30px);
+  padding-left: 5px;
+  width: 30px;
+  font-size: 115%;
+  background-color: var(--delete-red);
+}
+
+.mistake-viewer-toggle.mistake-viewer-open:hover {
+  background-color: var(--delete-red-hover);
+}
+
 .annotation-popover {
   position: fixed;
   top: 150px;
@@ -383,8 +525,18 @@ const addAnnotation = () => {
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   width: 14rem;
   max-height: calc(90vh - 100px);
-  overflow: auto;
+  overflow: visible;
   resize: both;
+}
+
+.popover-inner {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  max-height: calc(90vh - 100px);
+  overflow-y: auto;    /* Scrolling happens here */
+  display: flex;       /* Helps keep header sticky working */
+  flex-direction: column;
 }
 
 .popover-header {
@@ -414,6 +566,7 @@ const addAnnotation = () => {
   display: flex;
   align-items: center;
   transition: color 0.2s;
+  font-size: 125%;
 }
 
 .close-button:hover {

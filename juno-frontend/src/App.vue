@@ -2,11 +2,23 @@
   <div class="app-container">
     <MorphAnnotator
       v-if="selectedWord && features.inline"
-      :wordData="selectedWord" 
+      :word-data="selectedWord" 
       :features="features"
+      :mistake-tracker="allMistakes"
+      @clear-mistakes="handleClearMistakes"
       @close="selectedWord = null"
       @annotation-added="handleAnnotationAdded" 
     />
+
+    <SyntaxPanel
+      v-if="features.syntax && annotatedText"
+      class="syntax-panel"
+      :syntax-phrases="getSyntaxPhrasesForSection()"
+      :hovered-syntax-phrase="hoveredSyntaxPhrase"
+      @syntax-hover="handleSyntaxPanelHover"
+      @syntax-unhover="handleSyntaxPanelUnhover"
+    />
+
 
     <!--- help/about button toggle -->
     <button
@@ -19,7 +31,7 @@
     </button>
     <div class="sidebar" :class="{ 'open': helpSidebarOpen }">
       <div class="sidebar-content">
-        <HelpPanel></HelpPanel>
+        <HelpPanel/>
       </div>
     </div>
 
@@ -36,7 +48,7 @@
     <!-- Sidebar -->
     <div class="sidebar" :class="{ 'open': sidebarOpen }">
       <div class="sidebar-content">
-        <FeatureSelector 
+        <SettingSelector 
           :features="features" 
           @toggle-feature="handleToggleFeature" 
           @import-annotations="importAnnotations"
@@ -84,6 +96,7 @@
       >🡺</button>
 
       <div v-if="annotatedText" class="passage-container">
+
         <h2 class="passage-title">Section {{currentSection }}</h2>
         <div class="passage-text">
           <template 
@@ -95,7 +108,7 @@
               :active-ranges="getActiveRanges(word.uid)"
               :features="features"
               :is-selected="selectedWord?.uid === word.uid"
-              :syntax-phrase="getSyntaxPhraseForWord(word.uid)"
+              :hovered-syntax-phrase="hoveredSyntaxPhrase"
               @word-click="handleWordClick"
               @word-delete="handleWordAnnotationDelete"
               @word-mouseup="handleMouseUp"
@@ -222,27 +235,6 @@
           </div>
         </div>
       </div>
-      <!-- <div v-if="features.syntax" class="legend-section">
-        <h4>Syntax (Highlights):</h4>
-        <div class="legend-items">
-          <div class="legend-item">
-            <span class="legend-example syntax-indirect_question">text</span>
-            <span>Indirect Question</span>
-          </div>
-          <div class="legend-item">
-            <span class="legend-example syntax-relative_clause">text</span>
-            <span>Relative Clause</span>
-          </div>
-          <div class="legend-item">
-            <span class="legend-example syntax-indirect_statement">text</span>
-            <span>Indirect Statement</span>
-          </div>
-          <div class="legend-item">
-            <span class="legend-example syntax-ablative_absolute">text</span>
-            <span>Ablative Absolute</span>
-          </div>
-        </div>
-      </div> -->
     </div>
   </div>
   </div>
@@ -252,13 +244,17 @@
 <script setup>
 import { ref, reactive, computed, onMounted, watch } from 'vue';
 
-import FeatureSelector from './components/FeatureSelector.vue';
+import SettingSelector from './components/SettingSelector.vue';
 import Word from './components/Word.vue';
 import AnnotationPanel from './components/AnnotationPanel.vue';
 import MorphAnnotator from './components/MorphAnnotator.vue';
 import DocumentSelector from './components/DocumentSelector.vue';
 import HelpPanel from './components/HelpPanel.vue';
-import { annotationStorage } from './utils/annotationStorage.js';
+import SyntaxPanel from './components/SyntaxPanel.vue';
+import { storageUtil } from './utils/storageUtil.js';
+
+const ANNOTATION_KEY="annotations";
+const MISTAKE_KEY="mistakes";
 
 const currentUrn = ref(''); 
 const passageData = ref(null); 
@@ -268,9 +264,11 @@ const availableSections = computed(() => Object.keys(passageData?.value.text));
 const allAnnotations = ref({});
 const selectedWord = ref(null);
 
+const allMistakes = ref({});
+
 const helpSidebarOpen = ref(true);
 const sidebarOpen = ref(false);
-const docselectorOpen=ref(false);
+const docselectorOpen = ref(false);
 
 const isDragging = ref(false);
 const dragStart = ref(null);
@@ -282,6 +280,8 @@ const showRangeInput = ref(false);
 const rangeView = ref(null);
 const rangeViewPosition = ref({top: 0, left: 0});
 
+const hoveredSyntaxPhrase = ref(null);
+
 const features = reactive({
   inline: true,
   line: true,
@@ -289,22 +289,27 @@ const features = reactive({
   // Visual highlighting
   caseHighlight: false,
   posHighlight: false,
-  syntax: false,
+  syntax: true,
   
   // Annotation content - TODO remove unused
   // vocab: true,
   morphology: true,
-  // syntax: false
 });
 
 onMounted(() => {
-  allAnnotations.value = annotationStorage.load();
+  allMistakes.value = storageUtil.load(MISTAKE_KEY);
+  allAnnotations.value = storageUtil.load(ANNOTATION_KEY);
 });
 
 watch(allAnnotations, (newValue) => {
-  console.log("Syncing to localStorage...");
-  annotationStorage.save(newValue);
+  console.log("Syncing annotations to localStorage...");
+  storageUtil.save(ANNOTATION_KEY, newValue);
 }, { deep: true }); 
+
+watch(allMistakes, (newValue) => {
+  console.log("Syncing mistakes to localStorage...");
+  storageUtil.save(MISTAKE_KEY, newValue);
+}, { deep: true });
 
 const annotatedText = computed(() => {
   const docURN = currentUrn.value;
@@ -343,7 +348,6 @@ const handleAnnotationAdded = (newAnnotation) => {
 };
 
 const handleDocumentChange = (newDocument) => {
-  console.log('handledocchange')
   currentUrn.value = newDocument.urn
   passageData.value = newDocument.data;
   currentSection.value = Object.keys(passageData.value.text)[0]; // Reset to first!
@@ -351,11 +355,11 @@ const handleDocumentChange = (newDocument) => {
 };
 
 const exportAnnotations = () => {
-  annotationStorage.export();
+  storageUtil.export(ANNOTATION_KEY);
 };
 
 const importAnnotations = () => {  
-  annotationStorage.import((newData) => {
+  storageUtil.import(ANNOTATION_KEY, (newData) => {
     const merged = { ...allAnnotations.value };
 
     for (const urn in newData) {
@@ -373,6 +377,15 @@ const importAnnotations = () => {
   });
 };
 
+const handleClearMistakes = () => {
+  storageUtil.clear(MISTAKE_KEY);
+  allMistakes.value = {}
+};
+
+const handleClearAnnotations = () => {
+  console.log('TODO');
+};
+
 const nextSection = () => {
   const index = availableSections.value.indexOf(currentSection.value);
   if (index < availableSections.value.length - 1) {
@@ -385,6 +398,14 @@ const prevSection = () => {
   if (index > 0) {
     currentSection.value = availableSections.value[index - 1];
   }
+};
+
+const handleSyntaxPanelHover = (phrase) => {
+  hoveredSyntaxPhrase.value = { ...phrase };
+};
+
+const handleSyntaxPanelUnhover = () => {
+  hoveredSyntaxPhrase.value = null;
 };
 
 const getRangesEndingAt = (uid) => {
@@ -411,7 +432,7 @@ const openExistingRangeNote = (uid, event) => {
     //TODO: fix this, add support for showing multiple annotations
     rangeView.value = ranges[0];
   }
-  else {console.log("huh??");}
+  else {console.log("Error");}
 
   const rect = event.target.getBoundingClientRect();
   rangeViewPosition.value = {
@@ -448,7 +469,6 @@ const handleRangeAnnotationDelete = (rangeAnnotation) => {
 };
 
 const handleMouseDown = (word) => {
-  console.log("mouse down")
   isDragging.value = true;
   dragStart.value = word.uid;
   dragEnd.value = word.uid;
@@ -461,10 +481,8 @@ const handleMouseEnter = (word) => {
 };
 
 const handleMouseUp = (word) => {
-  console.log("mouse up");
   if(isDragging.value && dragStart.value !== dragEnd.value) {
     startRangeAnnotation(dragStart.value, dragEnd.value);
-    console.log("saveannotation");
   }
   isDragging.value = false;
   dragStart.value = null;
@@ -499,12 +517,25 @@ const handleToggleFeature = (featureName) => {
   features[featureName] = !features[featureName];
 };
 
-const getSyntaxPhraseForWord = (wordId) => {
-  if (!features.syntax) return null;
+// const getSyntaxPhraseForWord = (wordId) => {
+//   if (!features.syntax) return null;
+
+//   const phrases = Object.values(passageData.value.passage.syntaxPhrases);
   
-  return passageData.value.passage.syntaxPhrases?.find(phrase => 
-    phrase.wordIds.includes(wordId)
-  ) || null;
+//   return phrases.filter(phrase => 
+//     phrase.uids.includes(wordId)
+//   ) || null;
+// };
+
+const getSyntaxPhrasesForSection = () => {
+  if (!features.syntax) return null;
+
+  const section = currentSection.value;
+
+  const uids = passageData.value?.text[section].map(word => word.uid); 
+  const phrases = Object.values(passageData.value.passage.syntaxPhrases);
+
+  return phrases.filter(phrase => phrase.uids.some(uid => uids.includes(uid)));
 };
 
 const openInput = ({id, uids, startuid, enduid, text}) => {
@@ -541,6 +572,11 @@ const saveRangeInput = () => {
 <style>
 * {
   box-sizing: border-box;
+}
+
+.syntax-panel {
+  position: fixed;
+  right: 20px;
 }
 
 /* doc selector toggle */

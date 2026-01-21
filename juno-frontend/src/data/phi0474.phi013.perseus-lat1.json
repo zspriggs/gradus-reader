@@ -1,7 +1,1929 @@
 {
     "passage": {
         "title": "In Catilinam I",
-        "syntaxPhrases": {}
+        "author": "Cicero",
+        "syntaxPhrases": [
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "patere",
+                "lastWord": "sentis",
+                "uids": [
+                    28,
+                    29,
+                    30,
+                    32
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "constrictam",
+                "lastWord": "vides",
+                "uids": [
+                    34,
+                    35,
+                    36,
+                    37,
+                    38,
+                    39,
+                    40,
+                    41,
+                    43
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "quid",
+                "lastWord": "egeris",
+                "uids": [
+                    45,
+                    46,
+                    47,
+                    48,
+                    49,
+                    50,
+                    51,
+                    52,
+                    53,
+                    54,
+                    55,
+                    56,
+                    57,
+                    58,
+                    59,
+                    60,
+                    61,
+                    62,
+                    63,
+                    64,
+                    65,
+                    67
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "satis",
+                "lastWord": "videmur",
+                "uids": [
+                    113,
+                    114,
+                    115,
+                    116,
+                    117
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "orbem",
+                "lastWord": "cupientem",
+                "uids": [
+                    176,
+                    177,
+                    178,
+                    179,
+                    180,
+                    181,
+                    182
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "patimur",
+                "lastWord": "auctoritatis",
+                "uids": [
+                    387,
+                    388,
+                    389,
+                    390,
+                    391
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "cupio",
+                "lastWord": "clementem",
+                "uids": [
+                    436,
+                    441,
+                    442,
+                    443
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "cupio",
+                "lastWord": "videri",
+                "uids": [
+                    445,
+                    446,
+                    447,
+                    448,
+                    449,
+                    450,
+                    451,
+                    452,
+                    453
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "te",
+                "lastWord": "iussero",
+                "uids": [
+                    506,
+                    507,
+                    508,
+                    509,
+                    510,
+                    511,
+                    538
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "interfici",
+                "lastWord": "iussero",
+                "uids": [
+                    514,
+                    515
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "inveniri",
+                "lastWord": "poterit",
+                "uids": [
+                    574,
+                    575
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "te",
+                "lastWord": "audeat",
+                "uids": [
+                    588,
+                    589,
+                    590
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "commovere",
+                "lastWord": "possis",
+                "uids": [
+                    608,
+                    609,
+                    610,
+                    611,
+                    612,
+                    613
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "tenebris",
+                "lastWord": "potest",
+                "uids": [
+                    646,
+                    647,
+                    648,
+                    649,
+                    667
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "parietibus",
+                "lastWord": "potest",
+                "uids": [
+                    653,
+                    654,
+                    655,
+                    656,
+                    657,
+                    658
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "meministi",
+                "lastWord": "tuae",
+                "uids": [
+                    698,
+                    700,
+                    701,
+                    702,
+                    703,
+                    704,
+                    705,
+                    706,
+                    707,
+                    708,
+                    709,
+                    710,
+                    711,
+                    712,
+                    713,
+                    714,
+                    715,
+                    716,
+                    717,
+                    718,
+                    719,
+                    720,
+                    721,
+                    722,
+                    723,
+                    724,
+                    725,
+                    726,
+                    727,
+                    728,
+                    729,
+                    730,
+                    731,
+                    732,
+                    733,
+                    734
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "dicere",
+                "lastWord": "tuae",
+                "uids": [
+                    706,
+                    709,
+                    710,
+                    711,
+                    712,
+                    713,
+                    714,
+                    715,
+                    716,
+                    717,
+                    718,
+                    719,
+                    720,
+                    721,
+                    722,
+                    723,
+                    724,
+                    725,
+                    726,
+                    727,
+                    728,
+                    729,
+                    730,
+                    731,
+                    732,
+                    733,
+                    734
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "dixi",
+                "lastWord": "causa",
+                "uids": [
+                    764,
+                    769,
+                    770,
+                    771,
+                    772,
+                    773,
+                    774,
+                    775,
+                    776,
+                    777,
+                    778,
+                    779,
+                    780,
+                    781,
+                    782,
+                    783,
+                    784,
+                    785,
+                    786,
+                    787,
+                    788,
+                    789,
+                    790,
+                    791,
+                    792,
+                    793,
+                    794,
+                    795,
+                    797,
+                    798
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "infitiari",
+                "lastWord": "dicebas",
+                "uids": [
+                    800,
+                    801,
+                    802,
+                    803,
+                    804,
+                    805,
+                    806,
+                    807,
+                    808,
+                    809,
+                    810,
+                    811,
+                    812,
+                    813,
+                    814,
+                    815,
+                    816,
+                    817,
+                    818,
+                    819,
+                    820,
+                    821,
+                    822,
+                    823,
+                    824,
+                    825,
+                    826,
+                    827,
+                    828,
+                    829,
+                    830,
+                    831,
+                    832
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "commovere",
+                "lastWord": "potuisse",
+                "uids": [
+                    812,
+                    813,
+                    814,
+                    815,
+                    816,
+                    818
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "infitiari",
+                "lastWord": "dicebas",
+                "uids": [
+                    800,
+                    802,
+                    803,
+                    804,
+                    805,
+                    806,
+                    807,
+                    808,
+                    809,
+                    810,
+                    811,
+                    812,
+                    813,
+                    814,
+                    815,
+                    816,
+                    817,
+                    818,
+                    819,
+                    820,
+                    821,
+                    822,
+                    823,
+                    824,
+                    825,
+                    826,
+                    827,
+                    828,
+                    829,
+                    830,
+                    831,
+                    832
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "discessu",
+                "lastWord": "dicebas",
+                "uids": [
+                    822,
+                    823,
+                    824,
+                    825,
+                    826,
+                    827,
+                    828,
+                    829,
+                    830,
+                    831,
+                    832
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "intelleges",
+                "lastWord": "vigilare",
+                "uids": [
+                    894,
+                    895,
+                    896,
+                    897,
+                    898,
+                    899,
+                    900,
+                    901,
+                    902,
+                    903,
+                    904,
+                    905,
+                    906,
+                    908
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "dico",
+                "lastWord": "domum",
+                "uids": [
+                    909,
+                    910,
+                    911,
+                    912,
+                    913,
+                    914,
+                    915,
+                    921,
+                    922,
+                    923,
+                    924,
+                    925
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "negare",
+                "lastWord": "audes",
+                "uids": [
+                    937,
+                    938
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "video",
+                "lastWord": "fuerunt",
+                "uids": [
+                    948,
+                    950,
+                    951,
+                    952,
+                    953,
+                    954,
+                    955,
+                    956,
+                    957,
+                    958
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "dixisti",
+                "lastWord": "viverem",
+                "uids": [
+                    1082,
+                    1083,
+                    1084,
+                    1085,
+                    1086,
+                    1087,
+                    1088,
+                    1089,
+                    1090,
+                    1091,
+                    1092
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "nobiscum",
+                "lastWord": "potes",
+                "uids": [
+                    1228,
+                    1229,
+                    1233
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "me",
+                "lastWord": "voluisti",
+                "uids": [
+                    1315,
+                    1316,
+                    1317,
+                    1318,
+                    1319,
+                    1320,
+                    1321,
+                    1322,
+                    1323
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "id",
+                "lastWord": "audeo",
+                "uids": [
+                    1392,
+                    1393,
+                    1394,
+                    1395,
+                    1396,
+                    1397,
+                    1398,
+                    1399,
+                    1400,
+                    1401,
+                    1402,
+                    1403,
+                    1404,
+                    1405,
+                    1406,
+                    1407,
+                    1409
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "te",
+                "lastWord": "iussero",
+                "uids": [
+                    1426,
+                    1427,
+                    1428
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "dubitas",
+                "lastWord": "faciebas",
+                "uids": [
+                    1467,
+                    1468,
+                    1471,
+                    1472,
+                    1473,
+                    1474,
+                    1475,
+                    1476
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "exire",
+                "lastWord": "hostem",
+                "uids": [
+                    1478,
+                    1479,
+                    1480,
+                    1481,
+                    1483
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "te",
+                "lastWord": "possit",
+                "uids": [
+                    1511,
+                    1512,
+                    1513,
+                    1514,
+                    1515,
+                    1516,
+                    1517
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "patior",
+                "lastWord": "sileri",
+                "uids": [
+                    1625,
+                    1626
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "tibi",
+                "lastWord": "senties",
+                "uids": [
+                    1651,
+                    1652,
+                    1653
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "potest",
+                "lastWord": "iucundus",
+                "uids": [
+                    1688,
+                    1690,
+                    1700,
+                    1701
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "scias",
+                "lastWord": "obstitisse",
+                "uids": [
+                    1704,
+                    1705,
+                    1706,
+                    1707,
+                    1708,
+                    1709,
+                    1710,
+                    1711,
+                    1712,
+                    1713,
+                    1714,
+                    1715,
+                    1716,
+                    1717,
+                    1718,
+                    1719,
+                    1720,
+                    1721,
+                    1722,
+                    1723,
+                    1724,
+                    1725,
+                    1726,
+                    1727,
+                    1728,
+                    1729,
+                    1730,
+                    1731,
+                    1732,
+                    1733,
+                    1734,
+                    1735,
+                    1736,
+                    1737,
+                    1738,
+                    1739,
+                    1740,
+                    1741,
+                    1742,
+                    1743,
+                    1744,
+                    1745,
+                    1746,
+                    1747
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "consulem",
+                "lastWord": "conatus",
+                "uids": [
+                    1772,
+                    1773,
+                    1774
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "me",
+                "lastWord": "conatus",
+                "uids": [
+                    1767,
+                    1768,
+                    1777,
+                    1778
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "vitari",
+                "lastWord": "posse",
+                "uids": [
+                    1786,
+                    1787
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "eam",
+                "lastWord": "defigere",
+                "uids": [
+                    1845,
+                    1846,
+                    1847,
+                    1848,
+                    1849,
+                    1850,
+                    1851,
+                    1852
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "quod",
+                "lastWord": "esse",
+                "uids": [
+                    1931,
+                    1932,
+                    1933,
+                    1934,
+                    1935,
+                    1936,
+                    1937,
+                    1938,
+                    1939,
+                    1940,
+                    1941,
+                    1942,
+                    1943,
+                    1944,
+                    1945,
+                    1946,
+                    1947,
+                    1948,
+                    1949,
+                    1950,
+                    1951,
+                    1952,
+                    1953,
+                    1954,
+                    1955,
+                    1956,
+                    1957,
+                    1958,
+                    1959,
+                    1960,
+                    1961,
+                    1966,
+                    1967,
+                    1970
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "domum",
+                "lastWord": "esse",
+                "uids": [
+                    1986,
+                    1987,
+                    1988,
+                    1989,
+                    1991
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "tibi",
+                "lastWord": "esse",
+                "uids": [
+                    1993,
+                    1994,
+                    1996,
+                    1998,
+                    1999
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "carere",
+                "lastWord": "mallem",
+                "uids": [
+                    2013,
+                    2014,
+                    2015,
+                    2016,
+                    2022
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "dubitas",
+                "lastWord": "vitare",
+                "uids": [
+                    2040,
+                    2041,
+                    2042,
+                    2043,
+                    2044,
+                    2045,
+                    2046,
+                    2047,
+                    2048,
+                    2049,
+                    2050,
+                    2051
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "eos",
+                "lastWord": "posses",
+                "uids": [
+                    2061,
+                    2062,
+                    2063,
+                    2064,
+                    2065
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "nihil",
+                "lastWord": "cogitare",
+                "uids": [
+                    2093,
+                    2094,
+                    2095,
+                    2096,
+                    2097,
+                    2098,
+                    2099,
+                    2100
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "iniri",
+                "lastWord": "posse",
+                "uids": [
+                    2211,
+                    2212
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "timere",
+                "lastWord": "desinam",
+                "uids": [
+                    2246,
+                    2247
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "impetrare",
+                "lastWord": "debeat",
+                "uids": [
+                    2261,
+                    2262
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "vim",
+                "lastWord": "possit",
+                "uids": [
+                    2266,
+                    2267,
+                    2269
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "vitandae",
+                "lastWord": "velle",
+                "uids": [
+                    2281,
+                    2282,
+                    2283,
+                    2284,
+                    2285,
+                    2286,
+                    2288,
+                    2289
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "vitandae",
+                "lastWord": "dixisti",
+                "uids": [
+                    2281,
+                    2282,
+                    2283,
+                    2284,
+                    2285,
+                    2286,
+                    2287,
+                    2288,
+                    2289,
+                    2290
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "etiam",
+                "lastWord": "ausus",
+                "uids": [
+                    2297,
+                    2298,
+                    2299,
+                    2300,
+                    2301
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "posse",
+                "lastWord": ",",
+                "uids": [
+                    2323,
+                    2324,
+                    2325,
+                    2326,
+                    2327,
+                    2328,
+                    2329,
+                    2330,
+                    2331,
+                    2332,
+                    2333,
+                    2334,
+                    2335,
+                    2336,
+                    2337,
+                    2338,
+                    2339
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "et",
+                "lastWord": "putasti",
+                "uids": [
+                    2365,
+                    2366,
+                    2367,
+                    2368,
+                    2369,
+                    2370,
+                    2371,
+                    2372,
+                    2373,
+                    2374,
+                    2375,
+                    2376,
+                    2377,
+                    2378,
+                    2379
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "quam",
+                "lastWord": "debere",
+                "uids": [
+                    2382,
+                    2383,
+                    2385,
+                    2386,
+                    2387,
+                    2388,
+                    2389,
+                    2390,
+                    2391
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "emori",
+                "lastWord": "potes",
+                "uids": [
+                    2410,
+                    2411,
+                    2412,
+                    2414
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "placere",
+                "lastWord": "exsilium",
+                "uids": [
+                    2449,
+                    2450,
+                    2451,
+                    2452,
+                    2453,
+                    2454,
+                    2455
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "vastare",
+                "lastWord": "studes",
+                "uids": [
+                    2652,
+                    2655
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "ire",
+                "lastWord": "induxeris",
+                "uids": [
+                    2705,
+                    2706,
+                    2707,
+                    2709
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "mihi",
+                "lastWord": "invidiam",
+                "uids": [
+                    2808,
+                    2809,
+                    2814,
+                    2815,
+                    2816,
+                    2817
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "servire",
+                "lastWord": "mavis",
+                "uids": [
+                    2849,
+                    2850,
+                    2851,
+                    2852,
+                    2853,
+                    2854
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "illa",
+                "lastWord": "transtulisti",
+                "uids": [
+                    2959,
+                    2960,
+                    2962,
+                    2963,
+                    2964,
+                    2965,
+                    2966,
+                    2967,
+                    2968,
+                    2969,
+                    2970,
+                    2971,
+                    2972,
+                    2973,
+                    2974,
+                    2975,
+                    2976,
+                    2977,
+                    2978,
+                    2979,
+                    2980
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "venerari",
+                "lastWord": "solebas",
+                "uids": [
+                    2964,
+                    2968
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "exsul",
+                "lastWord": "posses",
+                "uids": [
+                    3150,
+                    3151,
+                    3152,
+                    3153,
+                    3154,
+                    3155,
+                    3156,
+                    3157,
+                    3158
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "quem",
+                "lastWord": "comperisti",
+                "uids": [
+                    3246,
+                    3247,
+                    3248,
+                    3249
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "quem",
+                "lastWord": "sentis",
+                "uids": [
+                    3257,
+                    3258,
+                    3259,
+                    3260,
+                    3261,
+                    3262,
+                    3263
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "eum",
+                "lastWord": "patiere",
+                "uids": [
+                    3245,
+                    3246,
+                    3247,
+                    3248,
+                    3249,
+                    3250,
+                    3251,
+                    3252,
+                    3253,
+                    3254,
+                    3255,
+                    3256,
+                    3257,
+                    3258,
+                    3259,
+                    3260,
+                    3261,
+                    3262,
+                    3263,
+                    3264,
+                    3265,
+                    3266,
+                    3267,
+                    3268,
+                    3269,
+                    3270,
+                    3271,
+                    3272,
+                    3273,
+                    3274,
+                    3275,
+                    3276,
+                    3277,
+                    3278
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "in",
+                "lastWord": "posse",
+                "uids": [
+                    3655,
+                    3656,
+                    3657,
+                    3658
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "quam",
+                "lastWord": "faverent",
+                "uids": [
+                    4336,
+                    4337,
+                    4338,
+                    4339,
+                    4340,
+                    4341,
+                    4342,
+                    4343,
+                    4344,
+                    4345,
+                    4346,
+                    4347,
+                    4348,
+                    4349,
+                    4350,
+                    4351,
+                    4352,
+                    4353,
+                    4354,
+                    4355,
+                    4356,
+                    4357,
+                    4358,
+                    4359,
+                    4360,
+                    4361,
+                    4362,
+                    4363,
+                    4364,
+                    4365,
+                    4366
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "illo",
+                "lastWord": "iudicarem",
+                "uids": [
+                    4370,
+                    4371,
+                    4372,
+                    4373,
+                    4374,
+                    4375,
+                    4376,
+                    4377
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "viderem",
+                "lastWord": "possem",
+                "uids": [
+                    4397,
+                    4407,
+                    4408,
+                    4409,
+                    4410,
+                    4411,
+                    4412,
+                    4413,
+                    4414,
+                    4415,
+                    4416,
+                    4417,
+                    4418,
+                    4419,
+                    4420,
+                    4421,
+                    4422,
+                    4423,
+                    4424,
+                    4425
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "eius",
+                "lastWord": "possem",
+                "uids": [
+                    4419,
+                    4420,
+                    4423,
+                    4425
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "palam",
+                "lastWord": "possetis",
+                "uids": [
+                    4432,
+                    4433,
+                    4434
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "quem",
+                "lastWord": "putem",
+                "uids": [
+                    4440,
+                    4443,
+                    4449,
+                    4450,
+                    4451,
+                    4452
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "amare",
+                "lastWord": "coeperat",
+                "uids": [
+                    4482,
+                    4483,
+                    4484,
+                    4485
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "nullum",
+                "lastWord": "poterat",
+                "uids": [
+                    4496,
+                    4497,
+                    4498,
+                    4499,
+                    4500,
+                    4501
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "vadimonia",
+                "lastWord": "maluerunt",
+                "uids": [
+                    4566,
+                    4567,
+                    4571
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "quid",
+                "lastWord": "sentiunt",
+                "uids": [
+                    4652,
+                    4653,
+                    4654,
+                    4655,
+                    4656
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "cum",
+                "lastWord": "putet",
+                "uids": [
+                    4756,
+                    4757,
+                    4758,
+                    4760
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "patiantur",
+                "lastWord": "tabescere",
+                "uids": [
+                    4783,
+                    4784,
+                    4785,
+                    4786,
+                    4787,
+                    4788
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "accelerare",
+                "lastWord": "volent",
+                "uids": [
+                    4799,
+                    4800
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "tota",
+                "lastWord": "potest",
+                "uids": [
+                    4845,
+                    4846,
+                    4890,
+                    4891
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "se",
+                "lastWord": "fateatur",
+                "uids": [
+                    4893,
+                    4894,
+                    4895,
+                    4897,
+                    4898,
+                    4899
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "eius",
+                "lastWord": "possitis",
+                "uids": [
+                    5006,
+                    5007,
+                    5008,
+                    5009,
+                    5010,
+                    5011,
+                    5012,
+                    5013
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "se",
+                "lastWord": "fateatur",
+                "uids": [
+                    5025,
+                    5026,
+                    5027,
+                    5028,
+                    5029,
+                    5030
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "se",
+                "lastWord": "commemoret",
+                "uids": [
+                    5039,
+                    5040,
+                    5041,
+                    5042,
+                    5043,
+                    5044,
+                    5045
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "deficere",
+                "lastWord": "coepit",
+                "uids": [
+                    5154,
+                    5155
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "hoc",
+                "lastWord": "insidiari",
+                "uids": [
+                    5190,
+                    5193,
+                    5194,
+                    5195,
+                    5196,
+                    5197,
+                    5198,
+                    5199,
+                    5200,
+                    5201,
+                    5202,
+                    5203,
+                    5204,
+                    5205,
+                    5206,
+                    5207,
+                    5208,
+                    5209,
+                    5211,
+                    5212,
+                    5213
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "sanare",
+                "lastWord": "potest",
+                "uids": [
+                    5279,
+                    5281
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "bellum",
+                "lastWord": "possit",
+                "uids": [
+                    5307,
+                    5308,
+                    5309,
+                    5310,
+                    5311
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "sanari",
+                "lastWord": "poterunt",
+                "uids": [
+                    5367,
+                    5368
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "quae",
+                "lastWord": "manere",
+                "uids": [
+                    5373,
+                    5374,
+                    5375,
+                    5377,
+                    5378,
+                    5379,
+                    5380,
+                    5381
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "verbo",
+                "lastWord": "possem",
+                "uids": [
+                    5422,
+                    5423,
+                    5424
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "vocem",
+                "lastWord": "potuit",
+                "uids": [
+                    5440,
+                    5441,
+                    5442,
+                    5444
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "ire",
+                "lastWord": "iussus",
+                "uids": [
+                    5448,
+                    5449,
+                    5450,
+                    5451
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "dubitaret",
+                "lastWord": "pararet",
+                "uids": [
+                    5593,
+                    5594,
+                    5595,
+                    5596,
+                    5597,
+                    5598,
+                    5599
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "Catilinam",
+                "lastWord": "dictitant",
+                "uids": [
+                    5939,
+                    5940,
+                    5941,
+                    5942
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "illum",
+                "lastWord": "malit",
+                "uids": [
+                    5956,
+                    5957,
+                    5958,
+                    5959,
+                    5960,
+                    5961,
+                    5962,
+                    5963,
+                    5964
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "latrocinantem",
+                "lastWord": "vivere",
+                "uids": [
+                    5979,
+                    5980,
+                    5981,
+                    5982,
+                    5983,
+                    5984,
+                    5985
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "fatetur",
+                "lastWord": "hostem",
+                "uids": [
+                    6032,
+                    6033,
+                    6034,
+                    6035
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "ullo",
+                "lastWord": "possit",
+                "uids": [
+                    6072,
+                    6073,
+                    6074,
+                    6075
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "fieri",
+                "lastWord": "possit",
+                "uids": [
+                    6094,
+                    6096
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "me",
+                "lastWord": "volent",
+                "uids": [
+                    6100,
+                    6101,
+                    6102
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "quam",
+                "lastWord": "adferre",
+                "uids": [
+                    6129,
+                    6130,
+                    6134
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "dissolvi",
+                "lastWord": "possunt",
+                "uids": [
+                    6151,
+                    6154
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "hosce",
+                "lastWord": "arbitror",
+                "uids": [
+                    6231,
+                    6233,
+                    6234,
+                    6235,
+                    6236,
+                    6237,
+                    6238,
+                    6239,
+                    6240,
+                    6241
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "stare",
+                "lastWord": "possunt",
+                "uids": [
+                    6249,
+                    6251
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "vivere",
+                "lastWord": "possunt",
+                "uids": [
+                    6278,
+                    6279,
+                    6281
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "perire",
+                "lastWord": "velint",
+                "uids": [
+                    6283,
+                    6284,
+                    6285
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "ab",
+                "lastWord": "possunt",
+                "uids": [
+                    6321,
+                    6322,
+                    6323,
+                    6324
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "eos",
+                "lastWord": "possit",
+                "uids": [
+                    6336,
+                    6338,
+                    6340
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "illis",
+                "lastWord": "poterunt",
+                "uids": [
+                    6489,
+                    6490,
+                    6491
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "nudi",
+                "lastWord": "didicerunt",
+                "uids": [
+                    6519,
+                    6520,
+                    6521,
+                    6522,
+                    6523
+                ]
+            },
+            {
+                "type": "Accusative/Infinitive construction",
+                "isClause": true,
+                "firstWord": "ceteras",
+                "lastWord": "debeo",
+                "uids": [
+                    6597,
+                    6598,
+                    6599,
+                    6600,
+                    6601,
+                    6602,
+                    6603,
+                    6604,
+                    6605,
+                    6606,
+                    6607,
+                    6608,
+                    6609,
+                    6610,
+                    6611
+                ]
+            }
+        ]
     },
     "text": {
         "1.1": [
@@ -646,20 +2568,6 @@
                     "tense": "present",
                     "mood": "indicative",
                     "voice": "deponent"
-                }
-            },
-            {
-                "uid": 67,
-                "form": "egeris",
-                "lemma": "ago",
-                "postag": "v2srsa---",
-                "morphology": {
-                    "pos": "verb",
-                    "person": "second",
-                    "number": "singular",
-                    "tense": "perfect",
-                    "mood": "subjunctive",
-                    "voice": "active"
                 }
             },
             {
@@ -2219,20 +4127,6 @@
                 "uid": 228,
                 "form": "coercerent.",
                 "lemma": "coerceo1",
-                "postag": "v3pisa---",
-                "morphology": {
-                    "pos": "verb",
-                    "person": "third",
-                    "number": "plural",
-                    "tense": "imperfect",
-                    "mood": "subjunctive",
-                    "voice": "active"
-                }
-            },
-            {
-                "uid": 230,
-                "form": "coercerent",
-                "lemma": "coerceo",
                 "postag": "v3pisa---",
                 "morphology": {
                     "pos": "verb",
@@ -5223,49 +7117,6 @@
                 }
             },
             {
-                "uid": 538,
-                "form": "iussero",
-                "lemma": "jubeo",
-                "postag": "v1stia---",
-                "morphology": {
-                    "pos": "verb",
-                    "person": "first",
-                    "number": "singular",
-                    "tense": "future perfect",
-                    "mood": "indicative",
-                    "voice": "active"
-                }
-            },
-            {
-                "uid": 539,
-                "form": "dicant",
-                "lemma": "dico2",
-                "postag": "v3ppsa---",
-                "morphology": {
-                    "pos": "verb",
-                    "person": "third",
-                    "number": "plural",
-                    "tense": "present",
-                    "mood": "subjunctive",
-                    "voice": "active"
-                }
-            },
-            {
-                "uid": 540,
-                "form": "factum",
-                "lemma": "facio",
-                "postag": "v-srppna-",
-                "morphology": {
-                    "pos": "verb",
-                    "number": "singular",
-                    "tense": "perfect",
-                    "mood": "participle",
-                    "voice": "passive",
-                    "gender": "neuter",
-                    "case": "accusative"
-                }
-            },
-            {
                 "uid": 541,
                 "form": "verum",
                 "lemma": "verus1",
@@ -6511,20 +8362,6 @@
                     "number": "plural",
                     "gender": "neuter",
                     "case": "nominative"
-                }
-            },
-            {
-                "uid": 667,
-                "form": "potest",
-                "lemma": "possum",
-                "postag": "v3spia---",
-                "morphology": {
-                    "pos": "verb",
-                    "person": "third",
-                    "number": "singular",
-                    "tense": "present",
-                    "mood": "indicative",
-                    "voice": "active"
                 }
             },
             {
@@ -7782,30 +9619,6 @@
                 }
             },
             {
-                "uid": 797,
-                "form": "die",
-                "lemma": "dies",
-                "postag": "n-s---mb-",
-                "morphology": {
-                    "pos": "noun",
-                    "number": "singular",
-                    "gender": "masculine",
-                    "case": "ablative"
-                }
-            },
-            {
-                "uid": 798,
-                "form": "causa",
-                "lemma": "causa",
-                "postag": "n-s---fb-",
-                "morphology": {
-                    "pos": "noun",
-                    "number": "singular",
-                    "gender": "feminine",
-                    "case": "ablative"
-                }
-            },
-            {
                 "uid": 799,
                 "form": "num",
                 "lemma": "num1",
@@ -8196,20 +10009,6 @@
                     "number": "singular",
                     "gender": "neuter",
                     "case": "nominative"
-                }
-            },
-            {
-                "uid": 836,
-                "form": "est",
-                "lemma": "sum1",
-                "postag": "v3spia---",
-                "morphology": {
-                    "pos": "verb",
-                    "person": "third",
-                    "number": "singular",
-                    "tense": "present",
-                    "mood": "indicative",
-                    "voice": "active"
                 }
             },
             {
@@ -8698,15 +10497,6 @@
                     "mood": "subjunctive",
                     "voice": "active"
                 }
-            },
-            {
-                "uid": 885,
-                "form": "non",
-                "lemma": "non",
-                "postag": "d--------",
-                "morphology": {
-                    "pos": "adverb"
-                }
             }
         ],
         "1.4": [
@@ -8934,18 +10724,6 @@
                     "number": "singular",
                     "gender": "feminine",
                     "case": "genitive"
-                }
-            },
-            {
-                "uid": 908,
-                "form": "vigilare",
-                "lemma": "vigilo",
-                "postag": "v--pna---",
-                "morphology": {
-                    "pos": "verb",
-                    "tense": "present",
-                    "mood": "infinitive",
-                    "voice": "active"
                 }
             },
             {
@@ -9490,18 +11268,6 @@
                 }
             },
             {
-                "uid": 968,
-                "form": "nos",
-                "lemma": "nos",
-                "postag": "p-p---mn-",
-                "morphology": {
-                    "pos": "pronoun",
-                    "number": "plural",
-                    "gender": "masculine",
-                    "case": "nominative"
-                }
-            },
-            {
                 "uid": 969,
                 "form": "quam",
                 "lemma": "qui1",
@@ -9962,32 +11728,6 @@
                     "tense": "present",
                     "mood": "subjunctive",
                     "voice": "active"
-                }
-            },
-            {
-                "uid": 1017,
-                "form": "cogitent",
-                "lemma": "cogito",
-                "postag": "v3ppsa---",
-                "morphology": {
-                    "pos": "verb",
-                    "person": "third",
-                    "number": "plural",
-                    "tense": "present",
-                    "mood": "subjunctive",
-                    "voice": "active"
-                }
-            },
-            {
-                "uid": 1018,
-                "form": "exitio",
-                "lemma": "exitium",
-                "postag": "n-s---nb-",
-                "morphology": {
-                    "pos": "noun",
-                    "number": "singular",
-                    "gender": "neuter",
-                    "case": "ablative"
                 }
             },
             {
@@ -11929,34 +13669,6 @@
                     "gender": "masculine",
                     "case": "accusative",
                     "degree": "superlative"
-                }
-            },
-            {
-                "uid": 1210,
-                "form": "educ",
-                "lemma": "educo1",
-                "postag": "v2spma---",
-                "morphology": {
-                    "pos": "verb",
-                    "person": "second",
-                    "number": "singular",
-                    "tense": "present",
-                    "mood": "imperative",
-                    "voice": "active"
-                }
-            },
-            {
-                "uid": 1211,
-                "form": "potes",
-                "lemma": "possum",
-                "postag": "v2spia---",
-                "morphology": {
-                    "pos": "verb",
-                    "person": "second",
-                    "number": "singular",
-                    "tense": "present",
-                    "mood": "indicative",
-                    "voice": "active"
                 }
             },
             {
@@ -14680,21 +16392,6 @@
                 }
             },
             {
-                "uid": 1492,
-                "form": "iturus",
-                "lemma": "eo1",
-                "postag": "v-sfpamn-",
-                "morphology": {
-                    "pos": "verb",
-                    "number": "singular",
-                    "tense": "future",
-                    "mood": "participle",
-                    "voice": "active",
-                    "gender": "masculine",
-                    "case": "nominative"
-                }
-            },
-            {
                 "uid": 1493,
                 "form": "non",
                 "lemma": "non1",
@@ -15503,34 +17200,6 @@
                 }
             },
             {
-                "uid": 1576,
-                "form": "afuit",
-                "lemma": "asum",
-                "postag": "v3sria---",
-                "morphology": {
-                    "pos": "verb",
-                    "person": "third",
-                    "number": "singular",
-                    "tense": "perfect",
-                    "mood": "indicative",
-                    "voice": "active"
-                }
-            },
-            {
-                "uid": 1577,
-                "form": "afuit",
-                "lemma": "asum",
-                "postag": "v3sria---",
-                "morphology": {
-                    "pos": "verb",
-                    "person": "third",
-                    "number": "singular",
-                    "tense": "perfect",
-                    "mood": "indicative",
-                    "voice": "active"
-                }
-            },
-            {
                 "uid": 1578,
                 "form": "cui",
                 "lemma": "qui1",
@@ -15724,20 +17393,6 @@
                 }
             },
             {
-                "uid": 1596,
-                "form": "praetulisti",
-                "lemma": "praefero",
-                "postag": "v2sria---",
-                "morphology": {
-                    "pos": "verb",
-                    "person": "second",
-                    "number": "singular",
-                    "tense": "perfect",
-                    "mood": "indicative",
-                    "voice": "active"
-                }
-            },
-            {
                 "uid": 1597,
                 "form": "quid",
                 "lemma": "quis1",
@@ -15756,20 +17411,6 @@
                 "postag": "d--------",
                 "morphology": {
                     "pos": "adverb"
-                }
-            },
-            {
-                "uid": 1600,
-                "form": "est",
-                "lemma": "sum1",
-                "postag": "v3spia---",
-                "morphology": {
-                    "pos": "verb",
-                    "person": "third",
-                    "number": "singular",
-                    "tense": "present",
-                    "mood": "indicative",
-                    "voice": "active"
                 }
             },
             {
@@ -17585,34 +19226,6 @@
                 }
             },
             {
-                "uid": 1777,
-                "form": "interficere",
-                "lemma": "interficio",
-                "postag": "v--pna---",
-                "morphology": {
-                    "pos": "verb",
-                    "tense": "present",
-                    "mood": "infinitive",
-                    "voice": "active"
-                }
-            },
-            {
-                "uid": 1778,
-                "form": "conatus",
-                "lemma": "conor",
-                "postag": "v-srpdmn_",
-                "morphology": {
-                    "pos": "verb",
-                    "number": "singular",
-                    "tense": "perfect",
-                    "mood": "participle",
-                    "voice": "deponent",
-                    "gender": "masculine",
-                    "case": "nominative",
-                    "degree": null
-                }
-            },
-            {
                 "uid": 1779,
                 "form": "quot",
                 "lemma": "quot1",
@@ -18690,35 +20303,6 @@
                 }
             },
             {
-                "uid": 1887,
-                "form": "videar",
-                "lemma": "video",
-                "postag": "v1spsp---",
-                "morphology": {
-                    "pos": "verb",
-                    "person": "first",
-                    "number": "singular",
-                    "tense": "present",
-                    "mood": "subjunctive",
-                    "voice": "passive"
-                }
-            },
-            {
-                "uid": 1888,
-                "form": "permotus",
-                "lemma": "permoveo",
-                "postag": "v-srppmn-",
-                "morphology": {
-                    "pos": "verb",
-                    "number": "singular",
-                    "tense": "perfect",
-                    "mood": "participle",
-                    "voice": "passive",
-                    "gender": "masculine",
-                    "case": "nominative"
-                }
-            },
-            {
                 "uid": 1889,
                 "form": "venisti",
                 "lemma": "venio1",
@@ -19500,7 +21084,7 @@
             },
             {
                 "uid": 1967,
-                "form": "putas",
+                "form": "putas?",
                 "lemma": "puto1",
                 "postag": "v2spia---",
                 "morphology": {
@@ -19509,32 +21093,6 @@
                     "number": "singular",
                     "tense": "present",
                     "mood": "indicative",
-                    "voice": "active"
-                }
-            },
-            {
-                "uid": 1968,
-                "form": "est?",
-                "lemma": "sum1",
-                "postag": "v3spia---",
-                "morphology": {
-                    "pos": "verb",
-                    "person": "third",
-                    "number": "singular",
-                    "tense": "present",
-                    "mood": "indicative",
-                    "voice": "active"
-                }
-            },
-            {
-                "uid": 1970,
-                "form": "esse",
-                "lemma": "sum1",
-                "postag": "v--pna---",
-                "morphology": {
-                    "pos": "verb",
-                    "tense": "present",
-                    "mood": "infinitive",
                     "voice": "active"
                 }
             },
@@ -19757,18 +21315,6 @@
                 }
             },
             {
-                "uid": 1991,
-                "form": "esse",
-                "lemma": "sum1",
-                "postag": "v--pna---",
-                "morphology": {
-                    "pos": "verb",
-                    "tense": "present",
-                    "mood": "infinitive",
-                    "voice": "active"
-                }
-            },
-            {
                 "uid": 1992,
                 "form": "tu",
                 "lemma": "tu1",
@@ -19825,31 +21371,6 @@
                     "tense": "present",
                     "mood": "indicative",
                     "voice": "deponent"
-                }
-            },
-            {
-                "uid": 1998,
-                "form": "relinquendam",
-                "lemma": "relinquo",
-                "postag": "v-s-g-fa-",
-                "morphology": {
-                    "pos": "verb",
-                    "number": "singular",
-                    "mood": "gerundive",
-                    "gender": "feminine",
-                    "case": "accusative"
-                }
-            },
-            {
-                "uid": 1999,
-                "form": "esse",
-                "lemma": "sum1",
-                "postag": "v--pna---",
-                "morphology": {
-                    "pos": "verb",
-                    "tense": "present",
-                    "mood": "infinitive",
-                    "voice": "active"
                 }
             },
             {
@@ -21289,20 +22810,6 @@
                 }
             },
             {
-                "uid": 2142,
-                "form": "exstitit",
-                "lemma": "exsisto",
-                "postag": "v3sria---",
-                "morphology": {
-                    "pos": "verb",
-                    "person": "third",
-                    "number": "singular",
-                    "tense": "perfect",
-                    "mood": "indicative",
-                    "voice": "active"
-                }
-            },
-            {
                 "uid": 2143,
                 "form": "tibi",
                 "lemma": "tu1",
@@ -21464,20 +22971,6 @@
                     "number": "singular",
                     "gender": "feminine",
                     "case": "nominative"
-                }
-            },
-            {
-                "uid": 2159,
-                "form": "fuerunt",
-                "lemma": "sum1",
-                "postag": "v3pria---",
-                "morphology": {
-                    "pos": "verb",
-                    "person": "third",
-                    "number": "plural",
-                    "tense": "perfect",
-                    "mood": "indicative",
-                    "voice": "active"
                 }
             },
             {
@@ -22328,20 +23821,6 @@
                     "mood": "subjunctive",
                     "voice": "active"
                 }
-            },
-            {
-                "uid": 2249,
-                "form": "est",
-                "lemma": "sum1",
-                "postag": "v3spia---",
-                "morphology": {
-                    "pos": "verb",
-                    "person": "third",
-                    "number": "singular",
-                    "tense": "present",
-                    "mood": "indicative",
-                    "voice": "active"
-                }
             }
         ],
         "1.8": [
@@ -22732,20 +24211,6 @@
                     "person": "second",
                     "number": "singular",
                     "tense": "perfect",
-                    "mood": "indicative",
-                    "voice": "active"
-                }
-            },
-            {
-                "uid": 2292,
-                "form": "est",
-                "lemma": "sum1",
-                "postag": "v3spia---",
-                "morphology": {
-                    "pos": "verb",
-                    "person": "third",
-                    "number": "singular",
-                    "tense": "present",
                     "mood": "indicative",
                     "voice": "active"
                 }
@@ -25382,20 +26847,6 @@
                 }
             },
             {
-                "uid": 2563,
-                "form": "dixissem",
-                "lemma": "dico2",
-                "postag": "v1slsa---",
-                "morphology": {
-                    "pos": "verb",
-                    "person": "first",
-                    "number": "singular",
-                    "tense": "pluperfect",
-                    "mood": "subjunctive",
-                    "voice": "active"
-                }
-            },
-            {
                 "uid": 2564,
                 "form": "de",
                 "lemma": "de1",
@@ -26011,20 +27462,6 @@
                     "person": "second",
                     "number": "singular",
                     "tense": "perfect",
-                    "mood": "indicative",
-                    "voice": "active"
-                }
-            },
-            {
-                "uid": 2632,
-                "form": "est",
-                "lemma": "sum1",
-                "postag": "v3spia---",
-                "morphology": {
-                    "pos": "verb",
-                    "person": "third",
-                    "number": "singular",
-                    "tense": "present",
                     "mood": "indicative",
                     "voice": "active"
                 }
@@ -27611,34 +29048,6 @@
                 "uid": 2791,
                 "form": "revocarit.",
                 "lemma": "revoco1",
-                "postag": "v3srsa---",
-                "morphology": {
-                    "pos": "verb",
-                    "person": "third",
-                    "number": "singular",
-                    "tense": "perfect",
-                    "mood": "subjunctive",
-                    "voice": "active"
-                }
-            },
-            {
-                "uid": 2793,
-                "form": "revocarit",
-                "lemma": "revoco",
-                "postag": "v3srsa---",
-                "morphology": {
-                    "pos": "verb",
-                    "person": "third",
-                    "number": "singular",
-                    "tense": "perfect",
-                    "mood": "subjunctive",
-                    "voice": "active"
-                }
-            },
-            {
-                "uid": 2794,
-                "form": "revocarit",
-                "lemma": "revoco",
                 "postag": "v3srsa---",
                 "morphology": {
                     "pos": "verb",
@@ -31486,20 +32895,6 @@
                     "mood": "subjunctive",
                     "voice": "passive"
                 }
-            },
-            {
-                "uid": 3175,
-                "form": "nominaretur",
-                "lemma": "nomino",
-                "postag": "v3sisp---",
-                "morphology": {
-                    "pos": "verb",
-                    "person": "third",
-                    "number": "singular",
-                    "tense": "imperfect",
-                    "mood": "subjunctive",
-                    "voice": "passive"
-                }
             }
         ],
         "1.11": [
@@ -32023,34 +33418,6 @@
             {
                 "uid": 3232,
                 "form": "loquatur:",
-                "lemma": "loquor",
-                "postag": "v3spsd---",
-                "morphology": {
-                    "pos": "verb",
-                    "person": "third",
-                    "number": "singular",
-                    "tense": "present",
-                    "mood": "subjunctive",
-                    "voice": "deponent"
-                }
-            },
-            {
-                "uid": 3234,
-                "form": "loquatur",
-                "lemma": "loquor",
-                "postag": "v3spsd---",
-                "morphology": {
-                    "pos": "verb",
-                    "person": "third",
-                    "number": "singular",
-                    "tense": "present",
-                    "mood": "subjunctive",
-                    "voice": "deponent"
-                }
-            },
-            {
-                "uid": 3235,
-                "form": "loquatur",
                 "lemma": "loquor",
                 "postag": "v3spsd---",
                 "morphology": {
@@ -32862,20 +34229,6 @@
                 }
             },
             {
-                "uid": 3321,
-                "form": "impedit",
-                "lemma": "impedio",
-                "postag": "v3spia---",
-                "morphology": {
-                    "pos": "verb",
-                    "person": "third",
-                    "number": "singular",
-                    "tense": "present",
-                    "mood": "indicative",
-                    "voice": "active"
-                }
-            },
-            {
                 "uid": 3322,
                 "form": "at",
                 "lemma": "at1",
@@ -33109,20 +34462,6 @@
                 "uid": 3343,
                 "form": "sunt?",
                 "lemma": "sum1",
-                "postag": "v3ppia---",
-                "morphology": {
-                    "pos": "verb",
-                    "person": "third",
-                    "number": "plural",
-                    "tense": "present",
-                    "mood": "indicative",
-                    "voice": "active"
-                }
-            },
-            {
-                "uid": 3345,
-                "form": "impediunt",
-                "lemma": "impedio",
                 "postag": "v3ppia---",
                 "morphology": {
                     "pos": "verb",
@@ -33935,31 +35274,6 @@
             {
                 "uid": 3423,
                 "form": "pertimescenda.",
-                "lemma": "pertimesco",
-                "postag": "v-s-g-fn-",
-                "morphology": {
-                    "pos": "verb",
-                    "number": "singular",
-                    "mood": "gerundive",
-                    "gender": "feminine",
-                    "case": "nominative"
-                }
-            },
-            {
-                "uid": 3425,
-                "form": "invidia",
-                "lemma": "invidia",
-                "postag": "n-s---fn-",
-                "morphology": {
-                    "pos": "noun",
-                    "number": "singular",
-                    "gender": "feminine",
-                    "case": "nominative"
-                }
-            },
-            {
-                "uid": 3426,
-                "form": "pertimescenda",
                 "lemma": "pertimesco",
                 "postag": "v-s-g-fn-",
                 "morphology": {
@@ -36146,18 +37460,6 @@
                     "tense": "present",
                     "mood": "subjunctive",
                     "voice": "deponent"
-                }
-            },
-            {
-                "uid": 3641,
-                "form": "fore",
-                "lemma": "sum1",
-                "postag": "v--fna---",
-                "morphology": {
-                    "pos": "verb",
-                    "tense": "future",
-                    "mood": "infinitive",
-                    "voice": "active"
                 }
             },
             {
@@ -38921,42 +40223,6 @@
                 }
             },
             {
-                "uid": 3917,
-                "form": "fore",
-                "lemma": "sum1",
-                "postag": "v--fna---",
-                "morphology": {
-                    "pos": "verb",
-                    "tense": "future",
-                    "mood": "infinitive",
-                    "voice": "active"
-                }
-            },
-            {
-                "uid": 3918,
-                "form": "fore",
-                "lemma": "sum1",
-                "postag": "v--fna---",
-                "morphology": {
-                    "pos": "verb",
-                    "tense": "future",
-                    "mood": "infinitive",
-                    "voice": "active"
-                }
-            },
-            {
-                "uid": 3919,
-                "form": "fore",
-                "lemma": "sum1",
-                "postag": "v--fna---",
-                "morphology": {
-                    "pos": "verb",
-                    "tense": "future",
-                    "mood": "infinitive",
-                    "voice": "active"
-                }
-            },
-            {
                 "uid": 3920,
                 "form": "hisce",
                 "lemma": "hic1",
@@ -40035,21 +41301,6 @@
                     "tense": "future",
                     "mood": "indicative",
                     "voice": "active"
-                }
-            },
-            {
-                "uid": 4028,
-                "form": "constituta",
-                "lemma": "constituo",
-                "postag": "v-srppfn-",
-                "morphology": {
-                    "pos": "verb",
-                    "number": "singular",
-                    "tense": "perfect",
-                    "mood": "participle",
-                    "voice": "passive",
-                    "gender": "feminine",
-                    "case": "nominative"
                 }
             }
         ],
@@ -41832,20 +43083,6 @@
                     "person": "second",
                     "number": "plural",
                     "tense": "present",
-                    "mood": "indicative",
-                    "voice": "active"
-                }
-            },
-            {
-                "uid": 4215,
-                "form": "reliquit",
-                "lemma": "relinquo",
-                "postag": "v3sria---",
-                "morphology": {
-                    "pos": "verb",
-                    "person": "third",
-                    "number": "singular",
-                    "tense": "perfect",
                     "mood": "indicative",
                     "voice": "active"
                 }
@@ -45424,18 +46661,6 @@
                 }
             },
             {
-                "uid": 4573,
-                "form": "deserere",
-                "lemma": "desero2",
-                "postag": "v--pna---",
-                "morphology": {
-                    "pos": "verb",
-                    "tense": "present",
-                    "mood": "infinitive",
-                    "voice": "active"
-                }
-            },
-            {
                 "uid": 4574,
                 "form": "quibus",
                 "lemma": "qui1",
@@ -45597,20 +46822,6 @@
                     "person": "third",
                     "number": "plural",
                     "tense": "future",
-                    "mood": "indicative",
-                    "voice": "active"
-                }
-            },
-            {
-                "uid": 4592,
-                "form": "ostendero",
-                "lemma": "ostendo",
-                "postag": "v1stia---",
-                "morphology": {
-                    "pos": "verb",
-                    "person": "first",
-                    "number": "singular",
-                    "tense": "future perfect",
                     "mood": "indicative",
                     "voice": "active"
                 }
@@ -46122,18 +47333,6 @@
                 }
             },
             {
-                "uid": 4644,
-                "form": "esse",
-                "lemma": "sum1",
-                "postag": "v--pna---",
-                "morphology": {
-                    "pos": "verb",
-                    "tense": "present",
-                    "mood": "infinitive",
-                    "voice": "active"
-                }
-            },
-            {
                 "uid": 4645,
                 "form": "atque",
                 "lemma": "atque1",
@@ -46573,34 +47772,6 @@
                     "person": "third",
                     "number": "singular",
                     "tense": "perfect",
-                    "mood": "subjunctive",
-                    "voice": "active"
-                }
-            },
-            {
-                "uid": 4688,
-                "form": "habeat",
-                "lemma": "habeo",
-                "postag": "v3spsa---",
-                "morphology": {
-                    "pos": "verb",
-                    "person": "third",
-                    "number": "singular",
-                    "tense": "present",
-                    "mood": "subjunctive",
-                    "voice": "active"
-                }
-            },
-            {
-                "uid": 4689,
-                "form": "habeat",
-                "lemma": "habeo",
-                "postag": "v3spsa---",
-                "morphology": {
-                    "pos": "verb",
-                    "person": "third",
-                    "number": "singular",
-                    "tense": "present",
                     "mood": "subjunctive",
                     "voice": "active"
                 }
@@ -48851,21 +50022,6 @@
                 }
             },
             {
-                "uid": 4918,
-                "form": "factum",
-                "lemma": "facio",
-                "postag": "v-srppna-",
-                "morphology": {
-                    "pos": "verb",
-                    "number": "singular",
-                    "tense": "perfect",
-                    "mood": "participle",
-                    "voice": "passive",
-                    "gender": "neuter",
-                    "case": "accusative"
-                }
-            },
-            {
                 "uid": 4919,
                 "form": "iam",
                 "lemma": "jam1",
@@ -49006,20 +50162,6 @@
                     "number": "singular",
                     "gender": "masculine",
                     "case": "ablative"
-                }
-            },
-            {
-                "uid": 4933,
-                "form": "fuit",
-                "lemma": "sum1",
-                "postag": "v3sria---",
-                "morphology": {
-                    "pos": "verb",
-                    "person": "third",
-                    "number": "singular",
-                    "tense": "perfect",
-                    "mood": "indicative",
-                    "voice": "active"
                 }
             },
             {
@@ -49272,20 +50414,6 @@
             {
                 "uid": 4958,
                 "form": "pollicebatur.",
-                "lemma": "polliceor",
-                "postag": "v3siid---",
-                "morphology": {
-                    "pos": "verb",
-                    "person": "third",
-                    "number": "singular",
-                    "tense": "imperfect",
-                    "mood": "indicative",
-                    "voice": "deponent"
-                }
-            },
-            {
-                "uid": 4960,
-                "form": "pollicebatur",
                 "lemma": "polliceor",
                 "postag": "v3siid---",
                 "morphology": {
@@ -50212,20 +51340,6 @@
                 }
             },
             {
-                "uid": 5047,
-                "form": "est",
-                "lemma": "sum1",
-                "postag": "v3spia---",
-                "morphology": {
-                    "pos": "verb",
-                    "person": "third",
-                    "number": "singular",
-                    "tense": "present",
-                    "mood": "indicative",
-                    "voice": "active"
-                }
-            },
-            {
                 "uid": 5048,
                 "form": "atque",
                 "lemma": "atque1",
@@ -51022,20 +52136,6 @@
                 }
             },
             {
-                "uid": 5127,
-                "form": "sunt",
-                "lemma": "sum1",
-                "postag": "v3ppia---",
-                "morphology": {
-                    "pos": "verb",
-                    "person": "third",
-                    "number": "plural",
-                    "tense": "present",
-                    "mood": "indicative",
-                    "voice": "active"
-                }
-            },
-            {
                 "uid": 5128,
                 "form": "nihil",
                 "lemma": "nihil",
@@ -51279,20 +52379,6 @@
                 "uid": 5155,
                 "form": "coepit:",
                 "lemma": "coepio1",
-                "postag": "v3sria---",
-                "morphology": {
-                    "pos": "verb",
-                    "person": "third",
-                    "number": "singular",
-                    "tense": "perfect",
-                    "mood": "indicative",
-                    "voice": "active"
-                }
-            },
-            {
-                "uid": 5157,
-                "form": "defecit",
-                "lemma": "deficio",
                 "postag": "v3sria---",
                 "morphology": {
                     "pos": "verb",
@@ -51814,42 +52900,6 @@
                     "mood": "participle",
                     "gender": "masculine",
                     "case": "dative"
-                }
-            },
-            {
-                "uid": 5211,
-                "form": "insidiari",
-                "lemma": "insidior",
-                "postag": "v--pnd---",
-                "morphology": {
-                    "pos": "verb",
-                    "tense": "present",
-                    "mood": "infinitive",
-                    "voice": "deponent"
-                }
-            },
-            {
-                "uid": 5212,
-                "form": "insidiari",
-                "lemma": "insidior",
-                "postag": "v--pnd---",
-                "morphology": {
-                    "pos": "verb",
-                    "tense": "present",
-                    "mood": "infinitive",
-                    "voice": "deponent"
-                }
-            },
-            {
-                "uid": 5213,
-                "form": "insidiari",
-                "lemma": "insidior",
-                "postag": "v--pnd---",
-                "morphology": {
-                    "pos": "verb",
-                    "tense": "present",
-                    "mood": "infinitive",
-                    "voice": "deponent"
                 }
             },
             {
@@ -55982,151 +57032,6 @@
                 }
             },
             {
-                "uid": 5632,
-                "form": "scirem",
-                "lemma": "scio",
-                "postag": "v1sisa---",
-                "morphology": {
-                    "pos": "verb",
-                    "person": "first",
-                    "number": "singular",
-                    "tense": "imperfect",
-                    "mood": "subjunctive",
-                    "voice": "active"
-                }
-            },
-            {
-                "uid": 5633,
-                "form": "scirem",
-                "lemma": "scio",
-                "postag": "v1sisa---",
-                "morphology": {
-                    "pos": "verb",
-                    "person": "first",
-                    "number": "singular",
-                    "tense": "imperfect",
-                    "mood": "subjunctive",
-                    "voice": "active"
-                }
-            },
-            {
-                "uid": 5634,
-                "form": "scirem",
-                "lemma": "scio",
-                "postag": "v1sisa---",
-                "morphology": {
-                    "pos": "verb",
-                    "person": "first",
-                    "number": "singular",
-                    "tense": "imperfect",
-                    "mood": "subjunctive",
-                    "voice": "active"
-                }
-            },
-            {
-                "uid": 5635,
-                "form": "scirem",
-                "lemma": "scio",
-                "postag": "v1sisa---",
-                "morphology": {
-                    "pos": "verb",
-                    "person": "first",
-                    "number": "singular",
-                    "tense": "imperfect",
-                    "mood": "subjunctive",
-                    "voice": "active"
-                }
-            },
-            {
-                "uid": 5636,
-                "form": "scirem",
-                "lemma": "scio",
-                "postag": "v1sisa---",
-                "morphology": {
-                    "pos": "verb",
-                    "person": "first",
-                    "number": "singular",
-                    "tense": "imperfect",
-                    "mood": "subjunctive",
-                    "voice": "active"
-                }
-            },
-            {
-                "uid": 5637,
-                "form": "praemissa",
-                "lemma": "praemitto",
-                "postag": "v-prppna-",
-                "morphology": {
-                    "pos": "verb",
-                    "number": "plural",
-                    "tense": "perfect",
-                    "mood": "participle",
-                    "voice": "passive",
-                    "gender": "neuter",
-                    "case": "accusative"
-                }
-            },
-            {
-                "uid": 5638,
-                "form": "praemissas",
-                "lemma": "praemitto",
-                "postag": "v-prppfa-",
-                "morphology": {
-                    "pos": "verb",
-                    "number": "plural",
-                    "tense": "perfect",
-                    "mood": "participle",
-                    "voice": "passive",
-                    "gender": "feminine",
-                    "case": "accusative"
-                }
-            },
-            {
-                "uid": 5639,
-                "form": "praemissos",
-                "lemma": "praemitto",
-                "postag": "v-prppma-",
-                "morphology": {
-                    "pos": "verb",
-                    "number": "plural",
-                    "tense": "perfect",
-                    "mood": "participle",
-                    "voice": "passive",
-                    "gender": "masculine",
-                    "case": "accusative"
-                }
-            },
-            {
-                "uid": 5640,
-                "form": "praemissas",
-                "lemma": "praemitto",
-                "postag": "v-prppfa-",
-                "morphology": {
-                    "pos": "verb",
-                    "number": "plural",
-                    "tense": "perfect",
-                    "mood": "participle",
-                    "voice": "passive",
-                    "gender": "feminine",
-                    "case": "accusative"
-                }
-            },
-            {
-                "uid": 5641,
-                "form": "praemissa",
-                "lemma": "praemitto",
-                "postag": "v-prppna-",
-                "morphology": {
-                    "pos": "verb",
-                    "number": "plural",
-                    "tense": "perfect",
-                    "mood": "participle",
-                    "voice": "passive",
-                    "gender": "neuter",
-                    "case": "accusative"
-                }
-            },
-            {
                 "uid": 5642,
                 "form": "in",
                 "lemma": "in1",
@@ -57828,18 +58733,6 @@
                 }
             },
             {
-                "uid": 5814,
-                "form": "existimari",
-                "lemma": "existimo",
-                "postag": "v--pnp---",
-                "morphology": {
-                    "pos": "verb",
-                    "tense": "present",
-                    "mood": "infinitive",
-                    "voice": "passive"
-                }
-            },
-            {
                 "uid": 5815,
                 "form": "est",
                 "lemma": "sum1",
@@ -58774,20 +59667,6 @@
                     "person": "first",
                     "number": "singular",
                     "tense": "perfect",
-                    "mood": "subjunctive",
-                    "voice": "active"
-                }
-            },
-            {
-                "uid": 5911,
-                "form": "sit",
-                "lemma": "sum1",
-                "postag": "v3spsa---",
-                "morphology": {
-                    "pos": "verb",
-                    "person": "third",
-                    "number": "singular",
-                    "tense": "present",
                     "mood": "subjunctive",
                     "voice": "active"
                 }
@@ -60927,18 +61806,6 @@
                 }
             },
             {
-                "uid": 6134,
-                "form": "adferre",
-                "lemma": "affero",
-                "postag": "v--pna---",
-                "morphology": {
-                    "pos": "verb",
-                    "tense": "present",
-                    "mood": "infinitive",
-                    "voice": "active"
-                }
-            },
-            {
                 "uid": 6135,
                 "form": "Vnum",
                 "lemma": "unus1",
@@ -61333,20 +62200,6 @@
                     "gender": "feminine",
                     "case": "nominative",
                     "degree": "superlative"
-                }
-            },
-            {
-                "uid": 6171,
-                "form": "est",
-                "lemma": "sum1",
-                "postag": "v3spia---",
-                "morphology": {
-                    "pos": "verb",
-                    "person": "third",
-                    "number": "singular",
-                    "tense": "present",
-                    "mood": "indicative",
-                    "voice": "active"
                 }
             }
         ],
@@ -62252,20 +63105,6 @@
                 "uid": 6266,
                 "form": "sentiant.",
                 "lemma": "sentio1",
-                "postag": "v3ppsa---",
-                "morphology": {
-                    "pos": "verb",
-                    "person": "third",
-                    "number": "plural",
-                    "tense": "present",
-                    "mood": "subjunctive",
-                    "voice": "active"
-                }
-            },
-            {
-                "uid": 6268,
-                "form": "conruant",
-                "lemma": "corruo",
                 "postag": "v3ppsa---",
                 "morphology": {
                     "pos": "verb",
