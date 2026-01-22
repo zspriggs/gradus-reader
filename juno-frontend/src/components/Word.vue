@@ -8,7 +8,9 @@
     @click="$emit('word-click', wordData)"
     class="word-wrapper"
   >
-    <span :class="['word', highlightClass, {'syntax-highlighted': isInHoveredSyntax}]">{{ wordData.form + '\u00A0' + '\u00A0' }}</span>
+    <span :class="['word', highlightClass, {'syntax-highlighted': isInHoveredSyntax}, {'syntax-pinned': isInPinnedSyntax}]">
+      {{ wordData.form + '\u00A0' + '\u00A0' }}
+    </span>
 
     <span v-if="wordData.annotations" class="inline-annotations">
       <span class="annotation-tag">
@@ -55,6 +57,10 @@ const props = defineProps({
   hoveredSyntaxPhrase: {
     type: Object,
     default: {}
+  }, 
+  pinnedSyntaxPhrase: {
+    type: Object,
+    default: {}
   }
 });
 
@@ -92,26 +98,10 @@ const isInHoveredSyntax = computed(() => {
   return props.hoveredSyntaxPhrase.uids?.includes(props.wordData.uid);
 });
 
-// const syntaxStyle = computed(() => {
-//   // Only show syntax highlighting if syntax feature is enabled
-//   if (props.features.syntax && props.syntaxPhrase) {
-//     const colors = {
-//       'indirect_question': 'rgba(251, 191, 36, 0.25)',
-//       'relative_clause': 'rgba(147, 51, 234, 0.25)',
-//       'indirect_statement': 'rgba(59, 130, 246, 0.25)',
-//       'ablative_absolute': 'rgba(34, 197, 94, 0.25)',
-//       'purpose_clause': 'rgba(236, 72, 153, 0.25)',
-//       'result_clause': 'rgba(249, 115, 22, 0.25)'
-//     };
-    
-//     return {
-//       backgroundColor: colors[props.syntaxPhrase.type] || 'rgba(156, 163, 175, 0.25)',
-//       borderRadius: '3px',
-//       padding: '2px 0'
-//     };
-//   }
-//   return {}
-// });
+const isInPinnedSyntax = computed(() => { 
+  if (!props.pinnedSyntaxPhrase) return false;
+  return props.pinnedSyntaxPhrase.uids?.includes(props.wordData.uid);
+});
 
 const highlightClass = computed(() => {
   const rangeCount = props.activeRanges.length;
@@ -167,9 +157,12 @@ const abbreviatedFeatures = computed(() => {
 }
 
 .word.syntax-highlighted {
-  background-color: #fff3cd;
+  background-color: var(--yellow-syntax-highlight);
+}
+
+.word.syntax-pinned {
+  background-color: var(--yellow-syntax-highlight);
   border-bottom: 2px solid #ffc107;
-  /* Or whatever visual style you prefer */
 }
 
 .inline-annotations {

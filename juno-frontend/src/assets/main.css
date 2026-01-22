@@ -24,7 +24,10 @@
     --highlight-2: rgb(168, 187, 163, 0.5);
     --highlight-3: rgb(168, 187, 163, 0.7);
 
-    --title-dark: #374151;
+    --yellow-syntax-highlight: #fff3cd;
+    --yellow-syntax-underline: #ffc107;
+
+    --dark-blue: #12355B;
 
     --gray-text: #6b7280;
 

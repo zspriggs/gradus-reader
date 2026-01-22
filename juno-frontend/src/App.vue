@@ -10,6 +10,13 @@
       @annotation-added="handleAnnotationAdded" 
     />
 
+    <AnnotationPanel 
+      v-if="selectedWord && !features.inline"
+      :word="selectedWord" 
+      :features="features" 
+      @close="selectedWord = null"
+    />
+
     <SyntaxPanel
       v-if="features.syntax && annotatedText"
       class="syntax-panel"
@@ -17,6 +24,7 @@
       :hovered-syntax-phrase="hoveredSyntaxPhrase"
       @syntax-hover="handleSyntaxPanelHover"
       @syntax-unhover="handleSyntaxPanelUnhover"
+      @pin-toggle="handleSyntaxPinToggle"
     />
 
 
@@ -109,6 +117,7 @@
               :features="features"
               :is-selected="selectedWord?.uid === word.uid"
               :hovered-syntax-phrase="hoveredSyntaxPhrase"
+              :pinned-syntax-phrase="pinnedSyntaxPhrase"
               @word-click="handleWordClick"
               @word-delete="handleWordAnnotationDelete"
               @word-mouseup="handleMouseUp"
@@ -171,12 +180,6 @@
       <div v-else class="loading-screen">
         Loading library...
       </div>
-    
-    <AnnotationPanel 
-      v-if="selectedWord && !features.inline"
-      :word="selectedWord" 
-      :features="features" 
-    />
     
     <!-- Legend -->
     <div v-if="features.caseHighlight || features.posHighlight" class="legend-container">
@@ -281,6 +284,7 @@ const rangeView = ref(null);
 const rangeViewPosition = ref({top: 0, left: 0});
 
 const hoveredSyntaxPhrase = ref(null);
+const pinnedSyntaxPhrase = ref(null);
 
 const features = reactive({
   inline: true,
@@ -291,8 +295,7 @@ const features = reactive({
   posHighlight: false,
   syntax: true,
   
-  // Annotation content - TODO remove unused
-  // vocab: true,
+  vocab: true,
   morphology: true,
 });
 
@@ -406,6 +409,13 @@ const handleSyntaxPanelHover = (phrase) => {
 
 const handleSyntaxPanelUnhover = () => {
   hoveredSyntaxPhrase.value = null;
+};
+
+const handleSyntaxPinToggle = (phrase) => {
+  if (pinnedSyntaxPhrase.value && pinnedSyntaxPhrase.value.syntax_id === phrase.syntax_id){
+    pinnedSyntaxPhrase.value = null;
+  } else {
+    pinnedSyntaxPhrase.value = phrase; }
 };
 
 const getRangesEndingAt = (uid) => {

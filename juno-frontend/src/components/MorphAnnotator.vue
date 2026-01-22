@@ -8,14 +8,12 @@
           @click="handleClose"
         />
         
-        <div 
-          class="popover-wrapper"
-        >
+        <div class="popover-wrapper" >
 
           <div class="popover-main">
 
             <div class="popover-header">
-              <h3 class="popover-title">{{ props.wordData.form }}</h3>
+              <h3 class="popover-title">{{ wordData.form }}</h3>
               <button
                 @click="handleClose"
                 class="close-button"

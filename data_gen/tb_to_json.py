@@ -29,6 +29,7 @@ queries = {
 
 documents = [
     ("../tb_data/tlg0012.tlg001.perseus-grc1.tb.xml", "grc", "0012-001", "Iliad", "Homer"),
+    ("../tb_data/v1.0032-002.xml", "grc", "0032-002", "Memorabilia", "Xenophon"),
     ("../tb_data/tlg0016.tlg001.perseus-grc1.1.tb.xml", "grc", "0016-001", "Histories", "Herodotus"),
     ("../tb_data/phi0474.phi013.perseus-lat1.tb.xml", "lat", "0016-001", "In Catilinam I", "Cicero")         
 ]
@@ -36,12 +37,15 @@ documents = [
 def get_annotations(file: str, lang: str, urn: str, title: str, author: str) -> Dict:
     """Parse an XML Dependency Treebank file into a dictionary form"""
 
-    #Parse the tree
     try:
         tree = ET.parse(file)
-    except:
-        print(f"Failed to parse {file}. Aborting")
+    except FileNotFoundError:
+        print(f"{file} not found. Processing for this document has been stopped.")
         return None
+    except ET.ParseError:
+        print(f"Failed to parse {file} due to XML error. Aborting")
+        return None
+    
     root = tree.getroot()
 
     #Open the data for the query engine
@@ -68,6 +72,7 @@ def get_annotations(file: str, lang: str, urn: str, title: str, author: str) -> 
     uid_map = {}
     current_subdoc = None
     subdoc_words = []
+    pending_punc = None
 
     for sentence in root.findall('.//sentence'):
         if current_subdoc == None: #first pass
@@ -96,8 +101,14 @@ def get_annotations(file: str, lang: str, urn: str, title: str, author: str) -> 
             if postag == None or postag == '':
                 continue
             if postag[0] == 'u': #if punctuation, append to previous word and move on
-                subdoc_words[-1]["form"] += form
+                try:
+                    subdoc_words[-1]["form"] += form
+                except IndexError: #punctuation is first word in subdoc, so we save it for next word
+                    pending_punc = form
                 continue
+            if pending_punc:
+                form = pending_punc + form
+                pending_punc = None
             if len(postag) < 9:
                 postag = postag.ljust(9, '-')
             
@@ -130,7 +141,7 @@ def get_annotations(file: str, lang: str, urn: str, title: str, author: str) -> 
         syntax['uids'] = [uid_map[(str(long_id[0]), str(long_id[1]))] for long_id in syntax['longIds']]
         del syntax['longIds']
 
-    new_filename = file[:-7]
+    new_filename = file[:-4]
     with open(f"{new_filename}.json", "w") as f:
         json.dump(doc, f, indent=4)
         
@@ -139,6 +150,7 @@ def get_annotations(file: str, lang: str, urn: str, title: str, author: str) -> 
 def query_grammar(query_engine: QueryEngine):
     language = query_engine.parser.lang
     syntax_phrases = []
+    syntax_id = 0
 
     for type, query, is_clause in queries[language]:
         results = query_engine.query(query)
@@ -150,6 +162,7 @@ def query_grammar(query_engine: QueryEngine):
                 last_word = clause[-1].form
                 
                 syntax_phrases.append({
+                    "syntax_id": syntax_id,
                     "longIds": [(w.sentence_id, w.id) for w in clause],
                     "type": type,
                     "isClause": is_clause,
@@ -159,11 +172,13 @@ def query_grammar(query_engine: QueryEngine):
             else:
                 first_word = word.form
                 syntax_phrases.append({
+                    "syntax_id": syntax_id,
                     "longIds": [(word.sentence_id, word.id)],
                     "type": type,
                     "isClause": is_clause,
                     "firstWord": first_word,
                 })
+            syntax_id+=1
     
     return syntax_phrases
     

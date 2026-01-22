@@ -27,9 +27,10 @@
 <script setup>
 
 import {ref, onMounted} from 'vue';
-import ciceroInCatilinam1 from '../data/phi0474.phi013.perseus-lat1.json';
-import homerIliad from '../data/tlg0012.tlg001.perseus-grc1.json';
-import herodotusHistories1 from '../data/tlg0016.tlg001.perseus-grc1.1.json';
+import ciceroInCatilinam1 from '../data/phi0474.phi013.perseus-lat1.tb.json';
+import homerIliad from '../data/tlg0012.tlg001.perseus-grc1.tb.json';
+import herodotusHistories1 from '../data/tlg0016.tlg001.perseus-grc1.1.tb.json';
+import xenophonMemorabilia from '../data/v1.0032-002.json';
 
 const emit = defineEmits(['document-selected']);
 
@@ -39,7 +40,8 @@ const documents = {
   ],
   Greek: [
     {urn: 'tlg0012.tlg001', title: 'Homer - Iliad', data: homerIliad},    
-    {urn: 'tlg0016.tlg001', title: 'Herodotus - Histories', data: herodotusHistories1}
+    {urn: 'tlg0016.tlg001', title: 'Herodotus - Histories', data: herodotusHistories1},
+    {urn: '0032.002', title: 'Xenophon - Memorabilia', data: xenophonMemorabilia}
   ]
 };
 
