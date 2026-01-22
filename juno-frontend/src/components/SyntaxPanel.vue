@@ -2,7 +2,7 @@
   <div class="syntax-sidebar">
     <h3>Syntax</h3>
     <div class="tip-text">
-      <strong>Tip:</strong> Toggle syntax help in the settings menu.
+      <strong>Tip:</strong> You can close this syntax panel in the settings menu.
     </div>
     <div class="syntax-list">
       <div v-if="syntaxPhrases.length === 0">
