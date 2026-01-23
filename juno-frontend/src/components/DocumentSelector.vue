@@ -36,12 +36,12 @@ const emit = defineEmits(['document-selected']);
 
 const documents = {
   Latin: [
-    {urn: 'phi0474.phi013', title: 'Cicero - In Catilinam', data: ciceroInCatilinam1}
+    {urn: 'phi0474.phi013', lang: 'lat', title: 'Cicero - In Catilinam', data: ciceroInCatilinam1}
   ],
   Greek: [
-    {urn: 'tlg0012.tlg001', title: 'Homer - Iliad', data: homerIliad},    
-    {urn: 'tlg0016.tlg001', title: 'Herodotus - Histories', data: herodotusHistories1},
-    {urn: '0032.002', title: 'Xenophon - Memorabilia', data: xenophonMemorabilia}
+    {urn: 'tlg0012.tlg001', lang: 'grc', title: 'Homer - Iliad', data: homerIliad},    
+    {urn: 'tlg0016.tlg001', lang: 'grc', title: 'Herodotus - Histories', data: herodotusHistories1},
+    {urn: '0032.002', lang: 'grc', title: 'Xenophon - Memorabilia', data: xenophonMemorabilia}
   ]
 };
 
@@ -61,10 +61,10 @@ const loadDocument = () => {
   console.log("loading document", doc.title)
 
   if (doc && doc.data) {
-    // Replace passageData with new document
     selectedData.value = doc.data;
     emit('document-selected', {
       urn: doc.urn,
+      lang: doc.lang,
       data: doc.data}
     )
     console.log('Loaded:', doc.title);

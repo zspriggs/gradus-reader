@@ -3,6 +3,7 @@
     <MorphAnnotator
       v-if="selectedWord && features.inline"
       :word-data="selectedWord" 
+      :language="currentLanguage"
       :features="features"
       :mistake-tracker="allMistakes"
       @clear-mistakes="handleClearMistakes"
@@ -260,6 +261,7 @@ const ANNOTATION_KEY="annotations";
 const MISTAKE_KEY="mistakes";
 
 const currentUrn = ref(''); 
+const currentLanguage = ref('lat');
 const passageData = ref(null); 
 const currentSection = ref('1.1'); //default
 const availableSections = computed(() => Object.keys(passageData?.value.text));
@@ -352,6 +354,7 @@ const handleAnnotationAdded = (newAnnotation) => {
 
 const handleDocumentChange = (newDocument) => {
   currentUrn.value = newDocument.urn
+  currentLanguage.value = newDocument.lang
   passageData.value = newDocument.data;
   currentSection.value = Object.keys(passageData.value.text)[0]; // Reset to first!
   selectedWord.value = null;

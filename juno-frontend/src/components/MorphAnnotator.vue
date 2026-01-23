@@ -54,7 +54,7 @@
                     >
                       <option value="">—</option>
                       <option 
-                        v-for="option in morphologyOptions[feature]" 
+                        v-for="option in morphologyOptions[language][feature]" 
                         :key="option" 
                         :value="option"
                       >
@@ -155,10 +155,14 @@ const props = defineProps({
     type: Object,
     required: true,
   },
+  language: {
+    type: String,
+    required: true,
+  },
   // which features to show (defaults to all)
   visibleFeatures: {
     type: Array,
-    default: () => ['pos', 'case', 'number', 'gender', 'tense', 'mood', 'voice', 'person', 'declension', 'conjugation']
+    default: () => ['pos', 'case', 'number', 'gender', 'tense', 'mood', 'voice', 'person', 'degree']
   },
   mistakeTracker: {
     type: Object,
@@ -170,16 +174,26 @@ const emit = defineEmits(['close', 'annotation-checked', 'annotation-correct', '
 
 // Latin morphological feature options
 const morphologyOptions = {
-  pos: ["noun", "verb", "adjective", "preposition", "conjunction", "pronoun", "adverb", "participle"],
-  case: ["nominative", "genitive", "dative", "accusative", "ablative", "vocative", "locative"],
-  number: ["singular", "plural"],
-  gender: ["masculine", "feminine", "neuter"],
-  tense: ["present", "imperfect", "future", "perfect", "pluperfect", "future perfect"],
-  mood: ["indicative", "subjunctive", "imperative", "infinitive"],
-  voice: ["active", "passive", "deponent"],
-  person: ["first", "second", "third"]//,
-  //declension: ["1st", "2nd", "3rd", "4th", "5th"],
-  //conjugation: ["1st", "2nd", "3rd", "3rd-io", "4th"]
+  grc: {  
+    pos: ["noun", "verb", "adjective", "preposition", "conjunction", "pronoun", "adverb", "participle", "particle", "article", "numeral", "interjection", "exclamation", "irregular"],
+    case: ["nominative", "genitive", "dative", "accusative", "locative", "vocative", "locative"],
+    number: ["singular", "dual", "plural"],
+    gender: ["masculine", "feminine", "neuter"],
+    tense: ["present", "imperfect", "future", "perfect", "pluperfect", "future perfect", "aorist"],
+    mood: ["indicative", "subjunctive", "optative", "gerund", "gerundive", "imperative", "infinitive"],
+    voice: ["active", "passive", "middle", "mediopassive"],
+    person: ["first", "second", "third"], 
+    degree: ["positive", "comparative", "superlative"]},
+  lat: {
+    pos: ["noun", "verb", "adjective", "preposition", "conjunction", "pronoun", "adverb", "participle"],
+    case: ["nominative", "genitive", "dative", "accusative", "ablative", "vocative", "locative"],
+    number: ["singular", "plural"],
+    gender: ["masculine", "feminine", "neuter"],
+    tense: ["present", "imperfect", "future", "perfect", "pluperfect", "future perfect"],
+    mood: ["indicative", "subjunctive", "imperative", "infinitive"],
+    voice: ["active", "passive", "deponent"],
+    person: ["first", "second", "third"],
+    degree: ["positive", "comparative", "superlative"]}
 };
 
 const featureLabels = {
@@ -191,6 +205,7 @@ const featureLabels = {
   mood: "Mood",
   voice: "Voice",
   person: "Person",
+  degree: "Degree", 
   custom: "Custom Note"
   //declension: "Declension",
   //conjugation: "Conjugation"
@@ -227,30 +242,10 @@ const handleClearMistakes = () => {
   emit('clear-mistakes');
 }
 
-// const calculatePosition = () => {
-//   // Find the word element in the DOM
-//   // We need to find the Word component that has is-selected class
-//   const selectedWordElement = document.querySelector('.word.is-selected');
-  
-//   if (selectedWordElement) {
-//     const rect = selectedWordElement.getBoundingClientRect();
-//     popoverPosition.value = {
-//       top: rect.bottom + window.scrollY + 8,
-//       left: rect.left + window.scrollX
-//     };
-//   } else {
-//     // Fallback to center of screen if we can't find the element
-//     popoverPosition.value = {
-//       top: window.scrollY + 100,
-//       left: window.innerWidth / 2 - 192 // 192 = half of popover width (24rem = 384px)
-//     };
-//   }
-// };
-
 // Open the popover when component mounts
 onMounted(() => {
   nextTick(() => {
-    //calculatePosition();
+    console.log(props.language);
     isOpen.value = true;
   });
 });
