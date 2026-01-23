@@ -20,7 +20,7 @@ Juno is currently:
 - Preparing for **student user testing in Spring 2026**
 
 Because of this, some areas of the codebase may be experimental, sparsely documented, or subject to refactoring.
-You can find the  live version of the project at https://juno-reader.vercel.app/
+You can find the live version of the project at https://juno-reader.vercel.app/
 
 ---
 
