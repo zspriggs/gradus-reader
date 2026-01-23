@@ -21,18 +21,40 @@
         </option>
       </optgroup>
     </select>
+
+    <select
+      id="section-select"
+      v-model="selectedSection"
+      @change="changeSection"
+      class="doc-dropdown"
+    >
+      <option
+        v-for="section in availableSections"
+        :key="section"
+        :value="section"
+      >
+        {{ section }}
+      </option>
+    </select>
   </div>
 </template>
 
 <script setup>
 
-import {ref, onMounted} from 'vue';
+import {ref, onMounted, computed} from 'vue';
 import ciceroInCatilinam1 from '../data/phi0474.phi013.perseus-lat1.tb.json';
 import homerIliad from '../data/tlg0012.tlg001.perseus-grc1.tb.json';
 import herodotusHistories1 from '../data/tlg0016.tlg001.perseus-grc1.1.tb.json';
 import xenophonMemorabilia from '../data/v1.0032-002.json';
 
-const emit = defineEmits(['document-selected']);
+const emit = defineEmits(['document-selected', 'section-selected']);
+
+const props = defineProps({
+  availableSections: {
+    type: Object,
+    retuired: true
+  }
+});
 
 const documents = {
   Latin: [
@@ -46,7 +68,10 @@ const documents = {
 };
 
 const selectedURN = ref('phi0474.phi013');
+const selectedSection = ref('1.1');
 const selectedData = ref(ciceroInCatilinam1);
+
+const availableSections = computed(() => Object.keys(selectedData?.value.text));
 
 onMounted(() => {
   loadDocument();
@@ -65,11 +90,16 @@ const loadDocument = () => {
     emit('document-selected', {
       urn: doc.urn,
       lang: doc.lang,
+      availableSections: availableSections.value,
       data: doc.data}
     )
     console.log('Loaded:', doc.title);
   }
 };
+
+const changeSection = () => {
+  emit('section-selected', selectedSection.value);
+}
 
 
 </script>

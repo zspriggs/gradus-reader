@@ -80,6 +80,7 @@
       <div class="docselector-content">
         <DocumentSelector
           @document-selected="handleDocumentChange" 
+          @section-selected="handleSectionChange"
         />
       </div>
     </div>
@@ -264,7 +265,7 @@ const currentUrn = ref('');
 const currentLanguage = ref('lat');
 const passageData = ref(null); 
 const currentSection = ref('1.1'); //default
-const availableSections = computed(() => Object.keys(passageData?.value.text));
+const availableSections = ref(null);
 
 const allAnnotations = ref({});
 const selectedWord = ref(null);
@@ -353,8 +354,9 @@ const handleAnnotationAdded = (newAnnotation) => {
 };
 
 const handleDocumentChange = (newDocument) => {
-  currentUrn.value = newDocument.urn
-  currentLanguage.value = newDocument.lang
+  currentUrn.value = newDocument.urn;
+  currentLanguage.value = newDocument.lang;
+  availableSections.value = newDocument.availableSections;
   passageData.value = newDocument.data;
   currentSection.value = Object.keys(passageData.value.text)[0]; // Reset to first!
   selectedWord.value = null;
@@ -404,6 +406,10 @@ const prevSection = () => {
   if (index > 0) {
     currentSection.value = availableSections.value[index - 1];
   }
+};
+
+const handleSectionChange = (section) => {
+  currentSection.value = section;
 };
 
 const handleSyntaxPanelHover = (phrase) => {
