@@ -595,7 +595,7 @@ const saveRangeInput = () => {
 
 .syntax-panel {
   position: fixed;
-  right: 20px;
+  right: 0px;
 }
 
 /* doc selector toggle */

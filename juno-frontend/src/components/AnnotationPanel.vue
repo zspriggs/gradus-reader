@@ -26,9 +26,9 @@
               
               <!-- Vocabulary TODO: Add link-->
               <div v-if="features.vocab" class="annotation-section">
-                <span class="annotation-label vocab">Vocabulary:
+                <span class="annotation-label vocab">Vocab Help:
                   <a class="link-text" :href="vocabLink" target="_blank">
-                    Perseus 
+                    Go to Perseus 
                   </a> 
                 </span>
               </div>
@@ -157,11 +157,6 @@ const handleClose = () => {
   position: relative;
 }
 
-.text-display {
-  font-size: 1.5rem;
-  line-height: 2.5;
-}
-
 .popover-backdrop {
   position: fixed;
   inset: 0;
@@ -188,35 +183,12 @@ const handleClose = () => {
   resize: both;
   overflow: auto; 
   
-  width: 14rem;
+  width: 15rem;
   height: auto;
   min-height: 300px;
   max-height: 80vh;
   
   display: flex;
-  flex-direction: column;
-}
-
-.annotation-popover {
-  position: fixed;
-  top: 150px;
-  z-index: 50;
-  background-color: white;
-  border-radius: 0.5rem;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  width: 14rem;
-  max-height: calc(90vh - 100px);
-  overflow: visible;
-  resize: both;
-}
-
-.popover-inner {
-  background-color: white;
-  border-radius: 0.5rem;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-  max-height: calc(90vh - 100px);
-  overflow-y: auto;    
-  display: flex;       
   flex-direction: column;
 }
 
@@ -256,21 +228,6 @@ const handleClose = () => {
 
 .popover-body {
   padding: 1rem;
-}
-
-.annotation-panel {
-  margin-top: 24px;
-  padding: 16px;
-  border: 2px solid #d1d5db;
-  border-radius: 8px;
-  background-color: #f9fafb;
-}
-
-.annotation-title {
-  font-size: 1.25rem;
-  font-weight: bold;
-  color: #1d4ed8;
-  margin-bottom: 8px;
 }
 
 .annotation-lemma {

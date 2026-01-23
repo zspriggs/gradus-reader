@@ -245,7 +245,6 @@ const handleClearMistakes = () => {
 // Open the popover when component mounts
 onMounted(() => {
   nextTick(() => {
-    console.log(props.language);
     isOpen.value = true;
   });
 });
@@ -398,11 +397,6 @@ const addAnnotation = () => {
   position: relative;
 }
 
-.text-display {
-  font-size: 1.5rem;
-  line-height: 2.5;
-}
-
 .popover-backdrop {
   position: fixed;
   inset: 0;
@@ -410,31 +404,25 @@ const addAnnotation = () => {
   z-index: 40;
 }
 
-/* 1. The Wrapper - Holds them side-by-side */
 .popover-wrapper {
   position: fixed;
   top: 150px;
   width: fit-content;
   height: auto;
-  /* Use Flex to put Main and Sidecar next to each other */
   display: flex; 
-  align-items: flex-start; /* Aligns them to the top */
+  align-items: flex-start; 
   z-index: 50;
-  max-width: 90vw; /* Prevent it from going off screen */
+  max-width: 100vw; 
 }
 
-/* 2. The Main Box - Handles Resize & Scroll */
 .popover-main {
   background-color: white;
   border-radius: 0.5rem;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-  
-  /* RESIZABILITY IS BACK */
   resize: both;
-  overflow: auto; /* Required for resize to work */
+  overflow: auto; 
   
-  /* Initial dimensions */
-  width: 14rem;
+  width: 15rem;
   height: auto;
   min-height: 300px;
   max-height: 80vh;
@@ -443,12 +431,11 @@ const addAnnotation = () => {
   flex-direction: column;
 }
 
-/* 3. The Sidecar Container */
 .popover-sidecar {
   flex-shrink: 0;
   position: static;
   display: flex;
-  flex-direction: column; /* Toggle on top, panel below */
+  flex-direction: column; 
   align-items: flex-start;
   margin-left: 0; 
   z-index: auto;
@@ -458,14 +445,11 @@ const addAnnotation = () => {
   position: absolute;
   left: 100%;
   top: 0;
-  height: 100%; /* Match the height of the shell */
-  width: 14rem; /* Or whatever width you want */
-  
-  /* Hide it by default */
+  height: 100%; 
+  width: 14rem; 
   display: none; 
   
-  /* Styling */
-  background-color: var(--hover-khaki); /* Slightly different color to distinguish */
+  background-color: var(--hover-khaki); 
   border-radius: 0 0.5rem 0.5rem 0;
   box-shadow: 5px 0 15px rgba(0,0,0,0.05);
   border-left: 1px solid #e2e8f0;
@@ -476,7 +460,6 @@ const addAnnotation = () => {
   display: block;
 }
 
-/* 4. The Toggle Button */
 .mistake-viewer-toggle {
   position: absolute;
   left: 97%;
@@ -507,29 +490,6 @@ const addAnnotation = () => {
 
 .mistake-viewer-toggle.mistake-viewer-open:hover {
   background-color: var(--delete-red-hover);
-}
-
-.annotation-popover {
-  position: fixed;
-  top: 150px;
-  z-index: 50;
-  background-color: white;
-  border-radius: 0.5rem;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  width: 14rem;
-  max-height: calc(90vh - 100px);
-  overflow: visible;
-  resize: both;
-}
-
-.popover-inner {
-  background-color: white;
-  border-radius: 0.5rem;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-  max-height: calc(90vh - 100px);
-  overflow-y: auto;    /* Scrolling happens here */
-  display: flex;       /* Helps keep header sticky working */
-  flex-direction: column;
 }
 
 .popover-header {
@@ -592,16 +552,6 @@ const addAnnotation = () => {
   font-weight: 500;
   color: #374151;
   margin-bottom: 0.25rem;
-}
-
-.field-textarea {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-family: inherit; /* Keeps font consistent with selects */
-  font-size: 0.9rem;
-  min-height: 60px;
 }
 
 .field-select {
