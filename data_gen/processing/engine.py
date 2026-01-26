@@ -165,7 +165,7 @@ class QueryEngine:
         '''
         __init__
         
-        :param self: GreekQueryEngine
+        :param self: QueryEngine
         :param xml_docs: List of decoded xml documents in the format urn, content
         :type xml_docs: dict[str, str]
         '''

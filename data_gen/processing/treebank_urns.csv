@@ -1,0 +1,13 @@
+Author,Title,URN,Lang,Prose,filename,Sections
+Augustus,Res Gestae,phi1221.phi007.perseus-lat1,lat,True,phi1221.phi007.perseus-lat1.tb.xml,
+Caesar,Commentarii de Bello Gallico,phi0448.phi001.perseus-lat1,lat,True,phi0448.phi001.perseus-lat1.tb.xml,2.1-2.3; 2.5; 2.7; 2.9; 2.14-2.18; 2.32-2.33
+Cicero,In Catilinam,phi0474.phi013.perseus-lat1,lat,True,phi0474.phi013.perseus-lat1.tb.xml,1.1-2.11
+Jerome,Vulgata,tlg0031.tlg027.perseus-lat1,lat,True,tlg0031.tlg027.perseus-lat1.tb.xml,1-22
+Vergil,Aeneid,phi0690.phi003.perseus-lat1,lat,False,phi0690.phi003.perseus-lat1.tb.xml,6.1-6.336
+Ovid,Metamorphoses,phi0959.phi006.perseus-lat1,lat,False,phi0959.phi006.perseus-lat1.tb.xml,1.1-1.778
+Petronius,Satyricon,phi0972.phi001.perseus-lat1,lat,True,phi0972.phi001.perseus-lat1.tb.xml,26-78
+Phaedrus,Fabulae,phi0975.phi001.perseus-lat1,lat,False,phi0975.phi001.perseus-lat1.tb,1-3 
+Propertius,Elegiae,phi0620.phi001.perseus-lat1,lat,False,phi0620.phi001.perseus-lat1.tb.xml,1.1-1.22
+Sallust,Bellum Catilinae,phi0631.phi001.perseus-lat1,lat,True,phi0631.phi001.perseus-lat1.tb.xml,
+Suetonius,Life of Augustus,phi1348.abo012.perseus-lat1,lat,True,phi1348.abo012.perseus-lat1.tb.xml,1-55 
+Tacitus,Historiae,phi1351.phi005.perseus-lat1,lat,True,phi1351.phi005.perseus-lat1.tb.xml,1.1.21
