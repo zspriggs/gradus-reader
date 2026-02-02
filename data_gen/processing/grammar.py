@@ -1,6 +1,7 @@
 from typing import List, Dict
 from processing.engine import QueryEngine
 
+#TODO: add grammar paragraphs to queries
 QUERIES = {
     "grc": [
         {
@@ -12,16 +13,24 @@ QUERIES = {
             "type": "Relative clause",
             "query": ":verb[relation=ATR] > ὅς, :verb[relation=ATR] > ὅστις, :verb[relation=ATR] > οἷος, :verb[relation=ATR] > ὅσος",
             "is_clause": True
+        },
+        {
+            "type": "Genitive absolute",
+            "query": ":genitive[relation=SBJ]",
+            "is_clause": True
+        },
+        {
+            "type": "Indirect discourse",
+            "query": ":verb:infinitive[relation=OBJ], :verb:infinitive[relation=SBJ]",
+            "is_clause": True
         }
-
         #conditional clauses
-        #genitive absolute
-        #accusative infinitive constructions
+        #prepositional phrases
     ],
     "lat": [
         {
-            "type": "Accusative/Infinitive construction", 
-            "query": ":verb:infinitive[relation=OBJ]", 
+            "type": "Indirect discourse", 
+            "query": ":verb:infinitive[relation=OBJ]", #need to add sbj?
             "is_clause": True
         },
         {
@@ -33,7 +42,7 @@ QUERIES = {
         #abl abs
         #conditional clauses
         #maybe adverbial uses of non adverbs
-        #prepositional phrases (might not be as useful)
+        #prepositional phrases
         #highlight complex tags when applicable (ellipsis)
     ]
 }

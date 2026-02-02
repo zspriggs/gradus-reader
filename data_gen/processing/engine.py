@@ -2,7 +2,6 @@ import re
 import xml.etree.ElementTree as ET
 from typing import List, Dict, Optional
 from dataclasses import dataclass
-import os
 
 @dataclass
 class Word:
@@ -255,16 +254,25 @@ class QueryEngine:
     
     def get_subtree(self, word: Word) -> List[Word]:
         """
-        Input: A single 'Head' Word (e.g., 'εἰ' or a participle).
+        Input: A single 'Head' Word
         Output: A list of Words representing the entire phrase/clause.
         """
-        phrase_words = [word]
-        
-        for child in word.children:
-            phrase_words.extend(self.get_subtree(child))
+    
+        phrase_words = []
+        stack = [word]
+        visited = set()
+
+        while stack:
+            current_word = stack.pop()
+            if current_word.id in visited:
+                continue
+                
+            visited.add(current_word.id)
+            phrase_words.append(current_word)
             
-        phrase_words.sort(key=lambda w: w.id) #Assumes children will only be in same sentence
-        
+            stack.extend(current_word.children)
+
+        phrase_words.sort(key=lambda w: w.id)
         return phrase_words
     
     def get_subtree_and_head(self, word: Word) -> List[Word]:

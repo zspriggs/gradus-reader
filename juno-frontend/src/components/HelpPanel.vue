@@ -1,6 +1,6 @@
 <template>
   <div class="help-display">
-    <h3 class="title">Using Juno</h3>
+    <h3 class="title">Using Juno: Quick Start</h3>
     <h4 class="subtitle">ADDING ANNOTATIONS</h4>
     <pre class="help-text">Click a word to open up the <strong>Annotation Menu</strong> on the right side of the screen.
 
@@ -23,11 +23,9 @@
     
     <h3 class="title">About</h3>
     <pre class="help-text">
-        Juno is being created by Zoë Spriggs and Mitchell Shiffer, as part of a joint master's thesis project.
+        Juno is being created by Zoë Spriggs and Mitchell Shiffer, as part of a master's thesis project.
 
         For more information on the project, please visit https://github.com/zspriggs/juno-reader
-        
-        Special thanks
     </pre>
   </div>
 </template>

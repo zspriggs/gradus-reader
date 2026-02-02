@@ -1,11 +1,9 @@
 from pathlib import Path
 from processing.tb_to_json import process_treebank
-
 import argparse
 import json
 from pathlib import Path
 from typing import Optional
-
 import pandas as pd
 
 ''' Example usage: 
@@ -42,7 +40,7 @@ def load_user_queries(path: Optional[Path]):
 
     return data
 
-
+# TODO: Refactor this, bc this is the only code with pandas!
 def load_metadata(csv_path: Optional[Path]) -> dict[str, dict[str,str]]:
     """
     Load metadata CSV into a dictionary mapping URN -> {title, author}.

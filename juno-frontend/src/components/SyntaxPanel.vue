@@ -4,6 +4,9 @@
     <div class="tip-text">
       <strong>Tip:</strong> You can close this syntax panel in the settings menu.
     </div>
+    <div class="tip-text">
+      <strong>Warning:</strong> Syntax phrases are automatically detected, and may be prone to errors.
+    </div>
     <div class="syntax-list">
       <div v-if="syntaxPhrases.length === 0">
         No syntax phrases to display on this page.

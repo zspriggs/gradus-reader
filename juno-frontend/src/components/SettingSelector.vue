@@ -136,6 +136,7 @@ const handleExportAnnotations = () => {
 .feature-selector {
   background-color: white;
   padding: 20px;
+  padding-right: 50px;
   border-radius: 8px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   margin-bottom: 24px;
@@ -150,7 +151,7 @@ const handleExportAnnotations = () => {
 
 .feature-toggles {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 1fr;
   gap: 20px;
   margin-bottom: 20px;
 }
@@ -168,11 +169,12 @@ const handleExportAnnotations = () => {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  padding: 12px;
+  padding: 6px;
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.2s;
   border: 1px solid #e5e7eb;
+  max-width: 100%;
 }
 
 .feature-toggle:hover {
