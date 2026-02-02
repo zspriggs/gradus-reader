@@ -8,6 +8,12 @@ from typing import Optional
 
 import pandas as pd
 
+''' Example usage: 
+
+Process all Latin AGLDT treebanks with default grammar queries:
+    python3 cli.py ../tb_data/AGLDT/Latin/ --lang lat --out ./ --metadata ./treebank_urns.csv
+
+'''
 
 def collect_xml_files(input_path: Path) -> list[Path]:
     if input_path.is_file():
@@ -72,7 +78,10 @@ def process_file(
     meta = metadata_dict.get(urn, {})
     title = meta.get('title', xml_path.stem)
     author = meta.get('author', '')
-    prose = meta.get('prose', True).lower() == 'true'
+
+    prose = meta.get('Prose', True)
+    if type(prose) != type(True): #if prose is not a bool
+        prose = prose.lower() == 'true'
 
     doc = process_treebank(
         xml_path,

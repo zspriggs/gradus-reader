@@ -3,13 +3,6 @@ from typing import Dict
 from processing.grammar import query_grammar
 from processing.engine import QueryEngine, AncientTextParser
 
-# documents = [
-#     ("../tb_data/tlg0012.tlg001.perseus-grc1.tb.xml", "./temp_data/iliad.json", "grc", "0012-001", "Iliad", "Homer"),
-#     ("../tb_data/v1.0032-002.xml", "./temp_data/memorabilia.json", "grc", "0032-002", "Memorabilia", "Xenophon"),
-#     ("../tb_data/tlg0016.tlg001.perseus-grc1.1.tb.xml", "./temp_data/histories.json", "grc", "0016-001", "Histories", "Herodotus"),
-#     ("../tb_data/phi0474.phi013.perseus-lat1.tb.xml", "./temp_data/incatilinam.json", "lat", "0016-001", "In Catilinam I", "Cicero")         
-# ]
-
 def init_query_engine(file, urn: str, lang: str) -> QueryEngine:
     """ Opens the XML data for the query engine and initializes a new query engine. """
     #Open the data for the query engine
