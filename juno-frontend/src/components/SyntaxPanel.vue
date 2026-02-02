@@ -91,10 +91,18 @@ const getWordDisplay = (phrase) => {
   background: #f8f9fa;
   border-left: 1px solid #dee2e6;
   height: 100%;
-  min-width: 330px;
+  width: 20rem;
+  /*min-width: 330px;*/
   overflow-y: auto;
   overflow-x: auto;
+  resize: horizontal;
   z-index: 10;
+}
+
+@media (max-width: 1200px) {
+  .syntax-sidebar {
+    width: 40%;
+  }
 }
 
 .syntax-sidebar h3 {

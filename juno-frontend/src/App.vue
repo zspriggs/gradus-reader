@@ -72,7 +72,8 @@
       @click="docselectorOpen = !docselectorOpen"
       :class="{'docselector-open': docselectorOpen}"
     >
-      <span v-if="!docselectorOpen"> Documents</span>
+      <span class="docbutton-text" v-if="!docselectorOpen"> Documents</span>
+      <span class="docbutton-icon" v-if="!docselectorOpen"> 📜</span>
       <span v-else>x</span>
     </button>
 
@@ -92,7 +93,7 @@
       @click="sidebarOpen = false"
     ></div>
 
-    <div v-if="passageData" class="main-content" :class="{'sidebar-open': sidebarOpen}">
+    <div v-if="passageData" class="main-content" :class="{'syntax-open': features.syntax}">
       <h1 class="main-title">{{ passageData.passage.title}}</h1>
 
       <button class="prev-button"
@@ -275,6 +276,7 @@ const allMistakes = ref({});
 const helpSidebarOpen = ref(true);
 const sidebarOpen = ref(false);
 const docselectorOpen = ref(false);
+const syntaxOpen = ref(true);
 
 const isDragging = ref(false);
 const dragStart = ref(null);
@@ -628,11 +630,25 @@ const saveRangeInput = () => {
   background-color: var(--delete-red-hover);
 }
 
+.docbutton-icon {
+  display:none;
+}
+
+@media (max-width: 1200px) {
+  .docbutton-text {
+    display:none;
+  }
+
+  .docbutton-icon {
+    display:inline;
+  }
+}
+
 .docselector {
   position: fixed;
   top: 0;
-  left: -400px;
-  width: 350px;
+  left: -20rem;
+  width: 20rem;
   height: 100vh;
   background-color: white;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
@@ -729,8 +745,8 @@ const saveRangeInput = () => {
 .sidebar {
   position: fixed;
   top: 0;
-  right: -350px;
-  width: 350px;
+  right: -20rem;
+  width: 20rem;
   height: 100vh;
   background-color: white;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
@@ -761,23 +777,25 @@ const saveRangeInput = () => {
 
 /* Main content */
 .main-content {
-  max-width: 1024px;
-  margin: 0 auto;
-  padding: 24px;
+  max-width: 66rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-@media (max-width: 768px) {
-  .sidebar {
-    width: 300px;
-    right: -300px;
-  }
-  
-  .sidebar-overlay {
-    display: block;
-  }
-  
-  .main-content.sidebar-open {
+.main-content.syntax-open {
+  max-width: 66rem;
+  margin-left: auto;
+  margin-right: max(20rem, calc(50vw - 33rem)); /* Stay centered OR leave room for syntax */  
+  padding: 0 1rem;
+}
+
+/* under 1200 pixels, syntax and main are 5050 */
+@media (max-width: 1200px) {
+  .main-content.syntax-open{
+    width: 60%;
+    margin-left: 0;
     margin-right: 0;
+    max-width: none; 
   }
 }
 
