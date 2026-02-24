@@ -22,7 +22,7 @@
       v-if="features.syntax && annotatedText"
       class="syntax-panel"
       :syntax-phrases="getSyntaxPhrasesForSection()"
-      :hovered-syntax-phrase="hoveredSyntaxPhrase"
+      :hovered-syntax-id="hoveredSyntaxId"
       @syntax-hover="handleSyntaxPanelHover"
       @syntax-unhover="handleSyntaxPanelUnhover"
       @pin-toggle="handleSyntaxPinToggle"
@@ -121,8 +121,8 @@
                 :active-ranges="getActiveRanges(word.uid)"
                 :features="features"
                 :is-selected="selectedWord?.uid === word.uid"
-                :hovered-syntax-phrase="hoveredSyntaxPhrase"
-                :pinned-syntax-phrase="pinnedSyntaxPhrase"
+                :is-syntax-hovered="hoveredSyntaxUids.includes(word.uid)"
+                :is-syntax-pinned="pinnedSyntaxUids.has(word.uid)"
                 @word-click="handleWordClick"
                 @word-delete="handleWordAnnotationDelete"
                 @word-mouseup="handleMouseUp"
@@ -279,7 +279,6 @@ const allMistakes = ref({});
 const helpSidebarOpen = ref(true);
 const sidebarOpen = ref(false);
 const docselectorOpen = ref(false);
-const syntaxOpen = ref(true);
 
 const isDragging = ref(false);
 const dragStart = ref(null);
@@ -291,8 +290,8 @@ const showRangeInput = ref(false);
 const rangeView = ref(null);
 const rangeViewPosition = ref({top: 0, left: 0});
 
-const hoveredSyntaxPhrase = ref(null);
-const pinnedSyntaxPhrase = ref(null);
+const hoveredSyntaxId = ref(null);
+const pinnedSyntaxIds = ref([]);
 
 const features = reactive({
   inline: true,
@@ -305,6 +304,31 @@ const features = reactive({
   
   vocab: true,
   morphology: true,
+});
+
+const hoveredSyntaxUids = computed(() => {
+  if (hoveredSyntaxId.value === null) return [];
+  const activePhrase = passageData.value.passage.syntaxPhrases[hoveredSyntaxId.value];
+  return activePhrase ? activePhrase.uids : [];
+});
+
+
+const pinnedSyntaxUids = computed(() => {
+  const activeUids = new Set();
+  if (!passageData.value?.passage?.syntaxPhrases || !pinnedSyntaxIds.value) {
+    return activeUids; 
+  }
+
+  const allPhrases = passageData.value.passage.syntaxPhrases;
+
+  pinnedSyntaxIds.value.forEach(phraseId => {
+    const phrase = allPhrases[phraseId]; 
+    if (phrase && phrase.uids) {
+      phrase.uids.forEach(uid => activeUids.add(uid));
+    }
+  });
+
+  return activeUids;
 });
 
 onMounted(() => {
@@ -418,18 +442,22 @@ const handleSectionChange = (section) => {
 };
 
 const handleSyntaxPanelHover = (phrase) => {
-  hoveredSyntaxPhrase.value = { ...phrase };
+  hoveredSyntaxId.value = phrase.syntax_id;
 };
 
 const handleSyntaxPanelUnhover = () => {
-  hoveredSyntaxPhrase.value = null;
+  hoveredSyntaxId.value = null;
 };
 
-const handleSyntaxPinToggle = (phrase) => {
-  if (pinnedSyntaxPhrase.value && pinnedSyntaxPhrase.value.syntax_id === phrase.syntax_id){
-    pinnedSyntaxPhrase.value = null;
-  } else {
-    pinnedSyntaxPhrase.value = phrase; }
+// const handleSyntaxPinToggle = (phrase) => {
+//   if (pinnedSyntaxPhrase.value && pinnedSyntaxPhrase.value.syntax_id === phrase.syntax_id){
+//     pinnedSyntaxPhrase.value = null;
+//   } else {
+//     pinnedSyntaxPhrase.value = phrase; }
+// };
+
+const handleSyntaxPinToggle = (phrases) => {
+  pinnedSyntaxIds.value = phrases;
 };
 
 const getRangesEndingAt = (uid) => {

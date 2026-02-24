@@ -7,22 +7,35 @@
     <div class="tip-text">
       <strong>Warning:</strong> Syntax phrases are automatically detected, and may be prone to errors.
     </div>
+    <div class="pin-button-box">
+      <button
+        class="pin-all-button"
+        @click="pinAll"
+      >
+        Pin All
+      </button>
+      <button
+        class="unpin-all-button"
+        @click="unpinAll"
+      >
+        Unpin All
+      </button>
+    </div>
     <div class="syntax-list">
       <div v-if="syntaxPhrases.length === 0">
         No syntax phrases to display on this page.
       </div>
       <div
         v-for="(phrase, index) in syntaxPhrases"
-        :key="index"
+        :key="phrase.syntax_id"
         class="syntax-item"
-        :class="{ 'is-hovered': isPhrasehovered(phrase) }"
         @mouseenter="handleMouseEnter(phrase)"
         @mouseleave="handleMouseLeave"
       >
         <button 
           class="pin-button" 
           @click="pinSyntax(phrase)" 
-          :class="{ 'is-active': activeId === phrase.syntax_id }"
+          :class="{ 'is-active': isPhrasePinned(phrase)}"
         >
           📌
         </button>
@@ -39,7 +52,7 @@
 
 import {ref} from 'vue';
 
-const activeId=ref(null)
+const activeIds=ref([]);
 
 const props = defineProps({
   syntaxPhrases: {
@@ -47,9 +60,8 @@ const props = defineProps({
     required: true,
     default: () => []
   },
-  hoveredSyntaxPhrase: {
-    type: Object, // { uids: [...] } or null
-    default: null
+  hoveredSyntaxId: {
+    type: Number
   }
 });
 
@@ -64,19 +76,34 @@ const handleMouseLeave = () => {
 };
 
 const pinSyntax = (phrase) => {
-  if(activeId.value && activeId.value === phrase.syntax_id){
-    activeId.value = null;
-  } else { activeId.value = phrase.syntax_id; }
-  emit('pin-toggle', phrase);
-}
+  // if item is in the active ids, remove it, otherwise, add it
+  if(activeIds.value && activeIds.value.includes(phrase.syntax_id)) {
+    const index = activeIds.value.indexOf(phrase.syntax_id);
+    if (index > -1) {
+      activeIds.value.splice(index, 1); 
+    }
+  } else { activeIds.value.push(phrase.syntax_id); }
 
-const isPhrasehovered = (phrase) => {
-  if (!props.hoveredSyntaxPhrase) return false;
-  
-  // Check if the arrays have any overlap
-  return phrase.uids.some(uid => 
-    props.hoveredSyntaxPhrase.uids?.includes(uid)
-  );
+  emit('pin-toggle', activeIds.value);
+};
+
+const pinAll = () => {
+  activeIds.value = []
+  props.syntaxPhrases.forEach(phrase => {
+    activeIds.value.push(phrase.syntax_id);
+  });
+
+  emit('pin-toggle', activeIds.value);
+};
+
+const unpinAll = () => {
+  activeIds.value = []
+  emit('pin-toggle', activeIds.value);
+};
+
+const isPhrasePinned = (phrase) => {
+  if (!activeIds.value) return false;
+  return activeIds.value.includes(phrase.syntax_id);
 };
 
 const getWordDisplay = (phrase) => {
@@ -112,6 +139,30 @@ const getWordDisplay = (phrase) => {
   margin: 0 0 1rem 0;
   font-size: 1.125rem;
   color: #212529;
+}
+
+.pin-button-box {
+  padding: 0 0 1rem 0;
+}
+
+.pin-all-button {
+  position: relative;
+  padding: 5px;
+  left: 20%;
+  background: var(--yellow-syntax-highlight);
+  border-color: var(--yellow-syntax-underline);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.unpin-all-button {
+  position: relative;
+  padding: 5px;
+  left: 40%;
+  background: var(--yellow-syntax-highlight);
+  border-color: var(--yellow-syntax-underline);
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .syntax-list {

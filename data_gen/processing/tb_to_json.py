@@ -68,7 +68,10 @@ def process_treebank(file: str, lang: str, urn: str, title: str, author: str, pr
     pending_punc = None
     
     for sentence in root.findall('.//sentence'):
-        for word in sentence.findall('.//word'):
+        words = sorted(sentence.findall('.//word'), key=lambda w: int(w.get('id')))
+        words = reorder_enclitics(words)
+
+        for word in words:
             if prose:
                 section_key = sentence.get('subdoc')
             else:
@@ -86,6 +89,8 @@ def process_treebank(file: str, lang: str, urn: str, title: str, author: str, pr
                 current_section = section_key
                 section_words = []
 
+            #NOTE: Skipped words *are* assigned a uid, for ease of syntax re-mapping and 
+            #for dependency parsing applications that will later be implemented
             unique_id += 1
             long_id = (sentence.get('id'), word.get('id'))
             head_long_id = (sentence.get('id'), word.get('head'))
@@ -95,6 +100,7 @@ def process_treebank(file: str, lang: str, urn: str, title: str, author: str, pr
             lemma = word.get('lemma')
             postag = word.get('postag')
 
+            #skip conditions
             if word.get('artificial') or word.get('insertion_id'): #If this word is an insertion, ignore
                 continue
             if postag == None or postag == '': #If this word does not have a postag, ignore
@@ -115,7 +121,7 @@ def process_treebank(file: str, lang: str, urn: str, title: str, author: str, pr
             if len(postag) < 9:
                 postag = postag.ljust(9, '-')
             
-            #TODO: handle enclitics better?
+            #TODO: handle enclitics better
 
             morphology = map_morphology(postag, query_engine.parser)
 
@@ -131,38 +137,49 @@ def process_treebank(file: str, lang: str, urn: str, title: str, author: str, pr
     doc['text'][current_section] = section_words
 
     #remap ids onto each otherr
-    #TODO: refactor so the IDs are handled better !!! EWWW PLS REFACTOR
+    #TODO: refactor so the IDs are handled better?
     for syntax in doc['passage']['syntaxPhrases']:
         syntax['uids'] = [uid_map[(str(long_id[0]), str(long_id[1]))] for long_id in syntax['longIds']]
         del syntax['longIds']
-    for section in doc['text']:
-        for word in doc['text'][section]:
-            head = word.get('head')
-            if head:
-                if head[1] == '0': #this word is root
-                    word['head'] = 0
-                else:
-                    try:
-                        word['head'] = uid_map[head]
-                    except:
-                        word['head'] = 999
-                        #TODO: Figure out if the invisible heads are mistakes or not??
+
+    # TODO: Continue on dependency implementation
+    # for section in doc['text']:
+    #     for word in doc['text'][section]:
+    #         head = word.get('head')
+    #         if head:
+    #             if head[1] == '0': #this word is root
+    #                 word['head'] = 0
+    #             else:
+    #                 word['head'] = uid_map[head]
 
     if not prose:
         doc = chunk_poetry(doc, urn)
 
     return doc
 
+def reorder_enclitics(words):
+    """Reorders words to handle cases when Latin enclitics are treebanked before the word they actually append to"""
+    #check for que bc usually (or maybe always) form is -que when enclitic is properly ordered
+    word_list = list(words)
+    just_reordered = False
+    for i, word in enumerate(word_list):
+        if just_reordered: 
+            just_reordered = False
+            continue
+        if word.get('form') in {'que', 've', 'c'} and i + 1 < len(word_list):
+            word_list[i], word_list[i+1] = word_list[i+1], word_list[i]
+            just_reordered = True
+    return word_list
+
 def chunk_poetry(doc: dict, urn: str, lines_per_chunk: int=30):
+    """Chunks poetry into groups of at least lines_per_chunk lines, always ending on a sentence break"""
     doc_copy = doc.copy()
     doc_copy['text'] = {}
 
     section_count = 0
-    total_count = 1
     section = []
 
     #assumes section title format is like "urn:cts:latinLit:phi0959.phi006:1.344"
-    #print(doc["text"])
     section_start_book = None
     section_start_line = None
 
@@ -173,10 +190,10 @@ def chunk_poetry(doc: dict, urn: str, lines_per_chunk: int=30):
         if not section_start_book or not section_start_line: #first go-around
             section_start_book = book_num
             section_start_line = line_num
-            #= f"{book_num}.{line_num}"
 
         line_text = doc['text'][line]
-        #end punch checks line_text[-2] bc line_text[-1] should be linebreak
+
+        #end punc checks line_text[-2] bc line_text[-1] should be linebreak
         end_punc = \
             line_text[-2].get('form')[-1] == '.' or \
             line_text[-2].get('form')[-1] == ';' or \

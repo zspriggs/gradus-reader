@@ -8,7 +8,10 @@
     @click="$emit('word-click', wordData)"
     class="word-wrapper"
   >
-    <span :class="['word', highlightClass, {'syntax-highlighted': isInHoveredSyntax}, {'syntax-pinned': isInPinnedSyntax}]">
+    <span :class="['word', highlightClass, 
+    {'syntax-hovered': isSyntaxHovered}, 
+    {'syntax-pinned': isSyntaxPinned}, 
+    {'syntax-hovered-and-pinned': isSyntaxHovered && isSyntaxPinned}]">
       {{ wordData.form + '\u00A0' + '\u00A0' }}
     </span>
 
@@ -54,13 +57,11 @@ const props = defineProps({
     type: Boolean,
     default: false
   },
-  hoveredSyntaxPhrase: {
-    type: Object,
-    default: {}
-  }, 
-  pinnedSyntaxPhrase: {
-    type: Object,
-    default: {}
+  isSyntaxHovered: {
+    type: Boolean
+  },
+  isSyntaxPinned: {
+    type: Boolean
   }
 });
 
@@ -91,16 +92,6 @@ const wordClasses = computed(() => {
   }
   
   return classes.join(' ');
-});
-
-const isInHoveredSyntax = computed(() => {
-  if (!props.hoveredSyntaxPhrase) return false;
-  return props.hoveredSyntaxPhrase.uids?.includes(props.wordData.uid);
-});
-
-const isInPinnedSyntax = computed(() => { 
-  if (!props.pinnedSyntaxPhrase) return false;
-  return props.pinnedSyntaxPhrase.uids?.includes(props.wordData.uid);
 });
 
 const highlightClass = computed(() => {
@@ -156,13 +147,19 @@ const abbreviatedFeatures = computed(() => {
   font-size: 1.1rem;
 }
 
-.word.syntax-highlighted {
+.word.syntax-hovered {
   background-color: var(--yellow-syntax-highlight);
 }
 
 .word.syntax-pinned {
   background-color: var(--yellow-syntax-highlight);
   border-bottom: 2px solid #ffc107;
+}
+
+.word.syntax-hovered-and-pinned {
+  background-color: #ffdf80;
+  border-bottom: 2px solid #ffc107;
+
 }
 
 .inline-annotations {
