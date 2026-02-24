@@ -43,9 +43,10 @@
 
 import {ref, onMounted, computed} from 'vue';
 import ciceroInCatilinam1 from '../data/phi0474.phi013.perseus-lat1.tb.json';
-//import homerIliad from '../data/tlg0012.tlg001.perseus-grc1.tb.json';
+import homerIliad from '../data/tlg0012.tlg001.perseus-grc1.tb.json';
 import herodotusHistories1 from '../data/tlg0016.tlg001.perseus-grc1.1.tb.json';
 import xenophonMemorabilia from '../data/v1.0032-002.json';
+import ovidMetamorphoses from '../data/phi0959.phi006.perseus-lat1.tb.json';
 
 const emit = defineEmits(['document-selected', 'section-selected']);
 
@@ -58,10 +59,11 @@ const props = defineProps({
 
 const documents = {
   Latin: [
-    {urn: 'phi0474.phi013', lang: 'lat', title: 'Cicero - In Catilinam', data: ciceroInCatilinam1}
+    {urn: 'phi0474.phi013', lang: 'lat', title: 'Cicero - In Catilinam', data: ciceroInCatilinam1},
+    {urn: 'phi0959.phi006', lang: 'lat', title: 'Ovid - Metamorphoses', data: ovidMetamorphoses}
   ],
   Greek: [
-    //{urn: 'tlg0012.tlg001', lang: 'grc', title: 'Homer - Iliad', data: homerIliad},    
+    {urn: 'tlg0012.tlg001', lang: 'grc', title: 'Homer - Iliad', data: homerIliad},
     {urn: 'tlg0016.tlg001', lang: 'grc', title: 'Herodotus - Histories', data: herodotusHistories1},
     {urn: '0032.002', lang: 'grc', title: 'Xenophon - Memorabilia', data: xenophonMemorabilia}
   ]
@@ -78,7 +80,7 @@ onMounted(() => {
 });
 
 const loadDocument = () => {
-  console.log('tring to load doc')
+  console.log('trying to load doc')
   // Find the selected document across all languages
   const allDocs = Object.values(documents).flat();
   const doc = allDocs.find(d => d.urn === selectedURN.value);

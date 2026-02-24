@@ -374,8 +374,6 @@ const addAnnotation = () => {
     featuresToAdd.custom = annotations.value.custom;
   }
 
-
-
   const annotation = {
     word: props.wordData.form,
     uid: props.wordData.uid,

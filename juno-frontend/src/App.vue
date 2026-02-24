@@ -114,26 +114,29 @@
             v-for="word in annotatedText[currentSection]"
             :key="word.uid"
           >
-            <Word
-              :word-data="word"
-              :active-ranges="getActiveRanges(word.uid)"
-              :features="features"
-              :is-selected="selectedWord?.uid === word.uid"
-              :hovered-syntax-phrase="hoveredSyntaxPhrase"
-              :pinned-syntax-phrase="pinnedSyntaxPhrase"
-              @word-click="handleWordClick"
-              @word-delete="handleWordAnnotationDelete"
-              @word-mouseup="handleMouseUp"
-              @word-mousedown="handleMouseDown"
-              @word-mouseenter="handleMouseEnter"
-            />
-            <span 
-              v-if="getRangesEndingAt(word.uid).length > 0" 
-              class="line-note-icon"
-              @click="(event) => openExistingRangeNote(word.uid, event)"
-            >
-              💬
-            </span>
+            <br v-if=word.linebreak>
+            <template v-else>
+              <Word
+                :word-data="word"
+                :active-ranges="getActiveRanges(word.uid)"
+                :features="features"
+                :is-selected="selectedWord?.uid === word.uid"
+                :hovered-syntax-phrase="hoveredSyntaxPhrase"
+                :pinned-syntax-phrase="pinnedSyntaxPhrase"
+                @word-click="handleWordClick"
+                @word-delete="handleWordAnnotationDelete"
+                @word-mouseup="handleMouseUp"
+                @word-mousedown="handleMouseDown"
+                @word-mouseenter="handleMouseEnter"
+              />
+              <span
+                v-if="getRangesEndingAt(word.uid).length > 0"
+                class="line-note-icon"
+                @click="(event) => openExistingRangeNote(word.uid, event)"
+              >
+                💬
+              </span>
+            </template>
           </template>
 
           <div 

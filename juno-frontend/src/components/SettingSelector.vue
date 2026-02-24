@@ -122,7 +122,6 @@ const handleToggle = (featureName) => {
 };
 
 const handleImportAnnotations = () => {
-  console.log("emitting import event");
   emit('import-annotations');
 };
 
