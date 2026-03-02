@@ -59,7 +59,7 @@
         </label>
       </div> -->
     </div>
-      <h3>Import Export Annotations:</h3>
+      <h3>Import & Export Annotations:</h3>
       <button
         class="btn-import-annotation"
         @click="handleImportAnnotations"

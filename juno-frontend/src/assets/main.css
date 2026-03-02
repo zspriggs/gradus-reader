@@ -1,11 +1,13 @@
 .app-container {
     position: relative;
     min-height: 100vh;
-    font-family: 'EB Garamond', 'Garamond', 'Georgia', 'Times New Roman', serif;
+    font-weight: 400;
+    /*font-family: 'Gentium Plus', serif; */
+    font-family: system-ui, sans-serif;
 }
 
 :root {
-    /* Brand Colors */
+    /* buttons */
     --green-button: #768372;
     --green-button-hover: #657062;
 
@@ -31,15 +33,10 @@
 
     --gray-text: #6b7280;
 
-
-
     /* Neutral Colors */
     --bg-white: #ffffff;
     --text-main: #333333;
     --border-gray: #e0e0e0;
-    --btn-gray: #808080;
 
-    /* Spacing/Border Radius (Optional but helpful) */
-    --radius-sm: 4px;
-    --radius-round: 50%;
+    --font-serif: 'Gentium Plus', serif;
 }

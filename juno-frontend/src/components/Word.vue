@@ -145,6 +145,7 @@ const abbreviatedFeatures = computed(() => {
 .word {
   padding: 1px 0px;
   font-size: 1.1rem;
+  font-family: var(--font-serif);
 }
 
 .word.syntax-hovered {
@@ -169,6 +170,7 @@ const abbreviatedFeatures = computed(() => {
   padding: 1px 0px;
   margin-top: -2px;
   min-height: 8px;
+  font-family: system-ui;
 }
 
 .custom-annotations {
@@ -178,6 +180,7 @@ const abbreviatedFeatures = computed(() => {
   padding: 1px 0px;
   margin-top: 2px; 
   min-height: 8px;
+  font-family: system-ui;
 }
 
 .annotation-tag {

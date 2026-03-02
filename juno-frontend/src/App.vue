@@ -94,7 +94,9 @@
     ></div>
 
     <div v-if="passageData" class="main-content" :class="{'syntax-open': features.syntax}">
-      <h1 class="main-title">{{ passageData.passage.title}}</h1>
+      <h1 class="main-title">{{ passageData.passage.title}}
+        <h2 class="author-title">{{passageData.passage.author}}</h2>
+      </h1>
 
       <button class="prev-button"
         @click="prevSection"
@@ -833,9 +835,17 @@ const saveRangeInput = () => {
 .main-title {
   font-size: 2rem;
   font-weight: bold;
+  font-family: var(--font-serif);
   text-align: center;
-  margin-bottom: 32px;
-  color: var(--title-dark);
+  color: var(--dark-blue);
+}
+
+.author-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: var(--font-serif);
+  text-align: center;
+  color: var(--gray-text);
 }
 
 .passage-container {
