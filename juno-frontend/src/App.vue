@@ -276,7 +276,7 @@ const selectedWord = ref(null);
 
 const allMistakes = ref({});
 
-const helpSidebarOpen = ref(true);
+const helpSidebarOpen = ref(false);
 const sidebarOpen = ref(false);
 const docselectorOpen = ref(false);
 
