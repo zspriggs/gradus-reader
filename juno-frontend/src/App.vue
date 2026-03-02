@@ -1,20 +1,21 @@
 <template>
+  <Analytics />
   <div class="app-container">
     <MorphAnnotator
       v-if="selectedWord && features.inline"
-      :word-data="selectedWord" 
+      :word-data="selectedWord"
       :language="currentLanguage"
       :features="features"
       :mistake-tracker="allMistakes"
       @clear-mistakes="handleClearMistakes"
       @close="selectedWord = null"
-      @annotation-added="handleAnnotationAdded" 
+      @annotation-added="handleAnnotationAdded"
     />
 
-    <AnnotationPanel 
+    <AnnotationPanel
       v-if="selectedWord && !features.inline"
-      :word="selectedWord" 
-      :features="features" 
+      :word="selectedWord"
+      :features="features"
       @close="selectedWord = null"
     />
 
@@ -28,7 +29,6 @@
       @pin-toggle="handleSyntaxPinToggle"
     />
 
-
     <!--- help/about button toggle -->
     <button
       class="help-toggle"
@@ -38,15 +38,15 @@
       <span v-if="!helpSidebarOpen">❔</span>
       <span v-else>x</span>
     </button>
-    <div class="sidebar" :class="{ 'open': helpSidebarOpen }">
+    <div class="sidebar" :class="{ open: helpSidebarOpen }">
       <div class="sidebar-content">
-        <HelpPanel/>
+        <HelpPanel />
       </div>
     </div>
 
     <!-- Sidebar toggle -->
-    <button 
-      class="sidebar-toggle" 
+    <button
+      class="sidebar-toggle"
       @click="sidebarOpen = !sidebarOpen"
       :class="{ 'sidebar-open': sidebarOpen }"
     >
@@ -55,11 +55,11 @@
     </button>
 
     <!-- Sidebar -->
-    <div class="sidebar" :class="{ 'open': sidebarOpen }">
+    <div class="sidebar" :class="{ open: sidebarOpen }">
       <div class="sidebar-content">
-        <SettingSelector 
-          :features="features" 
-          @toggle-feature="handleToggleFeature" 
+        <SettingSelector
+          :features="features"
+          @toggle-feature="handleToggleFeature"
           @import-annotations="importAnnotations"
           @export-annotations="exportAnnotations"
         />
@@ -70,46 +70,40 @@
     <button
       class="docselector-toggle"
       @click="docselectorOpen = !docselectorOpen"
-      :class="{'docselector-open': docselectorOpen}"
+      :class="{ 'docselector-open': docselectorOpen }"
     >
       <span class="docbutton-text" v-if="!docselectorOpen"> Documents</span>
       <span class="docbutton-icon" v-if="!docselectorOpen"> 📜</span>
       <span v-else>x</span>
     </button>
 
-    <div class="docselector" :class="{ 'open': docselectorOpen }">
+    <div class="docselector" :class="{ open: docselectorOpen }">
       <div class="docselector-content">
         <DocumentSelector
-          @document-selected="handleDocumentChange" 
+          @document-selected="handleDocumentChange"
           @section-selected="handleSectionChange"
         />
       </div>
     </div>
 
     <!-- Overlay for mobile -->
-    <div 
-      v-if="sidebarOpen" 
-      class="sidebar-overlay"
-      @click="sidebarOpen = false"
-    ></div>
+    <div v-if="sidebarOpen" class="sidebar-overlay" @click="sidebarOpen = false"></div>
 
-    <div v-if="passageData" class="main-content" :class="{'syntax-open': features.syntax}">
-      <h1 class="main-title">{{ passageData.passage.title}}</h1>
+    <div v-if="passageData" class="main-content" :class="{ 'syntax-open': features.syntax }">
+      <h1 class="main-title">{{ passageData.passage.title }}</h1>
 
-      <button class="prev-button"
-        @click="prevSection"
-        :class="{'hidden': docselectorOpen}"
-      >🡸</button>
+      <button class="prev-button" @click="prevSection" :class="{ hidden: docselectorOpen }">
+        🡸
+      </button>
 
-      <button class="next-button"
-        @click="nextSection"
-        :class="{'hidden': docselectorOpen}"
-      >🡺</button>
+      <button class="next-button" @click="nextSection" :class="{ hidden: docselectorOpen }">
+        🡺
+      </button>
 
       <div v-if="annotatedText" class="passage-container">
-
-        <h2 class="passage-title">Section {{currentSection }}</h2>
+        <h2 class="passage-title">Section {{ currentSection }}</h2>
         <div class="passage-text">
+<<<<<<< HEAD
           <template 
             v-for="word in annotatedText[currentSection]"
             :key="word.uid"
@@ -137,16 +131,40 @@
                 💬
               </span>
             </template>
+=======
+          <template v-for="word in annotatedText[currentSection]" :key="word.uid">
+            <Word
+              :word-data="word"
+              :active-ranges="getActiveRanges(word.uid)"
+              :features="features"
+              :is-selected="selectedWord?.uid === word.uid"
+              :hovered-syntax-phrase="hoveredSyntaxPhrase"
+              :pinned-syntax-phrase="pinnedSyntaxPhrase"
+              @word-click="handleWordClick"
+              @word-delete="handleWordAnnotationDelete"
+              @word-mouseup="handleMouseUp"
+              @word-mousedown="handleMouseDown"
+              @word-mouseenter="handleMouseEnter"
+            />
+            <span
+              v-if="getRangesEndingAt(word.uid).length > 0"
+              class="line-note-icon"
+              @click="(event) => openExistingRangeNote(word.uid, event)"
+            >
+              💬
+            </span>
+>>>>>>> master
           </template>
 
-          <div 
+          <div
             v-if="features.line && showRangeInput && pendingAnnotation"
             class="annotation-modal"
-            @click.self="cancelRangeInput">
+            @click.self="cancelRangeInput"
+          >
             <div class="modal-content">
               <h5>Add Note</h5>
-              <textarea 
-                v-model="pendingAnnotation.text" 
+              <textarea
+                v-model="pendingAnnotation.text"
                 class="modal-input"
                 placeholder="Type your commentary here..."
               ></textarea>
@@ -163,91 +181,87 @@
             class="range-note-tooltip"
             :style="{
               top: rangeViewPosition.top + 'px',
-              left: rangeViewPosition.left + 'px'
+              left: rangeViewPosition.left + 'px',
             }"
           >
             <div class="tooltip-content">
               <button class="tooltip-close" @click="closeRangeNote">x</button>
-              <div class="tooltip-text"> {{ rangeView.text }}</div>
-              <button class="tooltip-delete" @click="handleRangeAnnotationDelete(rangeView)">Delete</button>
+              <div class="tooltip-text">{{ rangeView.text }}</div>
+              <button class="tooltip-delete" @click="handleRangeAnnotationDelete(rangeView)">
+                Delete
+              </button>
             </div>
           </div>
-          <div 
-            v-if="rangeView"
-            class="tooltip-overlay"
-            @click="closeRangeNote"
-          ></div>
+          <div v-if="rangeView" class="tooltip-overlay" @click="closeRangeNote"></div>
         </div>
         <div class="tip-text">
-          <strong>Tip:</strong> Toggle display options to customize your view. Click any word for detailed annotations!
+          <strong>Tip:</strong> Toggle display options to customize your view. Click any word for
+          detailed annotations!
         </div>
       </div>
-      
-      <div v-else class="loading-screen">
-        Loading library...
-      </div>
-    
-    <!-- Legend -->
-    <div v-if="features.caseHighlight || features.posHighlight" class="legend-container">
-      <h3>Legend</h3>
-      <div v-if="features.caseHighlight" class="legend-section">
-        <h4>Cases (Underlines):</h4>
-        <div class="legend-items">
-          <div class="legend-item">
-            <span class="legend-example case-nominative">text</span>
-            <span>Nominative</span>
-          </div>
-          <div class="legend-item">
-            <span class="legend-example case-genitive">text</span>
-            <span>Genitive</span>
-          </div>
-          <div class="legend-item">
-            <span class="legend-example case-dative">text</span>
-            <span>Dative</span>
-          </div>
-          <div class="legend-item">
-            <span class="legend-example case-accusative">text</span>
-            <span>Accusative</span>
-          </div>
-          <div class="legend-item">
-            <span class="legend-example case-ablative">text</span>
-            <span>Ablative</span>
-          </div>
-          <div class="legend-item">
-            <span class="legend-example case-vocative">text</span>
-            <span>Vocative</span>
+
+      <div v-else class="loading-screen">Loading library...</div>
+
+      <!-- Legend -->
+      <div v-if="features.caseHighlight || features.posHighlight" class="legend-container">
+        <h3>Legend</h3>
+        <div v-if="features.caseHighlight" class="legend-section">
+          <h4>Cases (Underlines):</h4>
+          <div class="legend-items">
+            <div class="legend-item">
+              <span class="legend-example case-nominative">text</span>
+              <span>Nominative</span>
+            </div>
+            <div class="legend-item">
+              <span class="legend-example case-genitive">text</span>
+              <span>Genitive</span>
+            </div>
+            <div class="legend-item">
+              <span class="legend-example case-dative">text</span>
+              <span>Dative</span>
+            </div>
+            <div class="legend-item">
+              <span class="legend-example case-accusative">text</span>
+              <span>Accusative</span>
+            </div>
+            <div class="legend-item">
+              <span class="legend-example case-ablative">text</span>
+              <span>Ablative</span>
+            </div>
+            <div class="legend-item">
+              <span class="legend-example case-vocative">text</span>
+              <span>Vocative</span>
+            </div>
           </div>
         </div>
-      </div>
-      <div v-if="features.posHighlight" class="legend-section">
-        <h4>Parts of Speech (Underlines):</h4>
-        <div class="legend-items">
-          <div class="legend-item">
-            <span class="legend-example pos-noun">text</span>
-            <span>Noun (solid)</span>
-          </div>
-          <div class="legend-item">
-            <span class="legend-example pos-verb">text</span>
-            <span>Verb (dashed)</span>
-          </div>
-          <div class="legend-item">
-            <span class="legend-example pos-adjective">text</span>
-            <span>Adjective (dotted)</span>
-          </div>
-          <div class="legend-item">
-            <span class="legend-example pos-adverb">text</span>
-            <span>Adverb (double)</span>
-          </div>
-          <div class="legend-item">
-            <span class="legend-example pos-pronoun">text</span>
-            <span>Pronoun (wavy)</span>
+        <div v-if="features.posHighlight" class="legend-section">
+          <h4>Parts of Speech (Underlines):</h4>
+          <div class="legend-items">
+            <div class="legend-item">
+              <span class="legend-example pos-noun">text</span>
+              <span>Noun (solid)</span>
+            </div>
+            <div class="legend-item">
+              <span class="legend-example pos-verb">text</span>
+              <span>Verb (dashed)</span>
+            </div>
+            <div class="legend-item">
+              <span class="legend-example pos-adjective">text</span>
+              <span>Adjective (dotted)</span>
+            </div>
+            <div class="legend-item">
+              <span class="legend-example pos-adverb">text</span>
+              <span>Adverb (double)</span>
+            </div>
+            <div class="legend-item">
+              <span class="legend-example pos-pronoun">text</span>
+              <span>Pronoun (wavy)</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  </div>
-
 </template>
 
 <script setup>
@@ -261,13 +275,14 @@ import DocumentSelector from './components/DocumentSelector.vue';
 import HelpPanel from './components/HelpPanel.vue';
 import SyntaxPanel from './components/SyntaxPanel.vue';
 import { storageUtil } from './utils/storageUtil.js';
+import { Analytics } from '@vercel/analytics/vue';
 
-const ANNOTATION_KEY="annotations";
-const MISTAKE_KEY="mistakes";
+const ANNOTATION_KEY = 'annotations';
+const MISTAKE_KEY = 'mistakes';
 
-const currentUrn = ref(''); 
+const currentUrn = ref('');
 const currentLanguage = ref('lat');
-const passageData = ref(null); 
+const passageData = ref(null);
 const currentSection = ref('1.1'); //default
 const availableSections = ref(null);
 
@@ -288,7 +303,7 @@ const pendingAnnotation = ref(null);
 const showRangeInput = ref(false);
 
 const rangeView = ref(null);
-const rangeViewPosition = ref({top: 0, left: 0});
+const rangeViewPosition = ref({ top: 0, left: 0 });
 
 const hoveredSyntaxId = ref(null);
 const pinnedSyntaxIds = ref([]);
@@ -296,12 +311,12 @@ const pinnedSyntaxIds = ref([]);
 const features = reactive({
   inline: true,
   line: true,
-  
+
   // Visual highlighting
   caseHighlight: false,
   posHighlight: false,
   syntax: true,
-  
+
   vocab: true,
   morphology: true,
 });
@@ -336,28 +351,38 @@ onMounted(() => {
   allAnnotations.value = storageUtil.load(ANNOTATION_KEY);
 });
 
-watch(allAnnotations, (newValue) => {
-  console.log("Syncing annotations to localStorage...");
-  storageUtil.save(ANNOTATION_KEY, newValue);
-}, { deep: true }); 
+watch(
+  allAnnotations,
+  (newValue) => {
+    console.log('Syncing annotations to localStorage...');
+    storageUtil.save(ANNOTATION_KEY, newValue);
+  },
+  { deep: true },
+);
 
-watch(allMistakes, (newValue) => {
-  console.log("Syncing mistakes to localStorage...");
-  storageUtil.save(MISTAKE_KEY, newValue);
-}, { deep: true });
+watch(
+  allMistakes,
+  (newValue) => {
+    console.log('Syncing mistakes to localStorage...');
+    storageUtil.save(MISTAKE_KEY, newValue);
+  },
+  { deep: true },
+);
 
 const annotatedText = computed(() => {
   const docURN = currentUrn.value;
-  if (!docURN ||!passageData.value || !passageData.value.passage){ return; }
+  if (!docURN || !passageData.value || !passageData.value.passage) {
+    return;
+  }
 
   const savedAnnotations = allAnnotations.value[docURN] || {};
-  
+
   const sections = {};
-  Object.keys(passageData.value.text).forEach(sectionKey => {
-    sections[sectionKey] = passageData.value.text[sectionKey].map(word => {
+  Object.keys(passageData.value.text).forEach((sectionKey) => {
+    sections[sectionKey] = passageData.value.text[sectionKey].map((word) => {
       return {
         ...word,
-        annotations: savedAnnotations[word.uid] || null
+        annotations: savedAnnotations[word.uid] || null,
       };
     });
   });
@@ -366,15 +391,17 @@ const annotatedText = computed(() => {
 });
 
 const handleAnnotationAdded = (newAnnotation) => {
-  const targetWord  = passageData.value.text[currentSection.value].find(w => w.uid === newAnnotation.uid);
+  const targetWord = passageData.value.text[currentSection.value].find(
+    (w) => w.uid === newAnnotation.uid,
+  );
   if (targetWord) {
     targetWord.annotations = {
       ...targetWord.annotations,
-      ...newAnnotation.features
-    }
+      ...newAnnotation.features,
+    };
 
     const docURN = currentUrn.value;
-    if(!allAnnotations.value[docURN]) {
+    if (!allAnnotations.value[docURN]) {
       allAnnotations.value[docURN] = {};
     }
     allAnnotations.value[docURN][targetWord.uid] = targetWord.annotations;
@@ -395,15 +422,15 @@ const exportAnnotations = () => {
   storageUtil.export(ANNOTATION_KEY);
 };
 
-const importAnnotations = () => {  
+const importAnnotations = () => {
   storageUtil.import(ANNOTATION_KEY, (newData) => {
     const merged = { ...allAnnotations.value };
 
     for (const urn in newData) {
       if (merged[urn]) {
         merged[urn] = {
-          ...merged[urn],    // Keep existing words
-          ...newData[urn]    // Add imported words
+          ...merged[urn], // Keep existing words
+          ...newData[urn], // Add imported words
         };
       } else {
         merged[urn] = newData[urn];
@@ -416,7 +443,7 @@ const importAnnotations = () => {
 
 const handleClearMistakes = () => {
   storageUtil.clear(MISTAKE_KEY);
-  allMistakes.value = {}
+  allMistakes.value = {};
 };
 
 const handleClearAnnotations = () => {
@@ -449,6 +476,7 @@ const handleSyntaxPanelUnhover = () => {
   hoveredSyntaxId.value = null;
 };
 
+<<<<<<< HEAD
 // const handleSyntaxPinToggle = (phrase) => {
 //   if (pinnedSyntaxPhrase.value && pinnedSyntaxPhrase.value.syntax_id === phrase.syntax_id){
 //     pinnedSyntaxPhrase.value = null;
@@ -458,45 +486,49 @@ const handleSyntaxPanelUnhover = () => {
 
 const handleSyntaxPinToggle = (phrases) => {
   pinnedSyntaxIds.value = phrases;
+=======
+const handleSyntaxPinToggle = (phrase) => {
+  if (pinnedSyntaxPhrase.value && pinnedSyntaxPhrase.value.syntax_id === phrase.syntax_id) {
+    pinnedSyntaxPhrase.value = null;
+  } else {
+    pinnedSyntaxPhrase.value = phrase;
+  }
+>>>>>>> master
 };
 
 const getRangesEndingAt = (uid) => {
   const docURN = currentUrn.value;
   const docAnnos = allAnnotations.value[docURN] || {};
-  
-  return Object.values(docAnnos).filter(anno => 
-    anno.type === 'range' && anno.enduid === uid
-  );
+
+  return Object.values(docAnnos).filter((anno) => anno.type === 'range' && anno.enduid === uid);
 };
 
 const getActiveRanges = (uid) => {
   const docURN = currentUrn.value;
   const docAnnos = allAnnotations.value[docURN] || {};
-  
-  return Object.values(docAnnos).filter(anno => 
-    anno.type === 'range' && anno.uids.includes(uid)
-  );
+
+  return Object.values(docAnnos).filter((anno) => anno.type === 'range' && anno.uids.includes(uid));
 };
 
 const openExistingRangeNote = (uid, event) => {
   const ranges = getRangesEndingAt(uid);
-  if(ranges.length > 0) {
+  if (ranges.length > 0) {
     //TODO: fix this, add support for showing multiple annotations
     rangeView.value = ranges[0];
+  } else {
+    console.log('Error');
   }
-  else {console.log("Error");}
 
   const rect = event.target.getBoundingClientRect();
   rangeViewPosition.value = {
     top: rect.bottom + window.scrollY + 2,
-    left: rect.left + window.scrollX
+    left: rect.left + window.scrollX,
   };
-
 };
 
 const closeRangeNote = () => {
   rangeView.value = null;
-}
+};
 
 const handleWordClick = (word) => {
   selectedWord.value = word;
@@ -506,14 +538,14 @@ const handleWordAnnotationDelete = (word) => {
   const urn = currentUrn.value;
   word.annotations = null;
 
-  if(allAnnotations.value[urn]) {
+  if (allAnnotations.value[urn]) {
     delete allAnnotations.value[urn][word.uid];
   }
 };
 
 const handleRangeAnnotationDelete = (rangeAnnotation) => {
   const urn = currentUrn.value;
-  if(allAnnotations.value[urn]) {
+  if (allAnnotations.value[urn]) {
     delete allAnnotations.value[urn][rangeAnnotation.id];
   }
 
@@ -527,13 +559,13 @@ const handleMouseDown = (word) => {
 };
 
 const handleMouseEnter = (word) => {
-  if(isDragging.value) {
+  if (isDragging.value) {
     dragEnd.value = word.uid;
   }
 };
 
 const handleMouseUp = (word) => {
-  if(isDragging.value && dragStart.value !== dragEnd.value) {
+  if (isDragging.value && dragStart.value !== dragEnd.value) {
     startRangeAnnotation(dragStart.value, dragEnd.value);
   }
   isDragging.value = false;
@@ -543,25 +575,25 @@ const handleMouseUp = (word) => {
 
 const startRangeAnnotation = (startUID, endUID) => {
   const section = passageData.value.text[currentSection.value];
-  const startIndex = section.findIndex(w => w.uid === startUID);
-  const endIndex = section.findIndex(w => w.uid === endUID);
+  const startIndex = section.findIndex((w) => w.uid === startUID);
+  const endIndex = section.findIndex((w) => w.uid === endUID);
 
   const realStartIndex = startIndex < endIndex ? startIndex : endIndex;
   const realEndIndex = startIndex < endIndex ? endIndex : startIndex;
 
-  const selectedWords = section.slice(realStartIndex, realEndIndex+1).map(w => w.uid);
+  const selectedWords = section.slice(realStartIndex, realEndIndex + 1).map((w) => w.uid);
 
   const startuid = section[realStartIndex].uid;
   const enduid = section[realEndIndex].uid;
 
-  const id = `range.${startuid}.${enduid}`
+  const id = `range.${startuid}.${enduid}`;
 
   openInput({
     id: id,
     uids: selectedWords,
     startuid: startuid,
     enduid: enduid,
-    text: ""
+    text: '',
   });
 };
 
@@ -573,8 +605,8 @@ const handleToggleFeature = (featureName) => {
 //   if (!features.syntax) return null;
 
 //   const phrases = Object.values(passageData.value.passage.syntaxPhrases);
-  
-//   return phrases.filter(phrase => 
+
+//   return phrases.filter(phrase =>
 //     phrase.uids.includes(wordId)
 //   ) || null;
 // };
@@ -584,15 +616,20 @@ const getSyntaxPhrasesForSection = () => {
 
   const section = currentSection.value;
 
-  const uids = passageData.value?.text[section].map(word => word.uid); 
+  const uids = passageData.value?.text[section].map((word) => word.uid);
   const phrases = Object.values(passageData.value.passage.syntaxPhrases);
 
-  return phrases.filter(phrase => phrase.uids.some(uid => uids.includes(uid)));
+  return phrases.filter((phrase) => phrase.uids.some((uid) => uids.includes(uid)));
 };
 
-const openInput = ({id, uids, startuid, enduid, text}) => {
+const openInput = ({ id, uids, startuid, enduid, text }) => {
   pendingAnnotation.value = {
-    id, uids, startuid, enduid, text, type: 'range'
+    id,
+    uids,
+    startuid,
+    enduid,
+    text,
+    type: 'range',
   };
 
   showRangeInput.value = true;
@@ -605,20 +642,21 @@ const cancelRangeInput = () => {
 
 const saveRangeInput = () => {
   const docURN = currentUrn.value;
-  if(!pendingAnnotation.value){return;}
+  if (!pendingAnnotation.value) {
+    return;
+  }
 
-  if(!allAnnotations.value[docURN]){
+  if (!allAnnotations.value[docURN]) {
     allAnnotations.value[docURN] = {};
   }
 
   allAnnotations.value[docURN][pendingAnnotation.value.id] = {
-    ...pendingAnnotation.value
+    ...pendingAnnotation.value,
   };
 
   showRangeInput.value = false;
   pendingAnnotation.value = null;
 };
-
 </script>
 
 <style>
@@ -662,16 +700,16 @@ const saveRangeInput = () => {
 }
 
 .docbutton-icon {
-  display:none;
+  display: none;
 }
 
 @media (max-width: 1200px) {
   .docbutton-text {
-    display:none;
+    display: none;
   }
 
   .docbutton-icon {
-    display:inline;
+    display: inline;
   }
 }
 
@@ -741,7 +779,7 @@ const saveRangeInput = () => {
 .help-toggle {
   position: fixed;
   top: 20px;
-  right:150px;
+  right: 150px;
   z-index: 1001;
   padding: 10px 10px;
   background-color: var(--green-button);
@@ -768,7 +806,7 @@ const saveRangeInput = () => {
 }
 
 /*remove button toggle when settings are open*/
-.help-toggle.sidebar-open{
+.help-toggle.sidebar-open {
   display: none;
 }
 
@@ -816,17 +854,18 @@ const saveRangeInput = () => {
 .main-content.syntax-open {
   max-width: 66rem;
   margin-left: auto;
-  margin-right: max(20rem, calc(50vw - 33rem)); /* Stay centered OR leave room for syntax */  
+  margin-right: max(20rem, calc(50vw - 33rem));
+  /* Stay centered OR leave room for syntax */
   padding: 0 1rem;
 }
 
 /* under 1200 pixels, syntax and main are 5050 */
 @media (max-width: 1200px) {
-  .main-content.syntax-open{
+  .main-content.syntax-open {
     width: 60%;
     margin-left: 0;
     margin-right: 0;
-    max-width: none; 
+    max-width: none;
   }
 }
 
@@ -849,7 +888,7 @@ const saveRangeInput = () => {
 .passage-title {
   font-size: 1.25rem;
   font-weight: 600;
-  margin-bottom: 16px;  
+  margin-bottom: 16px;
   color: var(--title-dark);
 }
 
@@ -885,7 +924,7 @@ const saveRangeInput = () => {
   left: 20px;
 }
 
-.next-button:hover, 
+.next-button:hover,
 .prev-button:hover {
   background-color: var(--orange-button-hover);
 }
@@ -897,8 +936,10 @@ const saveRangeInput = () => {
 
 .annotation-modal {
   position: fixed;
-  top: 0; left: 0;
-  width: 100vw; height: 100vh;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   background: rgba(255, 255, 255, 0.2);
   display: flex;
   align-items: center;
@@ -921,12 +962,12 @@ const saveRangeInput = () => {
 .modal-input {
   background: white;
   width: 100%;
-  height: 80px; 
+  height: 80px;
   padding: 0px;
   border: 1px solid var(--title-dark);
   border-radius: 4px;
   font-size: 0.9rem;
-  resize: none; 
+  resize: none;
   outline: none;
 }
 
@@ -966,16 +1007,16 @@ const saveRangeInput = () => {
 }
 
 .btn-save:hover {
-    background: var(--green-button-hover);
+  background: var(--green-button-hover);
 }
 
 .line-note-icon {
   cursor: pointer;
-  font-size: .75rem;
+  font-size: 0.75rem;
 }
 
 .line-note-icon:hover {
-  font-size: .85rem;
+  font-size: 0.85rem;
 }
 
 .tooltip-overlay {
@@ -984,7 +1025,8 @@ const saveRangeInput = () => {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1999; /* Just below the tooltip */
+  z-index: 1999;
+  /* Just below the tooltip */
   background: transparent;
 }
 
@@ -1026,7 +1068,8 @@ const saveRangeInput = () => {
   font-size: 0.9rem;
   line-height: 1.5;
   color: #374151;
-  padding-right: 20px; /* Space for the close button */
+  padding-right: 20px;
+  /* Space for the close button */
 }
 
 .tooltip-delete {
