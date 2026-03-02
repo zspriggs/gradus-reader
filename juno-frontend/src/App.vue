@@ -146,7 +146,7 @@
             class="annotation-modal"
             @click.self="cancelRangeInput">
             <div class="modal-content">
-              <h5>Add Note</h5>
+              <h5 class="modal-title">Add Note</h5>
               <textarea 
                 v-model="pendingAnnotation.text" 
                 class="modal-input"
@@ -930,6 +930,10 @@ const saveRangeInput = () => {
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
+.modal-title {
+  font-size:1.1rem;
+}
+
 .modal-input {
   background: white;
   width: 100%;
@@ -938,7 +942,7 @@ const saveRangeInput = () => {
   border: 2px solid var(--dark-blue);
   border-radius: 4px;
   font-size: 0.9rem;
-  font: inherit;
+  font-family: system-ui;
   resize: none; 
   outline: none;
 }
