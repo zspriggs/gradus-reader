@@ -898,7 +898,7 @@ const saveRangeInput = () => {
 .annotation-modal {
   position: fixed;
   top: 0; left: 0;
-  width: 100vw; height: 100vh;
+  width: 100vw; height: 80vh;
   background: rgba(255, 255, 255, 0.2);
   display: flex;
   align-items: center;
@@ -911,7 +911,9 @@ const saveRangeInput = () => {
 .modal-content {
   background: white;
   border: 2px solid var(--green-button);
-  padding: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
   border-radius: 12px;
   width: 90%;
   max-width: 400px;
@@ -921,11 +923,12 @@ const saveRangeInput = () => {
 .modal-input {
   background: white;
   width: 100%;
-  height: 80px; 
-  padding: 0px;
-  border: 1px solid var(--title-dark);
+  height: 6rem;
+  padding: 10px;
+  border: 2px solid var(--dark-blue);
   border-radius: 4px;
   font-size: 0.9rem;
+  font: inherit;
   resize: none; 
   outline: none;
 }
