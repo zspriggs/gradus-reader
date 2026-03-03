@@ -20,6 +20,11 @@
 
     This will save a JSON file, which can later be uploaded with <strong>Import Annotations</strong> on any device. Imported annotations will merge with existing annotations.
     </pre>
+
+    <h3 class="title">Citations & Data Credit</h3>
+    <pre class="help-text">
+        
+    </pre>
     
     <h3 class="title">About</h3>
     <pre class="help-text">

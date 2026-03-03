@@ -3,6 +3,10 @@ from typing import Dict
 from processing.grammar import query_grammar
 from processing.engine import QueryEngine, AncientTextParser
 
+"""Create exception for docs without poetry line nums"""
+class LineNumberError(Exception):
+    pass
+
 def init_query_engine(file, urn: str, lang: str) -> QueryEngine:
     """ Opens the XML data for the query engine and initializes a new query engine. """
     #Open the data for the query engine
@@ -44,7 +48,7 @@ def map_morphology(postag: str, parser: AncientTextParser) -> Dict:
     
     return morphology
 
-def process_treebank(file: str, lang: str, urn: str, title: str, author: str, prose: bool=True) -> Dict:
+def process_treebank(file: str, lang: str, urn: str, title: str, author: str, source: str, prose: bool=True) -> Dict:
     """Parse an XML Dependency Treebank file into json format"""
 
     root = init_tree(file).getroot()
@@ -54,6 +58,8 @@ def process_treebank(file: str, lang: str, urn: str, title: str, author: str, pr
         "passage": {
             "title": title,
             "author": author,
+            "urn": urn,
+            "source": source,
             "syntaxPhrases": query_grammar(query_engine)
         },
         "text": {
@@ -184,8 +190,12 @@ def chunk_poetry(doc: dict, urn: str, lines_per_chunk: int=30):
     section_start_line = None
 
     for line in doc['text']:
-        book_num = line.split(':')[-1].split('.')[0]
-        line_num = line.split(':')[-1].split('.')[-1]
+        if not line:
+            #If line is None type, this means this is poetry but without a "cite" element with line nums
+            #so we do not process the document due to inability to recover lines
+            raise LineNumberError(f"Document does not appear to have line numbers -- cannot recover line positions")
+        
+        book_num, line_num = split_cite_urn(line)
 
         if not section_start_book or not section_start_line: #first go-around
             section_start_book = book_num
@@ -200,7 +210,10 @@ def chunk_poetry(doc: dict, urn: str, lines_per_chunk: int=30):
             line_text[-2].get('form')[-1] == ':'
 
         new_book = section_start_book != book_num
-        skipped_lines = int(line_num) - section_count > int(section_start_line)
+        try:
+            skipped_lines = int(line_num) - section_count > int(section_start_line)
+        except ValueError:
+            skipped_lines = False #if we can't derive an int from the start_line or line_num, just trust the treebank
 
         if (section_count >= lines_per_chunk and end_punc) or new_book or skipped_lines:
             section_start = f"{section_start_book}.{section_start_line}"
@@ -221,8 +234,22 @@ def chunk_poetry(doc: dict, urn: str, lines_per_chunk: int=30):
 
     return doc_copy
 
-def handle_gap():
-    return
-
+def split_cite_urn(urn: str):
+    passage = urn.split(':')[-1]  # "1.344" or "344"
+    parts = passage.split('.')
+    
+    if len(parts) == 2:
+        return parts[0], parts[1]  # book_num, line_num
+    elif len(parts) == 1:
+        return None, parts[0]      # no book, just line_num
+    elif len(parts) == 3: # sometimes we see something like 1.929.1 when there's insertions
+        return parts[0], f"{parts[1]}.{parts[2]}"
+    else:
+        #sometimes there's a cite with a line/book, followed by a cite without
+        chunks = urn.split(' ')
+        if len(chunks) > 1:
+            return split_cite_urn(chunks[0])
+        else:
+            return None, None
 
 

@@ -1,7 +1,9 @@
 from pathlib import Path
 from processing.tb_to_json import process_treebank
+from processing.tb_to_json import LineNumberError
 import argparse
 import json
+import logging
 from pathlib import Path
 from typing import Optional
 import pandas as pd
@@ -55,6 +57,7 @@ def load_metadata(csv_path: Optional[Path]) -> dict[str, dict[str,str]]:
         metadata[row['URN']] = {
             'title': row['Title'],
             'author': row['Author'],
+            'source': row['Source'],
             'prose': row['Prose']
         }
     return metadata
@@ -75,24 +78,31 @@ def process_file(
     meta = metadata_dict.get(urn, {})
     title = meta.get('title', xml_path.stem)
     author = meta.get('author', '')
+    source = meta.get('source', '')
 
     prose_str = meta.get('prose', 'True')
     prose = prose_str.lower() == 'true'
 
-    doc = process_treebank(
-        xml_path,
-        lang=lang,
-        urn=urn,
-        title=title,
-        author=author,
-        prose=prose,
-    )
+    try:
+        doc = process_treebank(
+            xml_path,
+            lang=lang,
+            urn=urn,
+            title=title,
+            author=author,
+            source=source,
+            prose=prose,
+        )
+        out_path = out_dir / f"{xml_path.stem}.json"
+        with open(out_path, "w", encoding="utf-8") as f:
+            json.dump(doc, f, indent=4, ensure_ascii=False)
 
-    out_path = out_dir / f"{xml_path.stem}.json"
-    with open(out_path, "w", encoding="utf-8") as f:
-        json.dump(doc, f, indent=4, ensure_ascii=False)
+        print(f"✓ Processed {xml_path.name} → {out_path}")
 
-    print(f"✓ Processed {xml_path.name} → {out_path}")
+    except LineNumberError as e: 
+        logging.warning(f"\nSkipping {urn}: {e}\n")
+
+
 
 
 def main() -> None:
