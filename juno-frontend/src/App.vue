@@ -181,7 +181,10 @@
           ></div>
         </div>
         <div class="tip-text">
-          <strong>Tip:</strong> Toggle display options to customize your view. Click any word for detailed annotations!
+          <strong>Tip: </strong>Toggle display options to customize your view. Click any word for detailed annotations!
+        </div>
+        <div class="tip-text">
+          <strong>Data Source: </strong>{{passageData.passage.source}}
         </div>
       </div>
       

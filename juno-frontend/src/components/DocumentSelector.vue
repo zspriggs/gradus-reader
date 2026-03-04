@@ -45,7 +45,7 @@ import {ref, onMounted, computed} from 'vue';
 import ciceroInCatilinam1 from '../data/phi0474.phi013.perseus-lat1.tb.json';
 import homerIliad from '../data/tlg0012.tlg001.perseus-grc1.tb.json';
 import herodotusHistories1 from '../data/tlg0016.tlg001.perseus-grc1.1.tb.json';
-import xenophonMemorabilia from '../data/v1.0032-002.json';
+import xenophonMemorabilia from '../data/0032-002.json';
 //import ovidMetamorphoses from '../data/phi0959.phi006.perseus-lat1.tb.json';
 
 const emit = defineEmits(['document-selected', 'section-selected']);

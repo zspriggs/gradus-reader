@@ -2,17 +2,13 @@
   <div class="help-display">
     <h3 class="title">Using Juno: Quick Start</h3>
     <h4 class="subtitle">ADDING ANNOTATIONS</h4>
-    <pre class="help-text">Click a word to open up the <strong>Annotation Menu</strong> on the right side of the screen.
+    <pre class="help-text">Click a word to open up the <strong>Annotation Menu</strong>.
 
-        Select morphology (i.e. case, tense, gender) in the Annotation Menu.
+        Select attributes (i.e. case, number, gender) in the Annotation Menu, then click <strong>Check</strong> to check your work.
 
-        Click <strong>Check</strong> on the annotation menu to check your labels. 
+        After checking, click <strong>Add</strong> to add the annotations you got correct onto the text. You can also <strong>Add</strong> custom (unchecked) annotations.
 
-        After checking, click <strong>Add</strong> to add the labels onto the text, under the word.
-
-        Custom inline annotations may be added via the annotation menu at any time.
-
-        Click and drag over a group of words to create a <strong>chunk annotation.</strong> After creating a chunk annotation, the annotation can be accessed or deleted by clicking the 💬 icon.
+        Click and drag over a group of words to create a <strong>chunk annotation.</strong> After creating a chunk annotation, the annotation can be viewed or deleted by clicking the 💬 icon.
     </pre>
     <h4 class="subtitle"> SAVING ANNOTATIONS</h4>
     <pre class="help-text">
@@ -21,16 +17,18 @@
     This will save a JSON file, which can later be uploaded with <strong>Import Annotations</strong> on any device. Imported annotations will merge with existing annotations.
     </pre>
 
-    <h3 class="title">Citations & Data Credit</h3>
+    <h3 class="title">Data Credit</h3>
     <pre class="help-text">
-        
+        This project uses data from the Ancient Greek and Latin Dependency Treebanks (AGLDT) and Greek Language Automated (GLAUx) corpora.
     </pre>
     
     <h3 class="title">About</h3>
     <pre class="help-text">
         Juno is being created by Zoë Spriggs and Mitchell Shiffer, as part of a master's thesis project.
 
-        For more information on the project, please visit https://github.com/zspriggs/juno-reader
+        For more information on the project, including the code, visit our <a href="https://github.com/zspriggs/juno-reader">GitHub page.</a>
+
+        Feel free to send any questions, issues, or suggestions to zoe.spriggs@tufts.edu
     </pre>
   </div>
 </template>

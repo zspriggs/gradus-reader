@@ -75,6 +75,8 @@ def process_file(
 
     # Resolve metadata from CSV or fallback to file stem
     urn = '.'.join(xml_path.stem.split('.')[:-1])
+    if urn == '': # accomodate for GLAUx style urns
+        urn = xml_path.stem
     meta = metadata_dict.get(urn, {})
     title = meta.get('title', xml_path.stem)
     author = meta.get('author', '')
