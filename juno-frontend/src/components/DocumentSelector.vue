@@ -1,5 +1,6 @@
 <template>
   <div class="document-selector">
+  <p><strong>Note:</strong> Most texts will not have all sections available.</p>
     <label for="doc-select">Select a text:</label>
     <select 
       id="doc-select"
@@ -46,7 +47,7 @@ import ciceroInCatilinam1 from '../data/phi0474.phi013.perseus-lat1.tb.json';
 import homerIliad from '../data/tlg0012.tlg001.perseus-grc1.tb.json';
 import herodotusHistories1 from '../data/tlg0016.tlg001.perseus-grc1.1.tb.json';
 import xenophonMemorabilia from '../data/0032-002.json';
-//import ovidMetamorphoses from '../data/phi0959.phi006.perseus-lat1.tb.json';
+import ovidMetamorphoses from '../data/xphi0959.phi006.perseus-lat1.tb.json';
 
 const emit = defineEmits(['document-selected', 'section-selected']);
 
@@ -60,7 +61,7 @@ const props = defineProps({
 const documents = {
   Latin: [
     {urn: 'phi0474.phi013', lang: 'lat', title: 'Cicero - In Catilinam', data: ciceroInCatilinam1},
-    //{urn: 'phi0959.phi006', lang: 'lat', title: 'Ovid - Metamorphoses', data: ovidMetamorphoses}
+    {urn: 'phi0959.phi006', lang: 'lat', title: 'Ovid - Metamorphoses', data: ovidMetamorphoses}
   ],
   Greek: [
     {urn: 'tlg0012.tlg001', lang: 'grc', title: 'Homer - Iliad', data: homerIliad},

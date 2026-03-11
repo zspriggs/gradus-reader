@@ -1,5 +1,6 @@
 import xml.etree.ElementTree as ET
 from typing import Dict
+import json
 from processing.grammar import query_grammar
 from processing.engine import QueryEngine, AncientTextParser
 
@@ -48,11 +49,18 @@ def map_morphology(postag: str, parser: AncientTextParser) -> Dict:
     
     return morphology
 
+def load_corrections(file: str = './processing/corrections.json'):
+    with open(file, 'rb') as f:
+        return json.load(f)
+    return {}
+
 def process_treebank(file: str, lang: str, urn: str, title: str, author: str, source: str, prose: bool=True) -> Dict:
     """Parse an XML Dependency Treebank file into json format"""
 
     root = init_tree(file).getroot()
     query_engine = init_query_engine(file, urn, lang)
+    if not prose:
+        cite_corrections = load_corrections()
 
     doc = {
         "passage": {
@@ -81,8 +89,17 @@ def process_treebank(file: str, lang: str, urn: str, title: str, author: str, so
             if prose:
                 section_key = sentence.get('subdoc')
             else:
-                section_key = word.get('cite', current_section)
-                if section_key=="": #sometimes cite="", sometimes cite doesn't exist
+                try: #poetry has some citation corrections in corrections.json
+                    word_corrections = cite_corrections[urn][sentence_id][word.get('id')]
+                except KeyError:
+                    word_corrections = {}
+
+                raw_cite = word.get('cite')
+                actual_cite = word_corrections.get('cite', raw_cite)
+
+                section_key = actual_cite
+                print(section_key, word.get('form'))
+                if section_key == "" or None: #sometimes cite="", sometimes cite doesn't exist
                     section_key = current_section
 
             if current_section == None: #first pass
@@ -140,23 +157,14 @@ def process_treebank(file: str, lang: str, urn: str, title: str, author: str, so
                 "morphology": morphology
             })
 
-    doc['text'][current_section] = section_words
+    if current_section:
+        doc['text'][current_section] = section_words
 
     #remap ids onto each otherr
     #TODO: refactor so the IDs are handled better?
     for syntax in doc['passage']['syntaxPhrases']:
         syntax['uids'] = [uid_map[(str(long_id[0]), str(long_id[1]))] for long_id in syntax['longIds']]
         del syntax['longIds']
-
-    # TODO: Continue on dependency implementation
-    # for section in doc['text']:
-    #     for word in doc['text'][section]:
-    #         head = word.get('head')
-    #         if head:
-    #             if head[1] == '0': #this word is root
-    #                 word['head'] = 0
-    #             else:
-    #                 word['head'] = uid_map[head]
 
     if not prose:
         doc = chunk_poetry(doc, urn)
@@ -173,9 +181,11 @@ def reorder_enclitics(words):
             just_reordered = False
             continue
         if word.get('form') in {'que', 've', 'c'} and i + 1 < len(word_list):
+            word.set('form', '-' + word.get('form')) #add hyphen for reading clairty
             word_list[i], word_list[i+1] = word_list[i+1], word_list[i]
             just_reordered = True
     return word_list
+
 
 def chunk_poetry(doc: dict, urn: str, lines_per_chunk: int=30):
     """Chunks poetry into groups of at least lines_per_chunk lines, always ending on a sentence break"""
@@ -189,7 +199,9 @@ def chunk_poetry(doc: dict, urn: str, lines_per_chunk: int=30):
     section_start_book = None
     section_start_line = None
 
+    #print(doc['text'])
     for line in doc['text']:
+        print(line)
         if not line:
             #If line is None type, this means this is poetry but without a "cite" element with line nums
             #so we do not process the document due to inability to recover lines
