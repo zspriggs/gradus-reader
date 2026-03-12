@@ -1,11 +1,105 @@
 {
-  "urn:cts:latinLit:phi0959.phi006.perseus-lat1": {
+  "phi0959.phi006.perseus-lat1": {
     "4": {
       "2": { "cite": "urn:cts:latinLit:phi0959.phi006:1.7" },
       "3": { "cite": "urn:cts:latinLit:phi0959.phi006:1.7" },
       "4": { "cite": "urn:cts:latinLit:phi0959.phi006:1.7" },
       "5": { "cite": "urn:cts:latinLit:phi0959.phi006:1.8" },
       "6": { "cite": "urn:cts:latinLit:phi0959.phi006:1.8" }
+    },
+    "25": {
+      "21": { "cite": "urn:cts:latinLit:phi0959.phi006:1.203" },
+      "22": { "cite": "urn:cts:latinLit:phi0959.phi006:1.203" },
+      "23": { "cite": "urn:cts:latinLit:phi0959.phi006:1.203" },
+      "24": { "cite": "urn:cts:latinLit:phi0959.phi006:1.203" }
+    },
+    "26": {
+      "1": { "cite": "urn:cts:latinLit:phi0959.phi006:1.204" },
+      "2": { "cite": "urn:cts:latinLit:phi0959.phi006:1.204" }
+    },
+    "65": {
+      "6": { "cite": "urn:cts:latinLit:phi0959.phi006:1.267" },
+      "7": { "cite": "urn:cts:latinLit:phi0959.phi006:1.267" },
+      "8": { "cite": "urn:cts:latinLit:phi0959.phi006:1.267" },
+      "9": { "cite": "urn:cts:latinLit:phi0959.phi006:1.267" }
+    },
+    "66": {
+      "1": { "cite": "urn:cts:latinLit:phi0959.phi006:1.268" },
+      "2": { "cite": "urn:cts:latinLit:phi0959.phi006:1.268" }
+    },
+    "80": {
+      "11": { "cite": "urn:cts:latinLit:phi0959.phi006:1.286" },
+      "12": { "cite": "urn:cts:latinLit:phi0959.phi006:1.286" },
+      "13": { "cite": "urn:cts:latinLit:phi0959.phi006:1.286" },
+      "14": { "cite": "urn:cts:latinLit:phi0959.phi006:1.286" },
+      "15": { "cite": "urn:cts:latinLit:phi0959.phi006:1.287" },
+      "16": { "cite": "urn:cts:latinLit:phi0959.phi006:1.287" }
+    },
+    "87": {
+      "5": { "cite": "urn:cts:latinLit:phi0959.phi006:1.301" },
+      "6": { "cite": "urn:cts:latinLit:phi0959.phi006:1.301" },
+      "7": { "cite": "urn:cts:latinLit:phi0959.phi006:1.301" },
+      "8": { "cite": "urn:cts:latinLit:phi0959.phi006:1.301" },
+      "9": { "cite": "urn:cts:latinLit:phi0959.phi006:1.302" },
+      "11": { "cite": "urn:cts:latinLit:phi0959.phi006:1.302" },
+      "12": { "cite": "urn:cts:latinLit:phi0959.phi006:1.302" }
+    },
+    "121": {
+      "7": { "cite": "urn:cts:latinLit:phi0959.phi006:1.382" },
+      "8": { "cite": "urn:cts:latinLit:phi0959.phi006:1.382" },
+      "9": { "cite": "urn:cts:latinLit:phi0959.phi006:1.382" },
+      "10": { "cite": "urn:cts:latinLit:phi0959.phi006:1.382" },
+      "11": { "cite": "urn:cts:latinLit:phi0959.phi006:1.383" },
+      "12": { "cite": "urn:cts:latinLit:phi0959.phi006:1.383" }
+    },
+    "132": {
+      "5": { "cite": "urn:cts:latinLit:phi0959.phi006:1.401" },
+      "6": { "cite": "urn:cts:latinLit:phi0959.phi006:1.401" },
+      "7": { "cite": "urn:cts:latinLit:phi0959.phi006:1.401" },
+      "8": { "cite": "urn:cts:latinLit:phi0959.phi006:1.402" },
+      "9": { "cite": "urn:cts:latinLit:phi0959.phi006:1.402" },
+      "10": { "cite": "urn:cts:latinLit:phi0959.phi006:1.402" },
+      "11": { "cite": "urn:cts:latinLit:phi0959.phi006:1.402" },
+      "12": { "cite": "urn:cts:latinLit:phi0959.phi006:1.402" }
+    },
+    "175": {
+      "2": { "cite": "urn:cts:latinLit:phi0959.phi006:1.500" },
+      "3": { "cite": "urn:cts:latinLit:phi0959.phi006:1.500" },
+      "4": { "cite": "urn:cts:latinLit:phi0959.phi006:1.500" },
+      "5": { "cite": "urn:cts:latinLit:phi0959.phi006:1.500" },
+      "6": { "cite": "urn:cts:latinLit:phi0959.phi006:1.501" },
+      "7": { "cite": "urn:cts:latinLit:phi0959.phi006:1.501" }
+    },
+    "192": {
+      "4": { "cite": "urn:cts:latinLit:phi0959.phi006:1.517" },
+      "5": { "cite": "urn:cts:latinLit:phi0959.phi006:1.517" },
+      "6": { "cite": "urn:cts:latinLit:phi0959.phi006:1.517" },
+      "7": { "cite": "urn:cts:latinLit:phi0959.phi006:1.517" },
+      "8": { "cite": "urn:cts:latinLit:phi0959.phi006:1.518" },
+      "9": { "cite": "urn:cts:latinLit:phi0959.phi006:1.518" }
+    },
+    "213": {
+      "9": { "cite": "urn:cts:latinLit:phi0959.phi006:1.562" },
+      "10": { "cite": "urn:cts:latinLit:phi0959.phi006:1.562" },
+      "11": { "cite": "urn:cts:latinLit:phi0959.phi006:1.562" },
+      "12": { "cite": "urn:cts:latinLit:phi0959.phi006:1.562" },
+      "14": { "cite": "urn:cts:latinLit:phi0959.phi006:1.563" },
+      "15": { "cite": "urn:cts:latinLit:phi0959.phi006:1.563" }
+    },
+    "264": {
+      "6": { "cite": "urn:cts:latinLit:phi0959.phi006:1.657" },
+      "7": { "cite": "urn:cts:latinLit:phi0959.phi006:1.657" },
+      "8": { "cite": "urn:cts:latinLit:phi0959.phi006:1.657" },
+      "10": { "cite": "urn:cts:latinLit:phi0959.phi006:1.658" },
+      "11": { "cite": "urn:cts:latinLit:phi0959.phi006:1.658" }
+    },
+    "301": {
+      "18": { "cite": "urn:cts:latinLit:phi0959.phi006:1.740" },
+      "19": { "cite": "urn:cts:latinLit:phi0959.phi006:1.740" },
+      "20": { "cite": "urn:cts:latinLit:phi0959.phi006:1.740" },
+      "21": { "cite": "urn:cts:latinLit:phi0959.phi006:1.740" },
+      "23": { "cite": "urn:cts:latinLit:phi0959.phi006:1.741" },
+      "24": { "cite": "urn:cts:latinLit:phi0959.phi006:1.741" }
     }
   }
 }

@@ -1,0 +1,325 @@
+{
+    "passage": {
+        "title": "Historiae",
+        "author": "Tacitus",
+        "urn": "phi1351.phi005.perseus-lat1",
+        "source": "AGLDT",
+        "syntaxPhrases": [
+            {
+                "syntax_id": 0,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "posse",
+                "lastWord": "fieri",
+                "uids": [
+                    583,
+                    585,
+                    586,
+                    587,
+                    588
+                ]
+            },
+            {
+                "syntax_id": 1,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "in",
+                "lastWord": "intellegit",
+                "uids": [
+                    696,
+                    697,
+                    725,
+                    726
+                ]
+            },
+            {
+                "syntax_id": 2,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "impellere",
+                "lastWord": "nequiverint",
+                "uids": [
+                    1024,
+                    1025
+                ]
+            },
+            {
+                "syntax_id": 3,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "mutari",
+                "lastWord": "poterant",
+                "uids": [
+                    1048,
+                    1050
+                ]
+            },
+            {
+                "syntax_id": 4,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "imperare",
+                "lastWord": "noluisset",
+                "uids": [
+                    1238,
+                    1239
+                ]
+            },
+            {
+                "syntax_id": 5,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "queri",
+                "lastWord": "poterant",
+                "uids": [
+                    1255,
+                    1257
+                ]
+            },
+            {
+                "syntax_id": 6,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "doctae",
+                "lastWord": "odisse",
+                "uids": [
+                    1371,
+                    1372,
+                    1373,
+                    1374
+                ]
+            },
+            {
+                "syntax_id": 7,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "credo",
+                "lastWord": "relinqueretur",
+                "uids": [
+                    1959,
+                    1960,
+                    1961,
+                    1962,
+                    1963,
+                    1964,
+                    1965,
+                    1966,
+                    1967,
+                    1968,
+                    1969,
+                    1970,
+                    1971,
+                    1972,
+                    1973
+                ]
+            },
+            {
+                "syntax_id": 8,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "Pisonem",
+                "lastWord": "iubet",
+                "uids": [
+                    2120,
+                    2121,
+                    2122,
+                    2123
+                ]
+            },
+            {
+                "syntax_id": 9,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "conferre",
+                "lastWord": "conferre",
+                "uids": [
+                    2524,
+                    2525,
+                    2526,
+                    2527,
+                    2528,
+                    2529,
+                    2530,
+                    2531,
+                    2541
+                ]
+            },
+            {
+                "syntax_id": 10,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "plus",
+                "lastWord": "conferre",
+                "uids": [
+                    2535,
+                    2537,
+                    2538,
+                    2539,
+                    2542,
+                    2543,
+                    2544
+                ]
+            },
+            {
+                "syntax_id": 11,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "eligi",
+                "lastWord": "coepimus",
+                "uids": [
+                    2561,
+                    2562
+                ]
+            },
+            {
+                "syntax_id": 12,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "velis",
+                "lastWord": "eligere",
+                "uids": [
+                    2594,
+                    2595
+                ]
+            },
+            {
+                "syntax_id": 13,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "desinam",
+                "lastWord": "obicitur",
+                "uids": [
+                    2677,
+                    2678,
+                    2679,
+                    2680,
+                    2681,
+                    2682,
+                    2683,
+                    2684,
+                    2685
+                ]
+            },
+            {
+                "syntax_id": 14,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "nec",
+                "lastWord": "libertatem",
+                "uids": [
+                    2764,
+                    2765,
+                    2766,
+                    2767,
+                    2768,
+                    2769,
+                    2770,
+                    2771
+                ]
+            },
+            {
+                "syntax_id": 15,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "Pisonem",
+                "lastWord": "prodidisse",
+                "uids": [
+                    2794,
+                    2795,
+                    2796,
+                    2797,
+                    2798,
+                    2799,
+                    2800,
+                    2801,
+                    2802,
+                    2803,
+                    2804,
+                    2805,
+                    2806,
+                    2807,
+                    2808,
+                    2809,
+                    2810,
+                    2811
+                ]
+            },
+            {
+                "syntax_id": 16,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "imperare",
+                "lastWord": "posset",
+                "uids": [
+                    2833,
+                    2834
+                ]
+            },
+            {
+                "syntax_id": 17,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "adoptari",
+                "lastWord": "pronuntiat",
+                "uids": [
+                    2954,
+                    2955,
+                    2956,
+                    2957,
+                    2958,
+                    2959,
+                    2960,
+                    2961,
+                    2962,
+                    2963,
+                    2964,
+                    2965,
+                    2966,
+                    2967,
+                    2968,
+                    2969,
+                    2970
+                ]
+            },
+            {
+                "syntax_id": 18,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "potuisse",
+                "lastWord": "liberalitate",
+                "uids": [
+                    3041,
+                    3042,
+                    3044,
+                    3045,
+                    3046,
+                    3047
+                ]
+            },
+            {
+                "syntax_id": 19,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "appellari",
+                "lastWord": "iussit",
+                "uids": [
+                    3248,
+                    3249,
+                    3250
+                ]
+            },
+            {
+                "syntax_id": 20,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "occidi",
+                "lastWord": "posse",
+                "uids": [
+                    3466,
+                    3468
+                ]
+            }
+        ]
+    },
+    "text": {}
+}

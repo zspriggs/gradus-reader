@@ -90,24 +90,23 @@ def process_treebank(file: str, lang: str, urn: str, title: str, author: str, so
                 section_key = sentence.get('subdoc')
             else:
                 try: #poetry has some citation corrections in corrections.json
-                    word_corrections = cite_corrections[urn][sentence_id][word.get('id')]
+                    word_corrections = cite_corrections[urn][sentence.get('id')][word.get('id')]
                 except KeyError:
                     word_corrections = {}
-
                 raw_cite = word.get('cite')
                 actual_cite = word_corrections.get('cite', raw_cite)
 
                 section_key = actual_cite
-                print(section_key, word.get('form'))
-                if section_key == "" or None: #sometimes cite="", sometimes cite doesn't exist
-                    section_key = current_section
+               
+            if section_key == "" or section_key == None:
+                section_key = current_section
 
             if current_section == None: #first pass
                 current_section = section_key
-            elif current_section != section_key:
+            elif current_section != section_key: #new section
                 if not prose:
                     unique_id += 1
-                    section_words.append({"uid": unique_id, "linebreak": True})
+                    section_words.append({"uid": unique_id, "linebreak": True}) 
                 doc['text'][current_section] = section_words
                 current_section = section_key
                 section_words = []
@@ -158,7 +157,7 @@ def process_treebank(file: str, lang: str, urn: str, title: str, author: str, so
             })
 
     if current_section:
-        doc['text'][current_section] = section_words
+        doc['text'][current_section] = section_words #append last section
 
     #remap ids onto each otherr
     #TODO: refactor so the IDs are handled better?
@@ -167,7 +166,7 @@ def process_treebank(file: str, lang: str, urn: str, title: str, author: str, so
         del syntax['longIds']
 
     if not prose:
-        doc = chunk_poetry(doc, urn)
+        doc = chunk_poetry(doc)
 
     return doc
 
@@ -187,7 +186,7 @@ def reorder_enclitics(words):
     return word_list
 
 
-def chunk_poetry(doc: dict, urn: str, lines_per_chunk: int=30):
+def chunk_poetry(doc: dict, lines_per_chunk: int=30):
     """Chunks poetry into groups of at least lines_per_chunk lines, always ending on a sentence break"""
     doc_copy = doc.copy()
     doc_copy['text'] = {}
@@ -199,14 +198,12 @@ def chunk_poetry(doc: dict, urn: str, lines_per_chunk: int=30):
     section_start_book = None
     section_start_line = None
 
-    #print(doc['text'])
     for line in doc['text']:
-        print(line)
         if not line:
             #If line is None type, this means this is poetry but without a "cite" element with line nums
             #so we do not process the document due to inability to recover lines
             raise LineNumberError(f"Document does not appear to have line numbers -- cannot recover line positions")
-        
+                
         book_num, line_num = split_cite_urn(line)
 
         if not section_start_book or not section_start_line: #first go-around
@@ -215,11 +212,12 @@ def chunk_poetry(doc: dict, urn: str, lines_per_chunk: int=30):
 
         line_text = doc['text'][line]
 
+        ending_punctuation = ['·', '.', ';', ':', '?', '"', '\''] 
         #end punc checks line_text[-2] bc line_text[-1] should be linebreak
-        end_punc = \
-            line_text[-2].get('form')[-1] == '.' or \
-            line_text[-2].get('form')[-1] == ';' or \
-            line_text[-2].get('form')[-1] == ':'
+        last_punc = line_text[-2].get('form')[-1]
+        end_punc = last_punc in ending_punctuation
+
+        normal_section_end = section_count >= lines_per_chunk and end_punc
 
         new_book = section_start_book != book_num
         try:
@@ -227,10 +225,14 @@ def chunk_poetry(doc: dict, urn: str, lines_per_chunk: int=30):
         except ValueError:
             skipped_lines = False #if we can't derive an int from the start_line or line_num, just trust the treebank
 
-        if (section_count >= lines_per_chunk and end_punc) or new_book or skipped_lines:
-            section_start = f"{section_start_book}.{section_start_line}"
+        if normal_section_end or new_book or skipped_lines:
+            if normal_section_end: #append the current line NOW bc that's what has the end punc
+                section.extend(line_text)
+                section_count += 1
 
-            section_end = f"{section_start_book}.{int(section_start_line)+section_count-2}"
+            section_start = f"{section_start_book}.{section_start_line}"
+            #have to do math on section_end bc if we just skipped a chunk of lines we can't use current line
+            section_end = f"{section_start_book}.{incremented_line_num(section_start_line, section_count-1)}"
 
             section_title = f"{section_start}-{section_end}"
             doc_copy['text'][section_title] = section
@@ -239,14 +241,20 @@ def chunk_poetry(doc: dict, urn: str, lines_per_chunk: int=30):
             section = []
             section_count = 0
             section_start_book = book_num
-            section_start_line = line_num
 
-        section.extend(line_text)
-        section_count += 1
+            if normal_section_end:
+                section_start_line = incremented_line_num(line_num)
+            else: 
+                section_start_line = line_num #we just skipped lines or entered a new book, so next section starts NOW
+
+        if not normal_section_end: #append current line AFTER moving to new section
+            section.extend(line_text)
+            section_count += 1
 
     return doc_copy
 
 def split_cite_urn(urn: str):
+    """Splits a citation URN, returns the book number and line number as a tuple, when applicable"""
     passage = urn.split(':')[-1]  # "1.344" or "344"
     parts = passage.split('.')
     
@@ -264,4 +272,17 @@ def split_cite_urn(urn: str):
         else:
             return None, None
 
+def incremented_line_num(num, increment: int = 1):
+    """Increments a string-format line number, allowing for any number of period-separated parts"""
+    try:
+        parts = num.split('.')
+    except AttributeError: #if num is an already an int, just increment and return
+        return num + increment
+    
+    if len(parts) == 1:
+        return int(num) + increment
+    elif len(parts) > 1:
+        return f"{'.'.join(parts[:-1])}.{int(parts[-1]) + increment}"
+    else:
+        return num
 

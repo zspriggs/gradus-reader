@@ -1,0 +1,1044 @@
+{
+    "passage": {
+        "title": "Works and Days",
+        "author": "Hesiod",
+        "urn": "tlg0020.tlg002.perseus-grc1",
+        "source": "AGLDT",
+        "syntaxPhrases": [
+            {
+                "syntax_id": 0,
+                "type": "Dative of possession",
+                "isClause": false,
+                "firstWord": "δαίμονι",
+                "uids": [
+                    2700
+                ]
+            },
+            {
+                "syntax_id": 1,
+                "type": "Dative of possession",
+                "isClause": false,
+                "firstWord": "φυτοῖσιν",
+                "uids": [
+                    6718
+                ]
+            },
+            {
+                "syntax_id": 2,
+                "type": "Dative of possession",
+                "isClause": false,
+                "firstWord": "κούρῃ",
+                "uids": [
+                    6725
+                ]
+            },
+            {
+                "syntax_id": 3,
+                "type": "Dative of possession",
+                "isClause": false,
+                "firstWord": "τοῖσιν",
+                "uids": [
+                    972
+                ]
+            },
+            {
+                "syntax_id": 4,
+                "type": "Dative of possession",
+                "isClause": false,
+                "firstWord": "τοι",
+                "uids": [
+                    4218
+                ]
+            },
+            {
+                "syntax_id": 5,
+                "type": "Dative of possession",
+                "isClause": false,
+                "firstWord": "τῷ",
+                "uids": [
+                    4350
+                ]
+            },
+            {
+                "syntax_id": 6,
+                "type": "Dative of possession",
+                "isClause": false,
+                "firstWord": "τοι",
+                "uids": [
+                    4954
+                ]
+            },
+            {
+                "syntax_id": 7,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "ὃς",
+                "lastWord": "ναίει",
+                "uids": [
+                    63,
+                    66
+                ]
+            },
+            {
+                "syntax_id": 8,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "ὃς",
+                "lastWord": "σπεύδει",
+                "uids": [
+                    192,
+                    193
+                ]
+            },
+            {
+                "syntax_id": 9,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "αἵ",
+                "lastWord": "εἰσιν",
+                "uids": [
+                    313,
+                    315,
+                    316,
+                    317
+                ]
+            },
+            {
+                "syntax_id": 10,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "οἳ",
+                "lastWord": "ἐθέλουσι",
+                "uids": [
+                    336,
+                    339
+                ]
+            },
+            {
+                "syntax_id": 11,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "ᾧ",
+                "lastWord": "τέρπωνται",
+                "uids": [
+                    485,
+                    488
+                ]
+            },
+            {
+                "syntax_id": 12,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "αἵ",
+                "lastWord": "ἔδωκαν",
+                "uids": [
+                    767,
+                    771
+                ]
+            },
+            {
+                "syntax_id": 13,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "[οἵ",
+                "lastWord": "φυλάσσουσίν",
+                "uids": [
+                    1028,
+                    1030
+                ]
+            },
+            {
+                "syntax_id": 14,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "οἳ",
+                "lastWord": "ἔχουσιν",
+                "uids": [
+                    1155,
+                    1157
+                ]
+            },
+            {
+                "syntax_id": 15,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "οἳ]",
+                "lastWord": "γεγάασιν",
+                "uids": [
+                    1470,
+                    1471
+                ]
+            },
+            {
+                "syntax_id": 16,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "οἷς",
+                "lastWord": "μέμηλε",
+                "uids": [
+                    2044,
+                    2048
+                ]
+            },
+            {
+                "syntax_id": 17,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "οἳ",
+                "lastWord": "ἔχουσιν",
+                "uids": [
+                    2202,
+                    2204
+                ]
+            },
+            {
+                "syntax_id": 18,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "οἳ",
+                "lastWord": "παρκλίνωσι",
+                "uids": [
+                    2233,
+                    2234,
+                    2235,
+                    2237
+                ]
+            },
+            {
+                "syntax_id": 19,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "ἣ",
+                "lastWord": "γίγνεται",
+                "uids": [
+                    2397,
+                    2400
+                ]
+            },
+            {
+                "syntax_id": 20,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "ὃς",
+                "lastWord": "νοήσῃ",
+                "uids": [
+                    2524,
+                    2525,
+                    2527
+                ]
+            },
+            {
+                "syntax_id": 21,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "ὃς",
+                "lastWord": "πίθηται",
+                "uids": [
+                    2545,
+                    2548
+                ]
+            },
+            {
+                "syntax_id": 22,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "ὅς",
+                "lastWord": "ἔσθοντες",
+                "uids": [
+                    2619,
+                    2621,
+                    2622,
+                    2623,
+                    2624,
+                    2625,
+                    2626,
+                    2627,
+                    2628,
+                    2629,
+                    2630,
+                    2631,
+                    2632,
+                    2633,
+                    2634,
+                    2635
+                ]
+            },
+            {
+                "syntax_id": 23,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "οἵ",
+                "lastWord": "ἀεργοὶ",
+                "uids": [
+                    2629,
+                    2633,
+                    2634
+                ]
+            },
+            {
+                "syntax_id": 24,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "ὅς",
+                "lastWord": "ναίει",
+                "uids": [
+                    2971,
+                    2972,
+                    2975
+                ]
+            },
+            {
+                "syntax_id": 25,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "ὃς",
+                "lastWord": "φέρει",
+                "uids": [
+                    3159,
+                    3163
+                ]
+            },
+            {
+                "syntax_id": 26,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "ὃς",
+                "lastWord": "πέποιθε",
+                "uids": [
+                    3286,
+                    3289
+                ]
+            },
+            {
+                "syntax_id": 27,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "ὃς",
+                "lastWord": "ἐλαύνοι",
+                "uids": [
+                    3869,
+                    3875
+                ]
+            },
+            {
+                "syntax_id": 28,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "ᾗ",
+                "lastWord": "ἄγειραν",
+                "uids": [
+                    5592,
+                    5600
+                ]
+            },
+            {
+                "syntax_id": 29,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "ἥ",
+                "lastWord": "ναίει",
+                "uids": [
+                    6001,
+                    6002,
+                    6005
+                ]
+            },
+            {
+                "syntax_id": 30,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "ὃς",
+                "lastWord": "ἄνιπτος",
+                "uids": [
+                    6352,
+                    6354,
+                    6355,
+                    6356,
+                    6357,
+                    6358
+                ]
+            },
+            {
+                "syntax_id": 31,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "ἥν",
+                "lastWord": "φημίξωσι",
+                "uids": [
+                    6560,
+                    6561,
+                    6564
+                ]
+            },
+            {
+                "syntax_id": 32,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "ἃ",
+                "lastWord": "θυμβορεῖ",
+                "uids": [
+                    6863,
+                    6864
+                ]
+            },
+            {
+                "syntax_id": 33,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "ἥτις",
+                "lastWord": "ἕποιτο",
+                "uids": [
+                    3551,
+                    3554
+                ]
+            },
+            {
+                "syntax_id": 34,
+                "type": "Genitive absolute",
+                "isClause": true,
+                "firstWord": "τῆς",
+                "lastWord": "ἑλκομένης",
+                "uids": [
+                    1890,
+                    1892,
+                    1894
+                ]
+            },
+            {
+                "syntax_id": 35,
+                "type": "Genitive absolute",
+                "isClause": true,
+                "firstWord": "πληιάδων",
+                "lastWord": "ἐπιτελλομενάων",
+                "uids": [
+                    3356,
+                    3357,
+                    3358
+                ]
+            },
+            {
+                "syntax_id": 36,
+                "type": "Genitive absolute",
+                "isClause": true,
+                "firstWord": "περιπλομένου",
+                "lastWord": "ἐνιαυτοῦ",
+                "uids": [
+                    3379,
+                    3380
+                ]
+            },
+            {
+                "syntax_id": 37,
+                "type": "Genitive absolute",
+                "isClause": true,
+                "firstWord": "χαρασσομένοιο",
+                "lastWord": "σιδήρου",
+                "uids": [
+                    3384,
+                    3385
+                ]
+            },
+            {
+                "syntax_id": 38,
+                "type": "Genitive absolute",
+                "isClause": true,
+                "firstWord": "ὀμβρήσαντος",
+                "lastWord": "ἐρισθενέος",
+                "uids": [
+                    3633,
+                    3634,
+                    3635
+                ]
+            },
+            {
+                "syntax_id": 39,
+                "type": "Genitive absolute",
+                "isClause": true,
+                "firstWord": "θέρευς",
+                "lastWord": "ἐόντος",
+                "uids": [
+                    4358,
+                    4360,
+                    4361
+                ]
+            },
+            {
+                "syntax_id": 40,
+                "type": "Genitive absolute",
+                "isClause": true,
+                "firstWord": "πνεύσαντος",
+                "lastWord": "ὤρινε",
+                "uids": [
+                    4390,
+                    4391,
+                    4394,
+                    4395,
+                    4396,
+                    4397,
+                    4398,
+                    4399,
+                    4400,
+                    4401,
+                    4402
+                ]
+            },
+            {
+                "syntax_id": 41,
+                "type": "Genitive absolute",
+                "isClause": true,
+                "firstWord": "Βορέαο",
+                "lastWord": "πεσόντος",
+                "uids": [
+                    4725,
+                    4726
+                ]
+            },
+            {
+                "syntax_id": 42,
+                "type": "Genitive absolute",
+                "isClause": true,
+                "firstWord": "Θρηικίου",
+                "lastWord": "κλονέοντος",
+                "uids": [
+                    4763,
+                    4764,
+                    4766
+                ]
+            },
+            {
+                "syntax_id": 43,
+                "type": "Genitive absolute",
+                "isClause": true,
+                "firstWord": "ἔαρος",
+                "lastWord": "ἱσταμένοιο",
+                "uids": [
+                    4885,
+                    4887
+                ]
+            },
+            {
+                "syntax_id": 44,
+                "type": "Genitive absolute",
+                "isClause": true,
+                "firstWord": "ἐλθόντος",
+                "lastWord": "ὥρης",
+                "uids": [
+                    5685,
+                    5686,
+                    5687,
+                    5688
+                ]
+            },
+            {
+                "syntax_id": 45,
+                "type": "Genitive absolute",
+                "isClause": true,
+                "firstWord": "ἠοῦς",
+                "lastWord": "γιγνομένης",
+                "uids": [
+                    7046,
+                    7047
+                ]
+            },
+            {
+                "syntax_id": 46,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "τήνδε",
+                "lastWord": "δίκασσαι",
+                "uids": [
+                    337,
+                    338,
+                    339,
+                    340
+                ]
+            },
+            {
+                "syntax_id": 47,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "Ἀθήνην",
+                "lastWord": "[0]",
+                "uids": [
+                    537,
+                    538,
+                    539,
+                    540,
+                    541,
+                    542,
+                    543,
+                    545
+                ]
+            },
+            {
+                "syntax_id": 48,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "χάριν",
+                "lastWord": "[0]",
+                "uids": [
+                    547,
+                    548,
+                    549,
+                    550,
+                    551,
+                    552,
+                    553,
+                    554,
+                    555,
+                    556,
+                    557,
+                    559
+                ]
+            },
+            {
+                "syntax_id": 49,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "ἐν",
+                "lastWord": "ἤνωγε",
+                "uids": [
+                    560,
+                    562,
+                    563,
+                    564,
+                    565,
+                    566,
+                    567,
+                    568,
+                    570
+                ]
+            },
+            {
+                "syntax_id": 50,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "ὕβριν",
+                "lastWord": "ἀπέχειν",
+                "uids": [
+                    1112,
+                    1114,
+                    1116,
+                    1117,
+                    1118
+                ]
+            },
+            {
+                "syntax_id": 51,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "ἐθέλῃ",
+                "lastWord": "ἀντιφερίζειν",
+                "uids": [
+                    1797,
+                    1798,
+                    1799,
+                    1800
+                ]
+            },
+            {
+                "syntax_id": 52,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "ῥηιδίως",
+                "lastWord": "δύναται",
+                "uids": [
+                    1845,
+                    1846,
+                    1847
+                ]
+            },
+            {
+                "syntax_id": 53,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "τά",
+                "lastWord": "μητιόεντα",
+                "uids": [
+                    2338,
+                    2339,
+                    2340,
+                    2341,
+                    2342,
+                    2343,
+                    2344,
+                    2345
+                ]
+            },
+            {
+                "syntax_id": 54,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "ἐθέλῃ",
+                "lastWord": "ἀγορεῦσαι",
+                "uids": [
+                    2406,
+                    2407,
+                    2408,
+                    2409
+                ]
+            },
+            {
+                "syntax_id": 55,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "ἅ",
+                "lastWord": "ἄνωγα",
+                "uids": [
+                    3223,
+                    3224,
+                    3225,
+                    3226
+                ]
+            },
+            {
+                "syntax_id": 56,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "ὥρια",
+                "lastWord": "Δημήτερος",
+                "uids": [
+                    3425,
+                    3426,
+                    3427,
+                    3428,
+                    3429,
+                    3430
+                ]
+            },
+            {
+                "syntax_id": 57,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "ἄνωγα",
+                "lastWord": "ἀλεωρήν",
+                "uids": [
+                    3528,
+                    3529,
+                    3530,
+                    3531,
+                    3532,
+                    3533,
+                    3534,
+                    3535
+                ]
+            },
+            {
+                "syntax_id": 58,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "βουσὶν",
+                "lastWord": "ἐστιν",
+                "uids": [
+                    3755,
+                    3756,
+                    3758
+                ]
+            },
+            {
+                "syntax_id": 59,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "φησὶ",
+                "lastWord": "ἄμαξαν",
+                "uids": [
+                    3967,
+                    3972,
+                    3973
+                ]
+            },
+            {
+                "syntax_id": 60,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "πρόσθεν",
+                "lastWord": "θέσθαι",
+                "uids": [
+                    3989,
+                    3991,
+                    3992,
+                    3993
+                ]
+            },
+            {
+                "syntax_id": 61,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "εὔχεσθαι",
+                "lastWord": "ἀκτήν",
+                "uids": [
+                    4053,
+                    4060,
+                    4061,
+                    4062,
+                    4063,
+                    4064,
+                    4065
+                ]
+            },
+            {
+                "syntax_id": 62,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "σε",
+                "lastWord": "ἐόντος",
+                "uids": [
+                    4134,
+                    4135,
+                    4136,
+                    4137,
+                    4138,
+                    4139,
+                    4140
+                ]
+            },
+            {
+                "syntax_id": 63,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "ἐποτρύνειν",
+                "lastWord": "ἀλωῇ",
+                "uids": [
+                    5121,
+                    5122,
+                    5123,
+                    5124,
+                    5125,
+                    5134,
+                    5135,
+                    5136,
+                    5137,
+                    5138,
+                    5139,
+                    5140
+                ]
+            },
+            {
+                "syntax_id": 64,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "γῆν",
+                "lastWord": "κελεύω",
+                "uids": [
+                    5331,
+                    5332,
+                    5333,
+                    5334,
+                    5335,
+                    5336,
+                    5337
+                ]
+            },
+            {
+                "syntax_id": 65,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "βούληαι",
+                "lastWord": "ἀτερπέα",
+                "uids": [
+                    5550,
+                    5551,
+                    5552,
+                    5553,
+                    5554,
+                    5555,
+                    5556
+                ]
+            },
+            {
+                "syntax_id": 66,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "μέ",
+                "lastWord": "ὠτώεντα",
+                "uids": [
+                    5631,
+                    5632,
+                    5633,
+                    5634,
+                    5635,
+                    5636,
+                    5637
+                ]
+            },
+            {
+                "syntax_id": 67,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "ἐδίδαξαν",
+                "lastWord": "ἀείδειν",
+                "uids": [
+                    5672,
+                    5673,
+                    5674,
+                    5675
+                ]
+            },
+            {
+                "syntax_id": 68,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "ἐθέλῃσιν",
+                "lastWord": "ὀλέσσαι",
+                "uids": [
+                    5717,
+                    5718
+                ]
+            },
+            {
+                "syntax_id": 69,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "σπεύδειν",
+                "lastWord": "νέεσθαι",
+                "uids": [
+                    5757,
+                    5759,
+                    5760,
+                    5761,
+                    5762,
+                    5763
+                ]
+            },
+            {
+                "syntax_id": 70,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "σ̓",
+                "lastWord": "ἀγορεύω",
+                "uids": [
+                    5880,
+                    5881,
+                    5882,
+                    5883,
+                    5884,
+                    5885,
+                    5886,
+                    5887,
+                    5888,
+                    5889
+                ]
+            },
+            {
+                "syntax_id": 71,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "δίκην",
+                "lastWord": "παρασχεῖν",
+                "uids": [
+                    6112,
+                    6114,
+                    6115
+                ]
+            },
+            {
+                "syntax_id": 72,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "οὐλομένην",
+                "lastWord": "ἐόντων",
+                "uids": [
+                    6155,
+                    6156,
+                    6157,
+                    6158,
+                    6159,
+                    6160,
+                    6161,
+                    6162,
+                    6163,
+                    6164,
+                    6165
+                ]
+            },
+            {
+                "syntax_id": 73,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "ἀλέασθαι",
+                "lastWord": "ἄρξασθαι",
+                "uids": [
+                    6701,
+                    6702,
+                    6703
+                ]
+            },
+            {
+                "syntax_id": 74,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "φιλέοι",
+                "lastWord": "ὀαρισμούς",
+                "uids": [
+                    6772,
+                    6776,
+                    6777,
+                    6778,
+                    6779,
+                    6780,
+                    6781,
+                    6782,
+                    6783,
+                    6784,
+                    6785
+                ]
+            },
+            {
+                "syntax_id": 75,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "πεφύλαξο",
+                "lastWord": "[0]",
+                "uids": [
+                    6853,
+                    6856,
+                    6857,
+                    6858,
+                    6859,
+                    6860,
+                    6861,
+                    6862,
+                    6863,
+                    6864,
+                    6870
+                ]
+            },
+            {
+                "syntax_id": 76,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "ἐν",
+                "lastWord": "ἐπιόρκοις",
+                "uids": [
+                    6900,
+                    6901,
+                    6903,
+                    6904,
+                    6905,
+                    6906,
+                    6907,
+                    6908,
+                    6909,
+                    6910,
+                    6911,
+                    6912,
+                    6913
+                ]
+            },
+            {
+                "syntax_id": 77,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "ἄρχεσθαι",
+                "lastWord": "ἀραιάς",
+                "uids": [
+                    6947,
+                    6948,
+                    6949,
+                    6950
+                ]
+            }
+        ]
+    },
+    "text": {}
+}

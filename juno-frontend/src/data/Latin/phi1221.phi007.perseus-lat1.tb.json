@@ -1,0 +1,253 @@
+{
+    "passage": {
+        "title": "Res Gestae",
+        "author": "Augustus",
+        "urn": "phi1221.phi007.perseus-lat1",
+        "source": "AGLDT",
+        "syntaxPhrases": [
+            {
+                "syntax_id": 0,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "Res",
+                "lastWord": "iussit",
+                "uids": [
+                    91,
+                    92,
+                    93,
+                    94,
+                    95,
+                    96,
+                    97,
+                    99,
+                    100,
+                    101,
+                    102,
+                    103,
+                    104,
+                    105
+                ]
+            },
+            {
+                "syntax_id": 1,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "Externas",
+                "lastWord": "malui",
+                "uids": [
+                    175,
+                    176,
+                    177,
+                    178,
+                    179,
+                    180,
+                    181,
+                    182,
+                    183,
+                    186
+                ]
+            },
+            {
+                "syntax_id": 2,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "Quae",
+                "lastWord": "voluit",
+                "uids": [
+                    458,
+                    460,
+                    461,
+                    462,
+                    464
+                ]
+            },
+            {
+                "syntax_id": 3,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "Vota",
+                "lastWord": "decrevit",
+                "uids": [
+                    670,
+                    671,
+                    672,
+                    673,
+                    674,
+                    675,
+                    676,
+                    677,
+                    678,
+                    679,
+                    680,
+                    681,
+                    683
+                ]
+            },
+            {
+                "syntax_id": 4,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "in",
+                "lastWord": "redieram",
+                "uids": [
+                    829,
+                    830,
+                    835,
+                    836,
+                    837,
+                    838,
+                    839,
+                    840,
+                    841,
+                    842,
+                    843,
+                    844,
+                    845,
+                    846,
+                    847,
+                    848,
+                    849,
+                    850,
+                    851,
+                    852,
+                    853,
+                    854
+                ]
+            },
+            {
+                "syntax_id": 5,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "in",
+                "lastWord": "iussit",
+                "uids": [
+                    933,
+                    934,
+                    941,
+                    942,
+                    943,
+                    944
+                ]
+            },
+            {
+                "syntax_id": 6,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "quam",
+                "lastWord": "Octaviam",
+                "uids": [
+                    1442,
+                    1444,
+                    1445,
+                    1446,
+                    1447,
+                    1448,
+                    1449,
+                    1450,
+                    1451,
+                    1452,
+                    1453,
+                    1454,
+                    1456
+                ]
+            },
+            {
+                "syntax_id": 7,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": ",",
+                "lastWord": "iussi",
+                "uids": [
+                    1586,
+                    1587,
+                    1588,
+                    1589,
+                    1590,
+                    1591,
+                    1592,
+                    1593,
+                    1594,
+                    1595,
+                    1596
+                ]
+            },
+            {
+                "syntax_id": 8,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "refici",
+                "lastWord": "debebat",
+                "uids": [
+                    1617,
+                    1618
+                ]
+            },
+            {
+                "syntax_id": 9,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "Armeniam",
+                "lastWord": "provinciam",
+                "uids": [
+                    2277,
+                    2278,
+                    2284,
+                    2285,
+                    2286
+                ]
+            },
+            {
+                "syntax_id": 10,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "malui",
+                "lastWord": "[2]",
+                "uids": [
+                    2287,
+                    2288,
+                    2289,
+                    2290,
+                    2291,
+                    2292,
+                    2293,
+                    2294,
+                    2295,
+                    2296,
+                    2297,
+                    2298,
+                    2299,
+                    2300,
+                    2301,
+                    2302,
+                    2303,
+                    2304,
+                    2305,
+                    2306,
+                    2307,
+                    2308,
+                    2309,
+                    2310,
+                    2311,
+                    2312,
+                    2315,
+                    2316
+                ]
+            },
+            {
+                "syntax_id": 11,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "imperia",
+                "lastWord": "coegit",
+                "uids": [
+                    2548,
+                    2549,
+                    2550,
+                    2551,
+                    2552
+                ]
+            }
+        ]
+    },
+    "text": {}
+}
