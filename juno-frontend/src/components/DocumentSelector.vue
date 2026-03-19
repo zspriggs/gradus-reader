@@ -55,10 +55,8 @@ import athenaeusDeipnosophistae12 from '../data/Greek/tlg0008.tlg001.perseus-grc
 import athenaeusDeipnosophistae13 from '../data/Greek/tlg0008.tlg001.perseus-grc1.13.tb.json';
 import homerIliad from '../data/Greek/tlg0012.tlg001.perseus-grc1.tb.json';
 import homerOdyssey from '../data/Greek/tlg0012.tlg002.perseus-grc1.tb.json';
-//import homericHymnsDemeter from '../data/Greek/tlg0013.tlg002.perseus-grc1.tb.json';
 import herodotusHistories from '../data/Greek/tlg0016.tlg001.perseus-grc1.1.tb.json';
 import hesiodTheogony from '../data/Greek/tlg0020.tlg001.perseus-grc1.tb.json';
-import hesiodWorksAndDays from '../data/Greek/tlg0020.tlg002.perseus-grc1.tb.json';
 import hesiodShieldOfHeracles from '../data/Greek/tlg0020.tlg003.perseus-grc1.tb.json';
 import platoEuthyphro from '../data/Greek/tlg0059.tlg001.perseus-grc1.tb.json';
 import diodorusSiculusLibrary from '../data/Greek/tlg0060.tlg001.perseus-grc3.11.tb.json';
@@ -69,6 +67,9 @@ import lysiasAgainstAlcibiadesRefusal from '../data/Greek/tlg0540.tlg015.perseus
 import lysiasAgainstPancleon from '../data/Greek/tlg0540.tlg023.perseus-grc1.tb.json';
 import polybiusHistories from '../data/Greek/tlg0543.tlg001.perseus-grc1.tb.json';
 import apollodorusLibrary from '../data/Greek/tlg0548.tlg001.perseus-grc1.1.1.1-1.4.1.tb.json';
+
+// TODO delete these ones that Not included due to processing issues
+//import homericHymnsDemeter from '../data/Greek/tlg0013.tlg002.perseus-grc1.tb.json';
 // import sophoclesTrachiniae from '../data/Greek/tlg0011.tlg001.perseus-grc2.tb.json';
 // import sophoclesAntigone from '../data/Greek/tlg0011.tlg002.perseus-grc2.tb.json';
 // import sophoclesAjax from '../data/Greek/tlg0011.tlg003.perseus-grc1.tb.json';
@@ -81,6 +82,7 @@ import apollodorusLibrary from '../data/Greek/tlg0548.tlg001.perseus-grc1.1.1.1-
 // import aeschylusAgamemnon from '../data/Greek/tlg0085.tlg005.perseus-grc1.tb.json';
 // import aeschylusLibationBearers from '../data/Greek/tlg0085.tlg006.perseus-grc2.tb.json';
 // import aeschylusEumenides from '../data/Greek/tlg0085.tlg007.perseus-grc1.tb.json';
+//import hesiodWorksAndDays from '../data/Greek/tlg0020.tlg002.perseus-grc1.tb.json';
 
 //lat
 import caesarBelloGallico from '../data/Latin/phi0448.phi001.perseus-lat1.tb.json';
@@ -119,13 +121,12 @@ Latin: [
     { urn: 'tlg0003.tlg001', lang: 'grc', title: 'Thucydides - History of the Peloponnesian War', data: thucydidesPeloponnesianWar },
     { urn: 'tlg0007.tlg004', lang: 'grc', title: 'Plutarch - Lycurgus', data: plutarchLycurgus },
     { urn: 'tlg0007.tlg015', lang: 'grc', title: 'Plutarch - Alcibiades', data: plutarchAlcibiades },
-    { urn: 'tlg0008.tlg001', lang: 'grc', title: 'Athenaeus of Naucratis - Deipnosophistae', data: athenaeusDeipnosophistae12 },
-    { urn: 'tlg0008.tlg001', lang: 'grc', title: 'Athenaeus of Naucratis - Deipnosophistae', data: athenaeusDeipnosophistae13 },
+    { urn: 'tlg0008.tlg001', lang: 'grc', title: 'Athenaeus of Naucratis - Deipnosophistae 12', data: athenaeusDeipnosophistae12 },
+    { urn: 'tlg0008.tlg001', lang: 'grc', title: 'Athenaeus of Naucratis - Deipnosophistae 13', data: athenaeusDeipnosophistae13 },
     { urn: 'tlg0012.tlg001', lang: 'grc', title: 'Homer - Iliad', data: homerIliad },
     { urn: 'tlg0012.tlg002', lang: 'grc', title: 'Homer - Odyssey', data: homerOdyssey },
     { urn: 'tlg0016.tlg001', lang: 'grc', title: 'Herodotus - Histories', data: herodotusHistories },
     { urn: 'tlg0020.tlg001', lang: 'grc', title: 'Hesiod - Theogony', data: hesiodTheogony },
-    { urn: 'tlg0020.tlg002', lang: 'grc', title: 'Hesiod - Works and Days', data: hesiodWorksAndDays },
     { urn: 'tlg0020.tlg003', lang: 'grc', title: 'Hesiod - Shield of Heracles', data: hesiodShieldOfHeracles },
     { urn: 'tlg0059.tlg001', lang: 'grc', title: 'Plato - Euthyphro', data: platoEuthyphro },
     { urn: 'tlg0060.tlg001', lang: 'grc', title: 'Diodorus Siculus - Historical Library', data: diodorusSiculusLibrary },
@@ -138,7 +139,7 @@ Latin: [
     { urn: 'tlg0548.tlg001', lang: 'grc', title: 'Apollodorus - Library', data: apollodorusLibrary }
 
     //{ urn: 'tlg0013.tlg002', lang: 'grc', title: 'Homeric Hymns - Hymn 2 to Demeter', data: homericHymnsDemeter },
-
+    //{ urn: 'tlg0020.tlg002', lang: 'grc', title: 'Hesiod - Works and Days', data: hesiodWorksAndDays },
     // { urn: 'tlg0085.tlg001', lang: 'grc', title: 'Aeschylus - Supplices', data: aeschylusSupplices },
     // { urn: 'tlg0085.tlg002', lang: 'grc', title: 'Aeschylus - Persians', data: aeschylusPersians },
     // { urn: 'tlg0085.tlg003', lang: 'grc', title: 'Aeschylus - Prometheus Bound', data: aeschylusPrometheusBound },
