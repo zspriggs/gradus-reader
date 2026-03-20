@@ -23,7 +23,7 @@
         </option>
       </optgroup>
     </select>
-
+    <label class="section-select-label" for="section-select">Select a section:</label>
     <select
       id="section-select"
       v-model="selectedSection"
@@ -199,6 +199,11 @@ const changeSection = () => {
   padding: 16px;
   background-color: #f9fafb;
   border-radius: 8px;
+}
+
+.section-select-label{
+  display:block;
+  margin-top: 20px;
 }
 
 .doc-dropdown {
