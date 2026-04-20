@@ -8,7 +8,7 @@ QUERIES = {
             "type": "Dative of possession", 
             "query": "εἰμί > :noun:dative, εἰμί > :pronoun:dative, εἰμί > [relation=SBJ] > :noun:dative, εἰμί > [relation=SBJ] > :pronoun:dative",
             "is_clause": False,
-            "grammar_ref": "§DatPos"
+            "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D42%3Asection%3D96%3Asubsection%3D88"
         },
         {
             "type": "Relative clause",
@@ -17,24 +17,25 @@ QUERIES = {
             ":verb[relation=ATR]:has_child(οἷος), "
             ":verb[relation=ATR]:has_child(ὅσος)",
             "is_clause": True,
-            "grammar_ref": ""
+            "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D54%3Asection%3D140"
         },
         {
             "type": "Genitive absolute",
             "query": ":genitive[relation=SBJ]",
             "is_clause": True,
-            "grammar_ref": "§PartGen"
+            "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D46%3Asection%3D117%3Asubsection%3D130"
         },
         {
             "type": "Indirect discourse",
             "query": ":verb:infinitive[relation=OBJ], :verb:infinitive[relation=SBJ]",
             "is_clause": True,
-            "grammar_ref": ""
+            "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D55%3Asection%3D148"
         },
         {
             "type": "Conditional clause",
             "query": "εἰ[relation=AuxC] > :verb[relation=ADV], ἐάν[relation=AuxC] > :verb[relation=ADV]",
-            "is_clause": True
+            "is_clause": True,
+            "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D53%3Asection%3D135"
         }
         #prepositional phrases
     ],
@@ -62,7 +63,7 @@ QUERIES = {
             "query": "si[relation=AuxC] > :verb[relation=ADV], nisi[relation=AuxC] > :verb[relation=ADV]",
             "is_clause": True,
             "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences"
-        },
+        }
         #maybe adverbial uses of non adverbs
         #prepositional phrases
         #highlight complex tags when applicable (ellipsis)
@@ -107,6 +108,7 @@ def query_grammar(query_engine: QueryEngine, custom_queries: List[Dict] = [], us
                     "type": query["type"],
                     "isClause": query["is_clause"],
                     "firstWord": first_word,
+                    "grammar_ref": query.get("grammar_ref", "")
                 })
             syntax_id += 1
     

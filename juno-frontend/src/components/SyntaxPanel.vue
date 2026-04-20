@@ -48,7 +48,7 @@
 
 <script setup>
 
-import {ref, computed} from 'vue';
+import {ref} from 'vue';
 
 const activeIds=ref([]);
 
@@ -61,15 +61,6 @@ const props = defineProps({
   hoveredSyntaxId: {
     type: Number
   }
-});
-
-const getSyntaxLink = (phrase) => {
-  return phrase.grammar_ref;
-}
-
-const syntaxLink = computed((phrase) => {
-  return phrase.grammar_ref;
-//`https://www.perseus.tufts.edu/hopper/morph?l=${form}&la=la`
 });
 
 const emit = defineEmits(['syntax-hover', 'syntax-unhover', 'pin-toggle']);

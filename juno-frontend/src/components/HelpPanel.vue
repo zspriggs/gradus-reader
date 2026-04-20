@@ -17,18 +17,22 @@
     This will save a JSON file, which can later be uploaded with <strong>Import Annotations</strong> on any device. Imported annotations will merge with existing annotations.
     </pre>
 
-    <h3 class="title">Data Credit</h3>
-    <pre class="help-text">
-        This project uses data from the Ancient Greek and Latin Dependency Treebanks (AGLDT) and Greek Language Automated (GLAUx) corpora.
-    </pre>
-    
     <h3 class="title">About</h3>
     <pre class="help-text">
-        Juno is being created by Zoë Spriggs and Mitchell Shiffer, as part of a master's thesis project.
+    Juno is being created by Zoë Spriggs and Mitchell Shiffer, as part of a master's thesis project.
 
-        For more information on the project, including the code, visit our <a href="https://github.com/zspriggs/juno-reader">GitHub page.</a>
+    For more information on the project, including the code, visit our <a href="https://github.com/zspriggs/juno-reader">GitHub page.</a>
 
-        Feel free to send any questions, issues, or suggestions to zoe.spriggs@tufts.edu
+    Please send any questions, issues, or suggestions to zoe.spriggs2@gmail.com
+    </pre>
+
+    <h3 class="title">Data Credit</h3>
+    <pre class="help-text">
+    This project uses data from the <a href="https://perseusdl.github.io/treebank_data/" target="_blank">Ancient Greek and Latin Dependency Treebank</a> (AGLDT) and <a href="https://github.com/alekkeersmaekers/glaux" target="_blank">Greek Language Automated </a>(GLAUx) treebank.
+
+    Bamman, David, and Gregory Crane (2011) “The Ancient Greek and Latin Dependency Treebanks.” https://people.ischool.berkeley.edu/~dbamman/pubs/pdf/latech2011.pdf.
+
+    Keersmaekers, Alek (2021): The GLAUx corpus: methodological issues in designing a long-term, diverse, multi-layered corpus of Ancient Greek. Proceedings of the 2nd International Workshop on Computational Approaches to Historical Language Change 2021, 39–50. Online: Association for Computational Linguistics. doi:10.18653/v1/2021.lchange-1.6.
     </pre>
   </div>
 </template>

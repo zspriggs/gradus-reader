@@ -11,7 +11,7 @@
                 "isClause": true,
                 "firstWord": "Gitona",
                 "lastWord": "sequi",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     87,
                     88,
@@ -32,7 +32,7 @@
                 "isClause": true,
                 "firstWord": "errare",
                 "lastWord": "coepimus",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     102,
                     103
@@ -44,7 +44,7 @@
                 "isClause": true,
                 "firstWord": "hoc",
                 "lastWord": "dicebat",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     330,
                     331,
@@ -58,7 +58,7 @@
                 "isClause": true,
                 "firstWord": "destiti",
                 "lastWord": "persequi",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     510,
                     511,
@@ -72,7 +72,7 @@
                 "isClause": true,
                 "firstWord": "ratiocinari",
                 "lastWord": "didicisset",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     536,
                     537
@@ -84,7 +84,7 @@
                 "isClause": true,
                 "firstWord": "Interrogare",
                 "lastWord": "haberent",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     622,
                     624,
@@ -103,7 +103,7 @@
                 "isClause": true,
                 "firstWord": "conaremur",
                 "lastWord": "intrare",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     779,
                     780,
@@ -117,7 +117,7 @@
                 "isClause": true,
                 "firstWord": "rogare",
                 "lastWord": "eriperemus",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     829,
                     830,
@@ -134,7 +134,7 @@
                 "isClause": true,
                 "firstWord": "experiri",
                 "lastWord": "cantaret",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     1016,
                     1017,
@@ -151,7 +151,7 @@
                 "isClause": true,
                 "firstWord": "Permittetis",
                 "lastWord": "lusum",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     1279,
                     1281,
@@ -164,7 +164,7 @@
                 "isClause": true,
                 "firstWord": "esse",
                 "lastWord": "ova",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     1342,
                     1343,
@@ -179,7 +179,7 @@
                 "isClause": true,
                 "firstWord": "pavonis",
                 "lastWord": "supponi",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     1378,
                     1379,
@@ -194,7 +194,7 @@
                 "isClause": true,
                 "firstWord": "videbatur",
                 "lastWord": "coisse",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     1424,
                     1426,
@@ -209,7 +209,7 @@
                 "isClause": true,
                 "firstWord": "Hic",
                 "lastWord": "esse",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     1438,
                     1442,
@@ -222,7 +222,7 @@
                 "isClause": true,
                 "firstWord": "iterum",
                 "lastWord": "sumere",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     1473,
                     1474,
@@ -236,7 +236,7 @@
                 "isClause": true,
                 "firstWord": "argentum",
                 "lastWord": "everrere",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     1518,
                     1520,
@@ -253,7 +253,7 @@
                 "isClause": true,
                 "firstWord": "quales",
                 "lastWord": "esse",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     1536,
                     1537,
@@ -266,7 +266,7 @@
                 "isClause": true,
                 "firstWord": "iussi",
                 "lastWord": "assignari",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     1569,
                     1570,
@@ -281,7 +281,7 @@
                 "isClause": true,
                 "firstWord": "licet",
                 "lastWord": "bene",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     1729,
                     1730,
@@ -294,7 +294,7 @@
                 "isClause": true,
                 "firstWord": "putares",
                 "lastWord": "pugnare",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     1987,
                     1988,
@@ -309,7 +309,7 @@
                 "isClause": true,
                 "firstWord": "suspicatus",
                 "lastWord": "pertinere",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     2007,
                     2008,
@@ -327,7 +327,7 @@
                 "isClause": true,
                 "firstWord": "erubui",
                 "lastWord": "interrogare",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     2017,
                     2018,
@@ -348,7 +348,7 @@
                 "isClause": true,
                 "firstWord": "potui",
                 "lastWord": "gustare",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     2067,
                     2068,
@@ -362,7 +362,7 @@
                 "isClause": true,
                 "firstWord": "noluisses",
                 "lastWord": "accipere",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     2128,
                     2129,
@@ -378,7 +378,7 @@
                 "isClause": true,
                 "firstWord": "mero",
                 "lastWord": "esse",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     2153,
                     2154,
@@ -393,7 +393,7 @@
                 "isClause": true,
                 "firstWord": "apes",
                 "lastWord": "afferri",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     2245,
                     2246,
@@ -408,7 +408,7 @@
                 "isClause": true,
                 "firstWord": "solebat",
                 "lastWord": "portare",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     2337,
                     2338,
@@ -423,7 +423,7 @@
                 "isClause": true,
                 "firstWord": "puto",
                 "lastWord": "habere",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     2431,
                     2432,
@@ -438,7 +438,7 @@
                 "isClause": true,
                 "firstWord": "Solebat",
                 "lastWord": "[0]",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     2494,
                     2495,
@@ -455,7 +455,7 @@
                 "isClause": true,
                 "firstWord": "ilium",
                 "lastWord": "existimarent",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     2542,
                     2543,
@@ -468,7 +468,7 @@
                 "isClause": true,
                 "firstWord": "vino",
                 "lastWord": "dare",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     2578,
                     2580,
@@ -485,7 +485,7 @@
                 "isClause": true,
                 "firstWord": "me",
                 "lastWord": "videratis",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     2608,
                     2609,
@@ -507,7 +507,7 @@
                 "isClause": true,
                 "firstWord": "me",
                 "lastWord": "esse",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     2644,
                     2645,
@@ -523,7 +523,7 @@
                 "isClause": true,
                 "firstWord": "mihi",
                 "lastWord": "afferri",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     2652,
                     2655,
@@ -536,7 +536,7 @@
                 "isClause": true,
                 "firstWord": "circa",
                 "lastWord": "coeperunt",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     2915,
                     2916,
@@ -550,7 +550,7 @@
                 "isClause": true,
                 "firstWord": "suum",
                 "lastWord": "referri",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     3033,
                     3034,
@@ -564,7 +564,7 @@
                 "isClause": true,
                 "firstWord": "duravi",
                 "lastWord": "torqueret",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     3098,
                     3099,
@@ -583,7 +583,7 @@
                 "isClause": true,
                 "firstWord": "hoc",
                 "lastWord": "potest",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     3115,
                     3118,
@@ -596,7 +596,7 @@
                 "isClause": true,
                 "firstWord": "viderer",
                 "lastWord": "cenasse",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     3166,
                     3167,
@@ -611,7 +611,7 @@
                 "isClause": true,
                 "firstWord": "negabitis",
                 "lastWord": "patrem",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     3235,
                     3236,
@@ -626,7 +626,7 @@
                 "isClause": true,
                 "firstWord": "coepimus",
                 "lastWord": "sermones",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     3267,
                     3268,
@@ -640,7 +640,7 @@
                 "isClause": true,
                 "firstWord": "lavare",
                 "lastWord": "potui",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     3380,
                     3381
@@ -652,7 +652,7 @@
                 "isClause": true,
                 "firstWord": "Videor",
                 "lastWord": "loqui",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     3404,
                     3406,
@@ -666,7 +666,7 @@
                 "isClause": true,
                 "firstWord": "paratus",
                 "lastWord": "tollere",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     3578,
                     3580,
@@ -682,7 +682,7 @@
                 "isClause": true,
                 "firstWord": "Puto",
                 "lastWord": "centum",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     3596,
                     3598,
@@ -697,7 +697,7 @@
                 "isClause": true,
                 "firstWord": "quot",
                 "lastWord": "tulisse",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     3775,
                     3776,
@@ -713,7 +713,7 @@
                 "isClause": true,
                 "firstWord": "illum",
                 "lastWord": "reliquisse",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     3811,
                     3812,
@@ -729,7 +729,7 @@
                 "isClause": true,
                 "firstWord": "buccam",
                 "lastWord": "potui",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     3868,
                     3869,
@@ -743,7 +743,7 @@
                 "isClause": true,
                 "firstWord": "cum",
                 "lastWord": "micare",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     3988,
                     3989,
@@ -759,7 +759,7 @@
                 "isClause": true,
                 "firstWord": "puto",
                 "lastWord": "habuisse",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     4036,
                     4037,
@@ -775,7 +775,7 @@
                 "isClause": true,
                 "firstWord": "Asse",
                 "lastWord": "devorare",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     4065,
                     4066,
@@ -793,7 +793,7 @@
                 "isClause": true,
                 "firstWord": "puto",
                 "lastWord": "fieri",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     4198,
                     4199,
@@ -809,7 +809,7 @@
                 "isClause": true,
                 "firstWord": "melior",
                 "lastWord": "potest",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     4323,
                     4324,
@@ -822,7 +822,7 @@
                 "isClause": true,
                 "firstWord": "debemus",
                 "lastWord": "esse",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     4343,
                     4344,
@@ -835,7 +835,7 @@
                 "isClause": true,
                 "firstWord": "dices",
                 "lastWord": "ambulare",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     4357,
                     4358,
@@ -850,7 +850,7 @@
                 "isClause": true,
                 "firstWord": "coactus",
                 "lastWord": "facere",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     4506,
                     4508
@@ -862,7 +862,7 @@
                 "isClause": true,
                 "firstWord": "milvo",
                 "lastWord": "resecare",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     4540,
                     4541,
@@ -877,7 +877,7 @@
                 "isClause": true,
                 "firstWord": "Videris",
                 "lastWord": "dicere",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     4728,
                     4733
@@ -889,7 +889,7 @@
                 "isClause": true,
                 "firstWord": "potes",
                 "lastWord": "loquere",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     4746,
                     4747
@@ -901,7 +901,7 @@
                 "isClause": true,
                 "firstWord": "Scimus",
                 "lastWord": "esse",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     4763,
                     4764,
@@ -917,7 +917,7 @@
                 "isClause": true,
                 "firstWord": "Latinas",
                 "lastWord": "appetere",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     4887,
                     4888,
@@ -932,7 +932,7 @@
                 "isClause": true,
                 "firstWord": "vult",
                 "lastWord": "laborare",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     4914,
                     4915
@@ -944,7 +944,7 @@
                 "isClause": true,
                 "firstWord": "solet",
                 "lastWord": "venire",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     4936,
                     4937,
@@ -957,7 +957,7 @@
                 "isClause": true,
                 "firstWord": "volo",
                 "lastWord": "gustare",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     4956,
                     4957,
@@ -975,7 +975,7 @@
                 "isClause": true,
                 "firstWord": "destinavi",
                 "lastWord": "Orcus",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     4980,
                     4981,
@@ -1005,7 +1005,7 @@
                 "isClause": true,
                 "firstWord": "quod",
                 "lastWord": "possit",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     4993,
                     4994,
@@ -1019,7 +1019,7 @@
                 "isClause": true,
                 "firstWord": "voluerit",
                 "lastWord": "facere",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     5128,
                     5129,
@@ -1036,7 +1036,7 @@
                 "isClause": true,
                 "firstWord": "nullum",
                 "lastWord": "continere",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     5149,
                     5150,
@@ -1054,7 +1054,7 @@
                 "isClause": true,
                 "firstWord": "Hoc",
                 "lastWord": "potest",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     5158,
                     5159,
@@ -1068,7 +1068,7 @@
                 "isClause": true,
                 "firstWord": "soles",
                 "lastWord": "facere",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     5170,
                     5171,
@@ -1083,7 +1083,7 @@
                 "isClause": true,
                 "firstWord": "ullum",
                 "lastWord": "iuvet",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     5181,
                     5182,
@@ -1099,7 +1099,7 @@
                 "isClause": true,
                 "firstWord": "vetant",
                 "lastWord": "continere",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     5190,
                     5191
@@ -1111,7 +1111,7 @@
                 "isClause": true,
                 "firstWord": "Multos",
                 "lastWord": "dicere",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     5225,
                     5226,
@@ -1131,7 +1131,7 @@
                 "isClause": true,
                 "firstWord": "nolunt",
                 "lastWord": "dicere",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     5231,
                     5232,
@@ -1145,7 +1145,7 @@
                 "isClause": true,
                 "firstWord": "sciebamus",
                 "lastWord": "laborare",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     5254,
                     5255,
@@ -1166,7 +1166,7 @@
                 "isClause": true,
                 "firstWord": "Quem",
                 "lastWord": "fieri",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     5321,
                     5325,
@@ -1184,7 +1184,7 @@
                 "isClause": true,
                 "firstWord": "vitulos",
                 "lastWord": "facere",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     5348,
                     5349,
@@ -1199,7 +1199,7 @@
                 "isClause": true,
                 "firstWord": "cocum",
                 "lastWord": "iussit",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     5357,
                     5358,
@@ -1212,7 +1212,7 @@
                 "isClause": true,
                 "firstWord": "maximum",
                 "lastWord": "occidi",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     5366,
                     5367,
@@ -1226,7 +1226,7 @@
                 "isClause": true,
                 "firstWord": "te",
                 "lastWord": "conici",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     5426,
                     5427,
@@ -1242,7 +1242,7 @@
                 "isClause": true,
                 "firstWord": "coniungere",
                 "lastWord": "volo",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     5500,
                     5501,
@@ -1256,7 +1256,7 @@
                 "isClause": true,
                 "firstWord": "Solebam",
                 "lastWord": "legere",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     5660,
                     5661,
@@ -1271,7 +1271,7 @@
                 "isClause": true,
                 "firstWord": "Sibyllam",
                 "lastWord": "pendere",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     5669,
                     5676,
@@ -1286,7 +1286,7 @@
                 "isClause": true,
                 "firstWord": "tam",
                 "lastWord": "potuisse",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     5713,
                     5714,
@@ -1300,7 +1300,7 @@
                 "isClause": true,
                 "firstWord": "iurare",
                 "lastWord": "fuerat",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     5707,
                     5708,
@@ -1338,7 +1338,7 @@
                 "isClause": true,
                 "firstWord": "longe",
                 "lastWord": "fuerat",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     5723,
                     5724,
@@ -1358,7 +1358,7 @@
                 "isClause": true,
                 "firstWord": "oblitum",
                 "lastWord": "exinterare",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     5778,
                     5780
@@ -1370,7 +1370,7 @@
                 "isClause": true,
                 "firstWord": "Putes",
                 "lastWord": "coniecisse",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     5791,
                     5792,
@@ -1387,7 +1387,7 @@
                 "isClause": true,
                 "firstWord": "Solet",
                 "lastWord": "fieri",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     5823,
                     5824
@@ -1399,7 +1399,7 @@
                 "isClause": true,
                 "firstWord": "potui",
                 "lastWord": "tenere",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     5847,
                     5848,
@@ -1412,7 +1412,7 @@
                 "isClause": true,
                 "firstWord": "debet",
                 "lastWord": "nequissimus",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     5862,
                     5864,
@@ -1425,7 +1425,7 @@
                 "isClause": true,
                 "firstWord": "oblivisceretur",
                 "lastWord": "exinterare",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     5868,
                     5869,
@@ -1438,7 +1438,7 @@
                 "isClause": true,
                 "firstWord": "diceret",
                 "lastWord": "afferri",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     5991,
                     5992,
@@ -1453,7 +1453,7 @@
                 "isClause": true,
                 "firstWord": "fecit",
                 "lastWord": "Caesarem",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     6155,
                     6156,
@@ -1466,7 +1466,7 @@
                 "isClause": true,
                 "firstWord": "putabat",
                 "lastWord": "tenere",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     6197,
                     6198,
@@ -1481,7 +1481,7 @@
                 "isClause": true,
                 "firstWord": "vivere",
                 "lastWord": "putes",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     6268,
                     6269
@@ -1493,7 +1493,7 @@
                 "isClause": true,
                 "firstWord": "meum",
                 "lastWord": "vendo",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     6301,
                     6303,
@@ -1506,7 +1506,7 @@
                 "isClause": true,
                 "firstWord": "dixerit",
                 "lastWord": "ineptias",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     6479,
                     6480,
@@ -1524,7 +1524,7 @@
                 "isClause": true,
                 "firstWord": "collocari",
                 "lastWord": "potuit",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     6580,
                     6582
@@ -1536,7 +1536,7 @@
                 "isClause": true,
                 "firstWord": "Quicunque",
                 "lastWord": "vetuo",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     6637,
                     6641,
@@ -1556,7 +1556,7 @@
                 "isClause": true,
                 "firstWord": "dicebat",
                 "lastWord": "esse",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     6736,
                     6738,
@@ -1570,7 +1570,7 @@
                 "isClause": true,
                 "firstWord": "malui",
                 "lastWord": "facere",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     6776,
                     6777,
@@ -1584,7 +1584,7 @@
                 "isClause": true,
                 "firstWord": "choraulen",
                 "lastWord": "cantare",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     6782,
                     6783,
@@ -1599,7 +1599,7 @@
                 "isClause": true,
                 "firstWord": "alienum",
                 "lastWord": "plorare",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     6829,
                     6831
@@ -1611,7 +1611,7 @@
                 "isClause": true,
                 "firstWord": "oblitus",
                 "lastWord": "exinterare",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     6903,
                     6905,
@@ -1624,7 +1624,7 @@
                 "isClause": true,
                 "firstWord": "totum",
                 "lastWord": "exiret",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     6909,
                     6910,
@@ -1645,7 +1645,7 @@
                 "isClause": true,
                 "firstWord": "verberari",
                 "lastWord": "coepit",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     6924,
                     6925
@@ -1657,7 +1657,7 @@
                 "isClause": true,
                 "firstWord": "puerum",
                 "lastWord": "esse",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     6953,
                     6954,
@@ -1671,7 +1671,7 @@
                 "isClause": true,
                 "firstWord": "posset",
                 "lastWord": "vulneratum",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     6960,
                     6961,
@@ -1690,7 +1690,7 @@
                 "isClause": true,
                 "firstWord": "coepit",
                 "lastWord": "esse",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     7039,
                     7041
@@ -1702,7 +1702,7 @@
                 "isClause": true,
                 "firstWord": "quid",
                 "lastWord": "interesse",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     7061,
                     7062,
@@ -1719,7 +1719,7 @@
                 "isClause": true,
                 "firstWord": "his",
                 "lastWord": "potest",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     7080,
                     7081,
@@ -1733,7 +1733,7 @@
                 "isClause": true,
                 "firstWord": "Quod",
                 "lastWord": "artificium",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     7197,
                     7202,
@@ -1748,7 +1748,7 @@
                 "isClause": true,
                 "firstWord": "mihi",
                 "lastWord": "parari",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     7237,
                     7238,
@@ -1762,7 +1762,7 @@
                 "isClause": true,
                 "firstWord": "dicuntur",
                 "lastWord": "afferre",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     7299,
                     7300,
@@ -1777,7 +1777,7 @@
                 "isClause": true,
                 "firstWord": "in",
                 "lastWord": "coeperunt",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     7330,
                     7331,
@@ -1791,7 +1791,7 @@
                 "isClause": true,
                 "firstWord": "convivare",
                 "lastWord": "soles",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     7510,
                     7511,
@@ -1804,7 +1804,7 @@
                 "isClause": true,
                 "firstWord": "soleo",
                 "lastWord": "fervere",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     7566,
                     7567,
@@ -1817,7 +1817,7 @@
                 "isClause": true,
                 "firstWord": "malui",
                 "lastWord": "esse",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     7610,
                     7611,
@@ -1831,7 +1831,7 @@
                 "isClause": true,
                 "firstWord": "spero",
                 "lastWord": "sim",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     7619,
                     7620,
@@ -1850,7 +1850,7 @@
                 "isClause": true,
                 "firstWord": "scies",
                 "lastWord": "perdidisse",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     8155,
                     8156,
@@ -1865,7 +1865,7 @@
                 "isClause": true,
                 "firstWord": "meliorem",
                 "lastWord": "putat",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     8217,
                     8218,
@@ -1884,7 +1884,7 @@
                 "isClause": true,
                 "firstWord": "me",
                 "lastWord": "involasti",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     8229,
                     8230,
@@ -1904,7 +1904,7 @@
                 "isClause": true,
                 "firstWord": "scies",
                 "lastWord": "habere",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     8251,
                     8252,
@@ -1919,7 +1919,7 @@
                 "isClause": true,
                 "firstWord": "Coeperat",
                 "lastWord": "convicio",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     8350,
                     8352,
@@ -1932,7 +1932,7 @@
                 "isClause": true,
                 "firstWord": "sonare",
                 "lastWord": "coeperunt",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     8589,
                     8590
@@ -1944,7 +1944,7 @@
                 "isClause": true,
                 "firstWord": "haec",
                 "lastWord": "sumere",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     8652,
                     8653,
@@ -1958,7 +1958,7 @@
                 "isClause": true,
                 "firstWord": "coeperunt",
                 "lastWord": "crocum",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     8716,
                     8717,
@@ -1971,7 +1971,7 @@
                 "isClause": true,
                 "firstWord": "Rati",
                 "lastWord": "perfusum",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     8728,
                     8730,
@@ -1989,7 +1989,7 @@
                 "isClause": true,
                 "firstWord": "nullo",
                 "lastWord": "sinum",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     8769,
                     8770,
@@ -2008,7 +2008,7 @@
                 "isClause": true,
                 "firstWord": "veram",
                 "lastWord": "praeterire",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     8822,
                     8823,
@@ -2024,7 +2024,7 @@
                 "isClause": true,
                 "firstWord": "solebas",
                 "lastWord": "convictu",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     8852,
                     8856,
@@ -2039,7 +2039,7 @@
                 "isClause": true,
                 "firstWord": "amare",
                 "lastWord": "coponis",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     8975,
                     8976,
@@ -2054,7 +2054,7 @@
                 "isClause": true,
                 "firstWord": "coepit",
                 "lastWord": "facere",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     9115,
                     9116,
@@ -2068,7 +2068,7 @@
                 "isClause": true,
                 "firstWord": "mirari",
                 "lastWord": ",",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     9235,
                     9236,
@@ -2086,7 +2086,7 @@
                 "isClause": true,
                 "firstWord": "operire",
                 "lastWord": "potui",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     9293,
                     9294,
@@ -2100,7 +2100,7 @@
                 "isClause": true,
                 "firstWord": "Intellexi",
                 "lastWord": "esse",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     9348,
                     9349,
@@ -2114,7 +2114,7 @@
                 "isClause": true,
                 "firstWord": "cum",
                 "lastWord": "potui",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     9356,
                     9357,
@@ -2129,7 +2129,7 @@
                 "isClause": true,
                 "firstWord": "scio",
                 "lastWord": "narrare",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     9408,
                     9409,
@@ -2144,7 +2144,7 @@
                 "isClause": true,
                 "firstWord": "stridere",
                 "lastWord": "coeperunt",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     9474,
                     9475
@@ -2156,7 +2156,7 @@
                 "isClause": true,
                 "firstWord": "putares",
                 "lastWord": "persequi",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     9477,
                     9478,
@@ -2170,7 +2170,7 @@
                 "isClause": true,
                 "firstWord": "poterat",
                 "lastWord": "tollere",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     9496,
                     9497,
@@ -2184,7 +2184,7 @@
                 "isClause": true,
                 "firstWord": "videbantur",
                 "lastWord": "ardere",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     9675,
                     9676
@@ -2196,7 +2196,7 @@
                 "isClause": true,
                 "firstWord": ",",
                 "lastWord": "affirmabat",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     9773,
                     9774,
@@ -2211,7 +2211,7 @@
                 "isClause": true,
                 "firstWord": "Scylacem",
                 "lastWord": "familiae",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     9832,
                     9833,
@@ -2228,7 +2228,7 @@
                 "isClause": true,
                 "firstWord": "iussit",
                 "lastWord": "ascendere",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     9958,
                     9961
@@ -2240,7 +2240,7 @@
                 "isClause": true,
                 "firstWord": "camellam",
                 "lastWord": "misceri",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     9997,
                     9998,
@@ -2254,7 +2254,7 @@
                 "isClause": true,
                 "firstWord": "noluerit",
                 "lastWord": "accipere",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     10021,
                     10022
@@ -2266,7 +2266,7 @@
                 "isClause": true,
                 "firstWord": "quae",
                 "lastWord": "gallinas",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     10069,
                     10078,
@@ -2281,7 +2281,7 @@
                 "isClause": true,
                 "firstWord": "praetorem",
                 "lastWord": "venisse",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     10103,
                     10104,
@@ -2294,7 +2294,7 @@
                 "isClause": true,
                 "firstWord": "videtur",
                 "lastWord": "facere",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     10139,
                     10140,
@@ -2308,7 +2308,7 @@
                 "isClause": true,
                 "firstWord": "coacti",
                 "lastWord": "effundere",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     10261,
                     10263,
@@ -2325,7 +2325,7 @@
                 "isClause": true,
                 "firstWord": "debet",
                 "lastWord": "comesse",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     10448,
                     10449,
@@ -2338,7 +2338,7 @@
                 "isClause": true,
                 "firstWord": "coeperat",
                 "lastWord": "surgere",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     10558,
                     10559
@@ -2350,7 +2350,7 @@
                 "isClause": true,
                 "firstWord": "est",
                 "lastWord": "videre",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     10619,
                     10620,
@@ -2363,7 +2363,7 @@
                 "isClause": true,
                 "firstWord": "quem",
                 "lastWord": "dicebat",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     10652,
                     10653,
@@ -2378,7 +2378,7 @@
                 "isClause": true,
                 "firstWord": "iussit",
                 "lastWord": "omnia",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     10661,
                     10663,
@@ -2391,7 +2391,7 @@
                 "isClause": true,
                 "firstWord": "Sex",
                 "lastWord": "habere",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     10679,
                     10680,
@@ -2407,7 +2407,7 @@
                 "isClause": true,
                 "firstWord": "mentiri",
                 "lastWord": "videretur",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     10704,
                     10705
@@ -2419,7 +2419,7 @@
                 "isClause": true,
                 "firstWord": "secundas",
                 "lastWord": "afferri",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     10865,
                     10866,
@@ -2433,7 +2433,7 @@
                 "isClause": true,
                 "firstWord": "poteram",
                 "lastWord": "contentus",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     10902,
                     10907,
@@ -2448,7 +2448,7 @@
                 "isClause": true,
                 "firstWord": "luscinias",
                 "lastWord": "imitari",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     10934,
                     10935,
@@ -2461,7 +2461,7 @@
                 "isClause": true,
                 "firstWord": ",",
                 "lastWord": "imitari",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     11035,
                     11036,
@@ -2478,7 +2478,7 @@
                 "isClause": true,
                 "firstWord": "noli",
                 "lastWord": "esse",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     11165,
                     11166,
@@ -2491,7 +2491,7 @@
                 "isClause": true,
                 "firstWord": "solebam",
                 "lastWord": "debattuere",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     11184,
                     11185,
@@ -2505,7 +2505,7 @@
                 "isClause": true,
                 "firstWord": "fame",
                 "lastWord": "mallemus",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     11327,
                     11328,
@@ -2518,7 +2518,7 @@
                 "isClause": true,
                 "firstWord": "Vidi",
                 "lastWord": "fieri",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     11399,
                     11402,
@@ -2533,7 +2533,7 @@
                 "isClause": true,
                 "firstWord": "potest",
                 "lastWord": "homo",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     11433,
                     11434,
@@ -2547,7 +2547,7 @@
                 "isClause": true,
                 "firstWord": "Quos",
                 "lastWord": "afferri",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     11489,
                     11491,
@@ -2560,7 +2560,7 @@
                 "isClause": true,
                 "firstWord": "coeperat",
                 "lastWord": "saltare",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     11630,
                     11632,
@@ -2573,7 +2573,7 @@
                 "isClause": true,
                 "firstWord": "velle",
                 "lastWord": "saltare",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     11632,
                     11633
@@ -2585,7 +2585,7 @@
                 "isClause": true,
                 "firstWord": "Nec",
                 "lastWord": "recumbere",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     11702,
                     11704,
@@ -2598,7 +2598,7 @@
                 "isClause": true,
                 "firstWord": "Gratias",
                 "lastWord": "domini",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     11821,
                     11822,
@@ -2613,7 +2613,7 @@
                 "isClause": true,
                 "firstWord": "exemplar",
                 "lastWord": "afferri",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     11832,
                     11833,
@@ -2627,7 +2627,7 @@
                 "isClause": true,
                 "firstWord": "adici",
                 "lastWord": "volo",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     11947,
                     11948
@@ -2639,7 +2639,7 @@
                 "isClause": true,
                 "firstWord": "posset",
                 "lastWord": "esse",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     12130,
                     12131,
@@ -2655,7 +2655,7 @@
                 "isClause": true,
                 "firstWord": "flere",
                 "lastWord": "ubertim",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     12171,
                     12172,
@@ -2668,7 +2668,7 @@
                 "isClause": true,
                 "firstWord": "coeperam",
                 "lastWord": "plorare",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     12198,
                     12201
@@ -2680,7 +2680,7 @@
                 "isClause": true,
                 "firstWord": ",",
                 "lastWord": "malo",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     12244,
                     12246,
@@ -2699,7 +2699,7 @@
                 "isClause": true,
                 "firstWord": "Trimalchionem",
                 "lastWord": "coepit",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     12265,
                     12266,
@@ -2713,7 +2713,7 @@
                 "isClause": true,
                 "firstWord": "exire",
                 "lastWord": "venisti",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     12432,
                     12433,
@@ -2729,7 +2729,7 @@
                 "isClause": true,
                 "firstWord": "'",
                 "lastWord": "venisti",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     12424,
                     12431,
@@ -2747,7 +2747,7 @@
                 "isClause": true,
                 "firstWord": "quibus",
                 "lastWord": "esse",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     12465,
                     12468,
@@ -2761,7 +2761,7 @@
                 "isClause": true,
                 "firstWord": "quae",
                 "lastWord": "coepit",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     12486,
                     12488,
@@ -2776,7 +2776,7 @@
                 "isClause": true,
                 "firstWord": "coepit",
                 "lastWord": "intellegebant",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     12533,
                     12534,
@@ -2799,7 +2799,7 @@
                 "isClause": true,
                 "firstWord": "quem",
                 "lastWord": "iussit",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     12748,
                     12750,
@@ -2812,7 +2812,7 @@
                 "isClause": true,
                 "firstWord": "osculari",
                 "lastWord": "coepit",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     12866,
                     12867,
@@ -2825,7 +2825,7 @@
                 "isClause": true,
                 "firstWord": "sestertium",
                 "lastWord": "potui",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     13019,
                     13020,
@@ -2839,7 +2839,7 @@
                 "isClause": true,
                 "firstWord": "Scis",
                 "lastWord": "mentiri",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     13024,
                     13026,
@@ -2853,7 +2853,7 @@
                 "isClause": true,
                 "firstWord": "patiaris",
                 "lastWord": "interire",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     13045,
                     13046,
@@ -2867,7 +2867,7 @@
                 "isClause": true,
                 "firstWord": "nolo",
                 "lastWord": "levis",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     13057,
                     13058,
@@ -2880,7 +2880,7 @@
                 "isClause": true,
                 "firstWord": "sciat",
                 "lastWord": "dare",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     13105,
                     13106,
@@ -2895,7 +2895,7 @@
                 "isClause": true,
                 "firstWord": "posse",
                 "lastWord": "dare",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     13107,
                     13108,
@@ -2908,7 +2908,7 @@
                 "isClause": true,
                 "firstWord": "rogare",
                 "lastWord": "irasci",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     13122,
                     13123,
@@ -2925,7 +2925,7 @@
                 "isClause": true,
                 "firstWord": "desineret",
                 "lastWord": "irasci",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     13127,
                     13128
@@ -2937,7 +2937,7 @@
                 "isClause": true,
                 "firstWord": "per",
                 "lastWord": "frangeret",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     13152,
                     13153,
@@ -2958,7 +2958,7 @@
                 "isClause": true,
                 "firstWord": "coeperam",
                 "lastWord": "dicere",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     13353,
                     13354
@@ -2970,7 +2970,7 @@
                 "isClause": true,
                 "firstWord": "me",
                 "lastWord": "metiri",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     13379,
                     13380,
@@ -2985,7 +2985,7 @@
                 "isClause": true,
                 "firstWord": "Concupivi",
                 "lastWord": "negotiari",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     13482,
                     13483
@@ -2997,7 +2997,7 @@
                 "isClause": true,
                 "firstWord": "Putares",
                 "lastWord": "iussisse",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     13503,
                     13504,
@@ -3011,7 +3011,7 @@
                 "isClause": true,
                 "firstWord": "Putatis",
                 "lastWord": "defecisse",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     13524,
                     13525,
@@ -3024,7 +3024,7 @@
                 "isClause": true,
                 "firstWord": "coepi",
                 "lastWord": ",",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     13643,
                     13644,
@@ -3044,7 +3044,7 @@
                 "isClause": true,
                 "firstWord": "coepi",
                 "lastWord": "faenerare",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     13662,
                     13663,
@@ -3057,7 +3057,7 @@
                 "isClause": true,
                 "firstWord": "nolentem",
                 "lastWord": "exhortavit",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     13668,
                     13669,
@@ -3073,7 +3073,7 @@
                 "isClause": true,
                 "firstWord": "Putasses",
                 "lastWord": "habitasse",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     13723,
                     13724,
@@ -3088,7 +3088,7 @@
                 "isClause": true,
                 "firstWord": "nusquam",
                 "lastWord": "hospitari",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     13875,
                     13876,
@@ -3101,7 +3101,7 @@
                 "isClause": true,
                 "firstWord": "in",
                 "lastWord": "efferri",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     13928,
                     13929,
@@ -3116,7 +3116,7 @@
                 "isClause": true,
                 "firstWord": "ex",
                 "lastWord": "mea",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     13943,
                     13944,
@@ -3132,7 +3132,7 @@
                 "isClause": true,
                 "firstWord": "iussit",
                 "lastWord": "confecta",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     13966,
                     13968,
@@ -3151,7 +3151,7 @@
                 "isClause": true,
                 "firstWord": "volo",
                 "lastWord": "imprecetur",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     14001,
                     14002,
@@ -3170,7 +3170,7 @@
                 "isClause": true,
                 "firstWord": "vinum",
                 "lastWord": "infundi",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     14039,
                     14043,
@@ -3183,7 +3183,7 @@
                 "isClause": true,
                 "firstWord": "novum",
                 "lastWord": "adduci",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     14070,
                     14071,
@@ -3202,7 +3202,7 @@
                 "isClause": true,
                 "firstWord": "rati",
                 "lastWord": "domum",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     14138,
                     14139,
@@ -3216,7 +3216,7 @@
                 "isClause": true,
                 "firstWord": "cum",
                 "lastWord": "coeperunt",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive",
                 "uids": [
                     14147,
                     14148,
@@ -3234,7 +3234,7 @@
                 "isClause": true,
                 "firstWord": "eam",
                 "lastWord": "contigerat",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     161,
                     163,
@@ -3248,7 +3248,7 @@
                 "isClause": true,
                 "firstWord": "eas",
                 "lastWord": "vibrabant",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     202,
                     203,
@@ -3265,7 +3265,7 @@
                 "isClause": true,
                 "firstWord": "eas",
                 "lastWord": "decidebant",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     211,
                     212,
@@ -3280,7 +3280,7 @@
                 "isClause": true,
                 "firstWord": "unus",
                 "lastWord": ",",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     785,
                     788,
@@ -3299,7 +3299,7 @@
                 "isClause": true,
                 "firstWord": "vestimenta",
                 "lastWord": "sestertiorum",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     851,
                     855,
@@ -3316,7 +3316,7 @@
                 "isClause": true,
                 "firstWord": "Vestimenta",
                 "lastWord": ",",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     900,
                     904,
@@ -3336,7 +3336,7 @@
                 "isClause": true,
                 "firstWord": "pisces",
                 "lastWord": "natabant",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     1943,
                     1944,
@@ -3353,7 +3353,7 @@
                 "isClause": true,
                 "firstWord": "eum",
                 "lastWord": ",",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     2018,
                     2019,
@@ -3370,7 +3370,7 @@
                 "isClause": true,
                 "firstWord": "ille",
                 "lastWord": ",",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     2030,
                     2031,
@@ -3388,7 +3388,7 @@
                 "isClause": true,
                 "firstWord": "illum",
                 "lastWord": "carpit",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     2040,
                     2044,
@@ -3402,7 +3402,7 @@
                 "isClause": true,
                 "firstWord": "mulier",
                 "lastWord": "discurreret",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     2091,
                     2093,
@@ -3419,7 +3419,7 @@
                 "isClause": true,
                 "firstWord": "Fortunata",
                 "lastWord": "metitur",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     2107,
                     2109,
@@ -3435,7 +3435,7 @@
                 "isClause": true,
                 "firstWord": "mulam",
                 "lastWord": "sit",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     2277,
                     2281,
@@ -3453,7 +3453,7 @@
                 "isClause": true,
                 "firstWord": "illum",
                 "lastWord": "recumbit",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     2319,
                     2320,
@@ -3469,7 +3469,7 @@
                 "isClause": true,
                 "firstWord": "cena",
                 "lastWord": "videratis",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     2611,
                     2614,
@@ -3486,7 +3486,7 @@
                 "isClause": true,
                 "firstWord": "Patrono",
                 "lastWord": "esse",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     2637,
                     2642,
@@ -3505,7 +3505,7 @@
                 "isClause": true,
                 "firstWord": "qui",
                 "lastWord": "pascunt",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     2739,
                     2740,
@@ -3519,7 +3519,7 @@
                 "isClause": true,
                 "firstWord": "Carpus",
                 "lastWord": ",",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     2984,
                     2986,
@@ -3535,7 +3535,7 @@
                 "isClause": true,
                 "firstWord": "ego",
                 "lastWord": ",",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     3074,
                     3075,
@@ -3552,7 +3552,7 @@
                 "isClause": true,
                 "firstWord": "Quid",
                 "lastWord": "queratur",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     3569,
                     3571,
@@ -3565,7 +3565,7 @@
                 "isClause": true,
                 "firstWord": "ego",
                 "lastWord": "comedi",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     3612,
                     3615,
@@ -3581,7 +3581,7 @@
                 "isClause": true,
                 "firstWord": "servos",
                 "lastWord": "dederunt",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     3714,
                     3715,
@@ -3597,7 +3597,7 @@
                 "isClause": true,
                 "firstWord": "aedilem",
                 "lastWord": "nostram",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     4100,
                     4103,
@@ -3616,7 +3616,7 @@
                 "isClause": true,
                 "firstWord": "mulierem",
                 "lastWord": "delectaretur",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     4461,
                     4462,
@@ -3638,7 +3638,7 @@
                 "isClause": true,
                 "firstWord": "servus",
                 "lastWord": "facere",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     4502,
                     4504,
@@ -3654,7 +3654,7 @@
                 "isClause": true,
                 "firstWord": "subolfacio",
                 "lastWord": "Mammaea",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     4577,
                     4579,
@@ -3671,7 +3671,7 @@
                 "isClause": true,
                 "firstWord": "mortuus",
                 "lastWord": "praecisa",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     4653,
                     4656,
@@ -3687,7 +3687,7 @@
                 "isClause": true,
                 "firstWord": "Thraex",
                 "lastWord": "pugnavit",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     4669,
                     4670,
@@ -3705,7 +3705,7 @@
                 "isClause": true,
                 "firstWord": "tu",
                 "lastWord": ",",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     4743,
                     4744,
@@ -3721,7 +3721,7 @@
                 "isClause": true,
                 "firstWord": "alter",
                 "lastWord": "scit",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     4919,
                     4926,
@@ -3738,7 +3738,7 @@
                 "isClause": true,
                 "firstWord": "Fortunata",
                 "lastWord": "facere",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     5167,
                     5169,
@@ -3755,7 +3755,7 @@
                 "isClause": true,
                 "firstWord": ",",
                 "lastWord": "clivo",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     5259,
                     5260,
@@ -3770,7 +3770,7 @@
                 "isClause": true,
                 "firstWord": "eo",
                 "lastWord": "novi",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     5484,
                     5485,
@@ -3787,7 +3787,7 @@
                 "isClause": true,
                 "firstWord": "'",
                 "lastWord": "habeam",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     5976,
                     5979,
@@ -3802,7 +3802,7 @@
                 "isClause": true,
                 "firstWord": "faber",
                 "lastWord": "frangebatur",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     6136,
                     6137,
@@ -3821,7 +3821,7 @@
                 "isClause": true,
                 "firstWord": "phialam",
                 "lastWord": "frangebatur",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     6139,
                     6141,
@@ -3836,7 +3836,7 @@
                 "isClause": true,
                 "firstWord": "capides",
                 "lastWord": "Mummius",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     6272,
                     6274,
@@ -3853,7 +3853,7 @@
                 "isClause": true,
                 "firstWord": "Agamemnon",
                 "lastWord": "cenam",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     6401,
                     6402,
@@ -3873,7 +3873,7 @@
                 "isClause": true,
                 "firstWord": "actuarius",
                 "lastWord": "recitavit",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     6510,
                     6511,
@@ -3890,7 +3890,7 @@
                 "isClause": true,
                 "firstWord": "praedio",
                 "lastWord": ",",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     6525,
                     6527,
@@ -3906,7 +3906,7 @@
                 "isClause": true,
                 "firstWord": ",",
                 "lastWord": "centies",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     6578,
                     6579,
@@ -3923,7 +3923,7 @@
                 "isClause": true,
                 "firstWord": "saltuariorum",
                 "lastWord": "exheredabatur",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     6665,
                     6667,
@@ -3940,7 +3940,7 @@
                 "isClause": true,
                 "firstWord": "puer",
                 "lastWord": ",",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     6866,
                     6868,
@@ -3955,7 +3955,7 @@
                 "isClause": true,
                 "firstWord": "cocus",
                 "lastWord": "exinterare",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     6899,
                     6901,
@@ -3972,7 +3972,7 @@
                 "isClause": true,
                 "firstWord": "servus",
                 "lastWord": "lana",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     6923,
                     6926,
@@ -3994,7 +3994,7 @@
                 "isClause": true,
                 "firstWord": "nummularius",
                 "lastWord": "videt",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     7243,
                     7244,
@@ -4011,7 +4011,7 @@
                 "isClause": true,
                 "firstWord": "Apes",
                 "lastWord": "vomunt",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     7286,
                     7292,
@@ -4026,7 +4026,7 @@
                 "isClause": true,
                 "firstWord": "sexcenta",
                 "lastWord": "meae",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     7448,
                     7451,
@@ -4043,7 +4043,7 @@
                 "isClause": true,
                 "firstWord": "is",
                 "lastWord": "discumbebat",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     7481,
                     7483,
@@ -4058,7 +4058,7 @@
                 "isClause": true,
                 "firstWord": "larifuga",
                 "lastWord": "suum",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     7541,
                     7546,
@@ -4075,7 +4075,7 @@
                 "isClause": true,
                 "firstWord": "Quid",
                 "lastWord": "rideat",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     7579,
                     7581,
@@ -4088,7 +4088,7 @@
                 "isClause": true,
                 "firstWord": "domo",
                 "lastWord": "illac",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     7842,
                     7843,
@@ -4106,7 +4106,7 @@
                 "isClause": true,
                 "firstWord": "Giton",
                 "lastWord": ",",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     7886,
                     7887,
@@ -4123,7 +4123,7 @@
                 "isClause": true,
                 "firstWord": "meliorem",
                 "lastWord": "putat",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     8217,
                     8220,
@@ -4140,7 +4140,7 @@
                 "isClause": true,
                 "firstWord": "anulos",
                 "lastWord": "involasti",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     8231,
                     8234,
@@ -4156,7 +4156,7 @@
                 "isClause": true,
                 "firstWord": "iste",
                 "lastWord": "docet",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     8290,
                     8291,
@@ -4172,7 +4172,7 @@
                 "isClause": true,
                 "firstWord": "ego",
                 "lastWord": "sinum",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     8765,
                     8767,
@@ -4194,7 +4194,7 @@
                 "isClause": true,
                 "firstWord": "illud",
                 "lastWord": "venit",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     8877,
                     8878,
@@ -4209,7 +4209,7 @@
                 "isClause": true,
                 "firstWord": "loco",
                 "lastWord": "tangomediam",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     9518,
                     9521,
@@ -4223,7 +4223,7 @@
                 "isClause": true,
                 "firstWord": "servis",
                 "lastWord": ",",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     10005,
                     10006,
@@ -4240,7 +4240,7 @@
                 "isClause": true,
                 "firstWord": "Habinnas",
                 "lastWord": "facere",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     10131,
                     10137,
@@ -4257,7 +4257,7 @@
                 "isClause": true,
                 "firstWord": "panem",
                 "lastWord": "candidum",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     10321,
                     10326,
@@ -4274,7 +4274,7 @@
                 "isClause": true,
                 "firstWord": "sudario",
                 "lastWord": ",",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     10594,
                     10597,
@@ -4291,7 +4291,7 @@
                 "isClause": true,
                 "firstWord": ",",
                 "lastWord": "pulverem",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     10887,
                     10888,
@@ -4308,7 +4308,7 @@
                 "isClause": true,
                 "firstWord": "puer",
                 "lastWord": ",",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     10927,
                     10929,
@@ -4324,7 +4324,7 @@
                 "isClause": true,
                 "firstWord": "Servus",
                 "lastWord": ",",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     10948,
                     10949,
@@ -4341,7 +4341,7 @@
                 "isClause": true,
                 "firstWord": "que",
                 "lastWord": "circumtulit",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     11558,
                     11562,
@@ -4358,7 +4358,7 @@
                 "isClause": true,
                 "firstWord": "cocum",
                 "lastWord": ",",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     11689,
                     11690,
@@ -4376,7 +4376,7 @@
                 "isClause": true,
                 "firstWord": "ego",
                 "lastWord": "canem",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     12339,
                     12342,
@@ -4393,7 +4393,7 @@
                 "isClause": true,
                 "firstWord": "hac",
                 "lastWord": "venisti",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     12433,
                     12435,
@@ -4407,7 +4407,7 @@
                 "isClause": true,
                 "firstWord": "solium",
                 "lastWord": ",",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     12594,
                     12595,
@@ -4423,7 +4423,7 @@
                 "isClause": true,
                 "firstWord": "que",
                 "lastWord": "suam",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     12887,
                     12889,
@@ -4440,7 +4440,7 @@
                 "isClause": true,
                 "firstWord": "mathematicus",
                 "lastWord": "nostram",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     13674,
                     13675,
@@ -4458,7 +4458,7 @@
                 "isClause": true,
                 "firstWord": "ea",
                 "lastWord": "eram",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     13695,
                     13696,
@@ -4473,7 +4473,7 @@
                 "isClause": true,
                 "firstWord": "alia",
                 "lastWord": "ostendam",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     13888,
                     13890,
@@ -4489,7 +4489,7 @@
                 "isClause": true,
                 "firstWord": "amicus",
                 "lastWord": ",",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     13910,
                     13912,
@@ -4505,7 +4505,7 @@
                 "isClause": true,
                 "firstWord": "servus",
                 "lastWord": ",",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     14111,
                     14114,
@@ -4523,7 +4523,7 @@
                 "isClause": true,
                 "firstWord": "vigiles",
                 "lastWord": ",",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns",
                 "uids": [
                     14131,
                     14132,
@@ -4540,7 +4540,7 @@
                 "isClause": true,
                 "firstWord": "tot",
                 "lastWord": "confossis",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     13,
                     14,
@@ -4553,7 +4553,7 @@
                 "isClause": true,
                 "firstWord": "lusu",
                 "lastWord": "expellente",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     206,
                     207
@@ -4565,7 +4565,7 @@
                 "isClause": true,
                 "firstWord": "Exonerata",
                 "lastWord": "vesica",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     263,
                     265
@@ -4577,7 +4577,7 @@
                 "isClause": true,
                 "firstWord": "collecto",
                 "lastWord": "spiritu",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     507,
                     508
@@ -4589,7 +4589,7 @@
                 "isClause": true,
                 "firstWord": "Minerva",
                 "lastWord": "ducente",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     528,
                     530
@@ -4601,7 +4601,7 @@
                 "isClause": true,
                 "firstWord": "gustantibus",
                 "lastWord": "nobis",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     1322,
                     1324
@@ -4613,7 +4613,7 @@
                 "isClause": true,
                 "firstWord": "patentibus",
                 "lastWord": "ova",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     1336,
                     1339,
@@ -4631,7 +4631,7 @@
                 "isClause": true,
                 "firstWord": "symphonia",
                 "lastWord": "strepente",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     1353,
                     1354
@@ -4643,7 +4643,7 @@
                 "isClause": true,
                 "firstWord": "lusu",
                 "lastWord": "intermisso",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     1461,
                     1462
@@ -4655,7 +4655,7 @@
                 "isClause": true,
                 "firstWord": "hydraule",
                 "lastWord": "cantante",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     1989,
                     1990
@@ -4667,7 +4667,7 @@
                 "isClause": true,
                 "firstWord": "Inclinatis",
                 "lastWord": "suis",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     2533,
                     2535,
@@ -4680,7 +4680,7 @@
                 "isClause": true,
                 "firstWord": "sublatis",
                 "lastWord": "manibus",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     2858,
                     2859
@@ -4692,7 +4692,7 @@
                 "isClause": true,
                 "firstWord": "opertis",
                 "lastWord": "oculis",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     4222,
                     4223
@@ -4704,7 +4704,7 @@
                 "isClause": true,
                 "firstWord": "detersa",
                 "lastWord": "fronte",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     5067,
                     5068
@@ -4716,7 +4716,7 @@
                 "isClause": true,
                 "firstWord": "spatio",
                 "lastWord": "interposito",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     5072,
                     5074,
@@ -4729,7 +4729,7 @@
                 "isClause": true,
                 "firstWord": "mundatis",
                 "lastWord": "mensis",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     5268,
                     5271
@@ -4741,7 +4741,7 @@
                 "isClause": true,
                 "firstWord": "expectatione",
                 "lastWord": "discussa",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     5318,
                     5319
@@ -4753,7 +4753,7 @@
                 "isClause": true,
                 "firstWord": "expectata",
                 "lastWord": "nostra",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     5363,
                     5364,
@@ -4766,7 +4766,7 @@
                 "isClause": true,
                 "firstWord": "relaxato",
                 "lastWord": "vultu",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     5887,
                     5890
@@ -4778,7 +4778,7 @@
                 "isClause": true,
                 "firstWord": "Recepta",
                 "lastWord": "tunica",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     5908,
                     5910
@@ -4790,7 +4790,7 @@
                 "isClause": true,
                 "firstWord": "Hoc",
                 "lastWord": "facto",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     6195,
                     6196
@@ -4802,7 +4802,7 @@
                 "isClause": true,
                 "firstWord": "demisso",
                 "lastWord": "labro",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     6337,
                     6338
@@ -4814,7 +4814,7 @@
                 "isClause": true,
                 "firstWord": "erectis",
                 "lastWord": "manibus",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     6445,
                     6448
@@ -4826,7 +4826,7 @@
                 "isClause": true,
                 "firstWord": "concinente",
                 "lastWord": "familia",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     6452,
                     6453,
@@ -4839,7 +4839,7 @@
                 "isClause": true,
                 "firstWord": "crinibus",
                 "lastWord": "passis",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     6852,
                     6853
@@ -4851,7 +4851,7 @@
                 "isClause": true,
                 "firstWord": "cogitatione",
                 "lastWord": "distorta",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     7006,
                     7007
@@ -4863,7 +4863,7 @@
                 "isClause": true,
                 "firstWord": "sublatis",
                 "lastWord": "manibus",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     7466,
                     7467
@@ -4875,7 +4875,7 @@
                 "isClause": true,
                 "firstWord": "toga",
                 "lastWord": "perversa",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     8282,
                     8283
@@ -4887,7 +4887,7 @@
                 "isClause": true,
                 "firstWord": "silentio",
                 "lastWord": "facto",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     8459,
                     8460
@@ -4899,7 +4899,7 @@
                 "isClause": true,
                 "firstWord": "stricto",
                 "lastWord": "gladio",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     8554,
                     8556
@@ -4911,7 +4911,7 @@
                 "isClause": true,
                 "firstWord": "diductis",
                 "lastWord": "lacunaribus",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     8626,
                     8627
@@ -4923,7 +4923,7 @@
                 "isClause": true,
                 "firstWord": "Quibusdam",
                 "lastWord": "rapientibus",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     8751,
                     8759
@@ -4935,7 +4935,7 @@
                 "isClause": true,
                 "firstWord": "admiratione",
                 "lastWord": "universis",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     9385,
                     9386
@@ -4947,7 +4947,7 @@
                 "isClause": true,
                 "firstWord": "stricto",
                 "lastWord": "gladio",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     9503,
                     9504
@@ -4959,7 +4959,7 @@
                 "isClause": true,
                 "firstWord": "involuta",
                 "lastWord": "manu",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     9509,
                     9510,
@@ -4972,7 +4972,7 @@
                 "isClause": true,
                 "firstWord": "cluso",
                 "lastWord": "ostio",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     9563,
                     9564
@@ -4984,7 +4984,7 @@
                 "isClause": true,
                 "firstWord": "Apposita",
                 "lastWord": "manu",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     9764,
                     9768
@@ -4996,7 +4996,7 @@
                 "isClause": true,
                 "firstWord": "signo",
                 "lastWord": "dato",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     10562,
                     10563
@@ -5008,7 +5008,7 @@
                 "isClause": true,
                 "firstWord": "aberrante",
                 "lastWord": "tunica",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     10845,
                     10846
@@ -5020,7 +5020,7 @@
                 "isClause": true,
                 "firstWord": "Interposito",
                 "lastWord": "spatio",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     10861,
                     10863
@@ -5032,7 +5032,7 @@
                 "isClause": true,
                 "firstWord": "clamante",
                 "lastWord": "Trimalchione",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     10937,
                     10938
@@ -5044,7 +5044,7 @@
                 "isClause": true,
                 "firstWord": "ingemescente",
                 "lastWord": "familia",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     11842,
                     11843
@@ -5056,7 +5056,7 @@
                 "isClause": true,
                 "firstWord": "ducente",
                 "lastWord": "Gitone",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     12313,
                     12316
@@ -5068,7 +5068,7 @@
                 "isClause": true,
                 "firstWord": "proiectis",
                 "lastWord": ",",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     12482,
                     12484,
@@ -5088,7 +5088,7 @@
                 "isClause": true,
                 "firstWord": "manibus",
                 "lastWord": "nexis",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     12551,
                     12552
@@ -5100,7 +5100,7 @@
                 "isClause": true,
                 "firstWord": "restrictis",
                 "lastWord": "manibus",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     12565,
                     12566
@@ -5112,7 +5112,7 @@
                 "isClause": true,
                 "firstWord": "posito",
                 "lastWord": "genu",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     12573,
                     12574
@@ -5124,7 +5124,7 @@
                 "isClause": true,
                 "firstWord": "ebrietate",
                 "lastWord": "discussa",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     12603,
                     12604
@@ -5136,7 +5136,7 @@
                 "isClause": true,
                 "firstWord": "dicente",
                 "lastWord": "eo",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     12673,
                     12674
@@ -5148,7 +5148,7 @@
                 "isClause": true,
                 "firstWord": "Sumptis",
                 "lastWord": "matteis",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute",
                 "uids": [
                     12792,
                     12794
@@ -5160,7 +5160,7 @@
                 "isClause": true,
                 "firstWord": "si",
                 "lastWord": "memini",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     731,
                     732,
@@ -5173,7 +5173,7 @@
                 "isClause": true,
                 "firstWord": "si",
                 "lastWord": "sunt",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     1395,
                     1396,
@@ -5187,7 +5187,7 @@
                 "isClause": true,
                 "firstWord": "mero",
                 "lastWord": "esse",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     2153,
                     2154,
@@ -5204,7 +5204,7 @@
                 "isClause": true,
                 "firstWord": "lana",
                 "lastWord": "quaesieris",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     2206,
                     2207,
@@ -5224,7 +5224,7 @@
                 "isClause": true,
                 "firstWord": "si",
                 "lastWord": "dedit",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     2366,
                     2367,
@@ -5238,7 +5238,7 @@
                 "isClause": true,
                 "firstWord": "si",
                 "lastWord": "fuisset",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     3440,
                     3441,
@@ -5252,7 +5252,7 @@
                 "isClause": true,
                 "firstWord": "si",
                 "lastWord": "uxor",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     3500,
                     3501,
@@ -5267,7 +5267,7 @@
                 "isClause": true,
                 "firstWord": "si",
                 "lastWord": "accepisset",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     3508,
                     3509,
@@ -5282,7 +5282,7 @@
                 "isClause": true,
                 "firstWord": "si",
                 "lastWord": "conicias",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     3533,
                     3534,
@@ -5296,7 +5296,7 @@
                 "isClause": true,
                 "firstWord": "O",
                 "lastWord": "veni",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     3912,
                     3913,
@@ -5322,7 +5322,7 @@
                 "isClause": true,
                 "firstWord": "Simila",
                 "lastWord": "esset",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     3933,
                     3934,
@@ -5337,7 +5337,7 @@
                 "isClause": true,
                 "firstWord": "si",
                 "lastWord": "haberemus",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     4137,
                     4138,
@@ -5351,7 +5351,7 @@
                 "isClause": true,
                 "firstWord": "si",
                 "lastWord": "annona",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     4167,
                     4168,
@@ -5365,7 +5365,7 @@
                 "isClause": true,
                 "firstWord": "si",
                 "lastWord": "miserentur",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     4181,
                     4183,
@@ -5385,7 +5385,7 @@
                 "isClause": true,
                 "firstWord": "si",
                 "lastWord": "haberet",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     4327,
                     4328,
@@ -5398,7 +5398,7 @@
                 "isClause": true,
                 "firstWord": "Tu",
                 "lastWord": "fueris",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     4352,
                     4353,
@@ -5412,7 +5412,7 @@
                 "isClause": true,
                 "firstWord": "Quod",
                 "lastWord": "fecerit",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     4592,
                     4593,
@@ -5426,7 +5426,7 @@
                 "isClause": true,
                 "firstWord": "quos",
                 "lastWord": "sufflasses",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     4624,
                     4625,
@@ -5439,7 +5439,7 @@
                 "isClause": true,
                 "firstWord": "si",
                 "lastWord": "pallavit",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     4800,
                     4801,
@@ -5456,7 +5456,7 @@
                 "isClause": true,
                 "firstWord": "si",
                 "lastWord": "vixerit",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     4827,
                     4828
@@ -5468,7 +5468,7 @@
                 "isClause": true,
                 "firstWord": "si",
                 "lastWord": "est",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     4853,
                     4854,
@@ -5483,7 +5483,7 @@
                 "isClause": true,
                 "firstWord": "si",
                 "lastWord": "resilient",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     4977,
                     4978
@@ -5495,7 +5495,7 @@
                 "isClause": true,
                 "firstWord": "si",
                 "lastWord": "didicisset",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     5022,
                     5023,
@@ -5508,7 +5508,7 @@
                 "isClause": true,
                 "firstWord": "si",
                 "lastWord": "facere",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     5125,
                     5126,
@@ -5528,7 +5528,7 @@
                 "isClause": true,
                 "firstWord": "si",
                 "lastWord": "venit",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     5194,
                     5195,
@@ -5542,7 +5542,7 @@
                 "isClause": true,
                 "firstWord": "Vinum",
                 "lastWord": "placet",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     5453,
                     5457,
@@ -5556,7 +5556,7 @@
                 "isClause": true,
                 "firstWord": "si",
                 "lastWord": "ago",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     5530,
                     5531,
@@ -5570,7 +5570,7 @@
                 "isClause": true,
                 "firstWord": "si",
                 "lastWord": "amas",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     5561,
                     5562,
@@ -5583,7 +5583,7 @@
                 "isClause": true,
                 "firstWord": "Hoc",
                 "lastWord": "est",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     5604,
                     5608,
@@ -5597,7 +5597,7 @@
                 "isClause": true,
                 "firstWord": "si",
                 "lastWord": "est",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     5617,
                     5618,
@@ -5611,7 +5611,7 @@
                 "isClause": true,
                 "firstWord": "si",
                 "lastWord": "fecerit",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     5831,
                     5832
@@ -5623,7 +5623,7 @@
                 "isClause": true,
                 "firstWord": "si",
                 "lastWord": "praeterisset",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     5877,
                     5878,
@@ -5636,7 +5636,7 @@
                 "isClause": true,
                 "firstWord": "si",
                 "lastWord": "esset",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     6232,
                     6233,
@@ -5649,7 +5649,7 @@
                 "isClause": true,
                 "firstWord": "si",
                 "lastWord": "afferre",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     7298,
                     7299,
@@ -5665,7 +5665,7 @@
                 "isClause": true,
                 "firstWord": "si",
                 "lastWord": "discumberem",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     7523,
                     7524,
@@ -5679,7 +5679,7 @@
                 "isClause": true,
                 "firstWord": "si",
                 "lastWord": "illum",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     7556,
                     7557,
@@ -5692,7 +5692,7 @@
                 "isClause": true,
                 "firstWord": "Si",
                 "lastWord": "petii",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     9007,
                     9008,
@@ -5707,7 +5707,7 @@
                 "isClause": true,
                 "firstWord": "Si",
                 "lastWord": "venisses",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     9245,
                     9246,
@@ -5720,7 +5720,7 @@
                 "isClause": true,
                 "firstWord": "si",
                 "lastWord": "fugit",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     9277,
                     9278
@@ -5732,7 +5732,7 @@
                 "isClause": true,
                 "firstWord": "si",
                 "lastWord": "occidisses",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     9363,
                     9364,
@@ -5745,7 +5745,7 @@
                 "isClause": true,
                 "firstWord": "ego",
                 "lastWord": "mentior",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     9374,
                     9375,
@@ -5758,7 +5758,7 @@
                 "isClause": true,
                 "firstWord": "si",
                 "lastWord": "inhorruerunt",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     9397,
                     9398,
@@ -5777,7 +5777,7 @@
                 "isClause": true,
                 "firstWord": "Si",
                 "lastWord": "accipere",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     10016,
                     10017,
@@ -5791,7 +5791,7 @@
                 "isClause": true,
                 "firstWord": "si",
                 "lastWord": "fides",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     10048,
                     10049,
@@ -5806,7 +5806,7 @@
                 "isClause": true,
                 "firstWord": "si",
                 "lastWord": "effundere",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     10260,
                     10261,
@@ -5825,7 +5825,7 @@
                 "isClause": true,
                 "firstWord": "si",
                 "lastWord": "potuero",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     10288,
                     10289
@@ -5837,7 +5837,7 @@
                 "isClause": true,
                 "firstWord": "si",
                 "lastWord": "tulero",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     10397,
                     10398,
@@ -5854,7 +5854,7 @@
                 "isClause": true,
                 "firstWord": "si",
                 "lastWord": "comest",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     10438,
                     10442,
@@ -5868,7 +5868,7 @@
                 "isClause": true,
                 "firstWord": "si",
                 "lastWord": "haberem",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     10771,
                     10772,
@@ -5881,7 +5881,7 @@
                 "isClause": true,
                 "firstWord": "Mulieres",
                 "lastWord": "essent",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     10779,
                     10780,
@@ -5895,7 +5895,7 @@
                 "isClause": true,
                 "firstWord": "si",
                 "lastWord": "habes",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     10918,
                     10919,
@@ -5909,7 +5909,7 @@
                 "isClause": true,
                 "firstWord": "quae",
                 "lastWord": "haberet",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     11066,
                     11067,
@@ -5923,7 +5923,7 @@
                 "isClause": true,
                 "firstWord": "si",
                 "lastWord": "mallemus",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     11318,
                     11319,
@@ -5945,7 +5945,7 @@
                 "isClause": true,
                 "firstWord": "si",
                 "lastWord": "videtur",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     12031,
                     12032,
@@ -5958,7 +5958,7 @@
                 "isClause": true,
                 "firstWord": "si",
                 "lastWord": "balneum",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     12283,
                     12284,
@@ -5971,7 +5971,7 @@
                 "isClause": true,
                 "firstWord": "si",
                 "lastWord": "putas",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     12429,
                     12430
@@ -5983,7 +5983,7 @@
                 "isClause": true,
                 "firstWord": "si",
                 "lastWord": "feci",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     13182,
                     13183,
@@ -5997,7 +5997,7 @@
                 "isClause": true,
                 "firstWord": "si",
                 "lastWord": "iungere",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     13806,
                     13807,
@@ -6011,87 +6011,8 @@
                 "type": "Conditional clause",
                 "isClause": true,
                 "firstWord": "nisi",
-                "lastWord": "accessisset",
-                "grammar_ref": "",
-                "uids": [
-                    6468,
-                    6469,
-                    6470,
-                    6471,
-                    6472
-                ]
-            },
-            {
-                "syntax_id": 401,
-                "type": "Conditional clause",
-                "isClause": true,
-                "firstWord": "nisi",
-                "lastWord": "sciero",
-                "grammar_ref": "",
-                "uids": [
-                    6646,
-                    6647,
-                    6648,
-                    6649,
-                    6650
-                ]
-            },
-            {
-                "syntax_id": 402,
-                "type": "Conditional clause",
-                "isClause": true,
-                "firstWord": "nisi",
-                "lastWord": "persecutus",
-                "grammar_ref": "",
-                "uids": [
-                    8279,
-                    8280,
-                    8281,
-                    8282,
-                    8283,
-                    8284,
-                    8285
-                ]
-            },
-            {
-                "syntax_id": 403,
-                "type": "Conditional clause",
-                "isClause": true,
-                "firstWord": "nisi",
-                "lastWord": "video",
-                "grammar_ref": "",
-                "uids": [
-                    8897,
-                    8898,
-                    8899,
-                    8900,
-                    8901,
-                    8902,
-                    8903,
-                    8904,
-                    8905,
-                    8906
-                ]
-            },
-            {
-                "syntax_id": 404,
-                "type": "Conditional clause",
-                "isClause": true,
-                "firstWord": "nisi",
-                "lastWord": "discumbit",
-                "grammar_ref": "",
-                "uids": [
-                    10549,
-                    10551
-                ]
-            },
-            {
-                "syntax_id": 405,
-                "type": "Conditional clause",
-                "isClause": true,
-                "firstWord": "nisi",
                 "lastWord": "vocata",
-                "grammar_ref": "",
+                "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences",
                 "uids": [
                     10561,
                     10562,

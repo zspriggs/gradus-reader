@@ -10,6 +10,7 @@
                 "type": "Dative of possession",
                 "isClause": false,
                 "firstWord": "δαίμονι",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D42%3Asection%3D96%3Asubsection%3D88",
                 "uids": [
                     2700
                 ]
@@ -19,6 +20,7 @@
                 "type": "Dative of possession",
                 "isClause": false,
                 "firstWord": "φυτοῖσιν",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D42%3Asection%3D96%3Asubsection%3D88",
                 "uids": [
                     6718
                 ]
@@ -28,6 +30,7 @@
                 "type": "Dative of possession",
                 "isClause": false,
                 "firstWord": "κούρῃ",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D42%3Asection%3D96%3Asubsection%3D88",
                 "uids": [
                     6725
                 ]
@@ -37,6 +40,7 @@
                 "type": "Dative of possession",
                 "isClause": false,
                 "firstWord": "τοῖσιν",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D42%3Asection%3D96%3Asubsection%3D88",
                 "uids": [
                     972
                 ]
@@ -46,6 +50,7 @@
                 "type": "Dative of possession",
                 "isClause": false,
                 "firstWord": "τοι",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D42%3Asection%3D96%3Asubsection%3D88",
                 "uids": [
                     4218
                 ]
@@ -55,6 +60,7 @@
                 "type": "Dative of possession",
                 "isClause": false,
                 "firstWord": "τῷ",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D42%3Asection%3D96%3Asubsection%3D88",
                 "uids": [
                     4350
                 ]
@@ -64,6 +70,7 @@
                 "type": "Dative of possession",
                 "isClause": false,
                 "firstWord": "τοι",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D42%3Asection%3D96%3Asubsection%3D88",
                 "uids": [
                     4954
                 ]
@@ -74,7 +81,7 @@
                 "isClause": true,
                 "firstWord": "Ζεὺς",
                 "lastWord": "ναίει",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D54%3Asection%3D140",
                 "uids": [
                     60,
                     62,
@@ -90,7 +97,7 @@
                 "isClause": true,
                 "firstWord": "ἕτερον",
                 "lastWord": "θέσθαι",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D54%3Asection%3D140",
                 "uids": [
                     183,
                     191,
@@ -112,7 +119,7 @@
                 "isClause": true,
                 "firstWord": "δίκῃς",
                 "lastWord": "ἄρισται",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D54%3Asection%3D140",
                 "uids": [
                     311,
                     312,
@@ -130,7 +137,7 @@
                 "isClause": true,
                 "firstWord": "βασιλῆας",
                 "lastWord": "δίκασσαι",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D54%3Asection%3D140",
                 "uids": [
                     333,
                     335,
@@ -147,7 +154,7 @@
                 "isClause": true,
                 "firstWord": "κακόν",
                 "lastWord": "ἀμφαγαπῶντες",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D54%3Asection%3D140",
                 "uids": [
                     483,
                     484,
@@ -168,7 +175,7 @@
                 "isClause": true,
                 "firstWord": "νούσων",
                 "lastWord": "ἔδωκαν",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D54%3Asection%3D140",
                 "uids": [
                     763,
                     766,
@@ -185,7 +192,7 @@
                 "isClause": true,
                 "firstWord": "φύλακες",
                 "lastWord": "]",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D54%3Asection%3D140",
                 "uids": [
                     1024,
                     1027,
@@ -212,7 +219,7 @@
                 "isClause": true,
                 "firstWord": "θεοῖς",
                 "lastWord": "ἔχουσιν",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D54%3Asection%3D140",
                 "uids": [
                     1153,
                     1154,
@@ -227,7 +234,7 @@
                 "isClause": true,
                 "firstWord": "ἀνδρῶν",
                 "lastWord": "πουλυβοτείρῃ",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D54%3Asection%3D140",
                 "uids": [
                     1468,
                     1469,
@@ -244,7 +251,7 @@
                 "isClause": true,
                 "firstWord": "οἷς",
                 "lastWord": "τοῖς",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D54%3Asection%3D140",
                 "uids": [
                     2044,
                     2046,
@@ -264,7 +271,7 @@
                 "isClause": true,
                 "firstWord": "θεῶν",
                 "lastWord": "ἔχουσιν",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D54%3Asection%3D140",
                 "uids": [
                     2200,
                     2201,
@@ -279,7 +286,7 @@
                 "isClause": true,
                 "firstWord": "βασιλέων",
                 "lastWord": "ἐνέποντες",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D54%3Asection%3D140",
                 "uids": [
                     2231,
                     2232,
@@ -299,7 +306,7 @@
                 "isClause": true,
                 "firstWord": "δίκην",
                 "lastWord": "γίγνεται",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D54%3Asection%3D140",
                 "uids": [
                     2395,
                     2396,
@@ -315,7 +322,7 @@
                 "isClause": true,
                 "firstWord": "οὗτος",
                 "lastWord": "ἀμείνω",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D54%3Asection%3D140",
                 "uids": [
                     2520,
                     2523,
@@ -341,7 +348,7 @@
                 "isClause": true,
                 "firstWord": "κἀκεῖνος",
                 "lastWord": "πίθηται",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D54%3Asection%3D140",
                 "uids": [
                     2543,
                     2544,
@@ -357,7 +364,7 @@
                 "isClause": true,
                 "firstWord": "νεμεσῶσι",
                 "lastWord": "ἔσθοντες",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D54%3Asection%3D140",
                 "uids": [
                     2615,
                     2618,
@@ -386,7 +393,7 @@
                 "isClause": true,
                 "firstWord": "κηφήνεσσι",
                 "lastWord": "ἔσθοντες",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D54%3Asection%3D140",
                 "uids": [
                     2624,
                     2628,
@@ -405,7 +412,7 @@
                 "isClause": true,
                 "firstWord": "τὸν",
                 "lastWord": "ναίει",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D54%3Asection%3D140",
                 "uids": [
                     2966,
                     2970,
@@ -422,7 +429,7 @@
                 "isClause": true,
                 "firstWord": "ὃς",
                 "lastWord": "ὃ",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D54%3Asection%3D140",
                 "uids": [
                     3159,
                     3161,
@@ -438,7 +445,7 @@
                 "isClause": true,
                 "firstWord": "ὃς",
                 "lastWord": "ὅ",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D54%3Asection%3D140",
                 "uids": [
                     3286,
                     3288,
@@ -453,7 +460,7 @@
                 "isClause": true,
                 "firstWord": "αἰζηὸς",
                 "lastWord": "ἔχων",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D54%3Asection%3D140",
                 "uids": [
                     3861,
                     3868,
@@ -483,7 +490,7 @@
                 "isClause": true,
                 "firstWord": "Αὐλίδος",
                 "lastWord": "καλλιγύναικα",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D54%3Asection%3D140",
                 "uids": [
                     5590,
                     5591,
@@ -510,7 +517,7 @@
                 "isClause": true,
                 "firstWord": "τὴν",
                 "lastWord": "ναίει",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D54%3Asection%3D140",
                 "uids": [
                     5996,
                     6000,
@@ -527,7 +534,7 @@
                 "isClause": true,
                 "firstWord": "ὃς",
                 "lastWord": "τῷ",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D54%3Asection%3D140",
                 "uids": [
                     6352,
                     6353,
@@ -546,7 +553,7 @@
                 "isClause": true,
                 "firstWord": "φήμη",
                 "lastWord": "φημίξωσι",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D54%3Asection%3D140",
                 "uids": [
                     6554,
                     6559,
@@ -563,7 +570,7 @@
                 "isClause": true,
                 "firstWord": "ἄλγἐ",
                 "lastWord": "θυμβορεῖ",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D54%3Asection%3D140",
                 "uids": [
                     6862,
                     6863,
@@ -576,7 +583,7 @@
                 "isClause": true,
                 "firstWord": "ληίσσεται",
                 "lastWord": "κατοπάζῃ",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D54%3Asection%3D140",
                 "uids": [
                     2783,
                     2784,
@@ -606,7 +613,7 @@
                 "isClause": true,
                 "firstWord": "τῆς",
                 "lastWord": "ἑλκομένης",
-                "grammar_ref": "§PartGen",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D46%3Asection%3D117%3Asubsection%3D130",
                 "uids": [
                     1890,
                     1892,
@@ -619,7 +626,7 @@
                 "isClause": true,
                 "firstWord": "πληιάδων",
                 "lastWord": "ἐπιτελλομενάων",
-                "grammar_ref": "§PartGen",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D46%3Asection%3D117%3Asubsection%3D130",
                 "uids": [
                     3356,
                     3357,
@@ -632,7 +639,7 @@
                 "isClause": true,
                 "firstWord": "περιπλομένου",
                 "lastWord": "ἐνιαυτοῦ",
-                "grammar_ref": "§PartGen",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D46%3Asection%3D117%3Asubsection%3D130",
                 "uids": [
                     3379,
                     3380
@@ -644,7 +651,7 @@
                 "isClause": true,
                 "firstWord": "χαρασσομένοιο",
                 "lastWord": "σιδήρου",
-                "grammar_ref": "§PartGen",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D46%3Asection%3D117%3Asubsection%3D130",
                 "uids": [
                     3384,
                     3385
@@ -656,7 +663,7 @@
                 "isClause": true,
                 "firstWord": "ὀμβρήσαντος",
                 "lastWord": "ἐρισθενέος",
-                "grammar_ref": "§PartGen",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D46%3Asection%3D117%3Asubsection%3D130",
                 "uids": [
                     3633,
                     3634,
@@ -669,7 +676,7 @@
                 "isClause": true,
                 "firstWord": "θέρευς",
                 "lastWord": "ἐόντος",
-                "grammar_ref": "§PartGen",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D46%3Asection%3D117%3Asubsection%3D130",
                 "uids": [
                     4358,
                     4360,
@@ -682,7 +689,7 @@
                 "isClause": true,
                 "firstWord": "πνεύσαντος",
                 "lastWord": "ὤρινε",
-                "grammar_ref": "§PartGen",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D46%3Asection%3D117%3Asubsection%3D130",
                 "uids": [
                     4390,
                     4391,
@@ -703,7 +710,7 @@
                 "isClause": true,
                 "firstWord": "Βορέαο",
                 "lastWord": "πεσόντος",
-                "grammar_ref": "§PartGen",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D46%3Asection%3D117%3Asubsection%3D130",
                 "uids": [
                     4725,
                     4726
@@ -715,7 +722,7 @@
                 "isClause": true,
                 "firstWord": "Θρηικίου",
                 "lastWord": "κλονέοντος",
-                "grammar_ref": "§PartGen",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D46%3Asection%3D117%3Asubsection%3D130",
                 "uids": [
                     4763,
                     4764,
@@ -728,7 +735,7 @@
                 "isClause": true,
                 "firstWord": "ἔαρος",
                 "lastWord": "ἱσταμένοιο",
-                "grammar_ref": "§PartGen",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D46%3Asection%3D117%3Asubsection%3D130",
                 "uids": [
                     4885,
                     4887
@@ -740,7 +747,7 @@
                 "isClause": true,
                 "firstWord": "ἐλθόντος",
                 "lastWord": "ὥρης",
-                "grammar_ref": "§PartGen",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D46%3Asection%3D117%3Asubsection%3D130",
                 "uids": [
                     5685,
                     5686,
@@ -754,7 +761,7 @@
                 "isClause": true,
                 "firstWord": "ἠοῦς",
                 "lastWord": "γιγνομένης",
-                "grammar_ref": "§PartGen",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D46%3Asection%3D117%3Asubsection%3D130",
                 "uids": [
                     7046,
                     7047
@@ -766,7 +773,7 @@
                 "isClause": true,
                 "firstWord": "τήνδε",
                 "lastWord": "δίκασσαι",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D55%3Asection%3D148",
                 "uids": [
                     337,
                     338,
@@ -780,7 +787,7 @@
                 "isClause": true,
                 "firstWord": "Ἀθήνην",
                 "lastWord": "[0]",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D55%3Asection%3D148",
                 "uids": [
                     537,
                     538,
@@ -798,7 +805,7 @@
                 "isClause": true,
                 "firstWord": "χάριν",
                 "lastWord": "[0]",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D55%3Asection%3D148",
                 "uids": [
                     547,
                     548,
@@ -820,7 +827,7 @@
                 "isClause": true,
                 "firstWord": "ἐν",
                 "lastWord": "ἤνωγε",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D55%3Asection%3D148",
                 "uids": [
                     560,
                     562,
@@ -839,7 +846,7 @@
                 "isClause": true,
                 "firstWord": "ὕβριν",
                 "lastWord": "ἀπέχειν",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D55%3Asection%3D148",
                 "uids": [
                     1112,
                     1114,
@@ -854,7 +861,7 @@
                 "isClause": true,
                 "firstWord": "ἐθέλῃ",
                 "lastWord": "ἀντιφερίζειν",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D55%3Asection%3D148",
                 "uids": [
                     1797,
                     1798,
@@ -868,7 +875,7 @@
                 "isClause": true,
                 "firstWord": "ῥηιδίως",
                 "lastWord": "δύναται",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D55%3Asection%3D148",
                 "uids": [
                     1845,
                     1846,
@@ -881,7 +888,7 @@
                 "isClause": true,
                 "firstWord": "τά",
                 "lastWord": "μητιόεντα",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D55%3Asection%3D148",
                 "uids": [
                     2338,
                     2339,
@@ -899,7 +906,7 @@
                 "isClause": true,
                 "firstWord": "ἐθέλῃ",
                 "lastWord": "ἀγορεῦσαι",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D55%3Asection%3D148",
                 "uids": [
                     2406,
                     2407,
@@ -913,7 +920,7 @@
                 "isClause": true,
                 "firstWord": "ἅ",
                 "lastWord": "ἄνωγα",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D55%3Asection%3D148",
                 "uids": [
                     3223,
                     3224,
@@ -927,7 +934,7 @@
                 "isClause": true,
                 "firstWord": "ὥρια",
                 "lastWord": "Δημήτερος",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D55%3Asection%3D148",
                 "uids": [
                     3425,
                     3426,
@@ -943,7 +950,7 @@
                 "isClause": true,
                 "firstWord": "ἄνωγα",
                 "lastWord": "ἀλεωρήν",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D55%3Asection%3D148",
                 "uids": [
                     3528,
                     3529,
@@ -961,7 +968,7 @@
                 "isClause": true,
                 "firstWord": "βουσὶν",
                 "lastWord": "ἐστιν",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D55%3Asection%3D148",
                 "uids": [
                     3755,
                     3756,
@@ -974,7 +981,7 @@
                 "isClause": true,
                 "firstWord": "φησὶ",
                 "lastWord": "ἄμαξαν",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D55%3Asection%3D148",
                 "uids": [
                     3967,
                     3972,
@@ -987,7 +994,7 @@
                 "isClause": true,
                 "firstWord": "πρόσθεν",
                 "lastWord": "θέσθαι",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D55%3Asection%3D148",
                 "uids": [
                     3989,
                     3991,
@@ -1001,7 +1008,7 @@
                 "isClause": true,
                 "firstWord": "εὔχεσθαι",
                 "lastWord": "ἀκτήν",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D55%3Asection%3D148",
                 "uids": [
                     4053,
                     4060,
@@ -1018,7 +1025,7 @@
                 "isClause": true,
                 "firstWord": "σε",
                 "lastWord": "ἐόντος",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D55%3Asection%3D148",
                 "uids": [
                     4134,
                     4135,
@@ -1035,7 +1042,7 @@
                 "isClause": true,
                 "firstWord": "ἐποτρύνειν",
                 "lastWord": "ἀλωῇ",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D55%3Asection%3D148",
                 "uids": [
                     5121,
                     5122,
@@ -1057,7 +1064,7 @@
                 "isClause": true,
                 "firstWord": "γῆν",
                 "lastWord": "κελεύω",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D55%3Asection%3D148",
                 "uids": [
                     5331,
                     5332,
@@ -1074,7 +1081,7 @@
                 "isClause": true,
                 "firstWord": "βούληαι",
                 "lastWord": "ἀτερπέα",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D55%3Asection%3D148",
                 "uids": [
                     5550,
                     5551,
@@ -1091,7 +1098,7 @@
                 "isClause": true,
                 "firstWord": "μέ",
                 "lastWord": "ὠτώεντα",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D55%3Asection%3D148",
                 "uids": [
                     5631,
                     5632,
@@ -1108,7 +1115,7 @@
                 "isClause": true,
                 "firstWord": "ἐδίδαξαν",
                 "lastWord": "ἀείδειν",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D55%3Asection%3D148",
                 "uids": [
                     5672,
                     5673,
@@ -1122,7 +1129,7 @@
                 "isClause": true,
                 "firstWord": "ἐθέλῃσιν",
                 "lastWord": "ὀλέσσαι",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D55%3Asection%3D148",
                 "uids": [
                     5717,
                     5718
@@ -1134,7 +1141,7 @@
                 "isClause": true,
                 "firstWord": "σπεύδειν",
                 "lastWord": "νέεσθαι",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D55%3Asection%3D148",
                 "uids": [
                     5757,
                     5759,
@@ -1150,7 +1157,7 @@
                 "isClause": true,
                 "firstWord": "σ̓",
                 "lastWord": "ἀγορεύω",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D55%3Asection%3D148",
                 "uids": [
                     5880,
                     5881,
@@ -1170,7 +1177,7 @@
                 "isClause": true,
                 "firstWord": "δίκην",
                 "lastWord": "παρασχεῖν",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D55%3Asection%3D148",
                 "uids": [
                     6112,
                     6114,
@@ -1183,7 +1190,7 @@
                 "isClause": true,
                 "firstWord": "οὐλομένην",
                 "lastWord": "ἐόντων",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D55%3Asection%3D148",
                 "uids": [
                     6155,
                     6156,
@@ -1204,7 +1211,7 @@
                 "isClause": true,
                 "firstWord": "ἀλέασθαι",
                 "lastWord": "ἄρξασθαι",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D55%3Asection%3D148",
                 "uids": [
                     6701,
                     6702,
@@ -1217,7 +1224,7 @@
                 "isClause": true,
                 "firstWord": "φιλέοι",
                 "lastWord": "ὀαρισμούς",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D55%3Asection%3D148",
                 "uids": [
                     6772,
                     6776,
@@ -1238,7 +1245,7 @@
                 "isClause": true,
                 "firstWord": "πεφύλαξο",
                 "lastWord": "[0]",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D55%3Asection%3D148",
                 "uids": [
                     6853,
                     6856,
@@ -1259,7 +1266,7 @@
                 "isClause": true,
                 "firstWord": "ἐν",
                 "lastWord": "ἐπιόρκοις",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D55%3Asection%3D148",
                 "uids": [
                     6900,
                     6901,
@@ -1282,7 +1289,7 @@
                 "isClause": true,
                 "firstWord": "ἄρχεσθαι",
                 "lastWord": "ἀραιάς",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D55%3Asection%3D148",
                 "uids": [
                     6947,
                     6948,
@@ -1296,7 +1303,7 @@
                 "isClause": true,
                 "firstWord": "εἰ",
                 "lastWord": "ἐθέλεις",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D53%3Asection%3D135",
                 "uids": [
                     877,
                     879
@@ -1308,7 +1315,7 @@
                 "isClause": true,
                 "firstWord": "αἴ",
                 "lastWord": "ἐθέλω",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D53%3Asection%3D135",
                 "uids": [
                     1784,
                     1785,
@@ -1321,7 +1328,7 @@
                 "isClause": true,
                 "firstWord": "αἴ",
                 "lastWord": "ἐθέλῃσ̓",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D53%3Asection%3D135",
                 "uids": [
                     2289,
                     2290,
@@ -1334,7 +1341,7 @@
                 "isClause": true,
                 "firstWord": "εἰ",
                 "lastWord": "ἕξει",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D53%3Asection%3D135",
                 "uids": [
                     2328,
                     2329,
@@ -1350,7 +1357,7 @@
                 "isClause": true,
                 "firstWord": "εἰ",
                 "lastWord": "γιγνώσκων",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D53%3Asection%3D135",
                 "uids": [
                     2402,
                     2404,
@@ -1368,7 +1375,7 @@
                 "isClause": true,
                 "firstWord": "εἰ",
                 "lastWord": "ἐργάζῃ",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D53%3Asection%3D135",
                 "uids": [
                     2682,
                     2684,
@@ -1381,7 +1388,7 @@
                 "isClause": true,
                 "firstWord": "εἴ",
                 "lastWord": "κελεύω",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D53%3Asection%3D135",
                 "uids": [
                     2709,
                     2710,
@@ -1407,7 +1414,7 @@
                 "isClause": true,
                 "firstWord": "εἰ",
                 "lastWord": "γένηται",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D53%3Asection%3D135",
                 "uids": [
                     2977,
                     2979,
@@ -1424,7 +1431,7 @@
                 "isClause": true,
                 "firstWord": "εἰ",
                 "lastWord": "εἴη",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D53%3Asection%3D135",
                 "uids": [
                     3022,
                     3023,
@@ -1439,7 +1446,7 @@
                 "isClause": true,
                 "firstWord": "αἴ",
                 "lastWord": "δύνηαι",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D53%3Asection%3D135",
                 "uids": [
                     3045,
                     3046,
@@ -1452,7 +1459,7 @@
                 "isClause": true,
                 "firstWord": "κεἰ",
                 "lastWord": "δοίη",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D53%3Asection%3D135",
                 "uids": [
                     3126,
                     3127,
@@ -1465,7 +1472,7 @@
                 "isClause": true,
                 "firstWord": "σοὶ",
                 "lastWord": "ᾗσιν",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D53%3Asection%3D135",
                 "uids": [
                     3337,
                     3339,
@@ -1483,7 +1490,7 @@
                 "isClause": true,
                 "firstWord": "εἴ",
                 "lastWord": "Δημήτερος",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D53%3Asection%3D135",
                 "uids": [
                     3423,
                     3424,
@@ -1501,7 +1508,7 @@
                 "isClause": true,
                 "firstWord": "εἴ",
                 "lastWord": "ἄξαις",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D53%3Asection%3D135",
                 "uids": [
                     3791,
                     3792,
@@ -1515,7 +1522,7 @@
                 "isClause": true,
                 "firstWord": "εἰ",
                 "lastWord": "ὀπάζοι",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D53%3Asection%3D135",
                 "uids": [
                     4119,
                     4120,
@@ -1532,7 +1539,7 @@
                 "isClause": true,
                 "firstWord": "εἰ",
                 "lastWord": "δῖαν",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D53%3Asection%3D135",
                 "uids": [
                     4161,
                     4163,
@@ -1549,7 +1556,7 @@
                 "isClause": true,
                 "firstWord": "εἰ",
                 "lastWord": "ἀρόσῃς",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D53%3Asection%3D135",
                 "uids": [
                     4210,
                     4212,
@@ -1563,7 +1570,7 @@
                 "isClause": true,
                 "firstWord": "εἰ",
                 "lastWord": "πόντον",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D53%3Asection%3D135",
                 "uids": [
                     5295,
                     5297,
@@ -1591,7 +1598,7 @@
                 "isClause": true,
                 "firstWord": "εἴ",
                 "lastWord": "ἀήτας",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D53%3Asection%3D135",
                 "uids": [
                     5534,
                     5535,
@@ -1608,7 +1615,7 @@
                 "isClause": true,
                 "firstWord": "εἰ",
                 "lastWord": "ὀλέσσαι",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D53%3Asection%3D135",
                 "uids": [
                     5706,
                     5707,
@@ -1631,7 +1638,7 @@
                 "isClause": true,
                 "firstWord": "εἰ",
                 "lastWord": "ποιήσῃς",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D53%3Asection%3D135",
                 "uids": [
                     6067,
                     6069,
@@ -1644,7 +1651,7 @@
                 "isClause": true,
                 "firstWord": "εἰ",
                 "lastWord": "ἔρξας",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D53%3Asection%3D135",
                 "uids": [
                     6084,
                     6086,
@@ -1666,7 +1673,7 @@
                 "isClause": true,
                 "firstWord": "εἰ",
                 "lastWord": "εἴποις",
-                "grammar_ref": "",
+                "grammar_ref": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0007%3Apart%3D4%3Achapter%3D53%3Asection%3D135",
                 "uids": [
                     6184,
                     6186,
