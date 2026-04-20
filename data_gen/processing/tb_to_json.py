@@ -115,12 +115,12 @@ def process_treebank(file: str, lang: str, urn: str, title: str, author: str, so
             #for dependency parsing applications that will later be implemented
             unique_id += 1
             long_id = (sentence.get('id'), word.get('id'))
-            head_long_id = (sentence.get('id'), word.get('head'))
             uid_map[long_id] = unique_id
             
             form = word.get('form')
             lemma = word.get('lemma')
             postag = word.get('postag')
+
 
             #skip conditions
             if word.get('artificial') or word.get('insertion_id'): #If this word is an insertion, ignore
@@ -151,8 +151,6 @@ def process_treebank(file: str, lang: str, urn: str, title: str, author: str, so
                 "uid": unique_id,
                 "form": form,
                 "lemma": lemma,
-                "postag": postag,
-                "head": head_long_id,
                 "morphology": morphology
             })
 

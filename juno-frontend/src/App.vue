@@ -633,6 +633,8 @@ const saveRangeInput = () => {
 
 .syntax-panel {
   position: fixed;
+  /*temp fix, TODO: figure out where the margin actually is!*/
+  margin-top: -20px;
   right: 0px;
 }
 

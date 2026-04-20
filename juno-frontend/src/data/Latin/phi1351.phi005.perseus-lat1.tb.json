@@ -11,6 +11,7 @@
                 "isClause": true,
                 "firstWord": "posse",
                 "lastWord": "fieri",
+                "grammar_ref": "",
                 "uids": [
                     583,
                     585,
@@ -25,6 +26,7 @@
                 "isClause": true,
                 "firstWord": "in",
                 "lastWord": "intellegit",
+                "grammar_ref": "",
                 "uids": [
                     696,
                     697,
@@ -38,6 +40,7 @@
                 "isClause": true,
                 "firstWord": "impellere",
                 "lastWord": "nequiverint",
+                "grammar_ref": "",
                 "uids": [
                     1024,
                     1025
@@ -49,6 +52,7 @@
                 "isClause": true,
                 "firstWord": "mutari",
                 "lastWord": "poterant",
+                "grammar_ref": "",
                 "uids": [
                     1048,
                     1050
@@ -60,6 +64,7 @@
                 "isClause": true,
                 "firstWord": "imperare",
                 "lastWord": "noluisset",
+                "grammar_ref": "",
                 "uids": [
                     1238,
                     1239
@@ -71,6 +76,7 @@
                 "isClause": true,
                 "firstWord": "queri",
                 "lastWord": "poterant",
+                "grammar_ref": "",
                 "uids": [
                     1255,
                     1257
@@ -82,6 +88,7 @@
                 "isClause": true,
                 "firstWord": "doctae",
                 "lastWord": "odisse",
+                "grammar_ref": "",
                 "uids": [
                     1371,
                     1372,
@@ -95,6 +102,7 @@
                 "isClause": true,
                 "firstWord": "credo",
                 "lastWord": "relinqueretur",
+                "grammar_ref": "",
                 "uids": [
                     1959,
                     1960,
@@ -119,6 +127,7 @@
                 "isClause": true,
                 "firstWord": "Pisonem",
                 "lastWord": "iubet",
+                "grammar_ref": "",
                 "uids": [
                     2120,
                     2121,
@@ -132,6 +141,7 @@
                 "isClause": true,
                 "firstWord": "conferre",
                 "lastWord": "conferre",
+                "grammar_ref": "",
                 "uids": [
                     2524,
                     2525,
@@ -150,6 +160,7 @@
                 "isClause": true,
                 "firstWord": "plus",
                 "lastWord": "conferre",
+                "grammar_ref": "",
                 "uids": [
                     2535,
                     2537,
@@ -166,6 +177,7 @@
                 "isClause": true,
                 "firstWord": "eligi",
                 "lastWord": "coepimus",
+                "grammar_ref": "",
                 "uids": [
                     2561,
                     2562
@@ -177,6 +189,7 @@
                 "isClause": true,
                 "firstWord": "velis",
                 "lastWord": "eligere",
+                "grammar_ref": "",
                 "uids": [
                     2594,
                     2595
@@ -188,6 +201,7 @@
                 "isClause": true,
                 "firstWord": "desinam",
                 "lastWord": "obicitur",
+                "grammar_ref": "",
                 "uids": [
                     2677,
                     2678,
@@ -206,6 +220,7 @@
                 "isClause": true,
                 "firstWord": "nec",
                 "lastWord": "libertatem",
+                "grammar_ref": "",
                 "uids": [
                     2764,
                     2765,
@@ -223,6 +238,7 @@
                 "isClause": true,
                 "firstWord": "Pisonem",
                 "lastWord": "prodidisse",
+                "grammar_ref": "",
                 "uids": [
                     2794,
                     2795,
@@ -250,6 +266,7 @@
                 "isClause": true,
                 "firstWord": "imperare",
                 "lastWord": "posset",
+                "grammar_ref": "",
                 "uids": [
                     2833,
                     2834
@@ -261,6 +278,7 @@
                 "isClause": true,
                 "firstWord": "adoptari",
                 "lastWord": "pronuntiat",
+                "grammar_ref": "",
                 "uids": [
                     2954,
                     2955,
@@ -287,6 +305,7 @@
                 "isClause": true,
                 "firstWord": "potuisse",
                 "lastWord": "liberalitate",
+                "grammar_ref": "",
                 "uids": [
                     3041,
                     3042,
@@ -302,6 +321,7 @@
                 "isClause": true,
                 "firstWord": "appellari",
                 "lastWord": "iussit",
+                "grammar_ref": "",
                 "uids": [
                     3248,
                     3249,
@@ -314,9 +334,736 @@
                 "isClause": true,
                 "firstWord": "occidi",
                 "lastWord": "posse",
+                "grammar_ref": "",
                 "uids": [
                     3466,
                     3468
+                ]
+            },
+            {
+                "syntax_id": 21,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "-que",
+                "lastWord": ",",
+                "grammar_ref": "",
+                "uids": [
+                    529,
+                    531,
+                    532,
+                    533,
+                    534,
+                    535,
+                    536
+                ]
+            },
+            {
+                "syntax_id": 22,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "quem",
+                "lastWord": "intellegit",
+                "grammar_ref": "",
+                "uids": [
+                    695,
+                    696,
+                    697,
+                    698,
+                    725,
+                    726
+                ]
+            },
+            {
+                "syntax_id": 23,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "ipsis",
+                "lastWord": "occiderant",
+                "grammar_ref": "",
+                "uids": [
+                    879,
+                    881,
+                    882
+                ]
+            },
+            {
+                "syntax_id": 24,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "ea",
+                "lastWord": "conscripserat",
+                "grammar_ref": "",
+                "uids": [
+                    892,
+                    893,
+                    894,
+                    895,
+                    896,
+                    897
+                ]
+            },
+            {
+                "syntax_id": 25,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "bellum",
+                "lastWord": ",",
+                "grammar_ref": "",
+                "uids": [
+                    926,
+                    927,
+                    928,
+                    929,
+                    930,
+                    931,
+                    932
+                ]
+            },
+            {
+                "syntax_id": 26,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "numeri",
+                "lastWord": "revocaverat",
+                "grammar_ref": "",
+                "uids": [
+                    908,
+                    915,
+                    916,
+                    917,
+                    918,
+                    919,
+                    920,
+                    921,
+                    922,
+                    923,
+                    924,
+                    925,
+                    926,
+                    927,
+                    928,
+                    929,
+                    930,
+                    931,
+                    932,
+                    933,
+                    934,
+                    935,
+                    936
+                ]
+            },
+            {
+                "syntax_id": 27,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "Aegyptum",
+                "lastWord": ",",
+                "grammar_ref": "",
+                "uids": [
+                    1582,
+                    1585,
+                    1586,
+                    1587,
+                    1588
+                ]
+            },
+            {
+                "syntax_id": 28,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "Vinii",
+                "lastWord": "erat",
+                "grammar_ref": "",
+                "uids": [
+                    1824,
+                    1826,
+                    1827,
+                    1828,
+                    1829,
+                    1830,
+                    1831,
+                    1832,
+                    1833,
+                    1834,
+                    1835,
+                    1838
+                ]
+            },
+            {
+                "syntax_id": 29,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "liberto",
+                "lastWord": "vocitabant",
+                "grammar_ref": "",
+                "uids": [
+                    1881,
+                    1882,
+                    1883,
+                    1884,
+                    1885,
+                    1886,
+                    1887,
+                    1888,
+                    1889
+                ]
+            },
+            {
+                "syntax_id": 30,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "Lacone",
+                "lastWord": "est",
+                "grammar_ref": "",
+                "uids": [
+                    2134,
+                    2137,
+                    2138,
+                    2139,
+                    2140,
+                    2141,
+                    2142,
+                    2143,
+                    2144,
+                    2146
+                ]
+            },
+            {
+                "syntax_id": 31,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "Augusti",
+                "lastWord": "conlocavit",
+                "grammar_ref": "",
+                "uids": [
+                    2288,
+                    2289,
+                    2290,
+                    2291,
+                    2292,
+                    2293,
+                    2294,
+                    2295,
+                    2296,
+                    2297,
+                    2298,
+                    2299,
+                    2300,
+                    2301,
+                    2302,
+                    2303,
+                    2304,
+                    2305,
+                    2306,
+                    2307,
+                    2308,
+                    2309,
+                    2310
+                ]
+            },
+            {
+                "syntax_id": 32,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "necessitudines",
+                "lastWord": ",",
+                "grammar_ref": "",
+                "uids": [
+                    2348,
+                    2349,
+                    2350,
+                    2351,
+                    2352,
+                    2353
+                ]
+            },
+            {
+                "syntax_id": 33,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "Nero",
+                "lastWord": "depulerunt",
+                "grammar_ref": "",
+                "uids": [
+                    2604,
+                    2605,
+                    2606,
+                    2607,
+                    2608,
+                    2609,
+                    2610,
+                    2611,
+                    2612,
+                    2613,
+                    2614,
+                    2615,
+                    2616,
+                    2617,
+                    2618,
+                    2619,
+                    2620,
+                    2621,
+                    2622,
+                    2623,
+                    2624,
+                    2625,
+                    2626,
+                    2627,
+                    2628,
+                    2629
+                ]
+            },
+            {
+                "syntax_id": 34,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "gentibus",
+                "lastWord": "regnantur",
+                "grammar_ref": "",
+                "uids": [
+                    2748,
+                    2749,
+                    2750
+                ]
+            },
+            {
+                "syntax_id": 35,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "hominibus",
+                "lastWord": "libertatem",
+                "grammar_ref": "",
+                "uids": [
+                    2762,
+                    2763,
+                    2764,
+                    2765,
+                    2766,
+                    2767,
+                    2768,
+                    2769,
+                    2770,
+                    2771
+                ]
+            },
+            {
+                "syntax_id": 36,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "more",
+                "lastWord": ",",
+                "grammar_ref": "",
+                "uids": [
+                    2962,
+                    2964,
+                    2965,
+                    2966,
+                    2967,
+                    2968,
+                    2969
+                ]
+            },
+            {
+                "syntax_id": 37,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "quadriduo",
+                "lastWord": ",",
+                "grammar_ref": "",
+                "uids": [
+                    3115,
+                    3116,
+                    3117,
+                    3118,
+                    3119,
+                    3120,
+                    3121,
+                    3122,
+                    3123,
+                    3124
+                ]
+            },
+            {
+                "syntax_id": 38,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": ",",
+                "lastWord": ",",
+                "grammar_ref": "",
+                "uids": [
+                    3267,
+                    3271,
+                    3272,
+                    3273,
+                    3274,
+                    3275
+                ]
+            },
+            {
+                "syntax_id": 39,
+                "type": "Ablative absolute",
+                "isClause": true,
+                "firstWord": "evulgato",
+                "lastWord": "fieri",
+                "grammar_ref": "",
+                "uids": [
+                    580,
+                    581,
+                    582,
+                    583,
+                    584,
+                    585,
+                    586,
+                    587,
+                    588
+                ]
+            },
+            {
+                "syntax_id": 40,
+                "type": "Ablative absolute",
+                "isClause": true,
+                "firstWord": "usurpata",
+                "lastWord": "libertate",
+                "grammar_ref": "",
+                "uids": [
+                    595,
+                    597
+                ]
+            },
+            {
+                "syntax_id": 41,
+                "type": "Ablative absolute",
+                "isClause": true,
+                "firstWord": "adesis",
+                "lastWord": "bonis",
+                "grammar_ref": "",
+                "uids": [
+                    647,
+                    648
+                ]
+            },
+            {
+                "syntax_id": 42,
+                "type": "Ablative absolute",
+                "isClause": true,
+                "firstWord": "capite",
+                "lastWord": "ablato",
+                "grammar_ref": "",
+                "uids": [
+                    737,
+                    738,
+                    739
+                ]
+            },
+            {
+                "syntax_id": 43,
+                "type": "Ablative absolute",
+                "isClause": true,
+                "firstWord": "trucidatis",
+                "lastWord": "militum",
+                "grammar_ref": "",
+                "uids": [
+                    871,
+                    872,
+                    873,
+                    874,
+                    875
+                ]
+            },
+            {
+                "syntax_id": 44,
+                "type": "Ablative absolute",
+                "isClause": true,
+                "firstWord": "finibus",
+                "lastWord": "ademptis",
+                "grammar_ref": "",
+                "uids": [
+                    1189,
+                    1190
+                ]
+            },
+            {
+                "syntax_id": 45,
+                "type": "Ablative absolute",
+                "isClause": true,
+                "firstWord": "abducto",
+                "lastWord": "Verginio",
+                "grammar_ref": "",
+                "uids": [
+                    1264,
+                    1265
+                ]
+            },
+            {
+                "syntax_id": 46,
+                "type": "Ablative absolute",
+                "isClause": true,
+                "firstWord": "quieto",
+                "lastWord": "milite",
+                "grammar_ref": "",
+                "uids": [
+                    1303,
+                    1305
+                ]
+            },
+            {
+                "syntax_id": 47,
+                "type": "Ablative absolute",
+                "isClause": true,
+                "firstWord": "interfecto",
+                "lastWord": "Macro",
+                "grammar_ref": "",
+                "uids": [
+                    1640,
+                    1641,
+                    1642
+                ]
+            },
+            {
+                "syntax_id": 48,
+                "type": "Ablative absolute",
+                "isClause": true,
+                "firstWord": "rupta",
+                "lastWord": "reverentia",
+                "grammar_ref": "",
+                "uids": [
+                    1738,
+                    1739,
+                    1740
+                ]
+            },
+            {
+                "syntax_id": 49,
+                "type": "Ablative absolute",
+                "isClause": true,
+                "firstWord": "administrata",
+                "lastWord": "provincia",
+                "grammar_ref": "",
+                "uids": [
+                    2023,
+                    2024
+                ]
+            },
+            {
+                "syntax_id": 50,
+                "type": "Ablative absolute",
+                "isClause": true,
+                "firstWord": "adprehensa",
+                "lastWord": "manu",
+                "grammar_ref": "",
+                "uids": [
+                    2203,
+                    2204,
+                    2205
+                ]
+            },
+            {
+                "syntax_id": 51,
+                "type": "Ablative absolute",
+                "isClause": true,
+                "firstWord": "finita",
+                "lastWord": "domo",
+                "grammar_ref": "",
+                "uids": [
+                    2565,
+                    2566,
+                    2567,
+                    2568,
+                    2569
+                ]
+            },
+            {
+                "syntax_id": 52,
+                "type": "Ablative absolute",
+                "isClause": true,
+                "firstWord": "audita",
+                "lastWord": "adoptione",
+                "grammar_ref": "",
+                "uids": [
+                    2675,
+                    2676
+                ]
+            },
+            {
+                "syntax_id": 53,
+                "type": "Ablative absolute",
+                "isClause": true,
+                "firstWord": "decima",
+                "lastWord": "relicta",
+                "grammar_ref": "",
+                "uids": [
+                    3252,
+                    3253,
+                    3254,
+                    3258
+                ]
+            },
+            {
+                "syntax_id": 54,
+                "type": "Ablative absolute",
+                "isClause": true,
+                "firstWord": "omnibus",
+                "lastWord": "suspectis",
+                "grammar_ref": "",
+                "uids": [
+                    3377,
+                    3378
+                ]
+            },
+            {
+                "syntax_id": 55,
+                "type": "Ablative absolute",
+                "isClause": true,
+                "firstWord": "compositis",
+                "lastWord": "rebus",
+                "grammar_ref": "",
+                "uids": [
+                    3384,
+                    3385
+                ]
+            },
+            {
+                "syntax_id": 56,
+                "type": "Conditional clause",
+                "isClause": true,
+                "firstWord": "si",
+                "lastWord": "suppeditet",
+                "grammar_ref": "",
+                "uids": [
+                    155,
+                    156,
+                    157
+                ]
+            },
+            {
+                "syntax_id": 57,
+                "type": "Conditional clause",
+                "isClause": true,
+                "firstWord": "si",
+                "lastWord": "relinqueretur",
+                "grammar_ref": "",
+                "uids": [
+                    1970,
+                    1971,
+                    1972,
+                    1973
+                ]
+            },
+            {
+                "syntax_id": 58,
+                "type": "Conditional clause",
+                "isClause": true,
+                "firstWord": "si",
+                "lastWord": "loquimur",
+                "grammar_ref": "",
+                "uids": [
+                    2455,
+                    2456,
+                    2457,
+                    2458,
+                    2459,
+                    2460,
+                    2461,
+                    2462,
+                    2463
+                ]
+            },
+            {
+                "syntax_id": 59,
+                "type": "Conditional clause",
+                "isClause": true,
+                "firstWord": "Si",
+                "lastWord": "posset",
+                "grammar_ref": "",
+                "uids": [
+                    2494,
+                    2495,
+                    2496,
+                    2497,
+                    2498,
+                    2499,
+                    2500,
+                    2501,
+                    2502,
+                    2503
+                ]
+            },
+            {
+                "syntax_id": 60,
+                "type": "Conditional clause",
+                "isClause": true,
+                "firstWord": "si",
+                "lastWord": "eligere",
+                "grammar_ref": "",
+                "uids": [
+                    2593,
+                    2594,
+                    2595
+                ]
+            },
+            {
+                "syntax_id": 61,
+                "type": "Conditional clause",
+                "isClause": true,
+                "firstWord": "si",
+                "lastWord": "quiescunt",
+                "grammar_ref": "",
+                "uids": [
+                    2655,
+                    2656,
+                    2657,
+                    2658,
+                    2659,
+                    2660,
+                    2661,
+                    2662,
+                    2663,
+                    2664
+                ]
+            },
+            {
+                "syntax_id": 62,
+                "type": "Conditional clause",
+                "isClause": true,
+                "firstWord": "si",
+                "lastWord": "elegi",
+                "grammar_ref": "",
+                "uids": [
+                    2716,
+                    2717,
+                    2718,
+                    2719
+                ]
+            },
+            {
+                "syntax_id": 63,
+                "type": "Conditional clause",
+                "isClause": true,
+                "firstWord": "si",
+                "lastWord": "maneat",
+                "grammar_ref": "",
+                "uids": [
+                    3518,
+                    3519,
+                    3520,
+                    3521,
+                    3522,
+                    3523,
+                    3524
+                ]
+            },
+            {
+                "syntax_id": 64,
+                "type": "Conditional clause",
+                "isClause": true,
+                "firstWord": "nisi",
+                "lastWord": "esses",
+                "grammar_ref": "",
+                "uids": [
+                    2372,
+                    2373,
+                    2374,
+                    2375
                 ]
             }
         ]

@@ -158,8 +158,6 @@ class AncientTextParser:
 class QueryEngine:
     """Query engine for searching Greek texts using CSS-like selectors."""
     
-    return_parent = False
-
     def __init__(self, xml_docs: dict[str, str], lang='grc'):
         '''
         __init__
@@ -196,13 +194,7 @@ class QueryEngine:
     def query(self, selector: str) -> List[Word]:
         """Execute a query using CSS-like selector syntax."""
         # Handle comma-separated selectors
-        print(selector)
-
-        if 'returnParent' in selector:
-            self.return_parent = True
-            selector.replace('returnParent', '')
-        else:
-            self.return_parent = False
+        #print(selector)
 
         if '&' in selector:
             # Find sentences that contain ALL conditions
@@ -313,12 +305,6 @@ class QueryEngine:
             if word.parent_id != 0 or word.relation == 'AuxK':
                 return False
             selector = selector.replace(':root', '')
-        
-        # do not search alone! search with something more descriptive that points to it!
-        # :neighbor + γάρ is a good way to pull up postpositives, for instance
-        if ':neighbor' in selector:
-            return True
-            #selector = selector.replace(':neighbor', '')
 
         # Handle :before() and :after() pseudo-selectors
         before_match = re.search(r':before\(([^)]+)\)', selector)
@@ -334,6 +320,15 @@ class QueryEngine:
             if not self._check_word_order_condition(word, inner_selector, 'after'):
                 return False
             selector = re.sub(r':after\([^)]+\)', '', selector)
+
+        # Handle :has_child()
+        has_child_match = re.search(r':has_child\(([^)]+)\)', selector)
+        if has_child_match:
+            child_selector = has_child_match.group(1).strip()
+            # Check if ANY child of this word matches the inner selector
+            if not any(self._word_matches_selector(c, child_selector) for c in word.children):
+                return False
+            selector = re.sub(r':has_child\([^)]+\)', '', selector)
         
         # Handle linguistic pseudo-selectors
         pseudo_selectors = re.findall(r':(\w+)', selector)

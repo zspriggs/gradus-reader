@@ -46,7 +46,7 @@
 import {ref, onMounted, computed} from 'vue';
 
 //grc
-import xenophonMemorabilia from '../data/0032-002.json';
+import xenophonMemorabilia from '../data/Greek/0032-002.json';
 
 import thucydidesPeloponnesianWar from '../data/Greek/tlg0003.tlg001.perseus-grc1.1.tb.json';
 import plutarchLycurgus from '../data/Greek/tlg0007.tlg004.perseus-grc1.tb.json';
@@ -68,22 +68,6 @@ import lysiasAgainstPancleon from '../data/Greek/tlg0540.tlg023.perseus-grc1.tb.
 import polybiusHistories from '../data/Greek/tlg0543.tlg001.perseus-grc1.tb.json';
 import apollodorusLibrary from '../data/Greek/tlg0548.tlg001.perseus-grc1.1.1.1-1.4.1.tb.json';
 
-// TODO delete these ones that Not included due to processing issues
-//import homericHymnsDemeter from '../data/Greek/tlg0013.tlg002.perseus-grc1.tb.json';
-// import sophoclesTrachiniae from '../data/Greek/tlg0011.tlg001.perseus-grc2.tb.json';
-// import sophoclesAntigone from '../data/Greek/tlg0011.tlg002.perseus-grc2.tb.json';
-// import sophoclesAjax from '../data/Greek/tlg0011.tlg003.perseus-grc1.tb.json';
-// import sophoclesOedipusTyrannus from '../data/Greek/tlg0011.tlg004.perseus-grc1.tb.json';
-// import sophoclesElectra from '../data/Greek/tlg0011.tlg005.perseus-grc2.tb.json';
-// import aeschylusSupplices from '../data/Greek/tlg0085.tlg001.perseus-grc2.tb.json';
-// import aeschylusPersians from '../data/Greek/tlg0085.tlg002.perseus-grc2.tb.json';
-// import aeschylusPrometheusBound from '../data/Greek/tlg0085.tlg003.perseus-grc2.tb.json';
-// import aeschylusSevenAgainstThebes from '../data/Greek/tlg0085.tlg004.perseus-grc2.tb.json';
-// import aeschylusAgamemnon from '../data/Greek/tlg0085.tlg005.perseus-grc1.tb.json';
-// import aeschylusLibationBearers from '../data/Greek/tlg0085.tlg006.perseus-grc2.tb.json';
-// import aeschylusEumenides from '../data/Greek/tlg0085.tlg007.perseus-grc1.tb.json';
-//import hesiodWorksAndDays from '../data/Greek/tlg0020.tlg002.perseus-grc1.tb.json';
-
 //lat
 import caesarBelloGallico from '../data/Latin/phi0448.phi001.perseus-lat1.tb.json';
 import ciceroInCatilinam from '../data/Latin/phi0474.phi013.perseus-lat1.tb.json';
@@ -92,8 +76,6 @@ import ovidMetamorphoses from '../data/Latin/phi0959.phi006.perseus-lat1.tb.json
 import petroniusSatyricon from '../data/Latin/phi0972.phi001.perseus-lat1.tb.json';
 import suetoniusLifeOfAugustus from '../data/Latin/phi1348.abo012.perseus-lat1.tb.json';
 import jeromeVulgata from '../data/Latin/tlg0031.tlg027.perseus-lat1.tb.json';
-//import augustusResGestae from '../data/Latin/phi1221.phi007.perseus-lat1.tb.json';
-//import tacitusHistoriae from '../data/Latin/phi1351.phi005.perseus-lat1.tb.json';
 
 const emit = defineEmits(['document-selected', 'section-selected']);
 
@@ -106,8 +88,6 @@ const props = defineProps({
 
 const documents = {
 Latin: [
-    //{ urn: 'phi1221.phi007', lang: 'lat', title: 'Augustus - Res Gestae', data: augustusResGestae },
-    //{ urn: 'phi1351.phi005', lang: 'lat', title: 'Tacitus - Historiae', data: tacitusHistoriae },
     { urn: 'phi0448.phi001', lang: 'lat', title: 'Caesar - Commentarii de Bello Gallico', data: caesarBelloGallico },
     { urn: 'phi0474.phi013', lang: 'lat', title: 'Cicero - In Catilinam', data: ciceroInCatilinam },
     { urn: 'tlg0031.tlg027', lang: 'lat', title: 'Jerome - Vulgata', data: jeromeVulgata },
@@ -137,21 +117,6 @@ Latin: [
     { urn: 'tlg0540.tlg023', lang: 'grc', title: 'Lysias - Against Pancleon', data: lysiasAgainstPancleon },
     { urn: 'tlg0543.tlg001', lang: 'grc', title: 'Polybius - Histories', data: polybiusHistories },
     { urn: 'tlg0548.tlg001', lang: 'grc', title: 'Apollodorus - Library', data: apollodorusLibrary }
-
-    //{ urn: 'tlg0013.tlg002', lang: 'grc', title: 'Homeric Hymns - Hymn 2 to Demeter', data: homericHymnsDemeter },
-    //{ urn: 'tlg0020.tlg002', lang: 'grc', title: 'Hesiod - Works and Days', data: hesiodWorksAndDays },
-    // { urn: 'tlg0085.tlg001', lang: 'grc', title: 'Aeschylus - Supplices', data: aeschylusSupplices },
-    // { urn: 'tlg0085.tlg002', lang: 'grc', title: 'Aeschylus - Persians', data: aeschylusPersians },
-    // { urn: 'tlg0085.tlg003', lang: 'grc', title: 'Aeschylus - Prometheus Bound', data: aeschylusPrometheusBound },
-    // { urn: 'tlg0085.tlg004', lang: 'grc', title: 'Aeschylus - Seven Against Thebes', data: aeschylusSevenAgainstThebes },
-    // { urn: 'tlg0085.tlg005', lang: 'grc', title: 'Aeschylus - Agamemnon', data: aeschylusAgamemnon },
-    // { urn: 'tlg0085.tlg006', lang: 'grc', title: 'Aeschylus - Libation Bearers', data: aeschylusLibationBearers },
-    // { urn: 'tlg0085.tlg007', lang: 'grc', title: 'Aeschylus - Eumenides', data: aeschylusEumenides },
-    // { urn: 'tlg0011.tlg001', lang: 'grc', title: 'Sophocles - Trachiniae', data: sophoclesTrachiniae },
-    // { urn: 'tlg0011.tlg002', lang: 'grc', title: 'Sophocles - Antigone', data: sophoclesAntigone },
-    // { urn: 'tlg0011.tlg003', lang: 'grc', title: 'Sophocles - Ajax', data: sophoclesAjax },
-    // { urn: 'tlg0011.tlg004', lang: 'grc', title: 'Sophocles - Oedipus Tyrannus', data: sophoclesOedipusTyrannus },
-    // { urn: 'tlg0011.tlg005', lang: 'grc', title: 'Sophocles - Electra', data: sophoclesElectra },
   ]
 };
 

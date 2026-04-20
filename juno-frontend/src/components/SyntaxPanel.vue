@@ -120,9 +120,8 @@ const getWordDisplay = (phrase) => {
   padding-top: 60px;
   background: #f8f9fa;
   border-left: 1px solid #dee2e6;
-  height: 100%;
+  height: 100vh;
   width: 20rem;
-  /*min-width: 330px;*/
   overflow-y: auto;
   overflow-x: auto;
   resize: horizontal;

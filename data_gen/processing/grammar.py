@@ -7,24 +7,35 @@ QUERIES = {
         {
             "type": "Dative of possession", 
             "query": "εἰμί > :noun:dative, εἰμί > :pronoun:dative, εἰμί > [relation=SBJ] > :noun:dative, εἰμί > [relation=SBJ] > :pronoun:dative",
-            "is_clause": False
+            "is_clause": False,
+            "grammar_ref": "§DatPos"
         },
         {
             "type": "Relative clause",
-            "query": ":verb[relation=ATR] > ὅς, :verb[relation=ATR] > ὅστις, :verb[relation=ATR] > οἷος, :verb[relation=ATR] > ὅσος",
-            "is_clause": True
+            "query": ":verb[relation=ATR]:has_child(ὅς), "
+            ":verb[relation=ATR]:has_child(ὅστις), "
+            ":verb[relation=ATR]:has_child(οἷος), "
+            ":verb[relation=ATR]:has_child(ὅσος)",
+            "is_clause": True,
+            "grammar_ref": ""
         },
         {
             "type": "Genitive absolute",
             "query": ":genitive[relation=SBJ]",
-            "is_clause": True
+            "is_clause": True,
+            "grammar_ref": "§PartGen"
         },
         {
             "type": "Indirect discourse",
             "query": ":verb:infinitive[relation=OBJ], :verb:infinitive[relation=SBJ]",
+            "is_clause": True,
+            "grammar_ref": ""
+        },
+        {
+            "type": "Conditional clause",
+            "query": "εἰ[relation=AuxC] > :verb[relation=ADV], ἐάν[relation=AuxC] > :verb[relation=ADV]",
             "is_clause": True
         }
-        #conditional clauses
         #prepositional phrases
     ],
     "lat": [
@@ -35,12 +46,24 @@ QUERIES = {
         },
         {
             "type": "Relative clause",
-            "query": ":verb[relation=ATR] > qui1",
+            "query": ":verb[relation=ATR]:has_child(qui)",
+            "is_clause": True
+        },
+        {
+            "type": "Ablative absolute",
+            "query": ":ablative[relation=ADV] > :ablative[relation=SBJ]",
+            "is_clause": True
+        },
+        {
+            "type": "Conditional clause",
+            "query": "si[relation=AuxC] > :verb[relation=ADV]",
+            "is_clause": True
+        },
+        {
+            "type": "Conditional clause",
+            "query": "nisi[relation=AuxC] > :verb[relation=ADV]",
             "is_clause": True
         }
-
-        #abl abs
-        #conditional clauses
         #maybe adverbial uses of non adverbs
         #prepositional phrases
         #highlight complex tags when applicable (ellipsis)
@@ -74,7 +97,8 @@ def query_grammar(query_engine: QueryEngine, custom_queries: List[Dict] = [], us
                     "type": query["type"],
                     "isClause": query["is_clause"],
                     "firstWord": first_word,
-                    "lastWord": last_word
+                    "lastWord": last_word,
+                    "grammar_ref": query.get("grammar_ref", "")
                 })
             else:
                 first_word = word.form

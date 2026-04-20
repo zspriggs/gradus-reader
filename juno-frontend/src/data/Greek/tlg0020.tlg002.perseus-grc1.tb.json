@@ -72,10 +72,15 @@
                 "syntax_id": 7,
                 "type": "Relative clause",
                 "isClause": true,
-                "firstWord": "ὃς",
+                "firstWord": "Ζεὺς",
                 "lastWord": "ναίει",
+                "grammar_ref": "",
                 "uids": [
+                    60,
+                    62,
                     63,
+                    64,
+                    65,
                     66
                 ]
             },
@@ -83,56 +88,94 @@
                 "syntax_id": 8,
                 "type": "Relative clause",
                 "isClause": true,
-                "firstWord": "ὃς",
-                "lastWord": "σπεύδει",
+                "firstWord": "ἕτερον",
+                "lastWord": "θέσθαι",
+                "grammar_ref": "",
                 "uids": [
+                    183,
+                    191,
                     192,
-                    193
+                    193,
+                    194,
+                    195,
+                    196,
+                    197,
+                    198,
+                    199,
+                    200,
+                    201
                 ]
             },
             {
                 "syntax_id": 9,
                 "type": "Relative clause",
                 "isClause": true,
-                "firstWord": "αἵ",
-                "lastWord": "εἰσιν",
+                "firstWord": "δίκῃς",
+                "lastWord": "ἄρισται",
+                "grammar_ref": "",
                 "uids": [
+                    311,
+                    312,
                     313,
+                    314,
                     315,
                     316,
-                    317
+                    317,
+                    318
                 ]
             },
             {
                 "syntax_id": 10,
                 "type": "Relative clause",
                 "isClause": true,
-                "firstWord": "οἳ",
-                "lastWord": "ἐθέλουσι",
+                "firstWord": "βασιλῆας",
+                "lastWord": "δίκασσαι",
+                "grammar_ref": "",
                 "uids": [
+                    333,
+                    335,
                     336,
-                    339
+                    337,
+                    338,
+                    339,
+                    340
                 ]
             },
             {
                 "syntax_id": 11,
                 "type": "Relative clause",
                 "isClause": true,
-                "firstWord": "ᾧ",
-                "lastWord": "τέρπωνται",
+                "firstWord": "κακόν",
+                "lastWord": "ἀμφαγαπῶντες",
+                "grammar_ref": "",
                 "uids": [
+                    483,
+                    484,
                     485,
-                    488
+                    486,
+                    487,
+                    488,
+                    489,
+                    490,
+                    491,
+                    492,
+                    493
                 ]
             },
             {
                 "syntax_id": 12,
                 "type": "Relative clause",
                 "isClause": true,
-                "firstWord": "αἵ",
+                "firstWord": "νούσων",
                 "lastWord": "ἔδωκαν",
+                "grammar_ref": "",
                 "uids": [
+                    763,
+                    766,
                     767,
+                    768,
+                    769,
+                    770,
                     771
                 ]
             },
@@ -140,21 +183,41 @@
                 "syntax_id": 13,
                 "type": "Relative clause",
                 "isClause": true,
-                "firstWord": "[οἵ",
-                "lastWord": "φυλάσσουσίν",
+                "firstWord": "φύλακες",
+                "lastWord": "]",
+                "grammar_ref": "",
                 "uids": [
+                    1024,
+                    1027,
                     1028,
-                    1030
+                    1029,
+                    1030,
+                    1031,
+                    1032,
+                    1033,
+                    1034,
+                    1035,
+                    1036,
+                    1037,
+                    1038,
+                    1039,
+                    1040,
+                    1041,
+                    1043
                 ]
             },
             {
                 "syntax_id": 14,
                 "type": "Relative clause",
                 "isClause": true,
-                "firstWord": "οἳ",
+                "firstWord": "θεοῖς",
                 "lastWord": "ἔχουσιν",
+                "grammar_ref": "",
                 "uids": [
+                    1153,
+                    1154,
                     1155,
+                    1156,
                     1157
                 ]
             },
@@ -162,11 +225,17 @@
                 "syntax_id": 15,
                 "type": "Relative clause",
                 "isClause": true,
-                "firstWord": "οἳ]",
-                "lastWord": "γεγάασιν",
+                "firstWord": "ἀνδρῶν",
+                "lastWord": "πουλυβοτείρῃ",
+                "grammar_ref": "",
                 "uids": [
+                    1468,
+                    1469,
                     1470,
-                    1471
+                    1471,
+                    1472,
+                    1473,
+                    1474
                 ]
             },
             {
@@ -174,20 +243,33 @@
                 "type": "Relative clause",
                 "isClause": true,
                 "firstWord": "οἷς",
-                "lastWord": "μέμηλε",
+                "lastWord": "τοῖς",
+                "grammar_ref": "",
                 "uids": [
                     2044,
-                    2048
+                    2046,
+                    2047,
+                    2048,
+                    2049,
+                    2050,
+                    2051,
+                    2052,
+                    2053,
+                    2054
                 ]
             },
             {
                 "syntax_id": 17,
                 "type": "Relative clause",
                 "isClause": true,
-                "firstWord": "οἳ",
+                "firstWord": "θεῶν",
                 "lastWord": "ἔχουσιν",
+                "grammar_ref": "",
                 "uids": [
+                    2200,
+                    2201,
                     2202,
+                    2203,
                     2204
                 ]
             },
@@ -195,23 +277,35 @@
                 "syntax_id": 18,
                 "type": "Relative clause",
                 "isClause": true,
-                "firstWord": "οἳ",
-                "lastWord": "παρκλίνωσι",
+                "firstWord": "βασιλέων",
+                "lastWord": "ἐνέποντες",
+                "grammar_ref": "",
                 "uids": [
+                    2231,
+                    2232,
                     2233,
                     2234,
                     2235,
-                    2237
+                    2236,
+                    2237,
+                    2238,
+                    2239,
+                    2240
                 ]
             },
             {
                 "syntax_id": 19,
                 "type": "Relative clause",
                 "isClause": true,
-                "firstWord": "ἣ",
+                "firstWord": "δίκην",
                 "lastWord": "γίγνεται",
+                "grammar_ref": "",
                 "uids": [
+                    2395,
+                    2396,
                     2397,
+                    2398,
+                    2399,
                     2400
                 ]
             },
@@ -219,22 +313,41 @@
                 "syntax_id": 20,
                 "type": "Relative clause",
                 "isClause": true,
-                "firstWord": "ὃς",
-                "lastWord": "νοήσῃ",
+                "firstWord": "οὗτος",
+                "lastWord": "ἀμείνω",
+                "grammar_ref": "",
                 "uids": [
+                    2520,
+                    2523,
                     2524,
                     2525,
-                    2527
+                    2526,
+                    2527,
+                    2528,
+                    2529,
+                    2530,
+                    2531,
+                    2532,
+                    2533,
+                    2534,
+                    2535,
+                    2536,
+                    2537
                 ]
             },
             {
                 "syntax_id": 21,
                 "type": "Relative clause",
                 "isClause": true,
-                "firstWord": "ὃς",
+                "firstWord": "κἀκεῖνος",
                 "lastWord": "πίθηται",
+                "grammar_ref": "",
                 "uids": [
+                    2543,
+                    2544,
                     2545,
+                    2546,
+                    2547,
                     2548
                 ]
             },
@@ -242,10 +355,14 @@
                 "syntax_id": 22,
                 "type": "Relative clause",
                 "isClause": true,
-                "firstWord": "ὅς",
+                "firstWord": "νεμεσῶσι",
                 "lastWord": "ἔσθοντες",
+                "grammar_ref": "",
                 "uids": [
+                    2615,
+                    2618,
                     2619,
+                    2620,
                     2621,
                     2622,
                     2623,
@@ -267,23 +384,35 @@
                 "syntax_id": 23,
                 "type": "Relative clause",
                 "isClause": true,
-                "firstWord": "οἵ",
-                "lastWord": "ἀεργοὶ",
+                "firstWord": "κηφήνεσσι",
+                "lastWord": "ἔσθοντες",
+                "grammar_ref": "",
                 "uids": [
+                    2624,
+                    2628,
                     2629,
+                    2630,
+                    2631,
+                    2632,
                     2633,
-                    2634
+                    2634,
+                    2635
                 ]
             },
             {
                 "syntax_id": 24,
                 "type": "Relative clause",
                 "isClause": true,
-                "firstWord": "ὅς",
+                "firstWord": "τὸν",
                 "lastWord": "ναίει",
+                "grammar_ref": "",
                 "uids": [
+                    2966,
+                    2970,
                     2971,
                     2972,
+                    2973,
+                    2974,
                     2975
                 ]
             },
@@ -292,10 +421,15 @@
                 "type": "Relative clause",
                 "isClause": true,
                 "firstWord": "ὃς",
-                "lastWord": "φέρει",
+                "lastWord": "ὃ",
+                "grammar_ref": "",
                 "uids": [
                     3159,
-                    3163
+                    3161,
+                    3162,
+                    3163,
+                    3164,
+                    3165
                 ]
             },
             {
@@ -303,43 +437,87 @@
                 "type": "Relative clause",
                 "isClause": true,
                 "firstWord": "ὃς",
-                "lastWord": "πέποιθε",
+                "lastWord": "ὅ",
+                "grammar_ref": "",
                 "uids": [
                     3286,
-                    3289
+                    3288,
+                    3289,
+                    3290,
+                    3292
                 ]
             },
             {
                 "syntax_id": 27,
                 "type": "Relative clause",
                 "isClause": true,
-                "firstWord": "ὃς",
-                "lastWord": "ἐλαύνοι",
+                "firstWord": "αἰζηὸς",
+                "lastWord": "ἔχων",
+                "grammar_ref": "",
                 "uids": [
+                    3861,
+                    3868,
                     3869,
-                    3875
+                    3870,
+                    3871,
+                    3872,
+                    3873,
+                    3874,
+                    3875,
+                    3876,
+                    3877,
+                    3878,
+                    3879,
+                    3880,
+                    3881,
+                    3882,
+                    3883,
+                    3884,
+                    3885,
+                    3886
                 ]
             },
             {
                 "syntax_id": 28,
                 "type": "Relative clause",
                 "isClause": true,
-                "firstWord": "ᾗ",
-                "lastWord": "ἄγειραν",
+                "firstWord": "Αὐλίδος",
+                "lastWord": "καλλιγύναικα",
+                "grammar_ref": "",
                 "uids": [
+                    5590,
+                    5591,
                     5592,
-                    5600
+                    5593,
+                    5594,
+                    5595,
+                    5596,
+                    5597,
+                    5598,
+                    5599,
+                    5600,
+                    5601,
+                    5602,
+                    5603,
+                    5604,
+                    5605,
+                    5606
                 ]
             },
             {
                 "syntax_id": 29,
                 "type": "Relative clause",
                 "isClause": true,
-                "firstWord": "ἥ",
+                "firstWord": "τὴν",
                 "lastWord": "ναίει",
+                "grammar_ref": "",
                 "uids": [
+                    5996,
+                    6000,
                     6001,
                     6002,
+                    6003,
+                    6004,
                     6005
                 ]
             },
@@ -348,25 +526,34 @@
                 "type": "Relative clause",
                 "isClause": true,
                 "firstWord": "ὃς",
-                "lastWord": "ἄνιπτος",
+                "lastWord": "τῷ",
+                "grammar_ref": "",
                 "uids": [
                     6352,
+                    6353,
                     6354,
                     6355,
                     6356,
                     6357,
-                    6358
+                    6358,
+                    6359,
+                    6360
                 ]
             },
             {
                 "syntax_id": 31,
                 "type": "Relative clause",
                 "isClause": true,
-                "firstWord": "ἥν",
+                "firstWord": "φήμη",
                 "lastWord": "φημίξωσι",
+                "grammar_ref": "",
                 "uids": [
+                    6554,
+                    6559,
                     6560,
                     6561,
+                    6562,
+                    6563,
                     6564
                 ]
             },
@@ -374,9 +561,11 @@
                 "syntax_id": 32,
                 "type": "Relative clause",
                 "isClause": true,
-                "firstWord": "ἃ",
+                "firstWord": "ἄλγἐ",
                 "lastWord": "θυμβορεῖ",
+                "grammar_ref": "",
                 "uids": [
+                    6862,
                     6863,
                     6864
                 ]
@@ -385,11 +574,30 @@
                 "syntax_id": 33,
                 "type": "Relative clause",
                 "isClause": true,
-                "firstWord": "ἥτις",
-                "lastWord": "ἕποιτο",
+                "firstWord": "ληίσσεται",
+                "lastWord": "κατοπάζῃ",
+                "grammar_ref": "",
                 "uids": [
-                    3551,
-                    3554
+                    2783,
+                    2784,
+                    2785,
+                    2786,
+                    2787,
+                    2788,
+                    2789,
+                    2790,
+                    2791,
+                    2792,
+                    2793,
+                    2794,
+                    2795,
+                    2796,
+                    2797,
+                    2798,
+                    2799,
+                    2800,
+                    2801,
+                    2802
                 ]
             },
             {
@@ -398,6 +606,7 @@
                 "isClause": true,
                 "firstWord": "τῆς",
                 "lastWord": "ἑλκομένης",
+                "grammar_ref": "§PartGen",
                 "uids": [
                     1890,
                     1892,
@@ -410,6 +619,7 @@
                 "isClause": true,
                 "firstWord": "πληιάδων",
                 "lastWord": "ἐπιτελλομενάων",
+                "grammar_ref": "§PartGen",
                 "uids": [
                     3356,
                     3357,
@@ -422,6 +632,7 @@
                 "isClause": true,
                 "firstWord": "περιπλομένου",
                 "lastWord": "ἐνιαυτοῦ",
+                "grammar_ref": "§PartGen",
                 "uids": [
                     3379,
                     3380
@@ -433,6 +644,7 @@
                 "isClause": true,
                 "firstWord": "χαρασσομένοιο",
                 "lastWord": "σιδήρου",
+                "grammar_ref": "§PartGen",
                 "uids": [
                     3384,
                     3385
@@ -444,6 +656,7 @@
                 "isClause": true,
                 "firstWord": "ὀμβρήσαντος",
                 "lastWord": "ἐρισθενέος",
+                "grammar_ref": "§PartGen",
                 "uids": [
                     3633,
                     3634,
@@ -456,6 +669,7 @@
                 "isClause": true,
                 "firstWord": "θέρευς",
                 "lastWord": "ἐόντος",
+                "grammar_ref": "§PartGen",
                 "uids": [
                     4358,
                     4360,
@@ -468,6 +682,7 @@
                 "isClause": true,
                 "firstWord": "πνεύσαντος",
                 "lastWord": "ὤρινε",
+                "grammar_ref": "§PartGen",
                 "uids": [
                     4390,
                     4391,
@@ -488,6 +703,7 @@
                 "isClause": true,
                 "firstWord": "Βορέαο",
                 "lastWord": "πεσόντος",
+                "grammar_ref": "§PartGen",
                 "uids": [
                     4725,
                     4726
@@ -499,6 +715,7 @@
                 "isClause": true,
                 "firstWord": "Θρηικίου",
                 "lastWord": "κλονέοντος",
+                "grammar_ref": "§PartGen",
                 "uids": [
                     4763,
                     4764,
@@ -511,6 +728,7 @@
                 "isClause": true,
                 "firstWord": "ἔαρος",
                 "lastWord": "ἱσταμένοιο",
+                "grammar_ref": "§PartGen",
                 "uids": [
                     4885,
                     4887
@@ -522,6 +740,7 @@
                 "isClause": true,
                 "firstWord": "ἐλθόντος",
                 "lastWord": "ὥρης",
+                "grammar_ref": "§PartGen",
                 "uids": [
                     5685,
                     5686,
@@ -535,6 +754,7 @@
                 "isClause": true,
                 "firstWord": "ἠοῦς",
                 "lastWord": "γιγνομένης",
+                "grammar_ref": "§PartGen",
                 "uids": [
                     7046,
                     7047
@@ -546,6 +766,7 @@
                 "isClause": true,
                 "firstWord": "τήνδε",
                 "lastWord": "δίκασσαι",
+                "grammar_ref": "",
                 "uids": [
                     337,
                     338,
@@ -559,6 +780,7 @@
                 "isClause": true,
                 "firstWord": "Ἀθήνην",
                 "lastWord": "[0]",
+                "grammar_ref": "",
                 "uids": [
                     537,
                     538,
@@ -576,6 +798,7 @@
                 "isClause": true,
                 "firstWord": "χάριν",
                 "lastWord": "[0]",
+                "grammar_ref": "",
                 "uids": [
                     547,
                     548,
@@ -597,6 +820,7 @@
                 "isClause": true,
                 "firstWord": "ἐν",
                 "lastWord": "ἤνωγε",
+                "grammar_ref": "",
                 "uids": [
                     560,
                     562,
@@ -615,6 +839,7 @@
                 "isClause": true,
                 "firstWord": "ὕβριν",
                 "lastWord": "ἀπέχειν",
+                "grammar_ref": "",
                 "uids": [
                     1112,
                     1114,
@@ -629,6 +854,7 @@
                 "isClause": true,
                 "firstWord": "ἐθέλῃ",
                 "lastWord": "ἀντιφερίζειν",
+                "grammar_ref": "",
                 "uids": [
                     1797,
                     1798,
@@ -642,6 +868,7 @@
                 "isClause": true,
                 "firstWord": "ῥηιδίως",
                 "lastWord": "δύναται",
+                "grammar_ref": "",
                 "uids": [
                     1845,
                     1846,
@@ -654,6 +881,7 @@
                 "isClause": true,
                 "firstWord": "τά",
                 "lastWord": "μητιόεντα",
+                "grammar_ref": "",
                 "uids": [
                     2338,
                     2339,
@@ -671,6 +899,7 @@
                 "isClause": true,
                 "firstWord": "ἐθέλῃ",
                 "lastWord": "ἀγορεῦσαι",
+                "grammar_ref": "",
                 "uids": [
                     2406,
                     2407,
@@ -684,6 +913,7 @@
                 "isClause": true,
                 "firstWord": "ἅ",
                 "lastWord": "ἄνωγα",
+                "grammar_ref": "",
                 "uids": [
                     3223,
                     3224,
@@ -697,6 +927,7 @@
                 "isClause": true,
                 "firstWord": "ὥρια",
                 "lastWord": "Δημήτερος",
+                "grammar_ref": "",
                 "uids": [
                     3425,
                     3426,
@@ -712,6 +943,7 @@
                 "isClause": true,
                 "firstWord": "ἄνωγα",
                 "lastWord": "ἀλεωρήν",
+                "grammar_ref": "",
                 "uids": [
                     3528,
                     3529,
@@ -729,6 +961,7 @@
                 "isClause": true,
                 "firstWord": "βουσὶν",
                 "lastWord": "ἐστιν",
+                "grammar_ref": "",
                 "uids": [
                     3755,
                     3756,
@@ -741,6 +974,7 @@
                 "isClause": true,
                 "firstWord": "φησὶ",
                 "lastWord": "ἄμαξαν",
+                "grammar_ref": "",
                 "uids": [
                     3967,
                     3972,
@@ -753,6 +987,7 @@
                 "isClause": true,
                 "firstWord": "πρόσθεν",
                 "lastWord": "θέσθαι",
+                "grammar_ref": "",
                 "uids": [
                     3989,
                     3991,
@@ -766,6 +1001,7 @@
                 "isClause": true,
                 "firstWord": "εὔχεσθαι",
                 "lastWord": "ἀκτήν",
+                "grammar_ref": "",
                 "uids": [
                     4053,
                     4060,
@@ -782,6 +1018,7 @@
                 "isClause": true,
                 "firstWord": "σε",
                 "lastWord": "ἐόντος",
+                "grammar_ref": "",
                 "uids": [
                     4134,
                     4135,
@@ -798,6 +1035,7 @@
                 "isClause": true,
                 "firstWord": "ἐποτρύνειν",
                 "lastWord": "ἀλωῇ",
+                "grammar_ref": "",
                 "uids": [
                     5121,
                     5122,
@@ -819,6 +1057,7 @@
                 "isClause": true,
                 "firstWord": "γῆν",
                 "lastWord": "κελεύω",
+                "grammar_ref": "",
                 "uids": [
                     5331,
                     5332,
@@ -835,6 +1074,7 @@
                 "isClause": true,
                 "firstWord": "βούληαι",
                 "lastWord": "ἀτερπέα",
+                "grammar_ref": "",
                 "uids": [
                     5550,
                     5551,
@@ -851,6 +1091,7 @@
                 "isClause": true,
                 "firstWord": "μέ",
                 "lastWord": "ὠτώεντα",
+                "grammar_ref": "",
                 "uids": [
                     5631,
                     5632,
@@ -867,6 +1108,7 @@
                 "isClause": true,
                 "firstWord": "ἐδίδαξαν",
                 "lastWord": "ἀείδειν",
+                "grammar_ref": "",
                 "uids": [
                     5672,
                     5673,
@@ -880,6 +1122,7 @@
                 "isClause": true,
                 "firstWord": "ἐθέλῃσιν",
                 "lastWord": "ὀλέσσαι",
+                "grammar_ref": "",
                 "uids": [
                     5717,
                     5718
@@ -891,6 +1134,7 @@
                 "isClause": true,
                 "firstWord": "σπεύδειν",
                 "lastWord": "νέεσθαι",
+                "grammar_ref": "",
                 "uids": [
                     5757,
                     5759,
@@ -906,6 +1150,7 @@
                 "isClause": true,
                 "firstWord": "σ̓",
                 "lastWord": "ἀγορεύω",
+                "grammar_ref": "",
                 "uids": [
                     5880,
                     5881,
@@ -925,6 +1170,7 @@
                 "isClause": true,
                 "firstWord": "δίκην",
                 "lastWord": "παρασχεῖν",
+                "grammar_ref": "",
                 "uids": [
                     6112,
                     6114,
@@ -937,6 +1183,7 @@
                 "isClause": true,
                 "firstWord": "οὐλομένην",
                 "lastWord": "ἐόντων",
+                "grammar_ref": "",
                 "uids": [
                     6155,
                     6156,
@@ -957,6 +1204,7 @@
                 "isClause": true,
                 "firstWord": "ἀλέασθαι",
                 "lastWord": "ἄρξασθαι",
+                "grammar_ref": "",
                 "uids": [
                     6701,
                     6702,
@@ -969,6 +1217,7 @@
                 "isClause": true,
                 "firstWord": "φιλέοι",
                 "lastWord": "ὀαρισμούς",
+                "grammar_ref": "",
                 "uids": [
                     6772,
                     6776,
@@ -989,6 +1238,7 @@
                 "isClause": true,
                 "firstWord": "πεφύλαξο",
                 "lastWord": "[0]",
+                "grammar_ref": "",
                 "uids": [
                     6853,
                     6856,
@@ -1009,6 +1259,7 @@
                 "isClause": true,
                 "firstWord": "ἐν",
                 "lastWord": "ἐπιόρκοις",
+                "grammar_ref": "",
                 "uids": [
                     6900,
                     6901,
@@ -1031,11 +1282,395 @@
                 "isClause": true,
                 "firstWord": "ἄρχεσθαι",
                 "lastWord": "ἀραιάς",
+                "grammar_ref": "",
                 "uids": [
                     6947,
                     6948,
                     6949,
                     6950
+                ]
+            },
+            {
+                "syntax_id": 78,
+                "type": "Conditional clause",
+                "isClause": true,
+                "firstWord": "εἰ",
+                "lastWord": "ἐθέλεις",
+                "grammar_ref": "",
+                "uids": [
+                    877,
+                    879
+                ]
+            },
+            {
+                "syntax_id": 79,
+                "type": "Conditional clause",
+                "isClause": true,
+                "firstWord": "αἴ",
+                "lastWord": "ἐθέλω",
+                "grammar_ref": "",
+                "uids": [
+                    1784,
+                    1785,
+                    1786
+                ]
+            },
+            {
+                "syntax_id": 80,
+                "type": "Conditional clause",
+                "isClause": true,
+                "firstWord": "αἴ",
+                "lastWord": "ἐθέλῃσ̓",
+                "grammar_ref": "",
+                "uids": [
+                    2289,
+                    2290,
+                    2291
+                ]
+            },
+            {
+                "syntax_id": 81,
+                "type": "Conditional clause",
+                "isClause": true,
+                "firstWord": "εἰ",
+                "lastWord": "ἕξει",
+                "grammar_ref": "",
+                "uids": [
+                    2328,
+                    2329,
+                    2330,
+                    2331,
+                    2332,
+                    2333
+                ]
+            },
+            {
+                "syntax_id": 82,
+                "type": "Conditional clause",
+                "isClause": true,
+                "firstWord": "εἰ",
+                "lastWord": "γιγνώσκων",
+                "grammar_ref": "",
+                "uids": [
+                    2402,
+                    2404,
+                    2405,
+                    2406,
+                    2407,
+                    2408,
+                    2409,
+                    2410
+                ]
+            },
+            {
+                "syntax_id": 83,
+                "type": "Conditional clause",
+                "isClause": true,
+                "firstWord": "εἰ",
+                "lastWord": "ἐργάζῃ",
+                "grammar_ref": "",
+                "uids": [
+                    2682,
+                    2684,
+                    2685
+                ]
+            },
+            {
+                "syntax_id": 84,
+                "type": "Conditional clause",
+                "isClause": true,
+                "firstWord": "εἴ",
+                "lastWord": "κελεύω",
+                "grammar_ref": "",
+                "uids": [
+                    2709,
+                    2710,
+                    2711,
+                    2712,
+                    2713,
+                    2714,
+                    2715,
+                    2716,
+                    2717,
+                    2718,
+                    2719,
+                    2720,
+                    2721,
+                    2722,
+                    2723,
+                    2724
+                ]
+            },
+            {
+                "syntax_id": 85,
+                "type": "Conditional clause",
+                "isClause": true,
+                "firstWord": "εἰ",
+                "lastWord": "γένηται",
+                "grammar_ref": "",
+                "uids": [
+                    2977,
+                    2979,
+                    2980,
+                    2981,
+                    2982,
+                    2983,
+                    2984
+                ]
+            },
+            {
+                "syntax_id": 86,
+                "type": "Conditional clause",
+                "isClause": true,
+                "firstWord": "εἰ",
+                "lastWord": "εἴη",
+                "grammar_ref": "",
+                "uids": [
+                    3022,
+                    3023,
+                    3024,
+                    3025,
+                    3026
+                ]
+            },
+            {
+                "syntax_id": 87,
+                "type": "Conditional clause",
+                "isClause": true,
+                "firstWord": "αἴ",
+                "lastWord": "δύνηαι",
+                "grammar_ref": "",
+                "uids": [
+                    3045,
+                    3046,
+                    3047
+                ]
+            },
+            {
+                "syntax_id": 88,
+                "type": "Conditional clause",
+                "isClause": true,
+                "firstWord": "κεἰ",
+                "lastWord": "δοίη",
+                "grammar_ref": "",
+                "uids": [
+                    3126,
+                    3127,
+                    3128
+                ]
+            },
+            {
+                "syntax_id": 89,
+                "type": "Conditional clause",
+                "isClause": true,
+                "firstWord": "σοὶ",
+                "lastWord": "ᾗσιν",
+                "grammar_ref": "",
+                "uids": [
+                    3337,
+                    3339,
+                    3340,
+                    3341,
+                    3342,
+                    3343,
+                    3344,
+                    3345
+                ]
+            },
+            {
+                "syntax_id": 90,
+                "type": "Conditional clause",
+                "isClause": true,
+                "firstWord": "εἴ",
+                "lastWord": "Δημήτερος",
+                "grammar_ref": "",
+                "uids": [
+                    3423,
+                    3424,
+                    3425,
+                    3426,
+                    3427,
+                    3428,
+                    3429,
+                    3430
+                ]
+            },
+            {
+                "syntax_id": 91,
+                "type": "Conditional clause",
+                "isClause": true,
+                "firstWord": "εἴ",
+                "lastWord": "ἄξαις",
+                "grammar_ref": "",
+                "uids": [
+                    3791,
+                    3792,
+                    3793,
+                    3794
+                ]
+            },
+            {
+                "syntax_id": 92,
+                "type": "Conditional clause",
+                "isClause": true,
+                "firstWord": "εἰ",
+                "lastWord": "ὀπάζοι",
+                "grammar_ref": "",
+                "uids": [
+                    4119,
+                    4120,
+                    4121,
+                    4122,
+                    4123,
+                    4124,
+                    4125
+                ]
+            },
+            {
+                "syntax_id": 93,
+                "type": "Conditional clause",
+                "isClause": true,
+                "firstWord": "εἰ",
+                "lastWord": "δῖαν",
+                "grammar_ref": "",
+                "uids": [
+                    4161,
+                    4163,
+                    4164,
+                    4165,
+                    4166,
+                    4167,
+                    4168
+                ]
+            },
+            {
+                "syntax_id": 94,
+                "type": "Conditional clause",
+                "isClause": true,
+                "firstWord": "εἰ",
+                "lastWord": "ἀρόσῃς",
+                "grammar_ref": "",
+                "uids": [
+                    4210,
+                    4212,
+                    4213,
+                    4214
+                ]
+            },
+            {
+                "syntax_id": 95,
+                "type": "Conditional clause",
+                "isClause": true,
+                "firstWord": "εἰ",
+                "lastWord": "πόντον",
+                "grammar_ref": "",
+                "uids": [
+                    5295,
+                    5297,
+                    5298,
+                    5299,
+                    5300,
+                    5301,
+                    5302,
+                    5303,
+                    5304,
+                    5305,
+                    5306,
+                    5307,
+                    5308,
+                    5309,
+                    5310,
+                    5311,
+                    5312,
+                    5313
+                ]
+            },
+            {
+                "syntax_id": 96,
+                "type": "Conditional clause",
+                "isClause": true,
+                "firstWord": "εἴ",
+                "lastWord": "ἀήτας",
+                "grammar_ref": "",
+                "uids": [
+                    5534,
+                    5535,
+                    5536,
+                    5537,
+                    5538,
+                    5539,
+                    5540
+                ]
+            },
+            {
+                "syntax_id": 97,
+                "type": "Conditional clause",
+                "isClause": true,
+                "firstWord": "εἰ",
+                "lastWord": "ὀλέσσαι",
+                "grammar_ref": "",
+                "uids": [
+                    5706,
+                    5707,
+                    5708,
+                    5709,
+                    5710,
+                    5711,
+                    5712,
+                    5713,
+                    5714,
+                    5715,
+                    5716,
+                    5717,
+                    5718
+                ]
+            },
+            {
+                "syntax_id": 98,
+                "type": "Conditional clause",
+                "isClause": true,
+                "firstWord": "εἰ",
+                "lastWord": "ποιήσῃς",
+                "grammar_ref": "",
+                "uids": [
+                    6067,
+                    6069,
+                    6070
+                ]
+            },
+            {
+                "syntax_id": 99,
+                "type": "Conditional clause",
+                "isClause": true,
+                "firstWord": "εἰ",
+                "lastWord": "ἔρξας",
+                "grammar_ref": "",
+                "uids": [
+                    6084,
+                    6086,
+                    6087,
+                    6088,
+                    6089,
+                    6090,
+                    6091,
+                    6092,
+                    6093,
+                    6094,
+                    6095,
+                    6096
+                ]
+            },
+            {
+                "syntax_id": 100,
+                "type": "Conditional clause",
+                "isClause": true,
+                "firstWord": "εἰ",
+                "lastWord": "εἴποις",
+                "grammar_ref": "",
+                "uids": [
+                    6184,
+                    6186,
+                    6187
                 ]
             }
         ]

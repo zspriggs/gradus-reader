@@ -1,0 +1,628 @@
+{
+    "passage": {
+        "title": "Aeneid",
+        "author": "Vergil",
+        "urn": "phi0690.phi003.perseus-lat1",
+        "source": "AGLDT",
+        "syntaxPhrases": [
+            {
+                "syntax_id": 0,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "praepetibus",
+                "lastWord": "caelo",
+                "grammar_ref": "",
+                "uids": [
+                    113,
+                    114,
+                    115,
+                    116,
+                    117,
+                    118
+                ]
+            },
+            {
+                "syntax_id": 1,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "pendere",
+                "lastWord": "natorum",
+                "grammar_ref": "",
+                "uids": [
+                    161,
+                    162,
+                    164,
+                    169,
+                    170,
+                    171,
+                    172
+                ]
+            },
+            {
+                "syntax_id": 2,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "conatus",
+                "lastWord": "auro",
+                "grammar_ref": "",
+                "uids": [
+                    254,
+                    256,
+                    257,
+                    258,
+                    259
+                ]
+            },
+            {
+                "syntax_id": 3,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "da",
+                "lastWord": "Troiae",
+                "grammar_ref": "",
+                "uids": [
+                    561,
+                    570,
+                    571,
+                    572,
+                    573,
+                    574,
+                    575,
+                    576,
+                    577,
+                    578,
+                    579
+                ]
+            },
+            {
+                "syntax_id": 4,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "bacchatur",
+                "lastWord": "deum",
+                "grammar_ref": "",
+                "uids": [
+                    661,
+                    663,
+                    664,
+                    665,
+                    666,
+                    667,
+                    668,
+                    669
+                ]
+            },
+            {
+                "syntax_id": 5,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "non",
+                "lastWord": "volent",
+                "grammar_ref": "",
+                "uids": [
+                    729,
+                    730,
+                    731,
+                    732
+                ]
+            },
+            {
+                "syntax_id": 6,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "potuit",
+                "lastWord": "coniugis",
+                "grammar_ref": "",
+                "uids": [
+                    1015,
+                    1016,
+                    1017,
+                    1018
+                ]
+            },
+            {
+                "syntax_id": 7,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "sic",
+                "lastWord": "loqui",
+                "grammar_ref": "",
+                "uids": [
+                    1069,
+                    1070,
+                    1071
+                ]
+            },
+            {
+                "syntax_id": 8,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "Hoc",
+                "lastWord": "instituit",
+                "grammar_ref": "",
+                "uids": [
+                    1219,
+                    1220,
+                    1222,
+                    1223,
+                    1225,
+                    1226
+                ]
+            },
+            {
+                "syntax_id": 9,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "quo",
+                "lastWord": "pergant",
+                "grammar_ref": "",
+                "uids": [
+                    1692,
+                    1693,
+                    1694
+                ]
+            },
+            {
+                "syntax_id": 10,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "acie",
+                "lastWord": "servare",
+                "grammar_ref": "",
+                "uids": [
+                    1703,
+                    1704,
+                    1706
+                ]
+            },
+            {
+                "syntax_id": 11,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "quam",
+                "lastWord": "pennis",
+                "grammar_ref": "",
+                "uids": [
+                    2007,
+                    2008,
+                    2011,
+                    2012,
+                    2014,
+                    2015,
+                    2016
+                ]
+            },
+            {
+                "syntax_id": 12,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "coepta",
+                "lastWord": "moveri",
+                "grammar_ref": "",
+                "uids": [
+                    2145,
+                    2146
+                ]
+            },
+            {
+                "syntax_id": 13,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "quam",
+                "lastWord": "ferunt",
+                "grammar_ref": "",
+                "uids": [
+                    2392,
+                    2393,
+                    2394,
+                    2395,
+                    2396,
+                    2397,
+                    2398
+                ]
+            },
+            {
+                "syntax_id": 14,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "tenues",
+                "lastWord": "formae",
+                "grammar_ref": "",
+                "uids": [
+                    2465,
+                    2466,
+                    2467,
+                    2468,
+                    2469,
+                    2470,
+                    2471,
+                    2472,
+                    2473,
+                    2474
+                ]
+            },
+            {
+                "syntax_id": 15,
+                "type": "Indirect discourse",
+                "isClause": true,
+                "firstWord": "orantes",
+                "lastWord": "cursum",
+                "grammar_ref": "",
+                "uids": [
+                    2632,
+                    2633,
+                    2634,
+                    2635
+                ]
+            },
+            {
+                "syntax_id": 16,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "arces",
+                "lastWord": ",",
+                "grammar_ref": "",
+                "uids": [
+                    66,
+                    67,
+                    68,
+                    69,
+                    70,
+                    71,
+                    72
+                ]
+            },
+            {
+                "syntax_id": 17,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "sacerdos",
+                "lastWord": "regi",
+                "grammar_ref": "",
+                "uids": [
+                    283,
+                    288,
+                    289,
+                    290,
+                    291
+                ]
+            },
+            {
+                "syntax_id": 18,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "Phoebe",
+                "lastWord": ",",
+                "grammar_ref": "",
+                "uids": [
+                    477,
+                    485,
+                    486,
+                    487,
+                    488,
+                    489,
+                    490,
+                    491,
+                    492,
+                    493,
+                    494,
+                    495
+                ]
+            },
+            {
+                "syntax_id": 19,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "-que",
+                "lastWord": "Dardaniae",
+                "grammar_ref": "",
+                "uids": [
+                    541,
+                    543,
+                    544,
+                    545,
+                    546,
+                    547,
+                    548,
+                    549
+                ]
+            },
+            {
+                "syntax_id": 20,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "Misenum",
+                "lastWord": "fuit",
+                "grammar_ref": "",
+                "uids": [
+                    1385,
+                    1401,
+                    1402,
+                    1403,
+                    1404,
+                    1405,
+                    1406,
+                    1407,
+                    1408,
+                    1409,
+                    1410,
+                    1411,
+                    1412,
+                    1414
+                ]
+            },
+            {
+                "syntax_id": 21,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "viscum",
+                "lastWord": ",",
+                "grammar_ref": "",
+                "uids": [
+                    1747,
+                    1751,
+                    1752,
+                    1753,
+                    1754,
+                    1755,
+                    1756,
+                    1757
+                ]
+            },
+            {
+                "syntax_id": 22,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "Di",
+                "lastWord": ",",
+                "grammar_ref": "",
+                "uids": [
+                    2218,
+                    2219,
+                    2220,
+                    2221,
+                    2222,
+                    2223,
+                    2224
+                ]
+            },
+            {
+                "syntax_id": 23,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "via",
+                "lastWord": "undas",
+                "grammar_ref": "",
+                "uids": [
+                    2485,
+                    2486,
+                    2487,
+                    2488,
+                    2489,
+                    2490,
+                    2491,
+                    2492
+                ]
+            },
+            {
+                "syntax_id": 24,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "Charon",
+                "lastWord": "iacet",
+                "grammar_ref": "",
+                "uids": [
+                    2519,
+                    2520,
+                    2521,
+                    2522,
+                    2523,
+                    2524,
+                    2525,
+                    2526
+                ]
+            },
+            {
+                "syntax_id": 25,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "Haec",
+                "lastWord": ",",
+                "grammar_ref": "",
+                "uids": [
+                    2733,
+                    2735,
+                    2736,
+                    2737,
+                    2738
+                ]
+            },
+            {
+                "syntax_id": 26,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "hi",
+                "lastWord": ",",
+                "grammar_ref": "",
+                "uids": [
+                    2750,
+                    2751,
+                    2752,
+                    2753,
+                    2754,
+                    2755
+                ]
+            },
+            {
+                "syntax_id": 27,
+                "type": "Relative clause",
+                "isClause": true,
+                "firstWord": "et",
+                "lastWord": "-que",
+                "grammar_ref": "",
+                "uids": [
+                    2814,
+                    2819,
+                    2820,
+                    2821,
+                    2822,
+                    2823,
+                    2824,
+                    2825,
+                    2826,
+                    2827,
+                    2828,
+                    2829,
+                    2830,
+                    2831,
+                    2832,
+                    2833,
+                    2834,
+                    2835,
+                    2836,
+                    2837,
+                    2838
+                ]
+            },
+            {
+                "syntax_id": 28,
+                "type": "Ablative absolute",
+                "isClause": true,
+                "firstWord": "ductis",
+                "lastWord": "sortibus",
+                "grammar_ref": "",
+                "uids": [
+                    176,
+                    177
+                ]
+            },
+            {
+                "syntax_id": 29,
+                "type": "Ablative absolute",
+                "isClause": true,
+                "firstWord": "Talibus",
+                "lastWord": "dictis",
+                "grammar_ref": "",
+                "uids": [
+                    834,
+                    837
+                ]
+            },
+            {
+                "syntax_id": 30,
+                "type": "Ablative absolute",
+                "isClause": true,
+                "firstWord": "Talibus",
+                "lastWord": "dictis",
+                "grammar_ref": "",
+                "uids": [
+                    1060,
+                    1062
+                ]
+            },
+            {
+                "syntax_id": 31,
+                "type": "Ablative absolute",
+                "isClause": true,
+                "firstWord": "Primo",
+                "lastWord": "avulso",
+                "grammar_ref": "",
+                "uids": [
+                    1228,
+                    1229
+                ]
+            },
+            {
+                "syntax_id": 32,
+                "type": "Ablative absolute",
+                "isClause": true,
+                "firstWord": "presso",
+                "lastWord": "ore",
+                "grammar_ref": "",
+                "uids": [
+                    1332,
+                    1335
+                ]
+            },
+            {
+                "syntax_id": 33,
+                "type": "Ablative absolute",
+                "isClause": true,
+                "firstWord": "His",
+                "lastWord": "actis",
+                "grammar_ref": "",
+                "uids": [
+                    1982,
+                    1983
+                ]
+            },
+            {
+                "syntax_id": 34,
+                "type": "Ablative absolute",
+                "isClause": true,
+                "firstWord": "adventante",
+                "lastWord": "dea",
+                "grammar_ref": "",
+                "uids": [
+                    2156,
+                    2157
+                ]
+            },
+            {
+                "syntax_id": 35,
+                "type": "Conditional clause",
+                "isClause": true,
+                "firstWord": "si",
+                "lastWord": "possit",
+                "grammar_ref": "",
+                "uids": [
+                    665,
+                    667
+                ]
+            },
+            {
+                "syntax_id": 36,
+                "type": "Conditional clause",
+                "isClause": true,
+                "firstWord": "si",
+                "lastWord": "vocant",
+                "grammar_ref": "",
+                "uids": [
+                    1259,
+                    1260,
+                    1261,
+                    1262
+                ]
+            },
+            {
+                "syntax_id": 37,
+                "type": "Conditional clause",
+                "isClause": true,
+                "firstWord": "si",
+                "lastWord": "est",
+                "grammar_ref": "",
+                "uids": [
+                    1473,
+                    1474,
+                    1475,
+                    1476
+                ]
+            },
+            {
+                "syntax_id": 38,
+                "type": "Conditional clause",
+                "isClause": true,
+                "firstWord": "si",
+                "lastWord": "est",
+                "grammar_ref": "",
+                "uids": [
+                    1648,
+                    1649,
+                    1650,
+                    1651
+                ]
+            }
+        ]
+    },
+    "text": {}
+}
