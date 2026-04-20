@@ -40,9 +40,7 @@
           📌
         </button>
         <div class="syntax-type">{{getWordDisplay(phrase)}}</div>
-        <div class="syntax-meta">
-          {{ phrase.type }}
-        </div>
+        <a class="syntax-meta" :href=phrase.grammar_ref target="_blank">{{phrase.type}}</a>
       </div>
     </div>
   </div>
@@ -50,7 +48,7 @@
 
 <script setup>
 
-import {ref} from 'vue';
+import {ref, computed} from 'vue';
 
 const activeIds=ref([]);
 
@@ -63,6 +61,15 @@ const props = defineProps({
   hoveredSyntaxId: {
     type: Number
   }
+});
+
+const getSyntaxLink = (phrase) => {
+  return phrase.grammar_ref;
+}
+
+const syntaxLink = computed((phrase) => {
+  return phrase.grammar_ref;
+//`https://www.perseus.tufts.edu/hopper/morph?l=${form}&la=la`
 });
 
 const emit = defineEmits(['syntax-hover', 'syntax-unhover', 'pin-toggle']);

@@ -42,28 +42,27 @@ QUERIES = {
         {
             "type": "Indirect discourse", 
             "query": ":verb:infinitive[relation=OBJ]", #need to add sbj?
-            "is_clause": True
+            "is_clause": True,
+            "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/accusative-and-infinitive"
         },
         {
             "type": "Relative clause",
             "query": ":verb[relation=ATR]:has_child(qui)",
-            "is_clause": True
+            "is_clause": True,
+            "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/relative-pronouns"
         },
         {
             "type": "Ablative absolute",
             "query": ":ablative[relation=ADV] > :ablative[relation=SBJ]",
-            "is_clause": True
+            "is_clause": True,
+            "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/ablative-absolute"
         },
         {
             "type": "Conditional clause",
-            "query": "si[relation=AuxC] > :verb[relation=ADV]",
-            "is_clause": True
+            "query": "si[relation=AuxC] > :verb[relation=ADV], nisi[relation=AuxC] > :verb[relation=ADV]",
+            "is_clause": True,
+            "grammar_ref": "https://dcc.dickinson.edu/grammar/latin/conditional-sentences"
         },
-        {
-            "type": "Conditional clause",
-            "query": "nisi[relation=AuxC] > :verb[relation=ADV]",
-            "is_clause": True
-        }
         #maybe adverbial uses of non adverbs
         #prepositional phrases
         #highlight complex tags when applicable (ellipsis)
