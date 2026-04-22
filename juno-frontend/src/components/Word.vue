@@ -16,14 +16,14 @@
     </span>
 
     <span v-if="wordData.annotations" class="inline-annotations">
-      <span class="annotation-tag">
-        {{ abbreviatedFeatures }}
+      <span class="annotation-tag" v-if="abbreviatedFeatures">
+        {{ '\u00A0' + abbreviatedFeatures  + '\u00A0'}}
       </span>
     </span>
 
     <span v-if="wordData.annotations?.custom" class="custom-annotations">
-      <span class="custom-annotation-tag">
-        {{ wordData.annotations.custom }}
+      <span class="custom-annotation-tag" v-if="wordData.annotations.custom">
+        {{ '\u00A0' + wordData.annotations.custom + '\u00A0'}}
       </span>
     </span>
 
@@ -188,6 +188,8 @@ const abbreviatedFeatures = computed(() => {
   color: black;
   background-color: rgb(212, 254, 205); 
   border-radius: 3px;
+  border-left: 1px solid green;
+  border-right: 1px solid green;
   line-height: 1;
   white-space: nowrap; 
 }
@@ -196,6 +198,8 @@ const abbreviatedFeatures = computed(() => {
   font-size: 0.75rem;
   color: black;
   background-color: white; 
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
   border-radius: 3px;
   line-height: 1;
   white-space: nowrap; 
